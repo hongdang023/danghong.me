@@ -1,0 +1,86 @@
+[
+  {
+    "id": "conan-01",
+    "title": "Chia sẻ về Concept Chopper với Conan Community 2",
+    "community": "Conan",
+    "image": "/images/communities/conan-01.jpg"
+  },
+  {
+    "id": "conan-02",
+    "title": "Chia sẻ về Concept Chopper với Conan Community",
+    "community": "Conan",
+    "image": "/images/communities/conan-02.jpg"
+  },
+  {
+    "id": "conan-03",
+    "title": "Chia sẻ về Course Maker cho Conan Community",
+    "community": "Conan",
+    "image": "/images/communities/conan-03.jpg"
+  },
+  {
+    "id": "conan-04",
+    "title": "Conan Team Meeting",
+    "community": "Conan",
+    "image": "/images/communities/conan-04.jpg"
+  },
+  {
+    "id": "the1ight-01",
+    "title": "Hoạt động cộng đồng 1ight Club Community",
+    "community": "The1ight",
+    "image": "/images/communities/the1ight-01.jpg"
+  },
+  {
+    "id": "the1ight-02",
+    "title": "Hoạt động sharing Alumni Club The1ight",
+    "community": "The1ight",
+    "image": "/images/communities/the1ight-02.jpg"
+  },
+  {
+    "id": "improv-01",
+    "title": "Improv Class",
+    "community": "Improv",
+    "image": "/images/communities/improv-01.jpg"
+  },
+  {
+    "id": "improv-02",
+    "title": "Lớp Improv",
+    "community": "Improv",
+    "image": "/images/communities/improv-02.jpg"
+  },
+  {
+    "id": "dance-01",
+    "title": "Lớp múa đương đại 2",
+    "community": "Dance",
+    "image": "/images/communities/dance-01.jpg"
+  },
+  {
+    "id": "dance-02",
+    "title": "Lớp múa đương đại",
+    "community": "Dance",
+    "image": "/images/communities/dance-02.jpg"
+  },
+  {
+    "id": "the1ight-03",
+    "title": "The1ight Class",
+    "community": "The1ight",
+    "image": "/images/communities/the1ight-03.jpg"
+  },
+  {
+    "id": "the1ight-04",
+    "title": "The1ight Cứu hộ thuyền viên - Học nhóm",
+    "community": "The1ight",
+    "image": "/images/communities/the1ight-04.jpg"
+  },
+  {
+    "id": "the1ight-05",
+    "title": "The1ight Offline cuối khóa học",
+    "community": "The1ight",
+    "image": "/images/communities/the1ight-05.jpg"
+  },
+  {
+    "id": "film-01",
+    "title": "Vòng về Phim",
+    "community": "Film",
+    "image": "/images/communities/film-01.jpg"
+  }
+]

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm Apple Palette - B5 Standard */
+  --background: #F9F7F5;
+  --foreground: #1D1D1F;
+  --secondary: #EDE6DE;
+  --accent: #8E3A3A;
+  --border: #E5E5E7;
+  
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-border-custom: var(--border);
+  
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  
+  --radius-xl: 12px;
+  --radius-2xl: 24px;
+}
+
+/* Base resets */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial System Utilities */
+.editorial-spacing {
+  @apply py-20 px-6 max-w-7xl mx-auto;
+}
+
+.hero-container {
+  @apply max-w-4xl mx-auto;
+}
+
+.heading-hero {
+  @apply text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6;
+}
+
+.text-body {
+  @apply text-lg md:text-xl leading-relaxed opacity-80 max-w-2xl;
+}
+
+/* 0.5px Border System (Editorial Look) */
+.border-thin {
+  border-width: 0.5px;
+}
+
+.border-b-thin {
+  border-bottom-width: 0.5px;
+}
+
+.border-t-thin {
+  border-top-width: 0.5px;
+}
+
+/* Warm Editorial Blur */
+.warm-blur {
+  @apply bg-background/70 backdrop-blur-xl;
+}

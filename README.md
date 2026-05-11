@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Learning Architect - Personal Portfolio & Systems
+## "Active Traces of a Digital Craftsman"
 
-## Getting Started
+Chào mừng bạn đến với Repository của Đặng Hồng. Đây không chỉ là nơi lưu trữ Code, mà là một **Hệ thống thực chứng (Evidence-based System)** được xây dựng theo khung quản trị **DAC (Documentation Architecture)**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🏗️ Repository Structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Hệ thống được tổ chức thành 3 trụ cột chính bên trong thư mục `DAC/`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **[A_REQUIREMENTS](file:///Users/danghong/Documents/danghong.me/DAC/A_REQUIREMENTS)**: Định nghĩa giá trị, chân dung người dùng và bài toán thực tế.
+    *   *Sản phẩm lõi*: [PRD 3.0](file:///Users/danghong/Documents/danghong.me/DAC/A_REQUIREMENTS/A0.1_PRD_3.0.md), [Showcase List](file:///Users/danghong/Documents/danghong.me/DAC/A_REQUIREMENTS/A6_Showcase_List.md).
+2.  **[B_SYSTEM_DESIGN](file:///Users/danghong/Documents/danghong.me/DAC/B_SYSTEM_DESIGN)**: Định nghĩa giải pháp kỹ thuật, thẩm mỹ và trải nghiệm.
+    *   *Sản phẩm lõi*: [Design System](file:///Users/danghong/Documents/danghong.me/DAC/B_SYSTEM_DESIGN/B3.0_Design_System.md), [Database Design](file:///Users/danghong/Documents/danghong.me/DAC/B_SYSTEM_DESIGN/B1.2_Database_Design.md).
+3.  **[C_IMPLEMENTATION](file:///Users/danghong/Documents/danghong.me/DAC/C_IMPLEMENTATION)**: Quy chuẩn hóa việc lập trình, triển khai và vận hành.
+    *   *Sản phẩm lõi*: [Programming Standards](file:///Users/danghong/Documents/danghong.me/DAC/C_IMPLEMENTATION/C0_Programming_Standards.md), [Dev Workflow](file:///Users/danghong/Documents/danghong.me/DAC/C_IMPLEMENTATION/C1_Dev_Standards.md).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📚 Resources & Assets
 
-To learn more about Next.js, take a look at the following resources:
+Ngoài hệ thống DAC, repository còn chứa các tài nguyên chuyên môn:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   **[Learning Design Series](file:///Users/danghong/Documents/danghong.me/Learning_Design_Series)**: Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập (Bộ 9 tập).
+*   **Assets**: Hình ảnh và tài nguyên đa phương tiện phục vụ showcase.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack & Workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+*   **Core**: Next.js (App Router), TypeScript, TailwindCSS.
+*   **Backend**: Supabase (PostgreSQL, Auth, RLS).
+*   **Infrastructure**: Cloudflare Pages (CI/CD via GitHub).
+*   **Assistant**: Managed and Audited via **MCP (Model Context Protocol)**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+> **"Chúng ta không kể về năng lực, chúng ta trình diễn nó qua từng dòng Code và tài liệu."**
