@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+export const runtime = 'edge';
 import { redirect } from "next/navigation";
 import { saveOnboarding } from "./actions";
 import { ArrowRight, User, MapPin, Phone, ExternalLink, Briefcase } from "lucide-react";

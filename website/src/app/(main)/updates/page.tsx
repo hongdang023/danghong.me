@@ -1,5 +1,6 @@
 import React from "react";
 import { createClient } from "@/utils/supabase/server";
+export const runtime = 'edge';
 import { Bell, Zap, BookOpen, Bug } from "lucide-react";
 
 export const metadata = {

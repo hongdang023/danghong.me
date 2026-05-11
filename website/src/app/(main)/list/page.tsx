@@ -1,6 +1,7 @@
 import { ChevronDown, Brain, Layout, UserCheck, Package, Star, ArrowRight } from "lucide-react";
 import React from "react";
 import Link from "next/link";
+export const runtime = 'edge';
 
 export default function HongsListPage() {
   return (

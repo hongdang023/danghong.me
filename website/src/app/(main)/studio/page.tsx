@@ -5,6 +5,7 @@ import {
   ProgressView, 
   HistoryView 
 } from "@/components/studio";
+export const runtime = 'edge';
 import { Sparkles } from "lucide-react";
 import { createClient } from "@/utils/supabase/server";
 
@@ -66,52 +67,70 @@ export default async function StudioPage({
       saved_at: row.created_at,
     }));
 
-  // ─── Mock data for sections not yet fully wired ───────────────────────────────
-  const mockProgress = [
-    {
-      id: "1",
-      title: "Learning Design Series - Vol 1",
-      current_step: "03: Job-to-be-done",
-      total_steps: 10,
-      progress_percent: 30,
-      last_accessed: new Date().toISOString(),
-    }
-  ];
+  // 1. History: Fetch all active traces for the user
+  const { data: historyRows } = await supabase
+    .from('active_traces')
+    .select('*')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false });
 
-  const mockListItems = [
-    {
-      id: "l1",
-      title: "Product 101",
+  const historyTraces = (historyRows || []).map((row: any) => ({
+    id: row.id,
+    action_type: row.action_type,
+    entity_title: row.metadata?.entity_title || row.action_type,
+    created_at: row.created_at,
+    metadata: row.metadata,
+  }));
+
+  // 2. My List: Fetch courses the user has favourited
+  const { data: courseFavRows } = await supabase
+    .from('course_favourites')
+    .select('course_slug, created_at, courses(slug, title, instructor)')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false });
+
+  const listedCourses = (courseFavRows || [])
+    .filter((row: any) => row.courses)
+    .map((row: any) => ({
+      id: row.course_slug,
+      title: row.courses.title,
       type: "Course",
-      image_url: "/screenshots/coursemaker.png",
-      link: "/list/product-101"
-    }
-  ];
+      instructor: row.courses.instructor,
+      link: `/list/${row.course_slug}`,
+      created_at: row.created_at,
+    }));
 
-  const mockNotes = [
-    {
-      id: "n1",
-      entity_title: "Books: Learning Design",
-      content: "Điểm mấu chốt của JTBD là tập trung vào 'sự tiến bộ' mà khách hàng muốn đạt được.",
-      created_at: new Date().toISOString(),
-    }
-  ];
+  // 3. Progress: Fetch learning progress from book_progress
+  const { data: progressRows } = await supabase
+    .from('book_progress')
+    .select('*')
+    .eq('user_id', user.id)
+    .order('last_accessed', { ascending: false });
 
-  const mockTraces = [
-    {
-      id: "t1",
-      action_type: "comment",
-      entity_title: "Product 101 Review",
-      created_at: new Date().toISOString(),
-      metadata: { content: "Nội dung rất thực tế." }
-    }
-  ];
+  const learningProgress = (progressRows || []).map((row: any) => ({
+    id: row.id,
+    title: row.book_title || "Learning Design Series",
+    current_step: row.current_chapter || "01",
+    total_steps: row.total_chapters || 10,
+    progress_percent: row.progress_percent || 0,
+    last_accessed: row.last_accessed || row.updated_at,
+  }));
+
+  // 4. Notes: Fetch personal notes from active_traces
+  const personalNotes = (historyRows || [])
+    .filter((row: any) => row.action_type === 'personal_note')
+    .map((row: any) => ({
+      id: row.id,
+      entity_title: row.metadata?.entity_title || "General Note",
+      content: row.metadata?.content || "",
+      created_at: row.created_at,
+    }));
 
   const stats = {
     favouritesCount: favouritedProducts.length,
-    listCount: mockListItems.length,
-    progressCount: mockProgress.length + mockNotes.length,
-    historyCount: mockTraces.length,
+    listCount: listedCourses.length,
+    progressCount: learningProgress.length + personalNotes.length,
+    historyCount: historyTraces.length,
   };
 
   const renderActiveView = () => {
@@ -119,11 +138,11 @@ export default async function StudioPage({
       case "favourites":
         return <FavouritesView data={favouritedProducts} />;
       case "list":
-        return <ListView data={mockListItems} />;
+        return <ListView data={listedCourses} />;
       case "progress":
-        return <ProgressView data={{ progress: mockProgress, notes: mockNotes }} />;
+        return <ProgressView data={{ progress: learningProgress, notes: personalNotes }} />;
       case "history":
-        return <HistoryView data={mockTraces} />;
+        return <HistoryView data={historyTraces} />;
       default:
         return <StudioDashboard stats={stats} />;
     }

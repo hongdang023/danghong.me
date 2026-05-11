@@ -1,4 +1,5 @@
 import React from "react";
+export const runtime = 'edge';
 import { User, Menu, Bell } from "lucide-react";
 import NotificationCenter from "@/components/NotificationCenter";
 import { createClient } from "@/utils/supabase/server";
