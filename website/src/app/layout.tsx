@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const runtime = 'edge';
+
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { User, Menu } from "lucide-react";

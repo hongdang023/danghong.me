@@ -1,7 +1,6 @@
 import React from "react";
 import CollectionClientPage from "./ClientPage";
 import { createClient } from "@/utils/supabase/server";
-export const runtime = 'edge';
 
 export const revalidate = 60; // revalidate every minute
 

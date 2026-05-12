@@ -1,7 +1,7 @@
 import React from "react";
 import CommunityCards from "@/components/community/CommunityCards";
 import { createClient } from "@/utils/supabase/server";
-export const runtime = 'edge';
+
 
 export const metadata = {
   title: "Community | Hồng Đặng",
