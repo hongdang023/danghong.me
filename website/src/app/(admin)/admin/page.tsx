@@ -12,8 +12,9 @@ type Trace = {
   entity_title: string | null;
   entity_type: string | null;
   created_at: string;
-  profiles: { full_name: string | null } | null;
+  profiles: { full_name: string | null } | { full_name: string | null }[] | null;
 };
+
 
 type TopFavourite = {
   product_slug: string;
@@ -137,7 +138,7 @@ export default async function AdminDashboardPage() {
               <div key={trace.id} className="flex items-start space-x-3 bg-white/3 rounded-xl p-4 border border-white/5">
                 <div className="flex-1 min-w-0">
                   <p className="text-[12px] font-bold text-white/80 leading-tight">
-                    {trace.profiles?.full_name ?? 'Unknown'}
+                    {(Array.isArray(trace.profiles) ? trace.profiles[0]?.full_name : trace.profiles?.full_name) ?? 'Unknown'}
                   </p>
                   <p className="text-[11px] text-white/40 mt-0.5">
                     {actionLabel(trace.action_type)}
