@@ -1,18 +1,71 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { LD_SERIES } from "@/data/bookData";
-import { ChevronLeft, ShieldAlert, Zap } from "lucide-react";
+import { ChevronLeft, CheckCircle2, Loader2, ShieldAlert, Zap } from "lucide-react";
 import Quiz3LayerModal from "@/components/Quiz3LayerModal";
+import { createClient } from "@/utils/supabase/client";
 
 export default function PDFViewerClientPage() {
   const { id } = useParams();
   const router = useRouter();
   const [isReady, setIsReady] = useState(false);
   const [isQuizOpen, setIsQuizOpen] = useState(false);
+  const [noteContent, setNoteContent] = useState("");
+  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const supabase = createClient();
 
   const chapter = LD_SERIES.find((c) => c.id === id);
+
+  // Load existing note for this chapter
+  useEffect(() => {
+    if (!chapter) return;
+    const loadNote = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const { data } = await supabase
+        .from("user_notes")
+        .select("content")
+        .eq("user_id", user.id)
+        .eq("entity_type", "book_chapter")
+        .eq("entity_id", chapter.id)
+        .maybeSingle();
+      if (data?.content) setNoteContent(data.content);
+    };
+    loadNote();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chapter?.id]);
+
+  // Auto-save note with debounce
+  const handleNoteChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setNoteContent(value);
+    setSaveStatus("saving");
+
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(async () => {
+      if (!chapter) return;
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+
+      await supabase.from("user_notes").upsert(
+        {
+          user_id: user.id,
+          entity_type: "book_chapter",
+          entity_id: chapter.id,
+          entity_title: chapter.title,
+          content: value,
+          is_private: true,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "user_id,entity_type,entity_id" }
+      );
+      setSaveStatus("saved");
+      setTimeout(() => setSaveStatus("idle"), 2500);
+    }, 1500);
+  }, [chapter, supabase]);
 
   useEffect(() => {
     // Soft protection: Disable right click
@@ -36,6 +89,7 @@ export default function PDFViewerClientPage() {
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);
       document.removeEventListener("keydown", handleKeyDown);
+      if (debounceRef.current) clearTimeout(debounceRef.current);
     };
   }, []);
 
@@ -84,13 +138,29 @@ export default function PDFViewerClientPage() {
       <div className="flex flex-grow overflow-hidden">
         {/* Left Sidebar: Notes */}
         <aside className="w-80 bg-[#1e1e1e] border-r border-white/10 flex flex-col hidden xl:flex">
-          <div className="p-6 border-b border-white/5">
+          <div className="p-6 border-b border-white/5 flex items-center justify-between">
             <h2 className="text-[11px] font-bold uppercase tracking-widest opacity-40">Ghi chép của bạn</h2>
+            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider transition-all duration-300">
+              {saveStatus === "saving" && (
+                <>
+                  <Loader2 size={11} className="animate-spin text-white/30" />
+                  <span className="text-white/30">Đang lưu</span>
+                </>
+              )}
+              {saveStatus === "saved" && (
+                <>
+                  <CheckCircle2 size={11} className="text-emerald-400" />
+                  <span className="text-emerald-400">Đã lưu</span>
+                </>
+              )}
+            </div>
           </div>
           <div className="flex-grow p-4">
             <textarea 
               className="w-full h-full bg-transparent border-none focus:ring-0 text-sm leading-relaxed placeholder:opacity-20 resize-none text-white/80"
               placeholder="Nhập ghi chép của bạn tại đây..."
+              value={noteContent}
+              onChange={handleNoteChange}
             />
           </div>
         </aside>
@@ -99,7 +169,7 @@ export default function PDFViewerClientPage() {
         <main className="flex-grow relative bg-[#333]">
           {isReady && (
             <iframe
-              src={`${chapter.pdfPath.replace(/#/g, "%23")}#toolbar=0&navpanes=0&scrollbar=0`}
+              src={`${chapter.pdfPath}#toolbar=0&navpanes=0&scrollbar=0`}
               className="w-full h-full border-none"
               title={chapter.title}
               onContextMenu={(e) => e.preventDefault()}

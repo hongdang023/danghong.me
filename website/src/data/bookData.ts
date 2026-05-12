@@ -59,7 +59,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 1,
     title: "Các lý thuyết học tập",
     subtitle: "Nghệ thuật thấu hiểu cơ chế tiếp nhận tri thức",
-    pdfPath: "/books/LD#1. Các lý thuyết học tập.pdf",
+    pdfPath: "/books/ld-1-cac-ly-thuyet-hoc-tap.pdf",
     outcomes: {
       audience: "Người thiết kế học tập (Learning Designer)",
       behavior: "Trình bày và phân biệt được 3 nhóm lý thuyết chính",
@@ -114,7 +114,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 2,
     title: "Xác định nhu cầu đào tạo",
     subtitle: "Ngừng đoán, bắt đầu hiểu nhu cầu thực tế",
-    pdfPath: "/books/LD#2. Xác định nhu cầu đào tạo.pdf",
+    pdfPath: "/books/ld-2-xac-dinh-nhu-cau-dao-tao.pdf",
     outcomes: {
       audience: "Học viên",
       behavior: "Thực hiện được quy trình TNA (Training Needs Analysis)",
@@ -141,7 +141,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 3,
     title: "Xây dựng mục tiêu học tập",
     subtitle: "Kim chỉ nam cho mọi hoạt động giáo dục",
-    pdfPath: "/books/LD#3. Xây dựng mục tiêu học tập.pdf",
+    pdfPath: "/books/ld-3-xay-dung-muc-tieu-hoc-tap.pdf",
     outcomes: {
       audience: "Học viên",
       behavior: "Viết được mục tiêu học tập chuẩn SMART và ABCD",
@@ -168,7 +168,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 4,
     title: "Xây dựng chương trình đào tạo",
     subtitle: "Kiến trúc hóa lộ trình phát triển",
-    pdfPath: "/books/LD#4. Xây dựng chương trình đào tạo.pdf",
+    pdfPath: "/books/ld-4-xay-dung-chuong-trinh-dao-tao.pdf",
     outcomes: { audience: "LD", behavior: "Thiết kế khung", condition: "Logic", degree: "Toàn diện" },
     sections: [
       { id: "4.1", title: "Cấu trúc Module", description: "Chia nhỏ kiến thức thành các đơn vị học tập." },
@@ -183,7 +183,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 5,
     title: "Các phương pháp đào tạo",
     subtitle: "Đa dạng hóa trải nghiệm học tập",
-    pdfPath: "/books/LD#5. Các phương pháp đào tạo.pdf",
+    pdfPath: "/books/ld-5-cac-phuong-phap-dao-tao.pdf",
     outcomes: { audience: "Trainer", behavior: "Lựa chọn phương pháp", condition: "Phù hợp", degree: "Hiệu quả" },
     sections: [
       { id: "5.1", title: "Học qua trải nghiệm", description: "Role-play, Case study và Thảo luận nhóm." },
@@ -198,7 +198,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 6,
     title: "Các phương tiện đào tạo",
     subtitle: "Tận dụng đòn bẩy công nghệ và học liệu",
-    pdfPath: "/books/LD#6. Các phương tiện đào tạo.pdf",
+    pdfPath: "/books/ld-6-cac-phuong-tien-dao-tao.pdf",
     outcomes: { audience: "LD", behavior: "Sử dụng công cụ", condition: "Hợp lý", degree: "Tối ưu" },
     sections: [
       { id: "6.1", title: "Học liệu số (E-learning)", description: "Video, Podcast và Interactive Slides." },
@@ -213,7 +213,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 7,
     title: "Tổ chức đào tạo",
     subtitle: "Vận hành chuyên nghiệp, không sai sót",
-    pdfPath: "/books/LD#7. Tổ chức đào tạo.pdf",
+    pdfPath: "/books/ld-7-to-chuc-dao-tao.pdf",
     outcomes: { audience: "Coordinator", behavior: "Vận hành lớp", condition: "Quy trình", degree: "Trơn tru" },
     sections: [
       { id: "7.1", title: "Chuẩn bị trước lớp", description: "Logistics, danh sách học viên và thiết bị." },
@@ -228,7 +228,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 8,
     title: "Đánh giá đào tạo",
     subtitle: "Đo lường giá trị thực chứng",
-    pdfPath: "/books/LD#8. Đánh giá đào tạo.pdf",
+    pdfPath: "/books/ld-8-danh-gia-dao-tao.pdf",
     outcomes: { audience: "Evaluator", behavior: "Đánh giá hiệu quả", condition: "Kirkpatrick", degree: "Chính xác" },
     sections: [
       { id: "8.1", title: "4 Cấp độ Kirkpatrick", description: "Phản ứng, Học tập, Hành vi và Kết quả." },
@@ -243,7 +243,7 @@ export const LD_SERIES: LDChapter[] = [
     chapterNumber: 9,
     title: "Đảm bảo chất lượng đào tạo",
     subtitle: "Duy trì tiêu chuẩn và sự xuất sắc",
-    pdfPath: "/books/LD#9. Đảm bảo chất lượng đào tạo.pdf",
+    pdfPath: "/books/ld-9-dam-bao-chat-luong-dao-tao.pdf",
     outcomes: { audience: "Manager", behavior: "Kiểm soát chất lượng", condition: "QA/QC", degree: "Bền vững" },
     sections: [
       { id: "9.1", title: "Tiêu chuẩn QA/QC", description: "Các quy chuẩn quốc tế về giáo dục." },
