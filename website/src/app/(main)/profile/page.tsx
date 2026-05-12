@@ -3,7 +3,6 @@ import { createClient } from "@/utils/supabase/server";
 import { User, Edit3, LogOut, MapPin, Phone, ExternalLink, Briefcase, BookOpen, Zap, Heart } from "lucide-react";
 import { logout } from "@/app/(auth)/actions";
 import { getUserIdentity, getGreeting } from "@/utils/identity";
-export const runtime = 'edge';
 
 export const metadata = {
   title: "My Profile | Hồng Đặng",

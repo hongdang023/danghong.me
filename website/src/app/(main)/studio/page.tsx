@@ -5,7 +5,6 @@ import {
   ProgressView, 
   HistoryView 
 } from "@/components/studio";
-export const runtime = 'edge';
 import { Sparkles } from "lucide-react";
 import { createClient } from "@/utils/supabase/server";
 

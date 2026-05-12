@@ -3,7 +3,6 @@ import { createClient } from '@/utils/supabase/server';
 import { Users, Package, GraduationCap, Activity, Heart } from 'lucide-react';
 import Link from 'next/link';
 
-export const runtime = 'edge';
 export const metadata = { title: 'Admin Dashboard — Hồng Đặng' };
 
 type Trace = {

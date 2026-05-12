@@ -1,4 +1,3 @@
-export const runtime = 'edge';
 import { requireAdmin } from '@/utils/admin';
 import AdminBooksClient from './AdminBooksClient';
 
