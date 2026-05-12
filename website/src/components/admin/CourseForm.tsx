@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { createClient } from '@/utils/supabase/client';
-import { X, Save, Loader2, Info } from 'lucide-react';
+import { X, Save, Loader2, Info, Star } from 'lucide-react';
 
 type CourseScores = {
   depth: number;
