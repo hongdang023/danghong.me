@@ -1,0 +1,81 @@
+[
+  {
+    "category": "NỀN TẢNG QUẢN TRỊ & HỆ THỐNG (SYSTEMS)",
+    "items": [
+      {
+        "name": "LightMS - Hệ thống quản trị học tập (LMS)",
+        "description": "Hệ thống quản trị học tập tinh gọn, tối ưu hóa trải nghiệm học viên và vận hành.",
+        "link": "https://light-ms.vercel.app/",
+        "access": "Mã cho khách test: The1ight-Admin-2026",
+        "outcome": "Tự động hóa 80% tác vụ vận hành lớp học truyền thống.",
+        "tech_stack": ["Antigravity", "Supabase", "Github", "Vercel"]
+      },
+      {
+        "name": "Course Maker - Nhà máy đóng gói ý tưởng",
+        "description": "Công cụ giúp chuyển đổi ý tưởng thô thành cấu trúc khóa học hoàn chỉnh trong thời gian ngắn.",
+        "link": "https://courses-maker.vercel.app/",
+        "outcome": "Rút ngắn thời gian đóng gói từ hàng tuần xuống hàng giờ.",
+        "tech_stack": ["Antigravity", "Github", "Vercel"]
+      }
+    ]
+  },
+  {
+    "category": "SẢN PHẨM TRẢI NGHIỆM & SỰ KIỆN (EXPERIENCE)",
+    "items": [
+      {
+        "name": "Hồng’s Sweet 22 - Website mời sinh nhật",
+        "description": "Website cá nhân hóa lời mời cho 10 nhóm bạn khác nhau với lịch trình riêng biệt.",
+        "link": "https://hong-bday.vercel.app/",
+        "access": "Mã cho khách: TEST1",
+        "outcome": "Tạo trải nghiệm cá nhân hóa sâu sắc và tự động hóa việc điều phối sự kiện.",
+        "tech_stack": ["Antigravity", "Github", "Vercel"]
+      }
+    ]
+  },
+  {
+    "category": "CÔNG CỤ TRÍ TUỆ NHÂN TẠO (GEMINI GEMS)",
+    "items": [
+      {
+        "name": "Course Maker (Gemini Gems Edition)",
+        "description": "Phiên bản trợ lý AI chuyên biệt cho việc đóng gói khóa học trên nền tảng Gemini.",
+        "link": "https://gemini.google.com/gem/1W-81uv2iC7eZb7G4HOfNX2MBS-Ei2DjS?usp=sharing",
+        "tech_stack": ["Gemini Gems"]
+      },
+      {
+        "name": "Concept Chopper",
+        "description": "Dành cho người HỌC THẬT muốn HIỂU SÂU. Chuyên \"băm nhỏ\" các khái niệm khó hiểu thành các ví dụ đời thường.",
+        "link": "https://gemini.google.com/gem/1xaEMN8zNA8A6oCj62qEVHjNh5uLKwt2B?usp=sharing",
+        "tech_stack": ["Gemini Gems"]
+      },
+      {
+        "name": "Insights Digger",
+        "description": "Chuyên gia thấu hiểu khách hàng dựa trên khung lý thuyết Job-to-be-done và Insights.",
+        "link": "https://gemini.google.com/gem/1Uzo2fJNEGdVMlwAlP8ZRa2_Gpe432-nL?usp=sharing",
+        "tech_stack": ["Gemini Gems"]
+      }
+    ]
+  },
+  {
+    "category": "TÀI NGUYÊN TRI THỨC (E-BOOKS)",
+    "items": [
+      {
+        "name": "Learning Design Series (Bộ 9 tập)",
+        "description": "Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập thực chứng.",
+        "link": null,
+        "internal_path": "/Learning Design Series",
+        "outcome": "Hệ thống hóa toàn bộ quy trình thiết kế đào tạo theo chuẩn quốc tế."
+      }
+    ]
+  },
+  {
+    "category": "BÀI VIẾT CHUYÊN SÂU (SUBSTACK)",
+    "items": [
+      {
+        "name": "Haru Reboot - Personal Newsletter",
+        "description": "Nơi chia sẻ về tư duy kiến trúc, công nghệ và hành trình \"Reboot\" năng lực trong kỷ nguyên AI.",
+        "link": "https://harureboot.substack.com/?utm_campaign=profile_chips",
+        "outcome": "Xây dựng cộng đồng những người làm giáo dục và vận hành có tư duy đổi mới."
+      }
+    ]
+  }
+]

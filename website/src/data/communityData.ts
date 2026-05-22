@@ -10,7 +10,7 @@ export interface Community {
   name: string;
   stats: string; // e.g., "Tháng 8/2025 • 45 thành viên"
   description: string;
-  coverImage: string;
+  cover_image: string;
   images: string[]; // for the gallery modal
 }
 
@@ -59,7 +59,7 @@ export const communitiesData: Community[] = [
     name: "The1ight Club",
     stats: "Cộng đồng Alumni",
     description: "Cộng đồng học viên lớp The1ight, nơi chia sẻ kiến thức và hỗ trợ lẫn nhau trong hành trình phát triển bản thân thông qua các buổi offline và học nhóm.",
-    coverImage: "/images/communities/the1ight-00.jpg",
+    cover_image: "/images/communities/the1ight-00.jpg",
     images: [
       "/images/communities/the1ight-00.jpg",
       "/images/communities/the1ight-01.jpg",
@@ -73,7 +73,7 @@ export const communitiesData: Community[] = [
     name: "Conan Community",
     stats: "Cộng đồng Công nghệ",
     description: "Nơi thảo luận về các giải pháp công nghệ, concept thiết kế và ứng dụng thực tế vào sản phẩm như Concept Chopper hay Course Maker.",
-    coverImage: "/images/communities/conan-00.jpg",
+    cover_image: "/images/communities/conan-00.jpg",
     images: [
       "/images/communities/conan-00.jpg",
       "/images/communities/conan-01.jpg",
@@ -86,7 +86,7 @@ export const communitiesData: Community[] = [
     name: "ACA Improv",
     stats: "Lớp học Kịch ứng tác",
     description: "Khám phá bản thân và rèn luyện kỹ năng giao tiếp, phản ứng nhanh thông qua nghệ thuật kịch ứng tác đầy ngẫu hứng.",
-    coverImage: "/images/communities/ACA-improv-00.jpg",
+    cover_image: "/images/communities/ACA-improv-00.jpg",
     images: [
       "/images/communities/ACA-improv-00.jpg",
       "/images/communities/ACA-improv-01.jpg",
@@ -97,7 +97,7 @@ export const communitiesData: Community[] = [
     name: "Kinergie Dance",
     stats: "Lớp múa đương đại",
     description: "Kết nối tâm hồn và cơ thể qua những chuyển động múa đương đại tại Kinergie Studio.",
-    coverImage: "/images/communities/kinergie-dance-01.jpg",
+    cover_image: "/images/communities/kinergie-dance-01.jpg",
     images: [
       "/images/communities/kinergie-dance-01.jpg",
       "/images/communities/kinergie-dance-02.jpg",
@@ -108,7 +108,7 @@ export const communitiesData: Community[] = [
     name: "Film Community",
     stats: "Cộng đồng yêu phim",
     description: "Nơi những tâm hồn đồng điệu cùng chia sẻ niềm đam mê với điện ảnh và các bộ phim kinh điển.",
-    coverImage: "/images/communities/film-01.jpg",
+    cover_image: "/images/communities/film-01.jpg",
     images: [
       "/images/communities/film-01.jpg",
     ],

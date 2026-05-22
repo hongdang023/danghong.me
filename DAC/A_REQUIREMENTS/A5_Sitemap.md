@@ -24,19 +24,6 @@
 │   ├── /moments (Ảnh đời sống, bè bạn & sự kiện)
 │   └── /network (Kết nối những Learning Architects)
 │
-├── 🏰 4. MY STUDIO (Vùng Thành Tựu Cá Nhân - Chỉ hiện khi đăng nhập)
-│   ├── /my-favourites (Sản phẩm yêu thích từ Products Hub)
-│   ├── /my-list (Khóa học yêu thích từ Hồng's List)
-│   ├── /my-progress (Tiến trình học tập & Ghi chép)
-│   └── /my-history (Dấu tích hoạt động)
-│
-├── ⚡ AUTH
-│   ├── /join (Đăng ký thành viên)
-│   └── /login (Truy cập Studio)
-│
-├── 🔔 5. UPDATES (Nhật Ký Cập Nhật)
-│   └── /updates (Cập nhật hệ thống, khóa học mới - Chỉ hiện khi đăng nhập)
-│
 └── ⚙️ BACKOFFICE
     ├── /architect-cms (Quản lý Products & Pulse)
     ├── /curation-lab (Vận hành bộ lọc 4D)
@@ -47,10 +34,10 @@
 
 ## 2. QUY TẮC ĐIỀU HƯỚNG (RULES)
 
-1.  **Top-Level Nav**: 3 mục chính (Products Hub, Hồng's List, Community) luôn hiển thị. **My Studio** và **Updates** chỉ xuất hiện sau khi người dùng đăng nhập.
+1.  **Top-Level Nav**: 3 mục chính (Products Hub, Hồng's List, Community) luôn hiển thị.
 2.  **Product Categorization**: Trong Products Hub, sử dụng bộ lọc (Filter) để phân loại nhanh giữa "Live Demo", "E-book" và "Template".
 3.  **Human touch**: Hình ảnh từ mục Community có thể được dùng làm nền hoặc trang trí tinh tế cho các trang khác để tạo sự gần gũi.
-4.  **One-Click Studio**: Nút vào My Studio nổi bật nhất sau khi đăng nhập.
+4.  **Connect CTA**: Nút "Chat với Hồng" (Liên kết tới Facebook) đặt ở vị trí nổi bật (như Header/Footer) để thay thế cho nút Đăng nhập trước đây.
 
 ---
 

@@ -8,9 +8,11 @@ export default function Home() {
       {/* Hero Section - The Soul */}
       <section className="editorial-spacing min-h-[60vh] flex flex-col justify-center items-center text-center">
         <div className="hero-container animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <h1 className="heading-hero">
-            Evidence-Based Learning. <br />
-            <span className="text-accent">Architected.</span>
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+            <span className="text-accent block uppercase">Evidence-Based Learning. Architected.</span>
+            <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+              Kiến Tạo Hệ Thống Học Tập Thực Chứng
+            </span>
           </h1>
           
           <p className="text-body mx-auto mb-12 text-center opacity-40 font-medium">

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Course } from "@/data/courseData";
 import { Heart, MessageSquare, ExternalLink, BookOpen, Send } from "lucide-react";
 
+
 interface Comment {
   id: string;
   text: string;
@@ -19,25 +20,31 @@ export function CourseCard({ course }: { course: Course }) {
 
   // Load from localStorage on mount
   useEffect(() => {
+    const savedComments = localStorage.getItem(`course_comments_${course.id}`);
+    if (savedComments) setComments(JSON.parse(savedComments));
+
     const savedVotes = localStorage.getItem(`course_votes_${course.id}`);
     const savedHasVoted = localStorage.getItem(`course_hasVoted_${course.id}`);
-    const savedComments = localStorage.getItem(`course_comments_${course.id}`);
-
     if (savedVotes) setVotes(parseInt(savedVotes, 10));
     if (savedHasVoted) setHasVoted(savedHasVoted === "true");
-    if (savedComments) setComments(JSON.parse(savedComments));
   }, [course.id]);
 
   const handleVote = () => {
-    const newHasVoted = !hasVoted;
-    const newVotes = hasVoted ? Math.max(0, votes - 1) : votes + 1;
-    
-    setHasVoted(newHasVoted);
-    setVotes(newVotes);
-    
-    localStorage.setItem(`course_hasVoted_${course.id}`, String(newHasVoted));
-    localStorage.setItem(`course_votes_${course.id}`, String(newVotes));
+    if (hasVoted) {
+      const nextVotes = Math.max(0, votes - 1);
+      setHasVoted(false);
+      setVotes(nextVotes);
+      localStorage.setItem(`course_hasVoted_${course.id}`, "false");
+      localStorage.setItem(`course_votes_${course.id}`, String(nextVotes));
+    } else {
+      const nextVotes = votes + 1;
+      setHasVoted(true);
+      setVotes(nextVotes);
+      localStorage.setItem(`course_hasVoted_${course.id}`, "true");
+      localStorage.setItem(`course_votes_${course.id}`, String(nextVotes));
+    }
   };
+
 
   const handleAddComment = (e: React.FormEvent) => {
     e.preventDefault();

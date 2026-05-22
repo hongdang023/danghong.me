@@ -3,15 +3,13 @@
 import { useEffect, useState } from "react";
 import { ChapterCard } from "@/components/ChapterCard";
 import { LD_SERIES } from "@/data/bookData";
-import { Trophy, BookOpen, Lock } from "lucide-react";
-
+import { Trophy, BookOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function BooksClientPage() {
   const router = useRouter();
   const [unlockedChapters, setUnlockedChapters] = useState<string[]>(["ld-1"]);
   const [completedChapters, setCompletedChapters] = useState<string[]>([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Persistence
   useEffect(() => {
@@ -33,8 +31,11 @@ export default function BooksClientPage() {
     <main className="editorial-spacing pt-20 pb-24">
       {/* Hero Section */}
       <section className="hero-container text-center mb-16">
-        <h1 className="heading-hero">
-          Learning Design. <span className="text-accent">The Series.</span>
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          <span className="text-accent block uppercase">Learning Design. The Series.</span>
+          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+            Cẩm Nang Thiết Kế Trải Nghiệm Học Tập
+          </span>
         </h1>
         <p className="text-body opacity-40 font-medium mx-auto max-w-2xl">
           Lộ trình giúp bạn xây dựng chương trình đào tạo bài bản từ con số 0, nơi mọi lý thuyết đều được xác thực bằng hành động để bạn thực sự làm chủ tri thức.
@@ -69,20 +70,9 @@ export default function BooksClientPage() {
           </div>
 
           <div className="flex items-center gap-4">
-            {!isLoggedIn ? (
-              <button 
-                onClick={() => setIsLoggedIn(true)}
-                className="px-6 py-3 bg-foreground text-background rounded-full text-xs font-black tracking-tight flex items-center space-x-2 hover:scale-105 transition-transform"
-              >
-                <Lock size={14} />
-                <span>Đăng nhập để lưu tiến độ</span>
-              </button>
-            ) : (
-              <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-[10px] font-bold uppercase tracking-widest border border-green-500/20">
-                <CheckCircle2 size={12} />
-                <span>Đã đăng nhập</span>
-              </div>
-            )}
+            <div className="flex items-center space-x-2 px-4 py-2.5 bg-accent/5 text-accent rounded-full text-[10px] font-bold uppercase tracking-wider border border-accent/15">
+              <span>Tiến độ của bạn được lưu tự động trên trình duyệt này</span>
+            </div>
           </div>
         </div>
       </section>
@@ -97,13 +87,8 @@ export default function BooksClientPage() {
 
         <div className="grid grid-cols-1 gap-8">
           {LD_SERIES.map((chapter) => {
-            const isUnlocked = unlockedChapters.includes(chapter.id);
             const isCompleted = completedChapters.includes(chapter.id);
             
-            // UX Constraint: Limit free access if not logged in
-            const requiresLogin = !isLoggedIn && chapter.chapterNumber > 3;
-            const finalLocked = !isUnlocked || requiresLogin;
-
             return (
               <ChapterCard
                 key={chapter.id}
@@ -111,7 +96,7 @@ export default function BooksClientPage() {
                 title={chapter.title}
                 subtitle={chapter.subtitle}
                 sections={chapter.sections}
-                isLocked={finalLocked}
+                isLocked={false} // Visually unlocked to show "Học ngay" button
                 isCompleted={isCompleted}
                 onOpen={() => openPdf(chapter.id)}
               />
@@ -123,15 +108,3 @@ export default function BooksClientPage() {
   );
 }
 
-function CheckCircle2({ size }: { size: number }) {
-  return (
-    <svg 
-      width={size} height={size} 
-      viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-    >
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
-    </svg>
-  );
-}

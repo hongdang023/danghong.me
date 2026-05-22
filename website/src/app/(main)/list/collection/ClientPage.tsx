@@ -34,8 +34,11 @@ export default function CollectionClientPage({ initialCourses }: { initialCourse
 
       {/* Hero Section */}
       <section className="mb-12">
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-          Hồng's <span className="text-accent">Collection.</span>
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          <span className="text-accent block uppercase">Hồng's Collection.</span>
+          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+            Tuyển Tập Khóa Học Chọn Lọc
+          </span>
         </h1>
         <p className="text-lg font-medium opacity-60 max-w-2xl">
           Tuyển tập các khóa học được chọn lọc kỹ càng nhất. Tìm kiếm hoặc dùng bộ lọc bên dưới để khám phá.

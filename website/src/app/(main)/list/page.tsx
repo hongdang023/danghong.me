@@ -8,8 +8,11 @@ export default function HongsListPage() {
     <main className="editorial-spacing pt-20 pb-24">
       {/* Hero Section */}
       <section className="hero-container text-center mb-24">
-        <h1 className="heading-hero">
-          Hồng's <span className="text-accent">List.</span>
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          <span className="text-accent block uppercase">Hồng's List.</span>
+          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+            Tuyển Tập Khóa Học Khắt Khe
+          </span>
         </h1>
         <p className="text-body opacity-40 font-medium mx-auto max-w-2xl mb-8">
           Một hệ thống tuyển tập các khóa học được chọn lọc khắt khe nhất dành cho người đi làm.

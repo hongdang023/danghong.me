@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Product 101 - Không biết gì cũng làm sản phẩm",
+    "provider": "The1ight (Lucas Quang Nguyễn)",
+    "keywords": ["Vibe Coding", "Product Management", "Product Mindset"],
+    "review_link": "https://harureboot.substack.com/p/21-bai-hoc-tuoi-21-1-dan-non-tech",
+    "course_link": "https://the1ight.com/product/buildyour1stproduct/"
+  },
+  {
+    "name": "Customer Decode",
+    "provider": "Conan School",
+    "keywords": ["Job-to-be-done", "Insights", "Purchase Journey", "Hiểu nhu cầu khách hàng"],
+    "review_link": "https://harureboot.substack.com/p/21-bai-hoc-tuoi-21-2-lan-au-tap-toe",
+    "course_link": "https://www.conan.school/live-courses/customer-decode"
+  },
+  {
+    "name": "Ký hoạ vỡ lòng",
+    "provider": "Lớp học Hồng Xiêm",
+    "keywords": ["Tư duy hội hoạ", "Vẽ", "Nghệ thuật"],
+    "review_link": "https://harureboot.substack.com/p/21-bai-hoc-tuoi-21-4-lan-au-em-con",
+    "course_link": "https://www.hongxiem.com/"
+  },
+  {
+    "name": "Múa đương đại cơ bản",
+    "provider": "Kinergie Studio",
+    "keywords": ["Múa đương đại", "Chuyển động", "Ngôn ngữ hình thể", "Nghệ thuật"],
+    "review_link": "https://harureboot.substack.com/p/21-bai-hoc-tuoi-21-5-lan-au-i-hoc",
+    "course_link": "https://www.facebook.com/KinergieStudio"
+  },
+  {
+    "name": "Improv 101",
+    "provider": "ACA - Actors",
+    "keywords": ["Chuyển động", "Ứng tác", "Thuyết trình", "Phản ứng với các tình huống bất ngờ", "Nghệ thuật"],
+    "review_link": "https://harureboot.substack.com/p/21-bai-hoc-tuoi-21-6-lan-au-hoc-improv",
+    "course_link": "https://www.aca-hanoi.com/ung-tac-dien-vien"
+  },
+  {
+    "name": "Makeup cá nhân 1-1",
+    "provider": "Monarosa (Cầu Giấy)",
+    "keywords": ["Làm đẹp"],
+    "review_link": null,
+    "course_link": null
+  },
+  {
+    "name": "Học Cách Học",
+    "provider": "Mở - Mơ và Hỏi",
+    "keywords": ["Learning Science"],
+    "review_link": null,
+    "course_link": null
+  },
+  {
+    "name": "Writing on The Net",
+    "provider": "Mở - Mơ và Hỏi",
+    "keywords": ["Tư duy viết", "Second Brain", "Vượt qua nỗi sợ"],
+    "review_link": null,
+    "course_link": "https://www.youtube.com/watch?v=mO--KBiOY4w&list=PLYz_felp3Scz99z1FjmTzQlGwzssrb07Q"
+  },
+  {
+    "name": "Case Interview Fundamental",
+    "provider": "Crafting Cases",
+    "keywords": ["Case Interview", "Problem Solving"],
+    "review_link": null,
+    "course_link": "https://www.craftingcases.com/"
+  }
+]

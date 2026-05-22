@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import { LD_SERIES } from "@/data/bookData";
 import { ChevronLeft, CheckCircle2, Loader2, ShieldAlert, Zap } from "lucide-react";
 import Quiz3LayerModal from "@/components/Quiz3LayerModal";
-import { createClient } from "@/utils/supabase/client";
 
 export default function PDFViewerClientPage() {
   const { id } = useParams();
@@ -15,27 +14,16 @@ export default function PDFViewerClientPage() {
   const [noteContent, setNoteContent] = useState("");
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const supabase = createClient();
 
   const chapter = LD_SERIES.find((c) => c.id === id);
 
   // Load existing note for this chapter
   useEffect(() => {
     if (!chapter) return;
-    const loadNote = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return;
-      const { data } = await supabase
-        .from("user_notes")
-        .select("content")
-        .eq("user_id", user.id)
-        .eq("entity_type", "book_chapter")
-        .eq("entity_id", chapter.id)
-        .maybeSingle();
-      if (data?.content) setNoteContent(data.content);
-    };
-    loadNote();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    const localNote = localStorage.getItem(`ld_note_${chapter.id}`);
+    if (localNote !== null) {
+      setNoteContent(localNote);
+    }
   }, [chapter?.id]);
 
   // Auto-save note with debounce
@@ -45,27 +33,14 @@ export default function PDFViewerClientPage() {
     setSaveStatus("saving");
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(async () => {
+    debounceRef.current = setTimeout(() => {
       if (!chapter) return;
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return;
-
-      await supabase.from("user_notes").upsert(
-        {
-          user_id: user.id,
-          entity_type: "book_chapter",
-          entity_id: chapter.id,
-          entity_title: chapter.title,
-          content: value,
-          is_private: true,
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: "user_id,entity_type,entity_id" }
-      );
+      localStorage.setItem(`ld_note_${chapter.id}`, value);
       setSaveStatus("saved");
       setTimeout(() => setSaveStatus("idle"), 2500);
     }, 1500);
-  }, [chapter, supabase]);
+  }, [chapter]);
+
 
   useEffect(() => {
     // Soft protection: Disable right click

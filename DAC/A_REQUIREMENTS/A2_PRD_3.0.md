@@ -25,8 +25,8 @@ Learning Architect (Hồng Đặng) đang gặp khó khăn trong việc tạo d�
 
 1.  **Tự động hóa chứng minh năng lực:** Showcase trực tiếp kỹ thuật Vibe Coding qua các demo "chạy được luôn" thay vì chỉ dùng lời nói.
 2.  **Thiết lập tiêu chuẩn sư phạm:** Khẳng định uy tín chuyên gia qua hệ thống đánh giá 4D Filter minh bạch.
-3.  **Chuyển đổi Lead (Conversion):** Biến người xem tò mò thành Members trung thành thông qua việc cung cấp các "Vũ khí" (Resources) thực chiến.
-4.  **Tối ưu hóa vận hành cá nhân:** Website đóng vai trò là một "Learning OS" giúp Hồng quản lý và trình diễn mọi sản phẩm trí tuệ của mình.
+3.  **Tối đa hóa trải nghiệm (Trial-all):** Mở khóa toàn bộ tài nguyên, E-books, và Templates để người xem có thể "chạm" và trải nghiệm ngay lập tức.
+4.  **Kết nối trực tiếp:** Chuyển đổi sự tò mò thành những cuộc trò chuyện chất lượng thông qua CTA "Chat ngay với Hồng" (Facebook).
 
 ---
 
@@ -35,11 +35,11 @@ Learning Architect (Hồng Đặng) đang gặp khó khăn trong việc tạo d�
 ### 4.1. Hiệu suất & Trải nghiệm (Performance)
 - **Tốc độ:** Lighthouse score > 90 cho mọi chỉ số (Performance, Accessibility, Best Practices, SEO).
 - **Responsive:** Trải nghiệm "Mobile-first" nhưng "Desktop-rich" (hiển thị đầy đủ nhất trên máy tính).
-- **Trial-first:** Cho phép dùng thử Demo links không cần đăng nhập để tối đa hóa "Aha! Moment".
+- **Trial-all:** Mở khóa toàn bộ tài nguyên không cần đăng nhập để tối đa hóa "Aha! Moment".
 
 ### 4.2. Bảo mật & Dữ liệu (Security)
-- **Xác thực:** Sử dụng Social Auth (Google/Github) qua Supabase để đảm bảo bảo mật và tiện lợi.
-- **Phân quyền:** Bảo vệ các tài nguyên Premium, chỉ cho phép Member đã đăng nhập mới được truy cập/tải về.
+- **Kiến trúc tĩnh (Static Site):** Hoạt động hoàn toàn tĩnh, không yêu cầu xác thực hay đăng nhập (No Auth).
+- **Kết nối cá nhân:** Không lưu trữ dữ liệu người dùng tại local, mọi tương tác tư vấn/hỗ trợ điều hướng thẳng qua Facebook cá nhân (https://www.facebook.com/danghong.harunoyuki).
 
 ---
 

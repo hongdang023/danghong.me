@@ -1,0 +1,35 @@
+{
+  "profile": {
+    "name": "Hong Dang",
+    "full_name": "Hồng Đặng",
+    "title": "The Learning Architect",
+    "vision": "Evidence-Based Learning. Architected.",
+    "location": "Vietnam",
+    "email": "hello@learningarchitect.me",
+    "bio": "Hồng không chỉ là một người làm nội dung giáo dục; bạn là một Kiến trúc sư Học tập (Learning Architect). Trong thế giới mà AI đang bão hòa, vị thế này khẳng định khả năng thiết kế và trực tiếp xây dựng (Build) các hệ thống giáo dục hiện đại bằng kỹ thuật Vibe Coding.",
+    "philosophy": {
+      "vision": "Kiến Tạo Hệ Thống Học Tập Thực Chứng",
+      "principles": [
+        "Outcome-Driven: Mọi sản phẩm phải giải quyết một bài toán cụ thể và mang lại dữ liệu thực chứng.",
+        "Inspiration-Led: Việc sử dụng công cụ phải đem lại cảm giác khám phá và sự phấn khích khi học được điều mới.",
+        "Evidence-Based: Thành công của người học là thước đo duy nhất cho sự thành công của kiến trúc sư."
+      ]
+    },
+    "expertise": [
+      "AI/Vibe Coding",
+      "Learning Science",
+      "Product Mindset",
+      "Interactive Evidence",
+      "Experience Design"
+    ],
+    "social": {
+      "substack": "https://harureboot.substack.com",
+      "facebook": "https://facebook.com/hongdang.architect"
+    },
+    "api_endpoints": {
+      "profile": "/api/profile.json",
+      "courses": "/api/courses.json",
+      "showcase": "/api/showcase.json"
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React from "react";
-import { createClient } from "@/utils/supabase/server";
-
+import { UPDATES } from "@/data/updateData";
 import { Bell, Zap, BookOpen, Bug } from "lucide-react";
 
 export const metadata = {
@@ -8,12 +7,10 @@ export const metadata = {
   description: "Cập nhật mới nhất về hệ thống, khóa học và cộng đồng.",
 };
 
-export const revalidate = 60;
-
 const TypeIcon = ({ type }: { type: string }) => {
   switch (type) {
     case "feature":
-      return <Zap className="text-red-500" size={18} />;
+      return <Zap className="text-accent" size={18} />;
     case "course_update":
       return <BookOpen className="text-blue-500" size={18} />;
     case "bugfix":
@@ -23,36 +20,7 @@ const TypeIcon = ({ type }: { type: string }) => {
   }
 };
 
-export default async function UpdatesPage() {
-  const supabase = await createClient();
-  
-  // Check auth - strictly member only
-  const { data: { user } } = await supabase.auth.getUser();
-  
-  if (!user) {
-    return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center px-6">
-        <div className="text-center space-y-6 max-w-md">
-          <div className="w-16 h-16 bg-border-custom/10 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Bell size={32} className="opacity-20" />
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight">Thành viên mới được xem mục này</h1>
-          <p className="text-body opacity-60">
-            Vui lòng đăng nhập để cập nhật những thay đổi mới nhất từ hệ thống và cộng đồng.
-          </p>
-          <a href="/login" className="inline-block bg-foreground text-background px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-all">
-            Đăng nhập ngay
-          </a>
-        </div>
-      </div>
-    );
-  }
-
-  const { data: updates } = await supabase
-    .from('updates')
-    .select('*')
-    .order('created_at', { ascending: false });
-
+export default function UpdatesPage() {
   return (
     <div className="min-h-screen bg-background py-16 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
@@ -64,7 +32,7 @@ export default async function UpdatesPage() {
         </header>
 
         <div className="space-y-12 border-l-thin border-border-custom pl-8 ml-2">
-          {updates?.map((update) => (
+          {UPDATES.map((update) => (
             <div key={update.id} className="relative">
               {/* Timeline Dot */}
               <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-background border-thin border-border-custom flex items-center justify-center shadow-sm">
@@ -98,7 +66,7 @@ export default async function UpdatesPage() {
             </div>
           ))}
 
-          {(!updates || updates.length === 0) && (
+          {(!UPDATES || UPDATES.length === 0) && (
             <div className="py-12 opacity-40 italic">
               Chưa có cập nhật nào được ghi lại.
             </div>
@@ -108,3 +76,4 @@ export default async function UpdatesPage() {
     </div>
   );
 }
+

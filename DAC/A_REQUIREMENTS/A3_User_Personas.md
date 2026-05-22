@@ -21,8 +21,8 @@ Thay vì phân mảnh thành 3 nhóm riêng biệt gây phức tạp cho hệ th
 ### 2. Hành trình tâm lý trên Website
 
 1.  **Giai đoạn Tò mò (Curiosity):** Nhìn thấy các Showcases (Course Maker, LightMS) -> Thấy được "tương lai" mà họ muốn hướng tới.
-2.  **Giai đoạn Thực chứng (Proof):** Làm Micro-Quiz hoặc xem Demo Link -> Tin rằng giải pháp của Hồng thực sự có chiều sâu logic.
-3.  **Giai đoạn Chuyển đổi (Conversion):** Muốn sở hữu tài nguyên (Unlock Resources) -> Đăng ký Member để bắt đầu xây dựng "Personal Lab" riêng (My Studio).
+2.  **Giai đoạn Thực chứng (Proof):** Trải nghiệm ngay các Demo Link hoặc tải E-books mà không rào cản -> Tin rằng giải pháp của Hồng thực sự có chiều sâu logic.
+3.  **Giai đoạn Kết nối (Connection):** Ấn tượng với kết quả thực chứng -> Click "Chat ngay với Hồng" (Facebook) để trao đổi sâu hơn hoặc hợp tác.
 
 ---
 
@@ -36,5 +36,5 @@ Vì chỉ phục vụ một nhóm đối tượng chính, ngôn ngữ trên toà
 *   **Tone of Voice:** Trực diện, không dùng từ ngữ "hyped" về AI. Tập trung vào kết quả (Outcomes) và logic vận hành.
 *   **Visual Strategy:** Tối giản, tinh gọn, sử dụng nhiều hình ảnh thực tế từ sản phẩm (Real-image first) thay vì ảnh minh họa trừu tượng.
 *   **Call to Action (CTA):** 
-    *   *Primary:* "Trải nghiệm Demo" (Dành cho Visitors).
-    *   *Secondary:* "Mở khóa Tài nguyên" (Dành cho Member conversion).
+    *   *Primary:* "Trải nghiệm Demo" / "Tải Ebook" (Sử dụng ngay lập tức).
+    *   *Secondary:* "Chat ngay với Hồng" (Dẫn đến Facebook: https://www.facebook.com/danghong.harunoyuki).

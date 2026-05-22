@@ -30,8 +30,11 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
     <main className="editorial-spacing pt-20 pb-8">
       {/* Header */}
       <section className="hero-container text-center mb-12">
-        <h1 className="heading-hero">
-          Think. Build. <span className="text-accent">Test. Learn.</span>
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+          <span className="text-accent block uppercase">Think. Build. Test. Learn.</span>
+          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+            Hệ Sinh Thái Sản Phẩm Thực Chiến
+          </span>
         </h1>
         <p className="text-body opacity-40 font-medium mx-auto">
           Bộ công cụ giúp bạn băm nhỏ kiến thức chuyên môn và tự động hóa toàn bộ quy trình vận hành, để bạn thảnh thơi tập trung vào những giá trị cốt lõi.

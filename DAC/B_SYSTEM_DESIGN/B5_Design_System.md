@@ -54,7 +54,7 @@ Giao diện là sự giao thoa giữa tính **Thẩm mỹ cao cấp** và **Th�
 - **Hiệu ứng**: Blur nền (Backdrop-filter) trên tone màu Beige.
 - **UI**: Tối giản kiểu YC (Logo + Link text) nhưng trải nghiệm mượt mà và nhiều white space kiểu Apple.
 - **Tính năng**: Sticky ở trên cùng trang, tự động thu nhỏ khi cuộn.
-- **Cấu trúc**: 4 Trụ cột chính (Products Hub, Hồng's List, Community, My Studio).
+- **Cấu trúc**: 3 Trụ cột chính (Products Hub, Hồng's List, Community) và nút "Chat với Hồng".
 
 ### 4. COMPONENTS STANDARDS
 - **Cards**: Border 0.5px, Radius 12px, Soft Shadow.
