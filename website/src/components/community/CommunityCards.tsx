@@ -6,7 +6,6 @@ import { ImageIcon } from "lucide-react";
 
 export interface Community {
   id: string;
-  slug: string;
   name: string;
   stats: string;
   description: string;
