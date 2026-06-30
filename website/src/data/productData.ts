@@ -21,7 +21,7 @@ export interface Product {
 export const PRODUCTS: Product[] = [
   {
     slug: "lightms",
-    category: "build",
+    category: "education",
     title: "LightMS",
     description: "Hệ quản trị học tập (LMS) tinh gọn, giúp giáo viên vận hành lớp học tự động.",
     longDescription: "",
@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "graduation-invite",
-    category: "build",
+    category: "life",
     title: "Thiệp mời tốt nghiệp",
     description: "Trải nghiệm thiệp mời tốt nghiệp cá nhân hóa độc đáo, lưu giữ và truyền tải trọn vẹn cảm xúc.",
     longDescription: "",
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "exam-runner",
-    category: "build",
+    category: "education",
     title: "Exam Runner",
     description: "Hệ thống luyện thi tiếng Anh lớp 9 cá nhân hóa, thiết kế riêng cho học sinh mất gốc tự học hàng ngày.",
     longDescription: "",
@@ -76,13 +76,13 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "sutucon",
-    category: "build",
+    category: "education",
     title: "Sư tử Con - Quiz Challenge",
     description: "Hệ thống quiz AI áp dụng triết lý Gamification và Chunking của Brilliant và Duolingo cho học sinh cấp 2 & 3.",
     longDescription: "",
     jtbd: {
       functional: "Học sinh khó ghi nhớ các khái niệm AI khô khan và nhanh chóng nản lòng với các bài tập lý thuyết truyền thống.",
-      emotional: "Lo lắng học sinh mất đi động lực học tập và sự tò mò tự nhiên đối với công nghệ mới.",
+      emotional: "Cảm thấy bế tắc, áp lực vì học sinh không thể tự ôn luyện hiệu quả khi ở nhà do thiếu công cụ định hướng.",
       social: "Muốn tạo ra một sân chơi thi đua sôi nổi, giúp các em tự hào khoe thành tích và cùng nhau tiến bộ."
     },
     dreamState: "Học sinh tự giác ôn tập mỗi ngày qua những bộ quiz ngắn gọn, tích điểm đổi quà và thăng hạng trên bảng xếp hạng, biến việc học AI phức tạp thành một trò chơi đầy hào hứng.",
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "coursemaker",
-    category: "build",
+    category: "education",
     title: "Course Maker",
     description: "Công cụ đóng gói kiến thức chuyên môn thành khóa học có cấu trúc bài bản.",
     longDescription: "",
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "sweet22",
-    category: "build",
+    category: "life",
     title: "Hồng’s Sweet 22",
     description: "Trải nghiệm mời sinh nhật cá nhân hóa, kết hợp tự động hóa điều phối sự kiện.",
     longDescription: "",
@@ -131,7 +131,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "cm-ai",
-    category: "tool",
+    category: "gems",
     title: "Course Maker AI",
     description: "Trợ lý ảo giúp băm nhỏ nội dung chuyên môn thành giáo án thực chứng.",
     longDescription: "",
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "concept-chopper",
-    category: "tool",
+    category: "gems",
     title: "Concept Chopper",
     description: "Băm nhỏ mọi khái niệm phức tạp thành những ví dụ đời thường dễ hiểu.",
     longDescription: "",
@@ -167,7 +167,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "insights-digger",
-    category: "tool",
+    category: "gems",
     title: "Insights Digger",
     description: "Chuyên gia thấu hiểu khách hàng dựa trên khung tư duy JTBD.",
     longDescription: "",
@@ -184,8 +184,44 @@ export const PRODUCTS: Product[] = [
     tags: ["Gemini Gems", "JTBD", "Insights"],
   },
   {
+    slug: "4f-reflection",
+    category: "gems",
+    title: "4F Reflection",
+    description: "Trợ lý phản tư theo framework 4F giúp kiến tạo bài học từ trải nghiệm hàng ngày.",
+    longDescription: "",
+    jtbd: {
+      functional: "Gặp khó khăn khi đúc rút bài học sâu sắc từ những trải nghiệm sống, sự kiện hay công việc hàng ngày.",
+      emotional: "Cảm thấy suy nghĩ lan man, nhiều tâm tư nhưng không biết làm thế nào để biến chúng thành động lực phát triển.",
+      social: "Muốn xây dựng thói quen phản tư (reflection) bài bản và lưu giữ hành trình tự hoàn thiện bản thân."
+    },
+    dreamState: "Mỗi trải nghiệm - từ việc đi một địa điểm mới, xem một show diễn, hay trò chuyện với người lạ - đều được chuyển hóa thành những bài học đắt giá, rõ ràng qua 4 bước: Facts (Sự thật), Feelings (Cảm xúc), Findings (Khám phá), Future (Tương lai).",
+    humanStory: "Là một người rất hay nghĩ, Hồng luôn tìm cách để mỗi trải nghiệm sống đều là cơ hội để phát triển. Hồng thiết kế 4F Reflection dựa trên framework phản tư chuẩn mực để đồng hành cùng bạn trên con đường tự thấu hiểu.",
+    image: "/screenshots/4f-reflection.png",
+    link: "https://gemini.google.com/gem/17dY0-xS3qgcYleWoStIqGQhnOaIcrEuu?usp=sharing",
+    outcome: "Kiến tạo bài học từ trải nghiệm",
+    tags: ["Gemini Gems", "Reflection", "4F Framework"],
+  },
+  {
+    slug: "performance-booster",
+    category: "gems",
+    title: "Performance Booster",
+    description: "Trợ lý giải phẫu vấn đề và tìm ra điểm nghẽn hiệu suất cá nhân và đội ngũ.",
+    longDescription: "",
+    jtbd: {
+      functional: "Gặp vấn đề về hiệu suất công việc của bản thân hoặc team nhưng không thể gọi tên chính xác nguyên nhân cốt lõi.",
+      emotional: "Cảm thấy bế tắc khi liên tục nỗ lực cải thiện nhưng hiệu quả tổng thể vẫn không tăng như kỳ vọng.",
+      social: "Cần một phương pháp khoa học, uy tín để phân tích và tối ưu hóa năng lực làm việc một cách bài bản trước đội ngũ."
+    },
+    dreamState: "Giải phẫu chính xác vấn đề hiệu suất và định vị đúng 'điểm nghẽn' cần tập trung xử lý bằng mô hình BEM (Behavioural Engineering Model) - thay vì cải thiện mù quáng, bạn tập trung 20% nguồn lực để đạt 80% kết quả.",
+    humanStory: "Hồng xây dựng Performance Booster nhằm giúp các bạn làm việc độc lập hoặc quản lý đội ngũ ngừng phỏng đoán về hiệu suất và bắt đầu tối ưu hóa dựa trên các mô hình kỹ thuật hành vi thực chứng.",
+    image: "/screenshots/performance-booster.png",
+    link: "https://gemini.google.com/gem/1wEb2H1SJ5AnPqsungVfJEIrRaNGa96zR?usp=sharing",
+    outcome: "Giải phẫu & tối ưu hiệu suất",
+    tags: ["Gemini Gems", "Performance", "BEM Model"],
+  },
+  {
     slug: "substack",
-    category: "resource",
+    category: "education",
     title: "Haru Reboot Substack",
     description: "Bản tin chia sẻ tư duy kiến trúc học tập và công nghệ mới nhất.",
     longDescription: "",

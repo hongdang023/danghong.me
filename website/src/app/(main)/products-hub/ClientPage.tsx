@@ -6,10 +6,9 @@ import { ProductDetail } from "@/components/ProductDetail";
 
 const FILTERS = [
   { id: "all", label: "Tất cả" },
-  { id: "build", label: "Builds" },
-  { id: "demo", label: "Demos" },
-  { id: "tool", label: "Tools" },
-  { id: "resource", label: "Resources" },
+  { id: "life", label: "Life" },
+  { id: "education", label: "Education" },
+  { id: "gems", label: "Gems" },
 ];
 
 export default function ProductsHubClient({ initialItems }: { initialItems: any[] }) {

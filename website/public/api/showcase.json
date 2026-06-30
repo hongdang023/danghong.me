@@ -1,6 +1,6 @@
 [
   {
-    "category": "NỀN TẢNG QUẢN TRỊ & HỆ THỐNG (SYSTEMS)",
+    "category": "GIÁO DỤC & PHÁT TRIỂN (EDUCATION)",
     "items": [
       {
         "name": "LightMS - Hệ thống quản trị học tập (LMS)",
@@ -30,11 +30,24 @@
         "link": "https://sutucon.pages.dev/",
         "outcome": "Tăng 200% hiệu quả ôn tập và tạo động lực tự học sôi nổi.",
         "tech_stack": ["React", "Gamification", "AI Teen"]
+      },
+      {
+        "name": "Learning Design Series (Bộ 9 tập)",
+        "description": "Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập thực chứng.",
+        "link": null,
+        "internal_path": "/Learning Design Series",
+        "outcome": "Hệ thống hóa toàn bộ quy trình thiết kế đào tạo theo chuẩn quốc tế."
+      },
+      {
+        "name": "Haru Reboot Substack - Personal Newsletter",
+        "description": "Nơi chia sẻ về tư duy kiến trúc, công nghệ và hành trình \"Reboot\" năng lực trong kỷ nguyên AI.",
+        "link": "https://harureboot.substack.com/?utm_campaign=profile_chips",
+        "outcome": "Xây dựng cộng đồng những người làm giáo dục và vận hành có tư duy đổi mới."
       }
     ]
   },
   {
-    "category": "SẢN PHẨM TRẢI NGHIỆM & SỰ KIỆN (EXPERIENCE)",
+    "category": "ĐỜI SỐNG & TRẢI NGHIỆM (LIFE)",
     "items": [
       {
         "name": "Hồng’s Sweet 22 - Website mời sinh nhật",
@@ -54,7 +67,7 @@
     ]
   },
   {
-    "category": "CÔNG CỤ TRÍ TUỆ NHÂN TẠO (GEMINI GEMS)",
+    "category": "CÔNG CỤ TRÍ TUỆ NHÂN TẠO (GEMS)",
     "items": [
       {
         "name": "Course Maker (Gemini Gems Edition)",
@@ -73,29 +86,18 @@
         "description": "Chuyên gia thấu hiểu khách hàng dựa trên khung lý thuyết Job-to-be-done và Insights.",
         "link": "https://gemini.google.com/gem/1Uzo2fJNEGdVMlwAlP8ZRa2_Gpe432-nL?usp=sharing",
         "tech_stack": ["Gemini Gems"]
-      }
-    ]
-  },
-  {
-    "category": "TÀI NGUYÊN TRI THỨC (E-BOOKS)",
-    "items": [
+      },
       {
-        "name": "Learning Design Series (Bộ 9 tập)",
-        "description": "Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập thực chứng.",
-        "link": null,
-        "internal_path": "/Learning Design Series",
-        "outcome": "Hệ thống hóa toàn bộ quy trình thiết kế đào tạo theo chuẩn quốc tế."
-      }
-    ]
-  },
-  {
-    "category": "BÀI VIẾT CHUYÊN SÂU (SUBSTACK)",
-    "items": [
+        "name": "4F Reflection",
+        "description": "Trợ lý phản tư theo framework 4F (Facts, Feelings, Findings, Future) để rút ra bài học phát triển bản thân từ trải nghiệm hàng ngày.",
+        "link": "https://gemini.google.com/gem/17dY0-xS3qgcYleWoStIqGQhnOaIcrEuu?usp=sharing",
+        "tech_stack": ["Gemini Gems"]
+      },
       {
-        "name": "Haru Reboot - Personal Newsletter",
-        "description": "Nơi chia sẻ về tư duy kiến trúc, công nghệ và hành trình \"Reboot\" năng lực trong kỷ nguyên AI.",
-        "link": "https://harureboot.substack.com/?utm_campaign=profile_chips",
-        "outcome": "Xây dựng cộng đồng những người làm giáo dục và vận hành có tư duy đổi mới."
+        "name": "Performance Booster",
+        "description": "Trợ lý giải phẫu vấn đề và xác định điểm nghẽn hiệu suất cho cá nhân/đội ngũ sử dụng mô hình kỹ thuật hành vi BEM.",
+        "link": "https://gemini.google.com/gem/1wEb2H1SJ5AnPqsungVfJEIrRaNGa96zR?usp=sharing",
+        "tech_stack": ["Gemini Gems"]
       }
     ]
   }
