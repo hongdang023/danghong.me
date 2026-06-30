@@ -9,7 +9,7 @@
 ### 🏗️ LightMS - Hệ thống quản trị học tập (LMS)
 
 - **Mô tả**: Hệ thống quản trị học tập tinh gọn, tối ưu hóa trải nghiệm học viên và vận hành.
-- **Link**: [light-ms.vercel.app](https://light-ms.vercel.app/)
+- **Link**: [lightms.pages.dev](https://lightms.pages.dev/)
 - **Access**: Mã cho khách test: `The1ight-Admin-2026`
 - **Outcome**: Tự động hóa 80% tác vụ vận hành lớp học truyền thống.
   --> Công nghệ sử dụng: Antigravity, Supabase, Github, Vercel
@@ -20,6 +20,20 @@
 - **Link**: [courses-maker.vercel.app](https://courses-maker.vercel.app/)
 - **Outcome**: Rút ngắn thời gian đóng gói từ hàng tuần xuống hàng giờ.
   --> Công nghệ sử dụng: Antigravity, Github, Vercel
+
+### 🏃‍♂️ Exam Runner - Hệ thống luyện thi tiếng Anh lớp 9
+
+- **Mô tả**: Website luyện thi tiếng Anh lớp 9 thiết kế riêng cho học sinh mất gốc (em Min hàng xóm) tự ôn tập bù hổng kiến thức hàng ngày.
+- **Link**: [exam-runner.pages.dev](https://exam-runner.pages.dev/)
+- **Outcome**: Bù hổng kiến thức nhanh chóng qua việc tự luyện tập mọi lúc mọi nơi.
+  --> Công nghệ sử dụng: Next.js, Education, Tailwind
+
+### 🦁 Sư tử Con - Quiz Challenge
+
+- **Mô tả**: Hệ thống quiz giúp học sinh cấp 2 & 3 lớp AI Teen ôn tập kiến thức AI theo triết lý Gamification và Chunking của Brilliant và Duolingo.
+- **Link**: [sutucon.pages.dev](https://sutucon.pages.dev/)
+- **Outcome**: Học sinh ôn tập hào hứng hơn, ghi nhớ kiến thức AI sâu sắc hơn.
+  --> Công nghệ sử dụng: React, Gamification, AI Teen
 
 ---
 
@@ -32,6 +46,13 @@
 - **Access**: Mã cho khách: `TEST1`
 - **Outcome**: Tạo trải nghiệm cá nhân hóa sâu sắc và tự động hóa việc điều phối sự kiện.
   --> Công nghệ sử dụng: Antigravity, Github, Vercel
+
+### 🎓 Thiệp mời tốt nghiệp
+
+- **Mô tả**: Trải nghiệm thiệp mời tốt nghiệp cá nhân hóa độc đáo gửi đến người thân, bạn bè.
+- **Link**: [hong-pregrad.pages.dev](https://hong-pregrad.pages.dev/)
+- **Outcome**: Truyền tải lời mời trang trọng, cá nhân hóa đến từng người nhận.
+  --> Công nghệ sử dụng: React, Personalization, Vite
 
 ---
 

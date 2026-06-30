@@ -5,7 +5,7 @@
       {
         "name": "LightMS - Hệ thống quản trị học tập (LMS)",
         "description": "Hệ thống quản trị học tập tinh gọn, tối ưu hóa trải nghiệm học viên và vận hành.",
-        "link": "https://light-ms.vercel.app/",
+        "link": "https://lightms.pages.dev/",
         "access": "Mã cho khách test: The1ight-Admin-2026",
         "outcome": "Tự động hóa 80% tác vụ vận hành lớp học truyền thống.",
         "tech_stack": ["Antigravity", "Supabase", "Github", "Vercel"]
@@ -16,6 +16,20 @@
         "link": "https://courses-maker.vercel.app/",
         "outcome": "Rút ngắn thời gian đóng gói từ hàng tuần xuống hàng giờ.",
         "tech_stack": ["Antigravity", "Github", "Vercel"]
+      },
+      {
+        "name": "Exam Runner - Hệ thống luyện thi tiếng Anh lớp 9",
+        "description": "Hệ thống luyện thi tiếng Anh lớp 9 cá nhân hóa, thiết kế riêng cho học sinh mất gốc tự ôn luyện hàng ngày.",
+        "link": "https://exam-runner.pages.dev/",
+        "outcome": "Đột phá khả năng tự học 24/7 và bồi đắp lỗ hổng kiến thức hiệu quả.",
+        "tech_stack": ["Next.js", "Education", "Tailwind"]
+      },
+      {
+        "name": "Sư tử Con - Quiz Challenge",
+        "description": "Hệ thống quiz AI áp dụng triết lý Gamification và Chunking giúp học sinh cấp 2 & 3 ôn tập kiến thức.",
+        "link": "https://sutucon.pages.dev/",
+        "outcome": "Tăng 200% hiệu quả ôn tập và tạo động lực tự học sôi nổi.",
+        "tech_stack": ["React", "Gamification", "AI Teen"]
       }
     ]
   },
@@ -29,6 +43,13 @@
         "access": "Mã cho khách: TEST1",
         "outcome": "Tạo trải nghiệm cá nhân hóa sâu sắc và tự động hóa việc điều phối sự kiện.",
         "tech_stack": ["Antigravity", "Github", "Vercel"]
+      },
+      {
+        "name": "Thiệp mời tốt nghiệp",
+        "description": "Trải nghiệm thiệp mời tốt nghiệp cá nhân hóa độc đáo, lưu giữ và truyền tải trọn vẹn cảm xúc.",
+        "link": "https://hong-pregrad.pages.dev/",
+        "outcome": "Cá nhân hóa 100% lời mời gửi tới người thân và bạn bè.",
+        "tech_stack": ["React", "Personalization", "Vite"]
       }
     ]
   },
