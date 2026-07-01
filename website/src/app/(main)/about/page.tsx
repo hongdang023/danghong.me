@@ -61,24 +61,6 @@ export default function AboutPage() {
                   "Mình luôn bắt đầu bằng câu hỏi: Việc này có thực sự giúp một người phát triển hơn và tiến gần hơn tới mục tiêu của họ không?"
                 </p>
                 <p>
-                  Mình đến với giáo dục qua một hành trình khá vòng vèo: từ Chuyên Ngữ, sang Kinh tế ở ĐH Kinh tế Quốc dân, rồi đi làm qua Marketing, HR, và cuối cùng dừng lại ở Giáo dục. Mỗi chặng đều cho mình một góc nhìn khác về con người, về cách họ học, làm việc và phát triển.
-                </p>
-                <p>
-                  Trong quá trình đó, mình gặp những người thầy và những môi trường đã thay đổi cách mình nhìn thế giới. Có nơi khiến mình nhận ra một chương trình dù rất chỉn chu vẫn có thể vô nghĩa nếu người học không thay đổi được cách nghĩ và cách làm sau khi kết thúc. Có nơi lại cho mình thấy sức mạnh của việc đặt câu hỏi đúng, lắng nghe đúng và để người học tự chịu trách nhiệm cho sự tiến bộ của mình.
-                </p>
-                <p>
-                  Từ đó, mình quan tâm nhiều hơn đến một câu hỏi: điều gì thật sự làm một người phát triển? Với mình, đó không chỉ là học thêm kiến thức, mà là biết tự học, tự đánh giá, tự tiến lên, và cuối cùng có thể tạo ra thứ gì đó người khác thật sự cần.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="bg-card border-thin border-border-custom p-8 md:p-10 rounded-2xl shadow-sm">
-              <h2 className="text-2xl font-bold mb-6 flex items-center">
-                <span className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-sm mr-4">2</span>
-                Hệ thống thay vì Cảm hứng
-              </h2>
-              <div className="space-y-6 text-foreground/80 leading-relaxed text-[15px]">
-                <p>
                   Mình tin con người hạnh phúc nhất khi họ tiếp tục phát triển và khai mở tiềm năng của mình. Vì vậy, mình chọn giáo dục như một con đường bền vững để tạo ra tác động. Nhưng với mình, giáo dục không chỉ là truyền đạt nội dung; đó là thiết kế môi trường, trải nghiệm và hệ thống đủ tốt để một người thay đổi cách họ tư duy, học tập và hành động trong đời sống thực.
                 </p>
                 <p>
