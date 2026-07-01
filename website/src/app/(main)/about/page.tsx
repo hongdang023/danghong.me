@@ -135,6 +135,50 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Lifelong Practices */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-black uppercase tracking-tight mb-4">Lĩnh vực trọn đời</h2>
+            <p className="text-foreground/60">Ba lĩnh vực tôi muốn dành cả đời để nghiên cứu, thực hành và chiêm nghiệm</p>
+          </div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          >
+            {[
+              {
+                title: "Instructional Design & Learning Science",
+                desc: "Khoa học học tập và thiết kế chương trình. Nghiên cứu cách con người tiếp thu tri thức để kiến tạo những hệ thống, rubric và trải nghiệm giúp tối ưu hóa sự phát triển thực chất thay vì chỉ dừng lại ở cảm hứng hay điểm số."
+              },
+              {
+                title: "Communication Intelligence",
+                desc: "Trí tuệ giao tiếp. Đến từ chính nỗi đau của bản thân trong việc kết nối với chính mình, với bạn bè và bố mẹ. Thực hành lắng nghe sâu, thấu cảm và mở rộng nhận thức để thiết kế những cuộc hội thoại mở lòng."
+              },
+              {
+                title: "Digital Products",
+                desc: "Kiến tạo sản phẩm số. Quá trình trực tiếp xây dựng và thử nghiệm các công cụ (LMS, template...) dạy cho mình những bài học sâu sắc về sự thấu hiểu người dùng, giải quyết vấn đề và tính thực chất (authenticity) - làm ra thứ mọi người thực sự cần."
+              }
+            ].map((practice, i) => (
+              <motion.div 
+                key={i} 
+                variants={itemVariants}
+                className="p-8 rounded-2xl border-thin border-border-custom bg-card flex flex-col hover:bg-accent/10 hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 group cursor-default shadow-sm hover:shadow-md"
+              >
+                <h3 className="text-lg font-bold mb-4 group-hover:text-accent transition-colors duration-300 leading-snug">{practice.title}</h3>
+                <p className="text-foreground/75 leading-relaxed text-[14px] group-hover:text-foreground/90 transition-colors duration-300">
+                  {practice.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Education Journey */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">

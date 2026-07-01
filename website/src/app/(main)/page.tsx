@@ -4,9 +4,32 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-[70vh] justify-center">
+    <div className="flex flex-col">
+      {/* Hero Section - The Soul */}
+      <section className="editorial-spacing min-h-[60vh] flex flex-col justify-center items-center text-center">
+        <div className="hero-container animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+            <span className="text-accent block uppercase">Evidence-Based Learning. Architected.</span>
+            <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+              Kiến Tạo Hệ Thống Học Tập Thực Chứng
+            </span>
+          </h1>
+          
+          <p className="text-body mx-auto mb-12 text-center opacity-40 font-medium">
+            Thay vì những khóa học rời rạc, mình giúp bạn kiến tạo hệ thống học tập nơi mỗi bước đi đều để lại dấu tích thực tế và tự động dẫn dắt người học đến kết quả cuối cùng.
+          </p>
+
+          <div className="flex justify-center">
+            <a href="#about" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
+              <span>Tìm hiểu thêm về Hồng</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section className="editorial-spacing py-12 md:py-24">
+      <section id="about" className="editorial-spacing py-24">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary shadow-2xl">
@@ -38,6 +61,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
