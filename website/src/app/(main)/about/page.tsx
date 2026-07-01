@@ -179,6 +179,54 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Work Philosophy */}
+      <section className="py-20 px-6 bg-foreground/[0.01] border-t-thin border-border-custom">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-black uppercase tracking-tight mb-4">Triết lý làm việc</h2>
+            <p className="text-foreground/60">Những nguyên tắc dẫn dắt hành động và định hình tiêu chuẩn công việc của mình</p>
+          </div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          >
+            {[
+              {
+                title: "Make something people want",
+                desc: "Tạo ra thứ mọi người thực sự cần. Tập trung vào giá trị thực tế và giải quyết các bài toán cụ thể của người học, thay vì xây dựng các lý thuyết hào nhoáng nhưng sáo rỗng."
+              },
+              {
+                title: "Reflect and Act",
+                desc: "Suy ngẫm và Hành động. Liên tục nhìn nhận lại bản thân, đánh giá các hệ thống để phát hiện điểm mù, đồng thời quyết liệt chuyển hóa nhận thức mới thành những cải tiến thực tế."
+              },
+              {
+                title: "Be authentic",
+                desc: "Luôn chân thực và chính trực. Làm phải có giá trị thật, học phải học được thật, và dạy phải giúp người học thực sự tiến bộ. Không thỏa hiệp với các giá trị 'đánh bóng' bề mặt."
+              },
+              {
+                title: "Học, học nữa, học mãi",
+                desc: "Không bao giờ dừng lại. Tự học là kỹ năng sống còn. Chủ động tìm kiếm mentor, học từ những người xuất sắc nhất và không ngừng mở rộng giới hạn nhận thức của chính mình."
+              }
+            ].map((philosophy, i) => (
+              <motion.div 
+                key={i} 
+                variants={itemVariants}
+                className="p-8 rounded-2xl border-thin border-border-custom bg-card flex flex-col hover:bg-accent/10 hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 group cursor-default shadow-sm hover:shadow-md"
+              >
+                <h3 className="text-lg font-bold mb-3 group-hover:text-accent transition-colors duration-300 leading-snug">{philosophy.title}</h3>
+                <p className="text-foreground/75 leading-relaxed text-[14px] group-hover:text-foreground/90 transition-colors duration-300">
+                  {philosophy.desc}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Education Journey */}
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
