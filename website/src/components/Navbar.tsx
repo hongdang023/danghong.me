@@ -15,6 +15,7 @@ export default function Navbar() {
           </Link>
           
           <div className="hidden md:flex space-x-8 text-[13px] font-bold tracking-tight uppercase opacity-60">
+            <Link href="/about" className="hover:opacity-100 transition-opacity">About</Link>
             <Link href="/products-hub" className="hover:opacity-100 transition-opacity">Products Hub</Link>
             <Link href="/books" className="hover:opacity-100 transition-opacity">Books</Link>
             <Link href="/list" className="hover:opacity-100 transition-opacity">Hồng's List</Link>
