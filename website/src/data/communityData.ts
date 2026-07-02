@@ -113,4 +113,16 @@ export const communitiesData: Community[] = [
       "/images/communities/film-01.jpg",
     ],
   },
+  {
+    id: "mo",
+    name: "Mở",
+    stats: "Lớp học viết lách & Học cách học",
+    description: "Nơi những tâm hồn đồng điệu trò chuyện khai phóng cuộc đời",
+    cover_image: "/images/communities/mo-01.jpg",
+    images: [
+      "/images/communities/mo-01.jpg",
+      "/images/communities/mo-02.jpg",
+      "/images/communities/mo-03.jpg",
+    ],
+  },
 ];

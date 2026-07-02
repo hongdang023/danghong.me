@@ -1,27 +1,37 @@
+"use client";
+
 import { ChevronDown, Brain, Layout, UserCheck, Package, Star, ArrowRight } from "lucide-react";
 import React from "react";
 import Link from "next/link";
-
+import * as motion from "framer-motion/client";
 
 export default function HongsListPage() {
   return (
-    <main className="editorial-spacing pt-20 pb-24">
+    <main className="pb-24">
       {/* Hero Section */}
-      <section className="hero-container text-center mb-24">
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
-          <span className="text-accent block uppercase">Hồng's List.</span>
-          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
-            Tuyển Tập Khóa Học Khắt Khe
-          </span>
-        </h1>
-        <p className="text-body opacity-40 font-medium mx-auto max-w-2xl mb-8">
-          Một hệ thống tuyển tập các khóa học được chọn lọc khắt khe nhất dành cho người đi làm.
-        </p>
-        <div className="flex justify-center">
-          <Link href="/list/collection" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
-            <span>Xem toàn bộ danh sách Hồng's Lists</span>
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+      <section className="pt-10 md:pt-12 pb-6 md:pb-8 px-6 relative overflow-hidden text-center mb-12">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+              <span className="text-accent block uppercase">Hồng's List.</span>
+              <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+                Tuyển Tập Khóa Học Khắt Khe
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl font-medium opacity-40 max-w-2xl mx-auto leading-relaxed mb-8">
+              Một hệ thống tuyển tập các khóa học được chọn lọc khắt khe nhất dành cho người đi làm.
+            </p>
+            <div className="flex justify-center">
+              <Link href="/list/collection" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
+                <span>Xem toàn bộ danh sách Hồng's Lists</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 

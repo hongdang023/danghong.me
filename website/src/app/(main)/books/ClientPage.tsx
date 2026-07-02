@@ -5,6 +5,7 @@ import { ChapterCard } from "@/components/ChapterCard";
 import { LD_SERIES } from "@/data/bookData";
 import { Trophy, BookOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
+import * as motion from "framer-motion/client";
 
 export default function BooksClientPage() {
   const router = useRouter();
@@ -28,18 +29,26 @@ export default function BooksClientPage() {
   const progressPercentage = Math.round((completedChapters.length / LD_SERIES.length) * 100);
 
   return (
-    <main className="editorial-spacing pt-20 pb-24">
+    <main className="pb-24">
       {/* Hero Section */}
-      <section className="hero-container text-center mb-16">
-        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
-          <span className="text-accent block uppercase">Learning Design. The Series.</span>
-          <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
-            Cẩm Nang Thiết Kế Trải Nghiệm Học Tập
-          </span>
-        </h1>
-        <p className="text-body opacity-40 font-medium mx-auto max-w-2xl">
-          Lộ trình giúp bạn xây dựng chương trình đào tạo bài bản từ con số 0, nơi mọi lý thuyết đều được xác thực bằng hành động để bạn thực sự làm chủ tri thức.
-        </p>
+      <section className="pt-10 md:pt-12 pb-6 md:pb-8 px-6 relative overflow-hidden text-center mb-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+              <span className="text-accent block uppercase">Learning Design. The Series.</span>
+              <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+                Cẩm Nang Thiết Kế Trải Nghiệm Học Tập
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl font-medium opacity-40 max-w-2xl mx-auto leading-relaxed">
+              Lộ trình giúp bạn xây dựng chương trình đào tạo bài bản từ con số 0, nơi mọi lý thuyết đều được xác thực bằng hành động để bạn thực sự làm chủ tri thức.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* Progress Dashboard */}

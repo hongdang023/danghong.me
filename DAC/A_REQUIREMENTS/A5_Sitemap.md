@@ -5,36 +5,29 @@
 
 ---
 
-## 1. CẤU TRÚC ĐIỀU HƯỚNG (4 PILLARS)
+## 1. CẤU TRÚC ĐIỀU HƯỚNG TỔNG THỂ
 
 ```text
 / (Home - The Portal)
 ├── 🙋‍♀️ /about (Về Hồng - Identity, Triết lý giáo dục & Hành trình)
-│
-├── 🚀 1. PRODUCTS HUB (Trung Tâm Giải Pháp)
-│   ├── /all-products (Toàn bộ Builds, E-books & Templates)
-│   ├── /daily-pulse (Nhật ký Build Log & Prompt)
-│   └── /product/:id (Chi tiết từng sản phẩm/tài nguyên)
-│
-├── 📚 2. HỒNG'S LIST (Trung Tâm Giám Tuyển)
-│   ├── /curation-hub (Bảng danh sách khóa học lọc 4D)
-│   └── /deep-reviews/:id (Bài mổ xẻ chi tiết)
-│
-├── 🤝 3. FRIENDS & LIFE (Community)
-│   ├── /moments (Ảnh đời sống, bè bạn & sự kiện)
-│   └── /network (Kết nối những Learning Architects)
-│
-└── ⚙️ BACKOFFICE
-    ├── /architect-cms (Quản lý Products & Pulse)
-    ├── /curation-lab (Vận hành bộ lọc 4D)
-    └── /community-manager (Tải lên ảnh đời sống)
+├── 🎓 /masters (Nguồn tri thức ảnh hưởng - Chuyên gia & Trường phái)
+├── 🧬 /life-mentors/[id] (Trang chi tiết Người dẫn đường / Mentor cuộc sống)
+├── 🚀 /products-hub (Trung Tâm Giải Pháp - Dự án, E-books & Templates)
+├── 🛠️ /tools (My Stack - Hệ thống công cụ & Triết lý lựa chọn)
+├── 📚 /books (Tủ sách tuyển chọn - E-books)
+├── 📋 /list (Hồng's List - Triết lý & Tiêu chí giám tuyển khóa học lọc 4D)
+│   └── /list/collection (Danh sách các khóa học đã qua bộ lọc 4D)
+├── 🤝 /community (Moments & Network - Ảnh đời sống, bè bạn & kết nối)
+├── 🔄 /updates (Nhật ký cập nhật hệ thống / Changelog)
+└── 🔌 /api-docs (Tài liệu hướng dẫn API)
 ```
+
 
 ---
 
 ## 2. QUY TẮC ĐIỀU HƯỚNG (RULES)
 
-1.  **Top-Level Nav**: 4 mục chính (About, Products Hub, Hồng's List, Community) luôn hiển thị.
+1.  **Top-Level Nav**: Các mục chính (About, Masters, Products Hub, Tools, Books, Hồng's List, Community) luôn hiển thị.
 2.  **Product Categorization**: Trong Products Hub, sử dụng bộ lọc (Filter) để phân loại nhanh giữa "Live Demo", "E-book" và "Template".
 3.  **Human touch**: Hình ảnh từ mục Community có thể được dùng làm nền hoặc trang trí tinh tế cho các trang khác để tạo sự gần gũi.
 4.  **Connect CTA**: Nút "Chat với Hồng" (Liên kết tới Facebook) đặt ở vị trí nổi bật (như Header/Footer) để thay thế cho nút Đăng nhập trước đây.

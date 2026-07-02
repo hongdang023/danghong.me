@@ -82,5 +82,23 @@
     "title": "Vòng về Phim",
     "community": "Film",
     "image": "/images/communities/film-01.jpg"
+  },
+  {
+    "id": "mo-01",
+    "title": "Mở - Lớp học viết lách và Học cách học",
+    "community": "Mở",
+    "image": "/images/communities/mo-01.jpg"
+  },
+  {
+    "id": "mo-02",
+    "title": "Mở - Lớp học viết lách và Học cách học",
+    "community": "Mở",
+    "image": "/images/communities/mo-02.jpg"
+  },
+  {
+    "id": "mo-03",
+    "title": "Mở - Lớp học viết lách và Học cách học",
+    "community": "Mở",
+    "image": "/images/communities/mo-03.jpg"
   }
 ]

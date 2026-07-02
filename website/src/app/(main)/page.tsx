@@ -19,12 +19,6 @@ export default function Home() {
             Thay vì những khóa học rời rạc, mình giúp bạn kiến tạo hệ thống học tập nơi mỗi bước đi đều để lại dấu tích thực tế và tự động dẫn dắt người học đến kết quả cuối cùng.
           </p>
 
-          <div className="flex justify-center">
-            <a href="#about" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
-              <span>Tìm hiểu thêm về Hồng</span>
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -62,6 +56,101 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Workplaces Section */}
+      <section className="editorial-spacing py-24 border-t-thin border-border-custom bg-foreground/[0.01]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-bold tracking-widest uppercase text-accent mb-4">Workplaces</h2>
+            <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Nơi Hồng đang làm việc</h3>
+            <p className="text-foreground/60 max-w-2xl mx-auto text-sm font-medium">
+              Hành trình đồng hành, giảng dạy, quản lý vận hành và phát triển cộng đồng tại các tổ chức giáo dục hàng đầu.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "The1ight",
+                role: "Instructional Designer | Trợ giảng | Quản lý Vận hành Lớp học",
+                desc: "Hệ sinh thái khoá học về Vibe Coding và Làm chủ sự nghiệp",
+                link: "https://the1ight.com/",
+                image: "/images/the1ight.png"
+              },
+              {
+                title: "Conan School",
+                role: "Mentor lớp WebAI Builders và AI Master",
+                desc: "Trường học dạy cách thu hút khách số 1 Việt Nam",
+                link: "https://www.conan.school/",
+                image: "/images/conan_school.png"
+              },
+              {
+                title: "Sư Tử Con School",
+                role: "Mentor lớp AI Teen",
+                desc: "Trường học dạy các bé cấp 2 và cấp 3 làm quen với việc tạo ra sản phẩm và sử dụng được não",
+                link: "https://sutucon.com/",
+                image: "/images/sutucon_school.png"
+              },
+              {
+                title: "NextSteps Community",
+                role: "Community Facilitator",
+                desc: "Cộng đồng dành cho người trẻ phát triển đúng với tiềm năng của mình theo tiêu chuẩn quốc tế",
+                link: "https://nextstep27.com/",
+                image: "/images/nextsteps_community.png"
+              },
+              {
+                title: "Inside6",
+                role: "Community Facilitator",
+                desc: "Cộng đồng học cách hiểu mình và đối mặt với cảm xúc và xung đột (với bố mẹ, bạn bè, người yêu,...)",
+                link: "https://www.inside6.com/",
+                image: "/images/inside6.png"
+              }
+            ].map((work, idx) => (
+              <a
+                key={idx}
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col bg-card border-thin border-border-custom rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 hover:border-accent/30"
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden border-b-thin border-border-custom">
+                  <Image
+                    src={work.image}
+                    alt={work.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                    <span className="text-[12px] font-bold uppercase tracking-widest text-white flex items-center gap-1.5">
+                      Ghé thăm website <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-grow">
+                  <h4 className="text-xl font-extrabold tracking-tight mb-2 group-hover:text-accent transition-colors duration-300">
+                    {work.title}
+                  </h4>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-accent bg-accent/5 border border-accent/15 px-3 py-1 rounded-full w-fit mb-4">
+                    {work.role}
+                  </span>
+                  <p className="text-[14px] text-foreground/75 leading-relaxed font-medium">
+                    {work.desc}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="flex justify-center mt-16">
+            <a href="/about" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
+              <span>Tìm hiểu thêm về Hồng</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
+

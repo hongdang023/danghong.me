@@ -2,6 +2,28 @@
 
 import React from "react";
 import * as motion from "framer-motion/client";
+import Link from "next/link";
+import { Heart, Briefcase, Lightbulb, Compass, Sparkles, User, ArrowRight, Palette, Film, PenTool } from "lucide-react";
+import { lifeMentors } from "@/data/lifeMentorsData";
+
+const IconComponent = ({ name, className }: { name: string; className?: string }) => {
+  switch (name) {
+    case "Heart":
+      return <Heart className={className} size={24} />;
+    case "Briefcase":
+      return <Briefcase className={className} size={24} />;
+    case "Lightbulb":
+      return <Lightbulb className={className} size={24} />;
+    case "Compass":
+      return <Compass className={className} size={24} />;
+    case "Sparkles":
+      return <Sparkles className={className} size={24} />;
+    case "User":
+      return <User className={className} size={24} />;
+    default:
+      return <User className={className} size={24} />;
+  }
+};
 
 export default function AboutPage() {
   const containerVariants = {
@@ -22,8 +44,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen pb-20">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <section className="pt-12 pb-8 px-6 relative overflow-hidden">
         
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -31,10 +52,13 @@ export default function AboutPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-8 leading-tight">
-              Người kiến tạo <span className="text-accent italic">hệ thống</span> và <span className="text-accent italic">trải nghiệm</span>.
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
+              <span className="text-accent block uppercase">THE LEARNING ARCHITECT</span>
+              <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
+                Người kiến tạo hệ thống và trải nghiệm
+              </span>
             </h1>
-            <p className="text-lg md:text-xl font-medium text-foreground/80 leading-relaxed max-w-3xl mx-auto mb-12">
+            <p className="text-lg md:text-xl font-medium opacity-40 max-w-2xl mx-auto leading-relaxed">
               "Mình là người kiến tạo những hệ thống và trải nghiệm giúp con người không ngừng phát triển và khai mở tiềm năng của chính mình, vì mình tin rằng đó là con đường bền vững nhất để sống hạnh phúc và có ý nghĩa."
             </p>
           </motion.div>
@@ -227,8 +251,187 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Life Mentors Section */}
+      <section className="py-20 px-6 bg-foreground/[0.01] border-t-thin border-border-custom">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-black uppercase tracking-tight mb-4">Life Mentors</h2>
+            <p className="text-foreground/60 max-w-2xl mx-auto">
+              Họ không tự nhận là mentors của tôi, nhưng tôi coi họ là những người thầy lớn, những người đồng hành giúp tôi định hình phong cách sống, tư duy và con đường phát triển.
+            </p>
+          </div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {lifeMentors.map((mentor) => (
+              <motion.div 
+                key={mentor.id} 
+                variants={itemVariants}
+                className="group relative bg-card border-thin border-border-custom hover:border-accent/30 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 cursor-pointer"
+              >
+                <Link href={`/life-mentors/${mentor.id}`} className="absolute inset-0 z-10" />
+                
+                <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-6 text-foreground group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  <IconComponent name={mentor.iconName} className="transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                
+                <h3 className="text-xl font-extrabold mb-2 tracking-tight group-hover:text-accent transition-colors duration-300">
+                  {mentor.name}
+                </h3>
+                
+                <span className="text-[12px] font-bold uppercase tracking-wider text-foreground/40 mb-4 bg-secondary px-3 py-1 rounded-full">
+                  {mentor.badge}
+                </span>
+                
+                <p className="text-[14px] text-foreground/70 leading-relaxed mb-6 flex-grow">
+                  {mentor.summary}
+                </p>
+                
+                <div className="text-[13px] font-bold text-accent flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                  <span>Xem chi tiết</span>
+                  <ArrowRight size={14} />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Hobbies Section */}
+      <section className="py-20 px-6 border-t-thin border-border-custom bg-foreground/[0.01]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-black uppercase tracking-tight mb-4">Hobbies</h2>
+            <p className="text-foreground/60 max-w-2xl mx-auto">
+              Những mảnh ghép sở thích tạo nên thế giới quan, năng lượng sáng tạo và tinh thần của tôi ngoài công việc.
+            </p>
+          </div>
+
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 gap-8"
+          >
+            {/* 2-Column layout for Painting & Writing */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Art/Painting Card */}
+              <motion.div 
+                variants={itemVariants}
+                className="bg-card border-thin border-border-custom p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6 text-accent">
+                    <Palette size={22} />
+                  </div>
+                  <h3 className="text-xl font-extrabold mb-3 text-foreground">Vẽ vời & Nghệ thuật</h3>
+                  <p className="text-[14px] text-foreground/70 leading-relaxed mb-6">
+                    Nghệ thuật đối với tôi là nơi giải phóng suy nghĩ và thử nghiệm những góc nhìn trực quan mới. Bức tranh vẽ bằng những xúc cảm tự nhiên được chọn trưng bày tại triển lãm là một trong những trải nghiệm đáng nhớ nhất của tôi.
+                  </p>
+                </div>
+                <a 
+                  href="https://open.substack.com/pub/harureboot/p/21-bai-hoc-tuoi-21-4-lan-au-em-con?r=2ibecv&utm_campaign=post&utm_medium=web" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-bold text-accent inline-flex items-center gap-1 hover:gap-2 transition-all duration-300"
+                >
+                  <span>Chuyện về tranh đi triển lãm</span>
+                  <ArrowRight size={14} />
+                </a>
+              </motion.div>
+
+              {/* Writing Card */}
+              <motion.div 
+                variants={itemVariants}
+                className="bg-card border-thin border-border-custom p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-6 text-accent">
+                    <PenTool size={22} />
+                  </div>
+                  <h3 className="text-xl font-extrabold mb-3 text-foreground">Viết lách & Chiêm nghiệm</h3>
+                  <p className="text-[14px] text-foreground/70 leading-relaxed mb-6">
+                    Viết lách là công cụ giúp tôi sắp xếp lại suy nghĩ, phản tư về những bài học thường nhật và lưu trữ những cột mốc phát triển. Kênh Substack cá nhân là nơi tôi ghi chép những trải nghiệm một cách chân thực nhất.
+                  </p>
+                </div>
+                <a 
+                  href="https://harureboot.substack.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-bold text-accent inline-flex items-center gap-1 hover:gap-2 transition-all duration-300"
+                >
+                  <span>Đọc bài viết trên Substack</span>
+                  <ArrowRight size={14} />
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Movies Card (Full Width) */}
+            <motion.div 
+              variants={itemVariants}
+              className="bg-card border-thin border-border-custom p-8 md:p-10 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-accent">
+                  <Film size={22} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-extrabold text-foreground">Phim ảnh & Góc nhìn con người</h3>
+                  <p className="text-[14px] text-foreground/60">Top 04 bộ phim yêu thích đại diện cho 4 khía cạnh về con người mình</p>
+                </div>
+              </div>
+
+              {/* Grid of 4 Movies */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-2">
+                {[
+                  {
+                    title: "Steven Universe",
+                    aspect: "an adventurer",
+                    image: "/images/hobbies/steven-universe.png",
+                  },
+                  {
+                    title: "Attack on Titan",
+                    aspect: "a fighter",
+                    image: "/images/hobbies/attack-on-titan.jpg",
+                  },
+                  {
+                    title: "Chungking Express",
+                    aspect: "a lover",
+                    image: "/images/hobbies/chungking-express.png",
+                  },
+                  {
+                    title: "The Wind Rises",
+                    aspect: "a dreamer",
+                    image: "/images/hobbies/the-wind-rises.png",
+                  }
+                ].map((movie, idx) => (
+                  <div key={idx} className="flex flex-col items-center group/movie">
+                    <div className="relative aspect-[2/3] w-full rounded-xl overflow-hidden border-thin border-border-custom mb-3 shadow-sm group-hover/movie:shadow-md transition-shadow duration-300">
+                      <img 
+                        src={movie.image} 
+                        alt={movie.title}
+                        className="object-cover w-full h-full group-hover/movie:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-[12px] font-bold text-accent/50 uppercase tracking-widest mb-1 group-hover/movie:text-accent transition-colors duration-300 text-center">{movie.title}</span>
+                    <span className="text-[13px] font-extrabold text-foreground/80 tracking-tight text-center">{movie.aspect}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Education Journey */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 border-t-thin border-border-custom">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-black tracking-tight mb-4">Quá trình học tập</h2>
