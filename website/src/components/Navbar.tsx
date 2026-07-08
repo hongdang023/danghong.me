@@ -22,6 +22,7 @@ export default function Navbar() {
             <Link href="/books" className="hover:opacity-100 transition-opacity">Books</Link>
             <Link href="/list" className="hover:opacity-100 transition-opacity">Hồng's List</Link>
             <Link href="/community" className="hover:opacity-100 transition-opacity">Community</Link>
+            <Link href="/family" className="hover:opacity-100 transition-opacity">Family</Link>
           </div>
         </div>
 

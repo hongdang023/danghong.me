@@ -18,6 +18,7 @@
 ├── 📋 /list (Hồng's List - Triết lý & Tiêu chí giám tuyển khóa học lọc 4D)
 │   └── /list/collection (Danh sách các khóa học đã qua bộ lọc 4D)
 ├── 🤝 /community (Moments & Network - Ảnh đời sống, bè bạn & kết nối)
+├── 👨‍👩‍👧‍👦 /family (Gia đình - Những người tôi yêu thương)
 ├── 🔄 /updates (Nhật ký cập nhật hệ thống / Changelog)
 └── 🔌 /api-docs (Tài liệu hướng dẫn API)
 ```

@@ -5,6 +5,7 @@ import * as motion from "framer-motion/client";
 import Link from "next/link";
 import { Heart, Briefcase, Lightbulb, Compass, Sparkles, User, ArrowRight, Palette, Film, PenTool } from "lucide-react";
 import { lifeMentors } from "@/data/lifeMentorsData";
+import AmongUsGame from "./AmongUsGame";
 
 const IconComponent = ({ name, className }: { name: string; className?: string }) => {
   switch (name) {
@@ -496,6 +497,11 @@ export default function AboutPage() {
             ))}
           </motion.div>
         </div>
+      </section>
+
+      {/* 3 Truth 2 Lie Game */}
+      <section className="py-20 px-6 border-t-thin border-border-custom bg-foreground/[0.02]">
+        <AmongUsGame />
       </section>
     </div>
   );
