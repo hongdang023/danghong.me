@@ -73,8 +73,9 @@ export const communitiesData: Community[] = [
     name: "Conan Community",
     stats: "Cộng đồng Công nghệ",
     description: "Nơi thảo luận về các giải pháp công nghệ, concept thiết kế và ứng dụng thực tế vào sản phẩm như Concept Chopper hay Course Maker.",
-    cover_image: "/images/communities/conan-00.jpg",
+    cover_image: "/images/communities/conan-04.jpg",
     images: [
+      "/images/communities/conan-04.jpg",
       "/images/communities/conan-00.jpg",
       "/images/communities/conan-01.jpg",
       "/images/communities/conan-02.jpg",
