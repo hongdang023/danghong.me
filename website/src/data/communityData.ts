@@ -139,4 +139,14 @@ export const communitiesData: Community[] = [
       "/images/communities/improv-hub-03.png",
     ],
   },
+  {
+    id: "sutucon-school",
+    name: "Sư Tử Con School",
+    stats: "Lớp học AI Teen",
+    description: "Một khoảnh khắc bình thường nhưng đáng nhớ sau giờ làm sản phẩm. Tui rất yêu khoảng thời gian được gặp các bé ở lớp AI Teen, vì các bé đều rất đáng yêu, nhiều chuyện hay ho để kể.",
+    cover_image: "/images/communities/sutucon-00.jpg",
+    images: [
+      "/images/communities/sutucon-00.jpg",
+    ],
+  },
 ];
