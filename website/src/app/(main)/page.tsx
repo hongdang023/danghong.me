@@ -79,14 +79,14 @@ export default function Home() {
               {
                 title: "Conan School",
                 role: "Mentor lớp WebAI Builders và AI Master",
-                desc: "Trường học dạy cách thu hút khách số 1 Việt Nam",
+                desc: "Cộng đồng dành cho những người bắt đầu hành trình xây dựng doanh nghiệp trong kỷ nguyên AI",
                 link: "https://www.conan.school/",
                 image: "/images/conan_school.png"
               },
               {
                 title: "Sư Tử Con School",
                 role: "Mentor lớp AI Teen",
-                desc: "Trường học dạy các bé cấp 2 và cấp 3 làm quen với việc tạo ra sản phẩm và sử dụng được não",
+                desc: "Sư Tử Con giúp học sinh cấp 2–3 biết suy nghĩ, làm sản phẩm và sử dụng AI như một công cụ sáng tạo và học các Future Skills (như Problem Framing, Math Thinking, Python, ...)",
                 link: "https://sutucon.com/",
                 image: "/images/sutucon_school.png"
               },
@@ -103,43 +103,56 @@ export default function Home() {
                 desc: "Cộng đồng học cách hiểu mình và đối mặt với cảm xúc và xung đột (với bố mẹ, bạn bè, người yêu,...)",
                 link: "https://www.inside6.com/",
                 image: "/images/inside6.png"
+              },
+              {
+                title: "Chuyên Chọn",
+                role: "Mentor",
+                desc: "Hệ thống đo đạc giúp con đỗ trường chuyên cấp 3",
+                link: "https://chuyenchon.com/",
+                image: "/images/chuyen_chon.png"
               }
-            ].map((work, idx) => (
-              <a
-                key={idx}
-                href={work.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col bg-card border-thin border-border-custom rounded-3xl overflow-hidden hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 hover:border-accent/30"
-              >
-                <div className="relative aspect-[16/9] w-full overflow-hidden border-b-thin border-border-custom">
-                  <Image
-                    src={work.image}
-                    alt={work.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    unoptimized
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                    <span className="text-[12px] font-bold uppercase tracking-widest text-white flex items-center gap-1.5">
-                      Ghé thăm website <ArrowRight size={14} />
-                    </span>
+            ].map((work, idx) => {
+              const isLink = !!work.link;
+              const CardComponent = isLink ? 'a' : 'div';
+              return (
+                <CardComponent
+                  key={idx}
+                  {...(isLink ? { href: work.link, target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className={`group flex flex-col bg-card border-thin border-border-custom rounded-3xl overflow-hidden transition-all duration-500 ${
+                    isLink ? "hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/5 hover:border-accent/30 cursor-pointer" : ""
+                  }`}
+                >
+                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b-thin border-border-custom">
+                    <Image
+                      src={work.image}
+                      alt={work.title}
+                      fill
+                      className={`object-cover ${isLink ? "group-hover:scale-105" : ""} transition-transform duration-700`}
+                      unoptimized
+                    />
+                    {isLink && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                        <span className="text-[12px] font-bold uppercase tracking-widest text-white flex items-center gap-1.5">
+                          Ghé thăm website <ArrowRight size={14} />
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </div>
 
-                <div className="p-8 flex flex-col flex-grow">
-                  <h4 className="text-xl font-extrabold tracking-tight mb-2 group-hover:text-accent transition-colors duration-300">
-                    {work.title}
-                  </h4>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-accent bg-accent/5 border border-accent/15 px-3 py-1 rounded-full w-fit mb-4">
-                    {work.role}
-                  </span>
-                  <p className="text-[14px] text-foreground/75 leading-relaxed font-medium">
-                    {work.desc}
-                  </p>
-                </div>
-              </a>
-            ))}
+                  <div className="p-8 flex flex-col flex-grow">
+                    <h4 className={`text-xl font-extrabold tracking-tight mb-2 ${isLink ? "group-hover:text-accent" : ""} transition-colors duration-300`}>
+                      {work.title}
+                    </h4>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent bg-accent/5 border border-accent/15 px-3 py-1 rounded-full w-fit mb-4">
+                      {work.role}
+                    </span>
+                    <p className="text-[14px] text-foreground/75 leading-relaxed font-medium">
+                      {work.desc}
+                    </p>
+                  </div>
+                </CardComponent>
+              );
+            })}
           </div>
           <div className="flex justify-center mt-16">
             <a href="/about" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">

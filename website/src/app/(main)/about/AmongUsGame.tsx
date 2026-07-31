@@ -8,9 +8,9 @@ const STATEMENTS = [
   { id: 1, text: "Wibu", isTruth: true, color: "bg-red-500" },
   { id: 2, text: "Có một đứa em gái kém 20 tuổi (đẻ nó ra còn được luôn…)", isTruth: true, color: "bg-blue-500" },
   { id: 3, text: "Cấp 03 học lớp Chuyên Hàn THPT Chuyên Ngoại ngữ, nhưng ra trường 1 chữ tiếng Hàn bẻ đôi cũng không biết :’D", isTruth: true, color: "bg-green-500" },
-  { id: 4, text: "Hay đi muộn cúp học khi lên đại học", isTruth: false, color: "bg-yellow-500" },
-  { id: 5, text: "Chơi thể thao siêu dở (trừ bơi…)", isTruth: false, color: "bg-purple-500" },
-  { id: 6, text: "Lười làm việc nhà", isTruth: false, color: "bg-cyan-500" }
+  { id: 4, text: "Hay đi muộn cúp học khi lên đại học", isTruth: true, color: "bg-yellow-500" },
+  { id: 5, text: "Chơi thể thao siêu dở (trừ bơi…)", isTruth: true, color: "bg-purple-500" },
+  { id: 6, text: "Lười làm việc nhà", isTruth: true, color: "bg-cyan-500" }
 ];
 
 export default function AmongUsGame() {
@@ -45,7 +45,7 @@ export default function AmongUsGame() {
           Who is the Impostor?
         </h3>
         <p className="text-gray-400 text-sm md:text-base">
-          3 truth 2 lie? (Actually there are 6 statements!) Hãy vote để tìm ra sự thật nhé!
+          Trò chơi "3 Truth 2 Lie" nhưng... khoan đã, có thực sự là có lời nói dối nào không? Hãy thử vote xem sao!
         </p>
       </div>
 
