@@ -91,13 +91,6 @@ export default function Home() {
                 image: "/images/sutucon_school.png"
               },
               {
-                title: "NextSteps Community",
-                role: "Community Facilitator",
-                desc: "Cộng đồng dành cho người trẻ phát triển đúng với tiềm năng của mình theo tiêu chuẩn quốc tế",
-                link: "https://nextstep27.com/",
-                image: "/images/nextsteps_community.png"
-              },
-              {
                 title: "Inside6",
                 role: "Community Facilitator",
                 desc: "Cộng đồng học cách hiểu mình và đối mặt với cảm xúc và xung đột (với bố mẹ, bạn bè, người yêu,...)",
