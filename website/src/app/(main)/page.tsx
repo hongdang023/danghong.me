@@ -81,14 +81,14 @@ export default function Home() {
                 role: "Mentor lớp WebAI Builders và AI Master",
                 desc: "Cộng đồng dành cho những người bắt đầu hành trình xây dựng doanh nghiệp trong kỷ nguyên AI",
                 link: "https://www.conan.school/",
-                image: "/images/conan_school.png"
+                image: "/images/conan_school_v2.png"
               },
               {
                 title: "Sư Tử Con School",
                 role: "Mentor lớp AI Teen",
                 desc: "Sư Tử Con giúp học sinh cấp 2–3 biết suy nghĩ, làm sản phẩm và sử dụng AI như một công cụ sáng tạo và học các Future Skills (như Problem Framing, Math Thinking, Python, ...)",
                 link: "https://sutucon.com/",
-                image: "/images/sutucon_school.png"
+                image: "/images/sutucon_school_v2.png"
               },
               {
                 title: "Inside6",
