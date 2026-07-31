@@ -125,4 +125,17 @@ export const communitiesData: Community[] = [
       "/images/communities/mo-03.jpg",
     ],
   },
+  {
+    id: "the-improv-hub",
+    name: "The Improv Hub",
+    stats: "Lớp học Kịch ứng tác (IMPROV 101)",
+    description: "Một buổi chiều chủ nhật mùa hè, 12 “thợ ứng tác” mới toe của lớp IMPROV 101 (tiếng Anh) đã hoàn thành buổi 8 - buổi cuối cùng của khoá học. Cảm ơn cả lớp đã dìu tui đến buổi học cuối (nghỉ mất 1 hôm đi viện, 1 hôm mẹ ốm, 1 hôm mệcc ngủ quên)",
+    cover_image: "/images/communities/improv-hub-00.jpg",
+    images: [
+      "/images/communities/improv-hub-00.jpg",
+      "/images/communities/improv-hub-01.jpg",
+      "/images/communities/improv-hub-02.png",
+      "/images/communities/improv-hub-03.png",
+    ],
+  },
 ];
