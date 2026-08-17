@@ -193,6 +193,7 @@ export default function HongsListPage() {
           </p>
         </div>
       </section>
+      <PageNavigation prev={{ title: "Tools", href: "/tools" }} next={{ title: "Hồng's List Collection", href: "/list/collection" }} />
     </main>
   );
 }
@@ -268,7 +269,6 @@ function ScoreCard({
       <p className={`font-medium ${isTop ? 'opacity-80' : 'opacity-60'}`}>
         {description}
       </p>
-      <PageNavigation prev={{ title: "Products", href: "/products-hub" }} next={{ title: "Community", href: "/community" }} />
-</div>
+    </div>
   );
 }

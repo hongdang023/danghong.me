@@ -5,6 +5,7 @@ import { CATEGORY_MAPPING, getFilterCategories } from "@/data/courseData";
 import { CourseCard } from "@/components/CourseCard";
 import { ArrowLeft, Search, Filter, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import PageNavigation from "@/components/PageNavigation";
 
 export default function CollectionClientPage({ initialCourses }: { initialCourses: any[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>("Tất cả");
@@ -96,6 +97,8 @@ export default function CollectionClientPage({ initialCourses }: { initialCourse
           </div>
         )}
       </section>
+
+      <PageNavigation prev={{ title: "4D Criteria", href: "/list#criteria" }} next={{ title: "Community", href: "/community" }} />
     </main>
   );
 }

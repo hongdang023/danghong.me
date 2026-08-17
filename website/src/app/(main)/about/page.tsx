@@ -543,7 +543,22 @@ export default function AboutPage() {
           </section>
         </motion.div>
       )}
-      <PageNavigation next={{ title: "Masters", href: "/masters" }} />
+      <PageNavigation 
+        prev={
+          activeTab === "journey" ? undefined :
+          activeTab === "beliefs" ? { title: "My Journey", href: "/about#journey" } :
+          activeTab === "education" ? { title: "Core Beliefs", href: "/about#beliefs" } :
+          activeTab === "hobbies" ? { title: "Education", href: "/about#education" } :
+          activeTab === "game" ? { title: "Hobbies", href: "/about#hobbies" } : undefined
+        }
+        next={
+          activeTab === "journey" ? { title: "Core Beliefs", href: "/about#beliefs" } :
+          activeTab === "beliefs" ? { title: "Education", href: "/about#education" } :
+          activeTab === "education" ? { title: "Hobbies", href: "/about#hobbies" } :
+          activeTab === "hobbies" ? { title: "Who is the Impostor?", href: "/about#game" } :
+          activeTab === "game" ? { title: "Organizations", href: "/masters#organizations" } : undefined
+        } 
+      />
     </div>
   );
 }

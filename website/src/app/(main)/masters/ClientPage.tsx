@@ -236,8 +236,17 @@ export default function MastersClientPage() {
           </section>
         </motion.div>
       )}
-      <PageNavigation prev={{ title: "About", href: "/about" }} next={{ title: "Products", href: "/products-hub" }} />
-</div>
+      <PageNavigation 
+        prev={
+          activeTab === "organizations" ? { title: "Who is the Impostor?", href: "/about#game" } :
+          { title: "Organizations", href: "/masters#organizations" }
+        }
+        next={
+          activeTab === "organizations" ? { title: "Life Mentors", href: "/masters#life-mentors" } :
+          { title: "AI Websites", href: "/products-hub?cat=ai-websites" }
+        }
+      />
+    </div>
   );
 }
 
