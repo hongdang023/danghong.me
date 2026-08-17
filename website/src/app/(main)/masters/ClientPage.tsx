@@ -1,5 +1,5 @@
-import PageNavigation from "@/components/PageNavigation";
 "use client";
+import PageNavigation from "@/components/PageNavigation";
 
 import React from "react";
 import * as motion from "framer-motion/client";

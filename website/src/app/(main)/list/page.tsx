@@ -1,5 +1,5 @@
-import PageNavigation from "@/components/PageNavigation";
 "use client";
+import PageNavigation from "@/components/PageNavigation";
 
 import { ChevronDown, Brain, Layout, UserCheck, Package, Star, ArrowRight } from "lucide-react";
 import React from "react";

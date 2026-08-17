@@ -1,5 +1,5 @@
-import PageNavigation from "@/components/PageNavigation";
 "use client";
+import PageNavigation from "@/components/PageNavigation";
 
 import React, { useState } from "react";
 import { OutcomeCard } from "@/components/OutcomeCard";
