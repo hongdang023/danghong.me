@@ -1,3 +1,4 @@
+import PageNavigation from "@/components/PageNavigation";
 "use client";
 
 import React, { useState } from "react";
@@ -135,7 +136,8 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
             </div>
           )}
         </section>
-      </div>
+        <PageNavigation prev={{ title: "Masters", href: "/masters" }} next={{ title: "Hồng's List", href: "/list" }} />
+</div>
 
       <ProductDetail
         isOpen={isModalOpen}

@@ -1,3 +1,4 @@
+import PageNavigation from "@/components/PageNavigation";
 "use client";
 
 import React from "react";
@@ -33,7 +34,8 @@ export default function CommunityPage() {
       <div className="max-w-7xl mx-auto px-6">
         <CommunityCards communities={communitiesData} />
       </div>
-    </div>
+      <PageNavigation prev={{ title: "Hồng's List", href: "/list" }} next={{ title: "Family", href: "/family" }} />
+</div>
   );
 }
 

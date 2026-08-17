@@ -1,3 +1,4 @@
+import PageNavigation from "@/components/PageNavigation";
 "use client";
 
 import React from "react";
@@ -135,6 +136,7 @@ export default function FamilyPage() {
       <section className="max-w-7xl mx-auto px-6 mb-24">
         <MarioKartQuiz />
       </section>
-    </div>
+      <PageNavigation prev={{ title: "Community", href: "/community" }}  />
+</div>
   );
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Heart, Briefcase, Lightbulb, Compass, Sparkles, User, ArrowRight, Palette, Film, PenTool } from "lucide-react";
 
 import AmongUsGame from "./AmongUsGame";
+import PageNavigation from "@/components/PageNavigation";
 
 const IconComponent = ({ name, className }: { name: string; className?: string }) => {
   switch (name) {
@@ -542,6 +543,7 @@ export default function AboutPage() {
           </section>
         </motion.div>
       )}
+      <PageNavigation next={{ title: "Masters", href: "/masters" }} />
     </div>
   );
 }

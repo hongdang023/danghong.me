@@ -1,3 +1,4 @@
+import PageNavigation from "@/components/PageNavigation";
 "use client";
 
 import { ChevronDown, Brain, Layout, UserCheck, Package, Star, ArrowRight } from "lucide-react";
@@ -267,6 +268,7 @@ function ScoreCard({
       <p className={`font-medium ${isTop ? 'opacity-80' : 'opacity-60'}`}>
         {description}
       </p>
-    </div>
+      <PageNavigation prev={{ title: "Products", href: "/products-hub" }} next={{ title: "Community", href: "/community" }} />
+</div>
   );
 }

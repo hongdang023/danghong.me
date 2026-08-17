@@ -1,3 +1,4 @@
+import PageNavigation from "@/components/PageNavigation";
 "use client";
 
 import React from "react";
@@ -235,7 +236,8 @@ export default function MastersClientPage() {
           </section>
         </motion.div>
       )}
-    </div>
+      <PageNavigation prev={{ title: "About", href: "/about" }} next={{ title: "Products", href: "/products-hub" }} />
+</div>
   );
 }
 
