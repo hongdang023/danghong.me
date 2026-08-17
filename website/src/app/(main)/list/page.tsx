@@ -70,7 +70,7 @@ export default function HongsListPage() {
       </section>
 
       {/* 4D Filter - Toggle List */}
-      <section className="max-w-3xl mx-auto mb-24 space-y-4">
+      <section id="criteria" className="max-w-3xl mx-auto mb-24 space-y-4">
         <h2 className="text-sm font-bold tracking-widest uppercase text-accent mb-8 text-center">The 4D Filter</h2>
         
         <FilterToggle 

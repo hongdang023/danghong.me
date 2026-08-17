@@ -45,7 +45,7 @@ export default function AmongUsGame() {
           Who is the Impostor?
         </h3>
         <p className="text-gray-400 text-sm md:text-base">
-          Trò chơi "3 Truth 2 Lie" nhưng... khoan đã, có thực sự là có lời nói dối nào không? Hãy thử vote xem sao!
+          Trò chơi "3 Truths 3 Lies" nhưng... khoan đã, có thực sự là có lời nói dối nào không? Hãy thử vote xem sao!
         </p>
       </div>
 

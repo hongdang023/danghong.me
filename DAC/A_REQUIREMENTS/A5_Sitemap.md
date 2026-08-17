@@ -1,37 +1,65 @@
 # A5. SITEMAP TỔNG THỂ (LEARNING ARCHITECT PORTAL)
 
 > [!IMPORTANT]
-> Bản cập nhật v2.0 - Gộp Playground và Resource Hub thành **Products Hub** để tối giản hóa điều hướng.
+> Bản cập nhật v3.0 - Nâng cấp hệ thống điều hướng sang **Mega Dropdown Menu (phong cách Apple)**.
+>
+> - **Top-Level NavItems**: Ngắn gọn (1-2 từ), giữ nguyên tên gọi cốt lõi.
+> - **Products Hub**: Gom nhóm các sản phẩm bao gồm AI Websites, AI Assistants (Gemini Gems), Newsletter (Substack), Books và Tools.
+> - **Loved Ones**: Gom nhóm Community và Family dưới một phân vùng chung trong Mega Menu.
 
 ---
 
-## 1. CẤU TRÚC ĐIỀU HƯỚNG TỔNG THỂ
+## 1. CẤU TRÚC ĐIỀU HƯỚNG TỔNG THỂ (MEGA DROPDOWN SITEMAP)
 
 ```text
 / (Home - The Portal)
-├── 🙋‍♀️ /about (Về Hồng - Identity, Triết lý giáo dục & Hành trình)
-├── 🎓 /masters (Nguồn tri thức ảnh hưởng - Chuyên gia & Trường phái)
-├── 🧬 /life-mentors/[id] (Trang chi tiết Người dẫn đường / Mentor cuộc sống)
-├── 🚀 /products-hub (Trung Tâm Giải Pháp - Dự án, E-books & Templates)
-├── 🛠️ /tools (My Stack - Hệ thống công cụ & Triết lý lựa chọn)
-├── 📚 /books (Tủ sách tuyển chọn - E-books)
-├── 📋 /list (Hồng's List - Triết lý & Tiêu chí giám tuyển khóa học lọc 4D)
-│   └── /list/collection (Danh sách các khóa học đã qua bộ lọc 4D)
-├── 🤝 /community (Moments & Network - Ảnh đời sống, bè bạn & kết nối)
-├── 👨‍👩‍👧‍👦 /family (Gia đình - Những người tôi yêu thương)
-├── 🔄 /updates (Nhật ký cập nhật hệ thống / Changelog)
-└── 🔌 /api-docs (Tài liệu hướng dẫn API)
+├── 🙋‍♀️ About (/about)
+│   ├── My Journey
+│   ├── Core Beliefs
+│   ├── Education
+│   └── Hobbies
+│
+├── 🎓 Masters (/masters)
+│   ├── 🏛️ Organizations
+│   └── 🧬 Life Mentors
+│
+├── 🚀 Products (/products-hub)
+│   ├── 🌐 AI Websites
+│   ├── 🤖 AI Assistants
+│   ├── 📰 Newsletter
+│   ├── 📚 Books
+│   └── 🛠️ Tools
+│
+├── 📋 Hồng's List (/list)
+│   ├── 🔍 4D Criteria
+│   └── 🏆 Hồng's List
+│
+└── 💖 Safe Zone (Cộng đồng & Người thương)
+    ├── 🤝 Community
+    └── 👨‍👩‍👧‍👦 Family
 ```
-
 
 ---
 
-## 2. QUY TẮC ĐIỀU HƯỚNG (RULES)
+## 2. QUY TẮC ĐIỀU HƯỚNG MEGA MENU (APPLE-STYLE RULES)
 
-1.  **Top-Level Nav**: Các mục chính (About, Masters, Products Hub, Tools, Books, Hồng's List, Community) luôn hiển thị.
-2.  **Product Categorization**: Trong Products Hub, sử dụng bộ lọc (Filter) để phân loại nhanh giữa "Live Demo", "E-book" và "Template".
-3.  **Human touch**: Hình ảnh từ mục Community có thể được dùng làm nền hoặc trang trí tinh tế cho các trang khác để tạo sự gần gũi.
-4.  **Connect CTA**: Nút "Chat với Hồng" (Liên kết tới Facebook) đặt ở vị trí nổi bật (như Header/Footer) để thay thế cho nút Đăng nhập trước đây.
+1.  **Top-Level Nav**: Giao diện thanh Nav phía trên giữ nguyên sự tinh gọn với tên gọi ngắn gọn: **About**, **Masters**, **Products**, **Hồng's List**, **Safe Zone**.
+2.  **Mega Dropdown Panels**: Khi hover/click vào từng mục, một Panel full-width mịn màng (Glassmorphism effect) thả xuống hiển thị các cột nội dung trực quan.
+3.  **Products Hub Integration**:
+    - Mục **Products** gom trọn các mảnh ghép sản phẩm: AI Websites, AI Assistants (Gemini Gems), Newsletter (Substack), Books và Tools.
+4.  **Safe Zone Grouping**:
+    - Mục **Safe Zone** kết nối tình cảm cá nhân và mạng lưới: bao gồm **Community** và **Family**.
+5.  **Hash-based Section Filtering (Quy tắc hiển thị lọc nội dung)**:
+    - Đối với các trang chứa nhiều phần nội dung (như `/about`), khi bấm vào từng sub-item trên Mega Menu, hệ thống sẽ chuyển hướng tới trang đích với URL chứa Hash tương ứng (ví dụ: `#journey`, `#beliefs`, `#education`, `#hobbies`, `#game`).
+    - Trang đích sẽ nhận diện Hash này và chỉ hiển thị duy nhất nội dung tương ứng của phần đó (State-sync), không cuộn trang dài và không hiển thị tất cả các phần khác trên cùng một màn hình.
+6.  **Newsletter CTA**: Nút "Newsletter" (Liên kết tới Substack cá nhân) dạng outline sang trọng nằm ở góc phải Navbar, bên cạnh nút liên hệ.
+7.  **Connect CTA**: Nút "Chat với Hồng" (Liên kết tới Facebook) dạng solid nổi bật luôn nằm cố định ở góc phải ngoài cùng của Navbar.
+
+### 2.1. NGUYÊN TẮC PHÂN BỔ 3 CỘT TRONG MEGA MENU
+
+- **Cột 1 (Primary Sub-links 1)**: Hiển thị nhóm liên kết & danh mục nội dung cốt lõi của phân vùng (như Bản sắc & Triết lý, Tổ chức ảnh hưởng, AI Websites...).
+- **Cột 2 (Primary Sub-links 2)**: Hiển thị nhóm liên kết mở rộng, sở thích hoặc tài nguyên bổ trợ (như Sở thích, Life Mentors, AI Assistants, Books, Tools...).
+- **Cột 3 (Featured Highlight Card)**: Thẻ nội dung/dự án tiêu biểu nổi bật đại diện cho phân vùng (như Interactive Game, Featured Master, Live Apps Showcase...).
 
 ---
 

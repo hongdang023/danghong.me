@@ -7,15 +7,55 @@ import * as motion from "framer-motion/client";
 
 const FILTERS = [
   { id: "all", label: "Tất cả" },
-  { id: "life", label: "Life" },
+  { id: "ai-websites", label: "AI Websites" },
+  { id: "ai-assistants", label: "AI Assistants (Gems)" },
   { id: "education", label: "Education" },
-  { id: "gems", label: "Gems" },
+  { id: "life", label: "Life" },
 ];
 
 export default function ProductsHubClient({ initialItems }: { initialItems: any[] }) {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState("all");
+
+  const lastUrlRef = React.useRef("");
+
+  React.useEffect(() => {
+    const handleUrlCheck = () => {
+      const currentUrl = window.location.href;
+      if (currentUrl === lastUrlRef.current) return;
+      lastUrlRef.current = currentUrl;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get("cat");
+      const hashSegments = window.location.hash.split("#").filter(Boolean);
+      const hash = hashSegments.length > 0 ? hashSegments[hashSegments.length - 1] : "";
+      const targetFilter = catParam || hash;
+
+      if (targetFilter && ["all", "ai-websites", "ai-assistants", "life", "education", "gems"].includes(targetFilter)) {
+        setActiveFilter(targetFilter);
+      }
+    };
+
+    handleUrlCheck();
+    window.addEventListener("hashchange", handleUrlCheck);
+    window.addEventListener("popstate", handleUrlCheck);
+
+    const interval = setInterval(handleUrlCheck, 150);
+
+    return () => {
+      window.removeEventListener("hashchange", handleUrlCheck);
+      window.removeEventListener("popstate", handleUrlCheck);
+      clearInterval(interval);
+    };
+  }, []);
+
+  const handleFilterClick = (filterId: string) => {
+    setActiveFilter(filterId);
+    const newUrl = filterId === "all" ? "/products-hub" : `/products-hub?cat=${filterId}`;
+    lastUrlRef.current = window.location.origin + newUrl;
+    window.history.pushState(null, "", newUrl);
+  };
 
   const openProduct = (product: any) => {
     setSelectedProduct(product);
@@ -24,6 +64,10 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
 
   const filteredItems = activeFilter === "all" 
     ? initialItems 
+    : activeFilter === "ai-websites"
+    ? initialItems.filter(item => item.category === "education" || item.category === "life" || item.category === "ai-websites")
+    : activeFilter === "ai-assistants" || activeFilter === "gems"
+    ? initialItems.filter(item => item.category === "gems" || item.category === "ai-assistants")
     : initialItems.filter(item => item.category === activeFilter);
 
   return (
@@ -57,8 +101,8 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
             {FILTERS.map((filter) => (
               <button
                 key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-2.5 rounded-full text-sm font-bold border-thin transition-all ${
+                onClick={() => handleFilterClick(filter.id)}
+                className={`px-6 py-2.5 rounded-full text-sm font-bold border-thin transition-all cursor-pointer ${
                   activeFilter === filter.id 
                   ? "bg-accent text-white border-accent shadow-lg shadow-accent/20" 
                   : "bg-secondary border-border-custom opacity-60 hover:opacity-100"

@@ -236,5 +236,41 @@ export const PRODUCTS: Product[] = [
     link: "https://harureboot.substack.com/",
     outcome: "Cập nhật tư duy hàng tuần",
     tags: ["Newsletter", "Community"],
+  },
+  {
+    slug: "prompt-library",
+    category: "tools",
+    title: "Prompt Library",
+    description: "Thư viện tổng hợp những AI prompts được kiểm chứng và tối ưu cho công việc hàng ngày.",
+    longDescription: "",
+    jtbd: {
+      functional: "Tốn thời gian viết lại hoặc tìm lại những prompt hiệu quả đã từng sử dụng cho các tác vụ hàng ngày.",
+      emotional: "Cảm thấy thiếu một 'kho vũ khí' lưu trữ ngăn nắp để triệu hồi tức thì khi làm việc cùng AI.",
+      social: "Muốn chia sẻ những mẫu prompt tinh túy nhất để bạn bè và cộng đồng cùng nâng cao năng suất."
+    },
+    dreamState: "Một thư viện prompt cá nhân hóa tinh gọn, phân loại bài bản theo mục đích sử dụng, giúp bạn sao chép và kích hoạt các tác vụ AI mạnh mẽ chỉ trong một cú nhấp chuột.",
+    humanStory: "Hồng tạo ra Prompt Library để đóng gói toàn bộ những mẫu câu lệnh (prompts) mà Hồng tâm đắc và sử dụng thường xuyên nhất trong quá trình làm việc, thiết kế sản phẩm và nghiên cứu.",
+    image: "/screenshots/prompt-library.png",
+    link: "https://prompt-library-3lz.pages.dev/",
+    outcome: "Lưu trữ & tái sử dụng 100% prompt",
+    tags: ["AI Prompts", "Library", "Cloudflare Pages"],
+  },
+  {
+    slug: "family-dossiers",
+    category: "education",
+    title: "Family Dossiers",
+    description: "Dự án mẫu xây dựng website hồ sơ cá nhân hóa cho học sinh lớp AI Teen.",
+    longDescription: "",
+    jtbd: {
+      functional: "Học sinh lớp AI Teen gặp khó khăn trong việc hình dung cách xây dựng một website thực tế và xác định chân dung độc giả mục tiêu (Target Audience).",
+      emotional: "Cảm thấy việc học làm web trở nên mơ hồ nếu chỉ dừng lại ở các bài tập lý thuyết đơn điệu.",
+      social: "Muốn tạo ra một sản phẩm vừa đậm tính cá nhân, vừa có yếu tố kể chuyện cuốn hút để khoe với người thân và bạn bè."
+    },
+    dreamState: "Một website hồ sơ mang phong cách trinh thám Conan độc đáo, thiết kế đo ni đóng giày cho độc giả mục tiêu là bạn thân 22 tuổi mê Conan, làm mẫu trực quan sinh động cho các em học sinh.",
+    humanStory: "Hồng xây dựng Family Dossiers làm bài mẫu trực tiếp cho các bé học sinh lớp AI Teen. Dự án thể hiện cách xác định đối tượng mục tiêu sâu sắc (bạn thân nữ 22 tuổi thích truyện Conan) và biến tri thức gia đình thành một trải nghiệm khám phá thú vị.",
+    image: "/screenshots/family-dossiers.png",
+    link: "https://hongdang-family.pages.dev/",
+    outcome: "Dự án mẫu trực quan cho AI Teen",
+    tags: ["AI Teen", "Conan Theme", "Target Audience"],
   }
 ];

@@ -7,6 +7,7 @@
   --secondary: #EDE6DE;
   --accent: #8E3A3A;
   --border: #E5E5E7;
+  --card: #FFFFFF;
   
   /* Typography */
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
@@ -19,6 +20,7 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-border-custom: var(--border);
+  --color-card: var(--card);
   
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);

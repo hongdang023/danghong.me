@@ -30,6 +30,43 @@ export default function FamilyPage() {
         </div>
       </section>
 
+      {/* Graduation Family Photo Showcase */}
+      <section className="max-w-4xl mx-auto px-6 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-card border-thin border-border-custom rounded-3xl overflow-hidden shadow-lg p-4 md:p-6"
+        >
+          <div className="relative aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] w-full rounded-2xl overflow-hidden mb-6 bg-secondary/50">
+            <img 
+              src="/images/family/graduation.jpg" 
+              alt="Lễ trao bằng tốt nghiệp NEU - Ngày 05/08/2026"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="px-2 md:px-4 text-center md:text-left space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b-thin border-border-custom pb-3">
+              <span className="text-xs font-extrabold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full">
+                Kỷ niệm đặc biệt • 05/08/2026
+              </span>
+              <span className="text-xs text-foreground/50 font-medium">
+                Đại học Kinh tế Quốc dân (NEU - AEP)
+              </span>
+            </div>
+
+            <p className="text-foreground/90 leading-relaxed text-sm md:text-base italic font-medium pt-2">
+              "Tôi chưa từng biết mình may mắn đến thế nào cho đến ngày hôm nay. Nhìn xung quanh, tôi là một trong số ít người hiếm hoi có đủ cả 3 thế hệ cùng sum vầy bên nhau 🥺🥺🥺 Điều này vượt qua mọi ước mơ lớn nhất trong đời tôi omgggg!
+            </p>
+
+            <p className="text-foreground/80 leading-relaxed text-sm md:text-base font-medium">
+              Cảm ơn ông bà, bố mẹ, anh trai và em gái nhỏ của tôi. Đặc biệt gửi lời cảm ơn đến Gemini (vì đã giúp bà ngoại đoàn tụ cùng tôi trong bức ảnh này từ thiên đường 😇)"
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Members Section */}
       <section className="max-w-7xl mx-auto px-6 mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
