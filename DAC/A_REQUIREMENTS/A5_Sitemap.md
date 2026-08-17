@@ -61,6 +61,17 @@
 - **Cột 2 (Primary Sub-links 2)**: Hiển thị nhóm liên kết mở rộng, sở thích hoặc tài nguyên bổ trợ (như Sở thích, Life Mentors, AI Assistants, Books, Tools...).
 - **Cột 3 (Featured Highlight Card)**: Thẻ nội dung/dự án tiêu biểu nổi bật đại diện cho phân vùng (như Interactive Game, Featured Master, Live Apps Showcase...).
 
+### 2.2. NGUYÊN TẮC ĐIỀU HƯỚNG TỐI GIẢN CUỐI TRANG (MINIMALIST INLINE PAGE NAVIGATION)
+
+8.  **Minimal Bottom Navigation**:
+    - Ở cuối mỗi trang/phân vùng nội dung (trước Footer chính), bổ sung bộ điều hướng 2 chiều dạng **Inline Text & Arrow Icons** (Không dùng Card background/border để giao diện thanh thoát và tránh lặp lại trải nghiệm dạng thẻ).
+    - **Cấu trúc hiển thị**:
+      - Góc trái: `← Trang trước: [Tên NavItem / Chủ đề trước]`
+      - Góc phải: `Trang sau: [Tên NavItem / Chủ đề tiếp theo] →`
+    - **Hiệu ứng Tương tác (UX/UI)**:
+      - Default: Typography màu trung tính, chìm nhẹ.
+      - Hover: Đổi màu chữ sang màu Accent chủ đạo và có micro-animation đẩy nhẹ mũi tên (`←` trượt về bên trái, `→` trượt về bên phải).
+
 ---
 
 ## 3. CHI TIẾT HỒNG'S LIST (THE CURATION LOGIC)
