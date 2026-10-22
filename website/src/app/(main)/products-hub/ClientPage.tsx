@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import { OutcomeCard } from "@/components/OutcomeCard";
 import { ProductDetail } from "@/components/ProductDetail";
 import * as motion from "framer-motion/client";
+import type { Product } from "@/data/productData";
+
+type HubItem = Omit<Product, "slug"> & { id: string };
 
 const FILTERS = [
   { id: "all", label: "Tất cả" },
@@ -14,8 +17,8 @@ const FILTERS = [
   { id: "life", label: "Life" },
 ];
 
-export default function ProductsHubClient({ initialItems }: { initialItems: any[] }) {
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+export default function ProductsHubClient({ initialItems }: { initialItems: HubItem[] }) {
+  const [selectedProduct, setSelectedProduct] = useState<HubItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -58,7 +61,7 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
     window.history.pushState(null, "", newUrl);
   };
 
-  const openProduct = (product: any) => {
+  const openProduct = (product: HubItem) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
   };
@@ -120,7 +123,7 @@ export default function ProductsHubClient({ initialItems }: { initialItems: any[
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => (
               <OutcomeCard
-                key={item.id || item.slug}
+                key={item.id}
                 title={item.title}
                 description={item.description}
                 image={item.image}

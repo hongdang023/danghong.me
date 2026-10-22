@@ -74,7 +74,7 @@ export default function LifeMentorClientPage() {
             {mentor.subtitle}
           </p>
           <p className="text-[15px] md:text-[16px] text-foreground/60 max-w-2xl mx-auto leading-relaxed italic">
-            "{mentor.summary}"
+            &quot;{mentor.summary}&quot;
           </p>
         </motion.div>
 
@@ -139,7 +139,7 @@ export default function LifeMentorClientPage() {
                 <div className="space-y-4">
                   {mentor.quotes.map((quote, idx) => (
                     <div key={idx} className="border-l-2 border-accent/40 pl-4 py-1 text-[13.5px] md:text-[14px] text-foreground/80 leading-relaxed font-semibold italic">
-                      "{quote}"
+                      &quot;{quote}&quot;
                     </div>
                   ))}
                 </div>

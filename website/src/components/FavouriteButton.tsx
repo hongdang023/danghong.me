@@ -21,6 +21,7 @@ export function FavouriteButton({ productSlug, className = "", showCount = true 
     if (saved) {
       const list = JSON.parse(saved) as string[];
       locallyFavourited = list.includes(productSlug);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount in the static export
       setIsFavourited(locallyFavourited);
     }
     

@@ -17,6 +17,7 @@ export default function BooksClientPage() {
     const savedProgress = localStorage.getItem("ld_progress");
     if (savedProgress) {
       const { unlocked, completed } = JSON.parse(savedProgress);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount in the static export
       setUnlockedChapters(unlocked);
       setCompletedChapters(completed);
     }

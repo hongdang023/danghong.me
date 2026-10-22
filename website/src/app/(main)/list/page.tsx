@@ -18,7 +18,7 @@ export default function HongsListPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
-              <span className="text-accent block uppercase">Hồng's List.</span>
+              <span className="text-accent block uppercase">Hồng&apos;s List.</span>
               <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
                 Tuyển Tập Khóa Học Khắt Khe
               </span>
@@ -28,7 +28,7 @@ export default function HongsListPage() {
             </p>
             <div className="flex justify-center">
               <Link href="/list/collection" className="group flex items-center space-x-2 px-10 py-5 bg-accent text-white text-[13px] font-bold tracking-tight uppercase rounded-full hover:scale-105 hover:shadow-xl hover:shadow-accent/20 transition-all">
-                <span>Xem toàn bộ danh sách Hồng's Lists</span>
+                <span>Xem toàn bộ danh sách Hồng&apos;s Lists</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -189,7 +189,7 @@ export default function HongsListPage() {
         
         <div className="mt-16 text-center">
           <p className="text-xl font-medium italic opacity-80 max-w-2xl mx-auto">
-            "Vì học là đầu tư. Và đầu tư nên có tiêu chuẩn."
+            &quot;Vì học là đầu tư. Và đầu tư nên có tiêu chuẩn.&quot;
           </p>
         </div>
       </section>

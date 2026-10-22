@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Terminal, User, BookOpen, Rocket, ExternalLink, Code } from 'lucide-react';
 
 export const metadata = {
@@ -63,9 +64,9 @@ export default function ApiDocsPage() {
             </div>
             <h1 className="text-xl font-extrabold tracking-tight uppercase">Public API <span className="opacity-40">Docs</span></h1>
           </div>
-          <a href="/" className="text-xs font-bold uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">
+          <Link href="/" className="text-xs font-bold uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity">
             Quay lại trang chủ
-          </a>
+          </Link>
         </div>
       </header>
 

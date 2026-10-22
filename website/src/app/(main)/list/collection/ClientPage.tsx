@@ -6,8 +6,9 @@ import { CourseCard } from "@/components/CourseCard";
 import { ArrowLeft, Search, Filter, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import PageNavigation from "@/components/PageNavigation";
+import type { Course } from "@/data/courseData";
 
-export default function CollectionClientPage({ initialCourses }: { initialCourses: any[] }) {
+export default function CollectionClientPage({ initialCourses }: { initialCourses: Course[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>("Tất cả");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const allCategories = ["Tất cả", ...getFilterCategories()];
@@ -30,13 +31,13 @@ export default function CollectionClientPage({ initialCourses }: { initialCourse
         className="inline-flex items-center space-x-2 text-sm font-bold tracking-widest uppercase opacity-40 hover:opacity-100 hover:text-accent transition-colors mb-12"
       >
         <ArrowLeft size={16} />
-        <span>Trở lại Hồng's List</span>
+        <span>Trở lại Hồng&apos;s List</span>
       </Link>
 
       {/* Hero Section */}
       <section className="mb-12">
         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6">
-          <span className="text-accent block uppercase">Hồng's Collection.</span>
+          <span className="text-accent block uppercase">Hồng&apos;s Collection.</span>
           <span className="text-foreground text-xl md:text-2xl block mt-3 opacity-80">
             Tuyển Tập Khóa Học Chọn Lọc
           </span>
@@ -92,7 +93,7 @@ export default function CollectionClientPage({ initialCourses }: { initialCourse
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCourses.map(course => (
-              <CourseCard key={course.id || course.slug} course={course} />
+              <CourseCard key={course.id} course={course} />
             ))}
           </div>
         )}

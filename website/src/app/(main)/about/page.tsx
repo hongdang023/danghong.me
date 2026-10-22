@@ -96,7 +96,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl font-medium opacity-40 max-w-2xl mx-auto leading-relaxed">
-              "Mình là người kiến tạo những hệ thống và trải nghiệm giúp con người không ngừng phát triển và khai mở tiềm năng của chính mình, vì mình tin rằng đó là con đường bền vững nhất để sống hạnh phúc và có ý nghĩa."
+              &quot;Mình là người kiến tạo những hệ thống và trải nghiệm giúp con người không ngừng phát triển và khai mở tiềm năng của chính mình, vì mình tin rằng đó là con đường bền vững nhất để sống hạnh phúc và có ý nghĩa.&quot;
             </p>
           </motion.div>
         </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                   </h2>
                   <div className="space-y-6 text-foreground/80 leading-relaxed text-[15px]">
                     <p className="text-lg font-medium text-foreground italic border-l-4 border-accent pl-4 py-1">
-                      "Mình luôn bắt đầu bằng câu hỏi: Việc này có thực sự giúp một người phát triển hơn và tiến gần hơn tới mục tiêu của họ không?"
+                      &quot;Mình luôn bắt đầu bằng câu hỏi: Việc này có thực sự giúp một người phát triển hơn và tiến gần hơn tới mục tiêu của họ không?&quot;
                     </p>
                     <p>
                       Mình đến với giáo dục qua một hành trình khá vòng vèo: từ Chuyên Ngữ, sang Kinh tế ở ĐH Kinh tế Quốc dân, rồi đi làm qua Marketing, HR, và cuối cùng dừng lại ở Giáo dục. Mỗi chặng đều cho mình một góc nhìn khác về con người, về cách họ học, làm việc và phát triển.

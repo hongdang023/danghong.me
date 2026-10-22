@@ -58,11 +58,11 @@ export default function FamilyPage() {
             </div>
 
             <p className="text-foreground/90 leading-relaxed text-sm md:text-base italic font-medium pt-2">
-              "Tôi chưa từng biết mình may mắn đến thế nào cho đến ngày hôm nay. Nhìn xung quanh, tôi là một trong số ít người hiếm hoi có đủ cả 3 thế hệ cùng sum vầy bên nhau 🥺🥺🥺 Điều này vượt qua mọi ước mơ lớn nhất trong đời tôi omgggg!
+              &quot;Tôi chưa từng biết mình may mắn đến thế nào cho đến ngày hôm nay. Nhìn xung quanh, tôi là một trong số ít người hiếm hoi có đủ cả 3 thế hệ cùng sum vầy bên nhau 🥺🥺🥺 Điều này vượt qua mọi ước mơ lớn nhất trong đời tôi omgggg!
             </p>
 
             <p className="text-foreground/80 leading-relaxed text-sm md:text-base font-medium">
-              Cảm ơn ông bà, bố mẹ, anh trai và em gái nhỏ của tôi. Đặc biệt gửi lời cảm ơn đến Gemini (vì đã giúp bà ngoại đoàn tụ cùng tôi trong bức ảnh này từ thiên đường 😇)"
+              Cảm ơn ông bà, bố mẹ, anh trai và em gái nhỏ của tôi. Đặc biệt gửi lời cảm ơn đến Gemini (vì đã giúp bà ngoại đoàn tụ cùng tôi trong bức ảnh này từ thiên đường 😇)&quot;
             </p>
           </div>
         </motion.div>

@@ -24,6 +24,7 @@ export default function GalleryModal({ community, isOpen, onClose }: GalleryModa
   // Reset index when community changes
   useEffect(() => {
     if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- reset on open
       setCurrentIndex(0);
       document.body.style.overflow = "hidden"; // Prevent background scrolling
     } else {

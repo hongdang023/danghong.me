@@ -1,0 +1,16 @@
+{
+  "name": "danghong-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "deploy": "npm run build && wrangler pages deploy"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4",
+    "wrangler": "4.42.0"
+  }
+}

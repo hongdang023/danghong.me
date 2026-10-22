@@ -220,7 +220,7 @@ export default function MarioKartQuiz() {
   const playSound = (type: "jump" | "correct" | "coin" | "finish" | "click" | "incorrect") => {
     if (!soundEnabled) return;
     try {
-      const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const ctx = new (window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext!)();
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.connect(gain);
@@ -530,7 +530,7 @@ export default function MarioKartQuiz() {
               SELECT WORLD
             </h3>
             <p className="text-xs text-zinc-200 mt-2">
-              Bấm nút di chuyển và Nhảy để đập các khối câu hỏi "?" tìm hiểu về gia đình tôi!
+              Bấm nút di chuyển và Nhảy để đập các khối câu hỏi &quot;?&quot; tìm hiểu về gia đình tôi!
             </p>
           </div>
 

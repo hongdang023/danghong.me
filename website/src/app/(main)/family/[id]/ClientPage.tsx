@@ -206,7 +206,7 @@ export default function FamilyMemberClientPage() {
                     <div className="space-y-4">
                       {member.quotes.map((quote, idx) => (
                         <div key={idx} className="border-l-2 border-accent/40 pl-4 py-1 text-[13.5px] md:text-[14px] text-foreground/80 leading-relaxed font-semibold italic">
-                          "{quote}"
+                          &quot;{quote}&quot;
                         </div>
                       ))}
                     </div>
