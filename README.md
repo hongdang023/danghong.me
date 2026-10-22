@@ -1,14 +1,15 @@
 # danghong.me — The Learning Architect
 
-Repository của Đặng Hồng, gồm website portfolio, tài liệu dự án (DAC) và thư viện media.
+Repository của Đặng Hồng, gồm website portfolio, tài liệu dự án, thư viện media và API.
 
 | Thư mục | Site | Stack |
 | :--- | :--- | :--- |
 | [`website/`](website/) | [danghong.me](https://danghong.me) | Next.js 16 (App Router, static export), TypeScript, Tailwind CSS 4 |
 | [`docs/`](docs/) | [docs.danghong.me](https://docs.danghong.me) | VitePress |
 | [`media/`](media/) | [media.danghong.me](https://media.danghong.me) | `media.yaml` + thư mục `files/`, build bằng Node script |
+| [`api/`](api/) | [api.danghong.me](https://api.danghong.me) | Cloudflare Workers + Hono |
 
-Cả ba site chạy trên **Cloudflare Pages**. Docs và media được deploy bằng `wrangler` qua GitHub Actions khi merge vào `main`.
+Website, docs và media chạy trên **Cloudflare Pages**; API chạy trên **Cloudflare Workers**. Docs và media được deploy bằng `wrangler` qua GitHub Actions khi merge vào `main`.
 
 ## Tài liệu
 

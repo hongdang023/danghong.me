@@ -1,0 +1,19 @@
+{
+  "name": "api.danghong.me",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers Edge API for danghong.me",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250224.0",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.151.0"
+  }
+}

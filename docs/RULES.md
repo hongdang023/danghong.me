@@ -24,5 +24,11 @@ Mọi dự án phải tuân thủ 3 trụ cột thông tin chính:
 *   Tạo thư mục con (ví dụ: `Pillars/`, `Assets/`) khi số lượng file cùng chủ đề vượt quá 3.
 *   Mọi thư mục con phải có file `index.md` riêng (trang mở đầu của thư mục trên docs site) để giải thích logic tổ chức bên trong nó.
 
+## 5. Docs là nguồn sự thật (Single Source of Truth)
+*   `docs/` và site **docs.danghong.me** là brief chính thức cho mọi domain. Không lưu tài liệu dự án ở nơi khác.
+*   Thay đổi code làm lệch brief phải sửa tài liệu **trong cùng Pull Request**. CI có job `docs-sync` kiểm tra việc này.
+*   Tài liệu mô tả hiện trạng thật. Điều chưa làm ghi rõ là "mục tiêu" hoặc đưa vào mục "Việc còn mở".
+*   Đọc tài liệu trên docs.danghong.me; sửa bằng nút "Sửa trang này trên GitHub" ở cuối trang, hoặc sửa file `.md` trong repo.
+
 ---
 > **QUAN TRỌNG**: Framework này được thiết kế để "Quản trị kết quả". Đừng biến nó thành nơi lưu trữ tài liệu rác. Mọi file được tạo ra phải đóng góp trực tiếp vào việc làm rõ hoặc thúc đẩy kết quả cuối cùng của dự án.

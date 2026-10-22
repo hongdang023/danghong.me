@@ -4,7 +4,7 @@ Giai đoạn định nghĩa "DNA của dự án" dựa trên triết lý **Inter
 
 ---
 
-## 1. DANH MỤC TÀI LIỆU (8 FILES)
+## 1. DANH MỤC TÀI LIỆU (9 FILES)
 
 1.  **[A1_Quality_Standards](./A1_Quality_Standards.md)**: Tiêu chuẩn vàng cho Hệ thống & Nội dung.
 2.  **[A2_PRD_3.0](./A2_PRD_3.0.md)**: Bản PRD chiến lược (Vision & Goals).
@@ -14,6 +14,7 @@ Giai đoạn định nghĩa "DNA của dự án" dựa trên triết lý **Inter
 6.  **[A6_Products_Catalog](./A6_Products_Catalog.md)**: Danh mục sản phẩm & tài nguyên thực chứng.
 7.  **[A7_Quiz_Standards](./A7_Quiz_Standards.md)**: Quy định Quiz 3 lớp cho Learning Design Series.
 8.  **[A8_Content_Standards](./A8_Content_Standards.md)**: Cách viết "Bình dân học vụ" và cấu trúc "Tôi muốn".
+9.  **[A9_Non_Functional](./A9_Non_Functional.md)**: Hiệu năng, độ tin cậy, bảo mật, khả năng truy cập (mục tiêu và hiện trạng).
 
 ---
 

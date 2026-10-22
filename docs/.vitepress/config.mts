@@ -36,6 +36,7 @@ export default defineConfig({
           { text: "A6. Products Catalog", link: "/A_REQUIREMENTS/A6_Products_Catalog" },
           { text: "A7. Quiz Standards", link: "/A_REQUIREMENTS/A7_Quiz_Standards" },
           { text: "A8. Content Standards", link: "/A_REQUIREMENTS/A8_Content_Standards" },
+          { text: "A9. Non-Functional", link: "/A_REQUIREMENTS/A9_Non_Functional" },
         ],
       },
       {
@@ -45,6 +46,7 @@ export default defineConfig({
           { text: "B1. System Design Wiki", link: "/B_SYSTEM_DESIGN/B1_System_Design_Wiki" },
           { text: "B2. Web Architecture", link: "/B_SYSTEM_DESIGN/B2_Web_Architecture" },
           { text: "B3. Data Architecture", link: "/B_SYSTEM_DESIGN/B3_Data_Architecture" },
+          { text: "B4. Infrastructure", link: "/B_SYSTEM_DESIGN/B4_Infrastructure" },
           { text: "B5. Design System", link: "/B_SYSTEM_DESIGN/B5_Design_System" },
         ],
       },

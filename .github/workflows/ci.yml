@@ -56,3 +56,26 @@ jobs:
           cache-dependency-path: media/package-lock.json
       - run: npm ci
       - run: npm run build
+
+  docs-sync:
+    name: Docs sync (brief cập nhật cùng code)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require docs/ change when website/, media/ or api/ change
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          changed=$(git diff --name-only "$BASE" "$HEAD")
+          code=$(echo "$changed" | grep -E '^(website|media|api)/' || true)
+          docs=$(echo "$changed" | grep -E '^docs/' || true)
+          if [ -z "$code" ] || [ -n "$docs" ]; then echo "OK"; exit 0; fi
+          if echo "$PR_BODY" | grep -qF '[no-docs]'; then echo "Bỏ qua: PR có [no-docs]"; exit 0; fi
+          echo "::error::PR sửa code nhưng không sửa docs/. Cập nhật brief tương ứng (xem CLAUDE.md), hoặc ghi [no-docs] trong mô tả PR nếu thay đổi không ảnh hưởng brief."
+          echo "$code"
+          exit 1
