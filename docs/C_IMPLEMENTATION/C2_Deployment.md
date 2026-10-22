@@ -1,6 +1,6 @@
 # C2. DEPLOYMENT (CLOUDFLARE PAGES)
 
-Ba site đều chạy trên Cloudflare Pages và được build từ cùng một repository.
+Ba site đều chạy trên Cloudflare Pages và được build từ cùng một repository. **Chỉ dùng Cloudflare**: Vercel đã bị tắt bằng `vercel.json` (`"git": { "deploymentEnabled": false }`) ở thư mục gốc và trong `website/`.
 
 | Site | Thư mục | Pages project | Output | Cách deploy |
 | :--- | :--- | :--- | :--- | :--- |
