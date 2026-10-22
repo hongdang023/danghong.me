@@ -33,3 +33,13 @@ website/next-env.d.ts
 
 # Project specific
 Input/
+
+# Docs (VitePress)
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Media
+media/dist/
+
+# Wrangler
+.wrangler/

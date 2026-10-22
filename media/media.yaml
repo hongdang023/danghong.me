@@ -1,0 +1,87 @@
+# media.danghong.me — nguồn dữ liệu duy nhất cho thông tin, ảnh, video và link về Hồng.
+#
+# Cách dùng nhanh:
+#   - Thêm ảnh/tài liệu/video nhỏ: thả file vào media/files/<thư mục>/ (tự được liệt kê).
+#   - Thêm tiêu đề, mô tả, tag cho một file: khai báo trong mục `files` bên dưới.
+#   - Thêm link: thêm một dòng vào nhóm phù hợp trong `links`.
+#   - Thêm video YouTube/Drive: thêm vào `videos` với `url` là link ngoài.
+# Hướng dẫn đầy đủ: https://docs.danghong.me/C_IMPLEMENTATION/C3_Media_Library
+
+profile:
+  name: Hồng Đặng
+  name_en: Hong Dang
+  title: The Learning Architect
+  tagline: Evidence-Based Learning. Architected.
+  location: Vietnam
+  avatar: photos/avatar.png
+  bio: >-
+    Mình là người kiến tạo những hệ thống và trải nghiệm giúp con người không ngừng
+    phát triển và khai mở tiềm năng của chính mình, vì mình tin rằng đó là con đường
+    bền vững nhất để sống hạnh phúc và có ý nghĩa.
+  expertise:
+    - AI/Vibe Coding
+    - Learning Science
+    - Product Mindset
+    - Interactive Evidence
+    - Experience Design
+
+links:
+  - group: Kết nối
+    items:
+      - label: Facebook
+        url: https://www.facebook.com/danghong.harunoyuki
+        description: Chat trực tiếp với Hồng
+      - label: Haru Reboot (Substack)
+        url: https://harureboot.substack.com/
+        description: Newsletter về tư duy kiến trúc học tập và công nghệ
+      - label: GitHub
+        url: https://github.com/hongdang023
+
+  - group: Sites
+    items:
+      - label: danghong.me
+        url: https://danghong.me
+        description: Portfolio "The Learning Architect"
+      - label: docs.danghong.me
+        url: https://docs.danghong.me
+        description: Tài liệu DAC của dự án
+      - label: media.danghong.me
+        url: https://media.danghong.me
+        description: Thư viện thông tin, ảnh, video và link
+
+  - group: Sản phẩm
+    items:
+      - label: LightMS
+        url: https://lightms.pages.dev/
+        description: Hệ thống quản trị học tập tinh gọn
+      - label: Course Maker
+        url: https://courses-maker.vercel.app/
+        description: Đóng gói ý tưởng thành khóa học
+      - label: Exam Runner
+        url: https://exam-runner.pages.dev/
+        description: Luyện thi tiếng Anh lớp 9
+      - label: Sư tử Con - Quiz Challenge
+        url: https://sutucon.pages.dev/
+        description: Quiz ôn tập AI cho lớp AI Teen
+      - label: Prompt Library
+        url: https://prompt-library-3lz.pages.dev/
+        description: Thư viện AI prompts đã kiểm chứng
+
+# Video: `url` là link ngoài (YouTube, Google Drive…) hoặc đường dẫn file trong media/files
+# (ví dụ videos/intro.mp4, tối đa 25 MB mỗi file).
+videos: []
+#  - title: Giới thiệu về Hồng
+#    url: https://www.youtube.com/watch?v=XXXXXXXXXXX
+#    description: Video giới thiệu 2 phút
+
+# Thông tin thêm cho từng file trong media/files (khóa là đường dẫn tính từ media/files).
+# File không khai báo vẫn được liệt kê, tiêu đề lấy theo tên file.
+files:
+  photos/avatar.png:
+    title: Ảnh đại diện
+    alt: Chân dung Hồng Đặng
+    tags: [profile]
+  photos/graduation.jpg:
+    title: Lễ tốt nghiệp ĐH Kinh tế Quốc dân (8/2026)
+    alt: Hồng cùng gia đình trong lễ trao bằng tốt nghiệp ĐH Kinh tế Quốc dân
+    tags: [family, milestone]
