@@ -41,7 +41,7 @@ export default function FamilyPage() {
         >
           <div className="relative aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] w-full rounded-2xl overflow-hidden mb-6 bg-secondary/50">
             <img 
-              src="/images/family/graduation.jpg" 
+              src="https://media.danghong.me/photos/graduation.jpg" 
               alt="Lễ trao bằng tốt nghiệp NEU - Ngày 05/08/2026"
               className="w-full h-full object-cover"
             />

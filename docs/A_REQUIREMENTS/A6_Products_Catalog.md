@@ -113,7 +113,7 @@
 Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập thực chứng.
 
 - **Link**: [danghong.me/books](https://danghong.me/books) (đọc PDF trong Interactive Reader `/books/viewer/ld-1` … `ld-9`, có ghi chú và Quiz 3 lớp theo [A7](./A7_Quiz_Standards.md)).
-- **File**: `website/public/books/ld-*.pdf`
+- **File**: R2 `website/books/ld-*.pdf` (https://media.danghong.me/website/books/…)
 - **Outcome**: Hệ thống hóa toàn bộ quy trình thiết kế đào tạo theo chuẩn quốc tế.
 
 ---

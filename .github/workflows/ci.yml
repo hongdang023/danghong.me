@@ -42,7 +42,7 @@ jobs:
       - run: npm run build
 
   media:
-    name: Media (build)
+    name: Media (test)
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -55,7 +55,7 @@ jobs:
           cache: npm
           cache-dependency-path: media/package-lock.json
       - run: npm ci
-      - run: npm run build
+      - run: npm test
 
   docs-sync:
     name: Docs sync (brief cập nhật cùng code)

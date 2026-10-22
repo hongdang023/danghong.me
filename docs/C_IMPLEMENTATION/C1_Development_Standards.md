@@ -31,14 +31,14 @@ Workflow `.github/workflows/ci.yml` chạy trên mọi Pull Request và mỗi l�
 | :--- | :--- | :--- |
 | Website | `website/` | `npm ci` → `npm run lint` → `npm run build` |
 | Docs | `docs/` | `npm ci` → `npm run build` (VitePress báo lỗi nếu có link hỏng) |
-| Media | `media/` | `npm ci` → `npm run build` (báo lỗi nếu file > 25 MB hoặc `media.yaml` trỏ tới file không tồn tại) |
+| Media | `media/` | `npm ci` → `npm test` (logic dựng dữ liệu, render và kiểm tra tên file upload) |
 
 ### 2.3. Chạy local
 
 ```bash
 cd website && npm install && npm run dev     # http://localhost:3000
 cd docs    && npm install && npm run dev     # http://localhost:5173
-cd media   && npm install && npm run build   # sinh media/dist
+cd media   && npm install && npm run dev     # Pages Functions + D1/R2 local, xem C3
 ```
 
 ---

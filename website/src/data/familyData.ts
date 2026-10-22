@@ -23,16 +23,16 @@ export const familyMembers: FamilyMember[] = [
     role: "Bố",
     job: "Kinh doanh tự do",
     birthYear: 1979,
-    coverImage: "/images/family/bo/2aOboQinLccGG95v9BAYPWm2PG2h3u6EIh1cLjnM.jpg",
+    coverImage: "https://media.danghong.me/website/images/family/bo/2aOboQinLccGG95v9BAYPWm2PG2h3u6EIh1cLjnM.jpg",
     images: [
-      "/images/family/bo/2aOboQinLccGG95v9BAYPWm2PG2h3u6EIh1cLjnM.jpg",
-      "/images/family/bo/21617d3a42d2c38c9ac3.jpg",
-      "/images/family/bo/2aOboQin9GSQeyZbVYG4gbj0E8sdYYaspP7w3C5o (1).jpg",
-      "/images/family/bo/2aOboQin9GSQeyZbVYG4gbj0E8sdYYaspP7w3C5o.jpg",
-      "/images/family/bo/2aOboQin9H79hpx5z5WMuTx6CN95neVIqK2S5pBo.jpg",
-      "/images/family/bo/2aOboQinLcv5uX3skqiFbJhG6MKIERLDz9O5uHA0.jpg",
-      "/images/family/bo/2aOboQinLdwcIlVcg1nXH1Jpo2xHGBzzq8AKKqaO.jpg",
-      "/images/family/bo/af3a47727f9afec4a78b.jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQinLccGG95v9BAYPWm2PG2h3u6EIh1cLjnM.jpg",
+      "https://media.danghong.me/website/images/family/bo/21617d3a42d2c38c9ac3.jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQin9GSQeyZbVYG4gbj0E8sdYYaspP7w3C5o%20(1).jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQin9GSQeyZbVYG4gbj0E8sdYYaspP7w3C5o.jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQin9H79hpx5z5WMuTx6CN95neVIqK2S5pBo.jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQinLcv5uX3skqiFbJhG6MKIERLDz9O5uHA0.jpg",
+      "https://media.danghong.me/website/images/family/bo/2aOboQinLdwcIlVcg1nXH1Jpo2xHGBzzq8AKKqaO.jpg",
+      "https://media.danghong.me/website/images/family/bo/af3a47727f9afec4a78b.jpg",
     ],
     admirations: [
       "Từng leo lên đỉnh Everest (nóc nhà thế giới), và chơi Bungee Jump ở đó luôn",
@@ -51,12 +51,12 @@ export const familyMembers: FamilyMember[] = [
     role: "Mẹ",
     job: "Nội trợ (chính) & Kinh doanh tự do (phụ)",
     birthYear: 1979,
-    coverImage: "/images/family/me/37a88975bb9e3ac0638f2.jpg",
+    coverImage: "https://media.danghong.me/website/images/family/me/37a88975bb9e3ac0638f2.jpg",
     images: [
-      "/images/family/me/37a88975bb9e3ac0638f2.jpg",
-      "/images/family/me/1ce1a43c96d717894ec61.jpg",
-      "/images/family/me/bd56e98bdb605a3e03714.jpg",
-      "/images/family/me/d2988a45b8ae39f060bf3.jpg"
+      "https://media.danghong.me/website/images/family/me/37a88975bb9e3ac0638f2.jpg",
+      "https://media.danghong.me/website/images/family/me/1ce1a43c96d717894ec61.jpg",
+      "https://media.danghong.me/website/images/family/me/bd56e98bdb605a3e03714.jpg",
+      "https://media.danghong.me/website/images/family/me/d2988a45b8ae39f060bf3.jpg"
     ],
     admirations: [
       "Làm mẹ của 3 đứa con, làm vợ của một ông chồng gia trưởng :)",
@@ -93,10 +93,10 @@ export const familyMembers: FamilyMember[] = [
     name: "Đặng Trần Huy",
     role: "Em trai",
     job: "Sinh viên năm 2 trường Đại học Ngoại thương (Khoa Tiếng Anh thương mại)",
-    coverImage: "/images/family/huy/img1.jpg",
+    coverImage: "https://media.danghong.me/website/images/family/huy/img1.jpg",
     images: [
-      "/images/family/huy/img1.jpg",
-      "/images/family/huy/img2.jpg"
+      "https://media.danghong.me/website/images/family/huy/img1.jpg",
+      "https://media.danghong.me/website/images/family/huy/img2.jpg"
     ],
     favoriteGames: ["Minecraft", "Roblox (chơi từ hồi nó còn học cấp 1 thì phải, tôi vẫn nhớ nó học thói xấu đổi tab chơi game với học bài từ tôi :))"],
     favoriteArtists: ["Kendrick Lamar", "MCK"],
@@ -115,12 +115,12 @@ export const familyMembers: FamilyMember[] = [
     name: "Đặng Minh Châu",
     role: "Em gái",
     job: "2 tuổi (cách tôi - chị nó 20 tuổi, đẻ ra nó còn được luôn)",
-    coverImage: "/images/family/minh-chau/09bd78864b6dca33937c12.jpg",
+    coverImage: "https://media.danghong.me/website/images/family/minh-chau/09bd78864b6dca33937c12.jpg",
     images: [
-      "/images/family/minh-chau/09bd78864b6dca33937c12.jpg",
-      "/images/family/minh-chau/532d9b16a8fd29a370ec9.jpg",
-      "/images/family/minh-chau/5801923aa1d1208f79c011.jpg",
-      "/images/family/minh-chau/963c630750ecd1b288fd10.jpg"
+      "https://media.danghong.me/website/images/family/minh-chau/09bd78864b6dca33937c12.jpg",
+      "https://media.danghong.me/website/images/family/minh-chau/532d9b16a8fd29a370ec9.jpg",
+      "https://media.danghong.me/website/images/family/minh-chau/5801923aa1d1208f79c011.jpg",
+      "https://media.danghong.me/website/images/family/minh-chau/963c630750ecd1b288fd10.jpg"
     ],
     hobbies: ["Chạy", "Ngủ", "Tuti mẹ"],
     lessons: [

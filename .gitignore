@@ -46,3 +46,8 @@ media/dist/
 
 # Wrangler
 .wrangler/
+
+# Media (Cloudflare Pages + D1/R2)
+media/.dev.vars
+media/.wrangler/
+media/dist/

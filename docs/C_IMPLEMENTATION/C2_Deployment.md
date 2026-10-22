@@ -6,7 +6,7 @@ Ba site đều chạy trên Cloudflare Pages và được build từ cùng một
 | :--- | :--- | :--- | :--- | :--- |
 | danghong.me | `website/` | (đã có sẵn) | `website/out` | Cloudflare Pages kết nối Git (thiết lập trên Dashboard) |
 | docs.danghong.me | `docs/` | `danghong-docs` | `docs/.vitepress/dist` | GitHub Actions + `wrangler pages deploy` |
-| media.danghong.me | `media/` | `danghong-media` | `media/dist` | GitHub Actions + `wrangler pages deploy` |
+| media.danghong.me | `media/` | `danghong-media` | `media/public` + `media/functions` (D1, R2) | GitHub Actions + `wrangler pages deploy` |
 
 ---
 
@@ -23,15 +23,15 @@ Ba site đều chạy trên Cloudflare Pages và được build từ cùng một
 
 Workflow `.github/workflows/deploy-docs.yml` và `deploy-media.yml` chạy khi có push vào `main` làm thay đổi `docs/**` hoặc `media/**` (hoặc chạy tay trong tab **Actions → Run workflow**). Mỗi workflow:
 
-1.  Cài dependency và build site.
+1.  Cài dependency, rồi build (docs) hoặc chạy test (media; media không có bước build, Functions đọc D1/R2 lúc chạy).
 2.  Tạo Pages project nếu chưa có (`wrangler pages project create … --production-branch main`).
 3.  Deploy bằng `wrangler pages deploy … --branch main`.
 
-Cấu hình project nằm trong `docs/wrangler.toml` và `media/wrangler.toml`.
+Cấu hình project nằm trong `docs/wrangler.toml` và `media/wrangler.toml`. `media/wrangler.toml` khai báo binding D1 (`DB`) và R2 (`BUCKET`); Pages áp dụng chúng mỗi lần deploy. Nội dung media không deploy qua Git: sửa ở `/admin/` là lên ngay.
 
 ### 2.1. Thiết lập một lần
 
-1.  **Tạo API token** tại Cloudflare Dashboard → *My Profile → API Tokens → Create Token → Custom token*, quyền **Account › Cloudflare Pages › Edit**, chọn đúng account đang giữ domain `danghong.me`.
+1.  **Tạo API token** tại Cloudflare Dashboard → *My Profile → API Tokens → Create Token → Custom token*, quyền **Account › Cloudflare Pages › Edit**, **Account › D1 › Read** và **Account › Workers R2 Storage › Read** (để gắn binding của media), chọn account `Dangtuyethong2324@gmail.com's Account` (nơi giữ các Pages project).
 2.  **Lấy Account ID** ở trang *Workers & Pages* (cột bên phải).
 3.  **Thêm GitHub secrets** tại repo → *Settings → Secrets and variables → Actions*:
     *   `CLOUDFLARE_API_TOKEN`
@@ -43,12 +43,24 @@ Cấu hình project nằm trong `docs/wrangler.toml` và `media/wrangler.toml`.
 
     Vì `danghong.me` đã ở trên Cloudflare, bản ghi DNS (CNAME) được tạo tự động.
 
+6.  **Mật khẩu trang quản trị media** (một lần, chỉ chủ site làm):
+
+    ```bash
+    cd media
+    npx wrangler pages secret put ADMIN_PASSWORD --project-name danghong-media
+    ```
+
+    Chưa đặt secret thì `/admin/` trả 503.
+
 ### 2.2. Deploy từ máy cá nhân (tùy chọn)
+
+Wrangler đăng nhập thấy hai account, nên cần chỉ rõ account:
 
 ```bash
 npx wrangler login
+export CLOUDFLARE_ACCOUNT_ID=574e12931f580feff7ebaf755990b8a2
 cd docs  && npm run deploy
-cd media && npm run deploy
+cd media && npm run deploy -- --branch main
 ```
 
 ---
@@ -57,4 +69,5 @@ cd media && npm run deploy
 
 *   `https://docs.danghong.me` mở được trang chủ tài liệu và ô tìm kiếm hoạt động.
 *   `https://media.danghong.me/api/index.json` trả về JSON, header có `Access-Control-Allow-Origin: *`.
+*   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` hỏi mật khẩu.
 *   Tab *Deployments* của từng project hiển thị commit mới nhất của `main`.

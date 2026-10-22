@@ -490,22 +490,22 @@ export default function AboutPage() {
                       {
                         title: "Steven Universe",
                         aspect: "an adventurer",
-                        image: "/images/hobbies/steven-universe.png",
+                        image: "https://media.danghong.me/website/images/hobbies/steven-universe.png",
                       },
                       {
                         title: "Attack on Titan",
                         aspect: "a fighter",
-                        image: "/images/hobbies/attack-on-titan.jpg",
+                        image: "https://media.danghong.me/website/images/hobbies/attack-on-titan.jpg",
                       },
                       {
                         title: "Chungking Express",
                         aspect: "a lover",
-                        image: "/images/hobbies/chungking-express.png",
+                        image: "https://media.danghong.me/website/images/hobbies/chungking-express.png",
                       },
                       {
                         title: "The Wind Rises",
                         aspect: "a dreamer",
-                        image: "/images/hobbies/the-wind-rises.png",
+                        image: "https://media.danghong.me/website/images/hobbies/the-wind-rises.png",
                       }
                     ].map((movie, idx) => (
                       <div key={idx} className="flex flex-col items-center group/movie">

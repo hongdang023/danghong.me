@@ -23,4 +23,4 @@ Tập trung vào luồng chuyển đổi: **Aha! Moment -> Connection (Facebook)
 | :--- | :--- | :--- |
 | **US-ADM-01** | Tôi muốn cập nhật sản phẩm mới vào Products Hub (sửa `website/src/data/productData.ts`). | Giữ cho Portfolio luôn sống động và thực tế. |
 | **US-ADM-02** | Tôi muốn thêm khóa học vào Hồng's List (`courseData.ts`) kèm link bài Deep Review trên Substack. | Duy trì uy tín chuyên gia qua bộ lọc 4D khắt khe. |
-| **US-ADM-03** | Tôi muốn thêm/bớt ảnh, video, link về bản thân mà không phải sửa code website. | Thả file vào `media/files/` hoặc sửa `media/media.yaml`, merge là media.danghong.me tự cập nhật ([C3](../C_IMPLEMENTATION/C3_Media_Library.md)). |
+| **US-ADM-03** | Tôi muốn thêm/bớt ảnh, video, link về bản thân mà không phải sửa code website. | Sửa ở https://media.danghong.me/admin/ (D1 + R2), site đổi ngay không cần deploy ([C3](../C_IMPLEMENTATION/C3_Media_Library.md)). |

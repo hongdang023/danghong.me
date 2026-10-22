@@ -28,7 +28,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary shadow-2xl">
               <Image 
-                src="/avatar.png" 
+                src="https://media.danghong.me/photos/avatar.png" 
                 alt="Hồng Đặng" 
                 fill 
                 className="object-cover"
@@ -74,42 +74,42 @@ export default function Home() {
                 role: "Quản lý vận hành lớp học",
                 desc: "Hệ sinh thái khoá học về Vibe Coding và Làm chủ sự nghiệp",
                 link: "https://the1ight.com/",
-                image: "/images/the1ight.png"
+                image: "https://media.danghong.me/website/images/the1ight.png"
               },
               {
                 title: "Sư Tử Con School",
                 role: "Mentor lớp AI Teen",
                 desc: "Trường học cho các bé cấp 2 về tư duy xây dựng sản phẩm với AI",
                 link: "https://sutucon.com/",
-                image: "/images/sutucon_school_v2.png"
+                image: "https://media.danghong.me/website/images/sutucon_school_v2.png"
               },
               {
                 title: "Nemo12",
                 role: "Mentor",
                 desc: "Hệ thống học tập cho các bé K12 (Toán, Văn, Anh)",
                 link: "https://nemo12.com/",
-                image: "/images/nemo12.png"
+                image: "https://media.danghong.me/website/images/nemo12.png"
               },
               {
                 title: "Inside6",
                 role: "Community Facilitator",
                 desc: "Cộng đồng học cách hiểu mình và đối mặt với cảm xúc và xung đột (với bố mẹ, bạn bè, người yêu,...)",
                 link: "https://www.inside6.com/",
-                image: "/images/inside6.png"
+                image: "https://media.danghong.me/website/images/inside6.png"
               },
               {
                 title: "Next Step",
                 role: "Community Facilitator",
                 desc: "Cộng đồng dành cho những người trẻ đã ra trường có 1–3 năm kinh nghiệm muốn tìm việc và nhảy việc",
                 link: "https://nextstep27.com/",
-                image: "/images/nextstep.png"
+                image: "https://media.danghong.me/website/images/nextstep.png"
               },
               {
                 title: "Conan School",
                 role: "Mentor AI Master",
                 desc: "Cộng đồng dành cho những người bắt đầu hành trình xây dựng doanh nghiệp trong kỷ nguyên AI",
                 link: "https://www.conan.school/",
-                image: "/images/conan_school_v2.png"
+                image: "https://media.danghong.me/website/images/conan_school_v2.png"
               }
             ].map((work, idx) => {
               const isLink = !!work.link;

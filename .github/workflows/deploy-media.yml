@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Build and deploy to Cloudflare Pages (danghong-media)
+    name: Deploy Functions to Cloudflare Pages (danghong-media)
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -30,8 +30,8 @@ jobs:
           cache: npm
           cache-dependency-path: media/package-lock.json
       - run: npm ci
-      - run: npm run build
+      - run: npm test
       - name: Create Pages project if missing
         run: npx wrangler pages project list | grep -q "danghong-media" || npx wrangler pages project create danghong-media --production-branch main
       - name: Deploy
-        run: npx wrangler pages deploy dist --project-name danghong-media --branch main --commit-hash ${{ github.sha }}
+        run: npx wrangler pages deploy --project-name danghong-media --branch main --commit-hash ${{ github.sha }}

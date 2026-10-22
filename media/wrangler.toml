@@ -1,4 +1,17 @@
-# Cloudflare Pages project for media.danghong.me
+# Cloudflare Pages project for media.danghong.me (account Dangtuyethong2324@gmail.com's Account).
+# Content lives in D1, files in R2; functions/[[path]].js renders everything at request time.
 name = "danghong-media"
-pages_build_output_dir = "dist"
+pages_build_output_dir = "public"
 compatibility_date = "2026-10-01"
+
+[vars]
+MEDIA_BASE_URL = "https://media.danghong.me"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "danghong-media"
+database_id = "b1b6abc3-11e6-4a63-8603-335eda1e1758"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "danghong-media"

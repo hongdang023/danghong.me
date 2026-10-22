@@ -185,12 +185,12 @@ const LIGHTBOX_JS = `
 `;
 
 export function renderSite(site) {
-  const { baseUrl, repo, branch, generatedAt, profile, about, people, stories, albums, links, videos, files } = site;
+  const { baseUrl, generatedAt, profile, about, people, stories, albums, links, videos, files } = site;
   // Pages link files root-relatively so preview deployments work too.
   const local = (url) => (url && url.startsWith(baseUrl + "/") ? url.slice(baseUrl.length) : url);
-  const gh = `https://github.com/${repo}`;
-  const editYaml = `${gh}/edit/${branch}/media/media.yaml`;
-  const uploadTo = (folder) => `${gh}/upload/${branch}/media/files/${folder ?? "photos"}`;
+  // Every edit button opens the matching tab of the admin page (/admin, password protected).
+  const adminTab = (tab) => `/admin/#${tab}`;
+  const uploadTo = (folder) => `/admin/#files:${folder ?? "photos"}`;
   const albumById = new Map(albums.map((a) => [a.id, a]));
   const storyById = new Map(stories.map((s) => [s.id, s]));
   const name = profile.name ?? "Media";
@@ -223,7 +223,7 @@ ${body}
 </main>
 <footer class="site">
   <div class="wrap">
-    <span>Cập nhật ${e(generatedAt.slice(0, 10))} · Nguồn: <code>media/</code> trong repo <a ${external(gh)}>${e(repo)}</a></span>
+    <span>Dữ liệu cập nhật trực tiếp từ Cloudflare D1 &amp; R2 · ${e(generatedAt.slice(0, 10))}</span>
     <span><a href="/edit/">Cách cập nhật</a> · <a href="/api/index.json">JSON API</a> · <a ${external("https://danghong.me")}>danghong.me</a></span>
   </div>
 </footer>
@@ -237,8 +237,8 @@ ${scripts}
   <div>${eyebrow ? `<div class="eyebrow">${e(eyebrow)}</div>` : ""}<h1>${e(title)}</h1>${intro ? `<p>${e(intro)}</p>` : ""}</div>
   ${actions ? `<div class="actions">${actions}</div>` : ""}
 </div>`;
-  const editBtn = (label = "✎ Sửa nội dung") => `<a class="btn" ${external(editYaml)}>${e(label)}</a>`;
-  const uploadBtn = (folder, label = "＋ Thêm ảnh") => `<a class="btn primary" ${external(uploadTo(folder))}>${e(label)}</a>`;
+  const editBtn = (label = "✎ Sửa nội dung", tab = "profile") => `<a class="btn" href="${adminTab(tab)}">${e(label)}</a>`;
+  const uploadBtn = (folder, label = "＋ Thêm ảnh") => `<a class="btn primary" href="${e(uploadTo(folder))}">${e(label)}</a>`;
 
   const albumCard = (a) => `<a class="card" href="/albums/${e(a.id)}/">
   ${a.cover ? `<img class="thumb" src="${e(local(a.cover))}" alt="" loading="lazy">` : `<div class="thumb"></div>`}
@@ -322,8 +322,8 @@ ${featuredStories.length ? `<h2>Câu chuyện</h2><div class="grid">${featuredSt
 
   // ───────────── Câu chuyện
   {
-    const body = `${pageHead({ eyebrow: "Câu chuyện", title: "Những câu chuyện của Hồng", intro: "Gia đình, cột mốc, cộng đồng và chuỗi bài viết “21 bài học tuổi 21”.", actions: editBtn("＋ Thêm câu chuyện") })}
-${stories.length ? `<div class="grid">${stories.map(storyCard).join("")}</div>` : `<div class="empty"><p>Chưa có câu chuyện nào.</p>${editBtn("＋ Thêm câu chuyện")}</div>`}`;
+    const body = `${pageHead({ eyebrow: "Câu chuyện", title: "Những câu chuyện của Hồng", intro: "Gia đình, cột mốc, cộng đồng và chuỗi bài viết “21 bài học tuổi 21”.", actions: editBtn("＋ Thêm câu chuyện", "stories") })}
+${stories.length ? `<div class="grid">${stories.map(storyCard).join("")}</div>` : `<div class="empty"><p>Chưa có câu chuyện nào.</p>${editBtn("＋ Thêm câu chuyện", "stories")}</div>`}`;
     pages["stories/index.html"] = layout({ path: "/stories/", title: "Câu chuyện", body });
 
     for (const s of stories.filter((x) => x.hasPage)) {
@@ -339,7 +339,7 @@ ${stories.length ? `<div class="grid">${stories.map(storyCard).join("")}</div>` 
   <div class="actions" style="margin-top:2rem">
     ${s.link?.url ? `<a class="btn primary" ${external(s.link.url)}>${e(s.link.label ?? "Đọc bài gốc")} ↗</a>` : ""}
     ${album ? `<a class="btn" href="/albums/${e(album.id)}/">Album: ${e(album.title)} (${album.count})</a>` : ""}
-    ${editBtn("✎ Sửa câu chuyện")}
+    ${editBtn("✎ Sửa câu chuyện", "stories")}
   </div>
 </article>`;
       pages[`stories/${s.id}/index.html`] = layout({ path: `/stories/${s.id}/`, title: s.title, description: s.summary, body });
@@ -349,7 +349,7 @@ ${stories.length ? `<div class="grid">${stories.map(storyCard).join("")}</div>` 
   // ───────────── Con người
   {
     const listBlock = (label, arr) => (arr?.length ? `<h4>${e(label)}</h4><ul>${arr.map((x) => `<li>${e(x)}</li>`).join("")}</ul>` : "");
-    const body = `${pageHead({ eyebrow: "Con người", title: "Gia đình & những người truyền cảm hứng", intro: "Những người đã nuôi lớn và định hình con người Hồng.", actions: editBtn() })}
+    const body = `${pageHead({ eyebrow: "Con người", title: "Gia đình & những người truyền cảm hứng", intro: "Những người đã nuôi lớn và định hình con người Hồng.", actions: editBtn("✎ Sửa nội dung", "people") })}
 ${people
   .map(
     (g) => `<h2>${e(g.group)}</h2><div class="grid people">${g.items
@@ -384,7 +384,7 @@ ${people
   {
     const categories = [...new Set(albums.map((a) => a.category ?? "Khác"))];
     const total = new Set(albums.flatMap((a) => a.photos.map((p) => p.path))).size;
-    const body = `${pageHead({ eyebrow: "Album", title: "Album ảnh", intro: `${albums.length} album · ${total} ảnh. Bấm vào album để xem, thêm ảnh hoặc lấy link ảnh dùng cho site khác.`, actions: `${editBtn("＋ Tạo album")}${uploadBtn("photos", "＋ Tải ảnh lên")}` })}
+    const body = `${pageHead({ eyebrow: "Album", title: "Album ảnh", intro: `${albums.length} album · ${total} ảnh. Bấm vào album để xem, thêm ảnh hoặc lấy link ảnh dùng cho site khác.`, actions: `${editBtn("＋ Tạo album", "albums")}${uploadBtn("photos", "＋ Tải ảnh lên")}` })}
 ${categories
   .map((c) => `<h2>${e(c)}</h2><div class="grid">${albums.filter((a) => (a.category ?? "Khác") === c).map(albumCard).join("")}</div>`)
   .join("")}`;
@@ -392,7 +392,7 @@ ${categories
 
     for (const a of albums) {
       const body = `<p><a href="/albums/">← Album</a></p>
-${pageHead({ eyebrow: [a.category, a.date].filter(Boolean).join(" · "), title: a.title, intro: a.description, actions: `${a.folder ? uploadBtn(a.folder) : ""}${editBtn("✎ Sửa album")}` })}
+${pageHead({ eyebrow: [a.category, a.date].filter(Boolean).join(" · "), title: a.title, intro: a.description, actions: `${a.folder ? uploadBtn(a.folder) : ""}${editBtn("✎ Sửa album", "albums")}` })}
 ${
   a.photos.length
     ? `<div class="photos">${a.photos
@@ -403,7 +403,7 @@ ${
         .join("")}</div>`
     : `<div class="empty"><p>Album chưa có ảnh nào.</p>${a.folder ? uploadBtn(a.folder) : ""}</div>`
 }
-${a.folder ? `<p class="muted" style="margin-top:1.5rem">Ảnh của album nằm trong <code>media/files/${e(a.folder)}/</code>. Thả ảnh mới vào thư mục này là tự xuất hiện. JSON: <a href="/api/albums.json"><code>/api/albums.json</code></a></p>` : ""}
+${a.folder ? `<p class="muted" style="margin-top:1.5rem">Ảnh của album nằm trong thư mục <code>${e(a.folder)}/</code> trên R2. Tải ảnh mới vào thư mục này là tự xuất hiện. JSON: <a href="/api/albums.json"><code>/api/albums.json</code></a></p>` : ""}
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh">
   <button class="btn close" type="button">✕ Đóng</button>
   <button class="nav-btn prev" type="button" aria-label="Ảnh trước">‹</button>
@@ -417,7 +417,7 @@ ${a.folder ? `<p class="muted" style="margin-top:1.5rem">Ảnh của album nằm
 
   // ───────────── Links
   {
-    const body = `${pageHead({ eyebrow: "Links", title: "Kết nối & sản phẩm", intro: "Mọi đường link của Hồng ở một chỗ.", actions: editBtn("＋ Thêm link") })}
+    const body = `${pageHead({ eyebrow: "Links", title: "Kết nối & sản phẩm", intro: "Mọi đường link của Hồng ở một chỗ.", actions: editBtn("＋ Thêm link", "links") })}
 ${links
   .map(
     (g) => `<h2>${e(g.group)}</h2><div class="grid">${(g.items ?? [])
@@ -432,7 +432,7 @@ ${links
 
   // ───────────── Video
   {
-    const body = `${pageHead({ eyebrow: "Video", title: "Video", intro: "Video YouTube/Drive hoặc file ngắn tự host (tối đa 25 MB).", actions: `${editBtn("＋ Thêm video")}${uploadBtn("videos", "＋ Tải file video")}` })}
+    const body = `${pageHead({ eyebrow: "Video", title: "Video", intro: "Video YouTube/Drive hoặc file ngắn tự host (tối đa 100 MB).", actions: `${editBtn("＋ Thêm video", "videos")}${uploadBtn("videos", "＋ Tải file video")}` })}
 ${
   videos.length
     ? `<div class="grid wide">${videos
@@ -446,7 +446,7 @@ ${
           return `<div class="card video">${player}<div class="body"><h3><a ${external(v.url)}>${e(v.title ?? v.url)}</a></h3>${v.description ? `<p class="muted">${e(v.description)}</p>` : ""}</div></div>`;
         })
         .join("")}</div>`
-    : `<div class="empty"><p>Chưa có video nào. Thêm link YouTube vào mục <code>videos</code> trong <code>media.yaml</code>.</p>${editBtn("＋ Thêm video")}</div>`
+    : `<div class="empty"><p>Chưa có video nào. Thêm link YouTube ở trang quản trị.</p>${editBtn("＋ Thêm video", "videos")}</div>`
 }`;
     pages["videos/index.html"] = layout({ path: "/videos/", title: "Video", body });
   }
@@ -454,7 +454,7 @@ ${
   // ───────────── Tài liệu
   {
     const docs = files.filter((f) => f.type !== "image" && f.type !== "video");
-    const body = `${pageHead({ eyebrow: "Tài liệu", title: "Tài liệu & file", intro: "CV, slide, PDF… thả vào media/files/documents/ là xuất hiện ở đây.", actions: uploadBtn("documents", "＋ Tải tài liệu lên") })}
+    const body = `${pageHead({ eyebrow: "Tài liệu", title: "Tài liệu & file", intro: "CV, slide, PDF… tải lên thư mục documents/ là xuất hiện ở đây.", actions: uploadBtn("documents", "＋ Tải tài liệu lên") })}
 ${
   docs.length
     ? `<table><thead><tr><th>Tên</th><th>Loại</th><th>Dung lượng</th></tr></thead><tbody>${docs
@@ -480,27 +480,24 @@ ${
       ["files", "Mọi file"],
     ];
     const folders = albums.filter((a) => a.folder);
-    const body = `${pageHead({ eyebrow: "Cập nhật", title: "Cập nhật nội dung", intro: "Mọi nội dung của site nằm trong thư mục media/ của repo. Sửa trên GitHub, commit vào main là site tự deploy sau vài phút.", actions: `<a class="btn primary" ${external(editYaml)}>✎ Mở media.yaml</a><a class="btn" ${external(`${gh}/tree/${branch}/media/files`)}>Thư mục files/</a>` })}
+    const body = `${pageHead({ eyebrow: "Cập nhật", title: "Cập nhật nội dung", intro: "Nội dung nằm trong Cloudflare D1, ảnh và file nằm trong R2. Sửa ở trang quản trị là site đổi ngay, không cần deploy.", actions: `<a class="btn primary" href="/admin/">✎ Mở trang quản trị</a>` })}
 
 <h2>Tôi muốn…</h2>
 <table>
   <thead><tr><th>Việc</th><th>Cách làm</th></tr></thead>
   <tbody>
-    <tr><td>Thêm ảnh vào album có sẵn</td><td>Mở album, bấm <strong>＋ Thêm ảnh</strong> → kéo thả ảnh → <em>Commit changes</em>. Không cần sửa <code>media.yaml</code>.</td></tr>
-    <tr><td>Tạo album mới</td><td>Tải ảnh lên một thư mục mới trong <code>photos/</code> (gõ tên thư mục vào đường dẫn khi upload), rồi thêm một mục vào <code>albums:</code> trong <code>media.yaml</code> với <code>id</code>, <code>title</code>, <code>folder</code>.</td></tr>
-    <tr><td>Đặt tiêu đề / mô tả cho một ảnh</td><td>Thêm khóa đường dẫn ảnh vào mục <code>files:</code> trong <code>media.yaml</code>.</td></tr>
-    <tr><td>Thêm link</td><td>Thêm <code>label</code> + <code>url</code> (và <code>image</code> nếu có) vào nhóm trong <code>links:</code>.</td></tr>
-    <tr><td>Thêm câu chuyện</td><td>Thêm mục vào <code>stories:</code> với <code>id</code>, <code>title</code> và <code>body</code> (đoạn văn cách nhau một dòng trống) hoặc <code>link</code> tới bài gốc.</td></tr>
-    <tr><td>Sửa hồ sơ, hành trình, niềm tin, học vấn</td><td>Sửa mục <code>profile:</code> và <code>about:</code>.</td></tr>
-    <tr><td>Thêm người vào trang Con người</td><td>Thêm mục vào <code>people:</code>.</td></tr>
-    <tr><td>Thêm video</td><td>Thêm vào <code>videos:</code> link YouTube/Drive, hoặc tải file ≤ 25 MB lên <code>videos/</code>.</td></tr>
+    <tr><td>Thêm ảnh vào album có sẵn</td><td>Mở album, bấm <strong>＋ Thêm ảnh</strong> (hoặc tab <em>Ảnh &amp; file</em> trong trang quản trị) → chọn ảnh. Ảnh trong thư mục của album tự xuất hiện.</td></tr>
+    <tr><td>Tạo album mới</td><td>Tải ảnh lên một thư mục mới trong <code>photos/</code>, rồi tạo album ở tab <em>Album</em> với <code>id</code>, tiêu đề và thư mục đó.</td></tr>
+    <tr><td>Đặt tiêu đề / mô tả cho một ảnh</td><td>Tab <em>Ảnh &amp; file</em> → bấm <strong>Sửa</strong> ở ảnh.</td></tr>
+    <tr><td>Thêm link, câu chuyện, người, video</td><td>Tab tương ứng → <strong>＋ Thêm</strong>.</td></tr>
+    <tr><td>Sửa hồ sơ, hành trình, niềm tin, học vấn</td><td>Tab <em>Hồ sơ</em> và <em>Giới thiệu</em>.</td></tr>
   </tbody>
 </table>
-<p class="muted">Nếu <code>media.yaml</code> có lỗi (ví dụ trỏ tới ảnh không tồn tại), bước build trên GitHub Actions sẽ báo lỗi bằng tiếng Việt và site giữ nguyên bản cũ. Mẹo: nén ảnh dưới ~500 KB, cạnh dài ~1600–2000px.</p>
+<p class="muted">Mẹo: nén ảnh dưới ~500 KB, cạnh dài ~1600–2000px. File tối đa 100 MB; video dài nên đưa lên YouTube.</p>
 
-<h2>Tải ảnh lên thư mục album</h2>
+<h2>Thư mục ảnh của từng album</h2>
 <ul class="list">${folders
-      .map((a) => `<li><div><a href="/albums/${e(a.id)}/">${e(a.title)}</a><div class="muted"><code>${e(a.folder)}/</code> · ${a.count} ảnh</div></div><a class="btn" ${external(uploadTo(a.folder))}>＋ Thêm ảnh</a></li>`)
+      .map((a) => `<li><div><a href="/albums/${e(a.id)}/">${e(a.title)}</a><div class="muted"><code>${e(a.folder)}/</code> · ${a.count} ảnh</div></div><a class="btn" href="${e(uploadTo(a.folder))}">＋ Thêm ảnh</a></li>`)
       .join("")}</ul>
 
 <h2 id="api">Dùng ảnh và dữ liệu ở site khác</h2>

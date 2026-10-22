@@ -11,10 +11,8 @@ website/
 ├── next.config.ts          # output: "export", images.unoptimized: true
 ├── public/
 │   ├── _headers            # Cache header cho Cloudflare Pages
-│   ├── api/*.json          # JSON API công khai (profile, courses, showcase)
-│   ├── books/ld-*.pdf      # Learning Design Series
-│   ├── images/, screenshots/
-│   └── avatar.png
+│   └── api/*.json          # JSON API công khai (profile, courses, showcase)
+│                           # Ảnh, screenshot, PDF sách nằm trên R2: https://media.danghong.me/website/…
 └── src/
     ├── app/
     │   ├── layout.tsx              # Root layout (font Inter + JetBrains Mono)
@@ -63,6 +61,6 @@ Vì trang được render tĩnh, các giá trị này chỉ đọc được sau 
 
 ## 4. TỐI ƯU HÓA HIỆU SUẤT (PERFORMANCE)
 
-*   **Images**: Static export không hỗ trợ tối ưu ảnh của `next/image` (`images.unoptimized: true`), nên ảnh dùng thẻ `<img>` thường. Ảnh cần được nén trước khi đưa vào `public/` hoặc `media/`.
+*   **Images**: Static export không hỗ trợ tối ưu ảnh của `next/image` (`images.unoptimized: true`), nên ảnh dùng thẻ `<img>` thường. Ảnh nằm trên R2 (tải lên qua https://media.danghong.me/admin/, thư mục `website/`) và được tham chiếu bằng URL tuyệt đối; nén trước khi tải lên.
 *   **Caching**: `public/_headers` đặt cache 1 năm cho `/_next/static/*`.
 *   **Pre-fetching**: Dùng `<Link>` của Next.js cho mọi điều hướng nội bộ (ESLint chặn thẻ `<a>` trỏ tới trang nội bộ).
