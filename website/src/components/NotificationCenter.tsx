@@ -75,7 +75,7 @@ export default function NotificationCenter() {
             </span>
           )}
         </div>
-        <span>What's New?</span>
+        <span>What&apos;s New?</span>
       </button>
 
       {/* Popover / Dropdown */}

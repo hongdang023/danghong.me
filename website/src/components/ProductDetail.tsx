@@ -132,7 +132,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({
                 {product.dreamState && (
                   <div className="relative py-8 border-y-thin border-border-custom/50">
                     <p className="text-lg sm:text-xl leading-relaxed font-medium italic opacity-90 text-center sm:text-left">
-                      "{product.dreamState}"
+                      &quot;{product.dreamState}&quot;
                     </p>
                   </div>
                 )}

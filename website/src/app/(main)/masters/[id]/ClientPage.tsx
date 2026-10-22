@@ -224,7 +224,7 @@ export default function MasterDetailPageClient() {
             </h2>
             
             <p className="text-foreground/90 leading-relaxed text-sm md:text-base italic font-medium">
-              "{org.philosophy}"
+              &quot;{org.philosophy}&quot;
             </p>
           </motion.div>
 

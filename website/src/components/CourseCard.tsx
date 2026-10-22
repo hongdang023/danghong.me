@@ -21,6 +21,7 @@ export function CourseCard({ course }: { course: Course }) {
   // Load from localStorage on mount
   useEffect(() => {
     const savedComments = localStorage.getItem(`course_comments_${course.id}`);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount in the static export
     if (savedComments) setComments(JSON.parse(savedComments));
 
     const savedVotes = localStorage.getItem(`course_votes_${course.id}`);

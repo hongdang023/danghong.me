@@ -25,9 +25,9 @@ export default function UpdatesPage() {
     <div className="min-h-screen bg-background py-16 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
         <header className="mb-16">
-          <h1 className="text-4xl font-bold tracking-tighter mb-4">What's New.</h1>
+          <h1 className="text-4xl font-bold tracking-tighter mb-4">What&apos;s New.</h1>
           <p className="text-body opacity-40 font-medium max-w-xl">
-            Lịch sử những bước tiến nhỏ, những lần tối ưu và cả những nội dung mới vừa được "lên sóng".
+            Lịch sử những bước tiến nhỏ, những lần tối ưu và cả những nội dung mới vừa được &quot;lên sóng&quot;.
           </p>
         </header>
 

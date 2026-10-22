@@ -22,6 +22,7 @@ export default function PDFViewerClientPage() {
     if (!chapter) return;
     const localNote = localStorage.getItem(`ld_note_${chapter.id}`);
     if (localNote !== null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount in the static export
       setNoteContent(localNote);
     }
   }, [chapter?.id]);

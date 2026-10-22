@@ -43,7 +43,7 @@ export default function Home() {
               The Learning Architect.
             </h3>
             <div className="p-8 bg-secondary rounded-[24px] border-thin border-border-custom relative">
-              <div className="absolute -top-4 -left-4 text-6xl text-accent opacity-20 font-serif">"</div>
+              <div className="absolute -top-4 -left-4 text-6xl text-accent opacity-20 font-serif">&quot;</div>
               <p className="text-lg md:text-xl font-medium leading-relaxed italic relative z-10">
                 Thành công của người học là thành công của tôi nên tôi sẽ nỗ lực hết sức để bạn VỀ ĐÍCH.
               </p>
