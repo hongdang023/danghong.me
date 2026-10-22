@@ -8,45 +8,61 @@
 
 ```text
 media/
-├── media.yaml          # Hồ sơ, link, video và thông tin thêm cho từng file
-├── files/              # Mọi file ở đây được publish nguyên đường dẫn
-│   ├── photos/         # → https://media.danghong.me/photos/…
-│   ├── videos/         # → https://media.danghong.me/videos/…
-│   └── documents/      # → https://media.danghong.me/documents/…
-├── scripts/build.mjs   # Sinh dist/: copy file, tạo JSON API, trang index.html, _headers
-└── wrangler.toml       # Pages project "danghong-media"
+├── media.yaml            # Hồ sơ, giới thiệu, con người, câu chuyện, album, link, video, thông tin file
+├── files/                # Mọi file ở đây được publish nguyên đường dẫn
+│   ├── photos/           # → https://media.danghong.me/photos/…
+│   │   ├── family/<người>/        # album gia đình
+│   │   ├── communities/<cộng đồng>/
+│   │   ├── milestones/<cột mốc>/
+│   │   ├── hobbies/ products/ organizations/
+│   ├── videos/           # → https://media.danghong.me/videos/…
+│   └── documents/        # → https://media.danghong.me/documents/…
+├── scripts/build.mjs     # Đọc media.yaml + files/, kiểm tra lỗi, sinh JSON API và dist/
+├── scripts/render.mjs    # Giao diện các trang (HTML/CSS)
+└── wrangler.toml         # Pages project "danghong-media"
 ```
 
-Có thể tạo thêm thư mục con bất kỳ trong `files/` (ví dụ `files/photos/community/`). Tên `api`, `index.html`, `_headers`, `_redirects`, `404.html` ở cấp đầu của `files/` là tên dành riêng.
+Site có thanh điều hướng với các trang: **Giới thiệu** (`/`), **Câu chuyện** (`/stories/`, mỗi câu chuyện một trang), **Con người** (`/people/`), **Album** (`/albums/`, mỗi album một trang có lightbox và nút *Sao chép link ảnh*), **Links**, **Video**, **Tài liệu**, **Cập nhật** (`/edit/` — hướng dẫn, nút tải ảnh lên từng thư mục album, JSON API).
+
+Tên dành riêng ở cấp đầu của `files/` (trùng với trang của site): `api`, `assets`, `albums`, `stories`, `people`, `links`, `edit`, `index.html`, `404.html`, `_headers`, `_redirects`; và `videos/index.html`, `documents/index.html`.
 
 ---
 
 ## 2. THÊM / BỚT NỘI DUNG
 
+Trang [media.danghong.me/edit/](https://media.danghong.me/edit/) có nút mở thẳng `media.yaml` trên GitHub và nút tải ảnh lên đúng thư mục của từng album. Commit vào `main` là site tự deploy ([C2](./C2_Deployment.md)).
+
 | Tôi muốn… | Làm gì |
 | :--- | :--- |
-| Thêm ảnh | Thả file vào `media/files/photos/`. Tự xuất hiện trên trang và trong `/api/photos.json`. |
-| Đặt tiêu đề, mô tả, tag cho ảnh | Thêm khóa vào mục `files:` trong `media.yaml` (xem ví dụ dưới). |
-| Xóa ảnh | Xóa file. Nếu file có khai báo trong `files:`, xóa luôn khóa đó. |
-| Thêm link | Thêm một mục `label` + `url` vào nhóm phù hợp trong `links:` (hoặc tạo nhóm mới). |
-| Thêm video YouTube/Drive | Thêm vào `videos:` với `url` là link ngoài. YouTube được nhúng tự động. |
-| Thêm video ngắn tự host | Thả file vào `media/files/videos/` và thêm vào `videos:` với `url: videos/ten-file.mp4`. |
-| Sửa hồ sơ (bio, chức danh, ảnh đại diện) | Sửa mục `profile:`. `avatar` là đường dẫn trong `files/`. |
+| Thêm ảnh vào album | Thả file vào thư mục `folder` của album (nút **＋ Thêm ảnh** trên trang album). Không cần sửa `media.yaml`. |
+| Tạo album mới | Tạo thư mục trong `files/photos/`, rồi thêm một mục vào `albums:` (`id`, `title`, `folder`, tùy chọn `category`, `date`, `description`, `cover`, `photos`). |
+| Dùng một ảnh trong nhiều album | Thêm đường dẫn ảnh vào `photos:` của album kia. |
+| Đặt tiêu đề, mô tả, tag cho ảnh | Thêm khóa vào mục `files:`. |
+| Thêm câu chuyện | Thêm mục vào `stories:` với `body` (đoạn cách nhau một dòng trống), `sections`, hoặc chỉ `link` tới bài gốc (Substack…). |
+| Sửa giới thiệu | Mục `profile:` và `about:` (hành trình, niềm tin, triết lý, lĩnh vực, học vấn, khóa học, sở thích, phim). |
+| Thêm người | Mục `people:` (nhóm Gia đình / Người truyền cảm hứng). |
+| Thêm link | Thêm `label` + `url` (+ `description`, `image`) vào nhóm trong `links:`. |
+| Thêm video | `videos:` với link YouTube/Drive, hoặc file ≤ 25 MB trong `files/videos/`. |
 
-Có thể sửa trực tiếp trên GitHub (nút *Add file → Upload files* hoặc biểu tượng bút chì), rồi merge vào `main`. Site tự deploy trong vài phút ([C2](./C2_Deployment.md)).
+Mọi đường dẫn ảnh trong `media.yaml` (`avatar`, `cover`, `photo`, `image`, `photos`) tính từ `media/files`, ví dụ `photos/family/me/me-01.jpg`. Build báo lỗi (tiếng Việt) nếu đường dẫn không tồn tại, `id` bị trùng, hoặc một `album`/`story` được tham chiếu không có.
 
 ```yaml
-files:
-  photos/graduation.jpg:
-    title: Lễ tốt nghiệp ĐH Kinh tế Quốc dân (8/2026)
-    alt: Hồng cùng gia đình trong lễ trao bằng tốt nghiệp
-    description: (tùy chọn)
-    tags: [family, milestone]
+albums:
+  - id: tot-nghiep               # chữ thường không dấu, số, gạch ngang → /albums/tot-nghiep/
+    title: Lễ tốt nghiệp ĐH Kinh tế Quốc dân
+    category: Cột mốc
+    date: 2026-08
+    folder: photos/milestones/tot-nghiep
+    photos: [photos/graduation.jpg]   # ảnh lẻ ở thư mục khác
 
-videos:
-  - title: Giới thiệu về Hồng
-    url: https://www.youtube.com/watch?v=XXXXXXXXXXX
-    description: Video giới thiệu 2 phút
+stories:
+  - id: nep-nha
+    title: Nếp nhà
+    cover: photos/family/minh-chau/minh-chau-02.jpg
+    body: |-
+      Đoạn thứ nhất.
+
+      Đoạn thứ hai.
 ```
 
 ### 2.1. Giới hạn
@@ -64,12 +80,16 @@ Mọi file và JSON đều cho phép CORS (`Access-Control-Allow-Origin: *`), n�
 
 | Endpoint | Nội dung |
 | :--- | :--- |
-| `/api/index.json` | Tất cả: `profile`, `links`, `videos`, `files` |
+| `/api/index.json` | Tất cả dữ liệu bên dưới |
 | `/api/profile.json` | Hồ sơ (avatar là URL tuyệt đối) |
-| `/api/links.json` | Các nhóm link |
+| `/api/about.json` | Hành trình, niềm tin, triết lý, học vấn, khóa học, sở thích |
+| `/api/people.json` | Gia đình & người truyền cảm hứng |
+| `/api/stories.json` | Câu chuyện (`page` là URL trang nếu có nội dung) |
+| `/api/albums.json` | Album: `id`, `title`, `cover`, `count`, `photos[]` (`url`, `title`, `alt`) |
+| `/api/links.json` | Các nhóm link (`image` là URL tuyệt đối) |
 | `/api/photos.json` | Chỉ các file ảnh |
 | `/api/videos.json` | Danh sách video |
-| `/api/files.json` | Mọi file: `path`, `url`, `type`, `folder`, `size`, `title`, `alt`, `tags` |
+| `/api/files.json` | Mọi file: `path`, `url`, `type`, `folder`, `size`, `title`, `alt`, `tags`, `albums` |
 
 Ví dụ trong một trang bất kỳ:
 
@@ -94,4 +114,4 @@ npm run build     # sinh media/dist
 npm run preview   # xem tại http://localhost:8788
 ```
 
-Biến môi trường `MEDIA_BASE_URL` đổi domain dùng trong URL tuyệt đối của JSON (mặc định `https://media.danghong.me`).
+Biến môi trường `MEDIA_BASE_URL` đổi domain dùng trong URL tuyệt đối của JSON (mặc định `https://media.danghong.me`). `MEDIA_REPO` / `MEDIA_BRANCH` đổi repo và nhánh mà các nút *Sửa* / *Thêm ảnh* trỏ tới (mặc định `hongdang023/danghong.me`, `main`).
