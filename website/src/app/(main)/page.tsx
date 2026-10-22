@@ -71,24 +71,24 @@ export default function Home() {
             {[
               {
                 title: "The1ight",
-                role: "Instructional Designer | Trợ giảng | Quản lý Vận hành Lớp học",
+                role: "Quản lý vận hành lớp học",
                 desc: "Hệ sinh thái khoá học về Vibe Coding và Làm chủ sự nghiệp",
                 link: "https://the1ight.com/",
                 image: "/images/the1ight.png"
               },
               {
-                title: "Conan School",
-                role: "Mentor lớp WebAI Builders và AI Master",
-                desc: "Cộng đồng dành cho những người bắt đầu hành trình xây dựng doanh nghiệp trong kỷ nguyên AI",
-                link: "https://www.conan.school/",
-                image: "/images/conan_school_v2.png"
-              },
-              {
                 title: "Sư Tử Con School",
                 role: "Mentor lớp AI Teen",
-                desc: "Sư Tử Con giúp học sinh cấp 2–3 biết suy nghĩ, làm sản phẩm và sử dụng AI như một công cụ sáng tạo và học các Future Skills (như Problem Framing, Math Thinking, Python, ...)",
+                desc: "Trường học cho các bé cấp 2 về tư duy xây dựng sản phẩm với AI",
                 link: "https://sutucon.com/",
                 image: "/images/sutucon_school_v2.png"
+              },
+              {
+                title: "Nemo12",
+                role: "Mentor",
+                desc: "Hệ thống học tập cho các bé K12 (Toán, Văn, Anh)",
+                link: "https://nemo12.com/",
+                image: "/images/nemo12.png"
               },
               {
                 title: "Inside6",
@@ -98,11 +98,18 @@ export default function Home() {
                 image: "/images/inside6.png"
               },
               {
-                title: "Chuyên Chọn",
-                role: "Mentor",
-                desc: "Hệ thống đo đạc giúp con đỗ trường chuyên cấp 3",
-                link: "https://chuyenchon.com/",
-                image: "/images/chuyen_chon.png"
+                title: "Next Step",
+                role: "Community Facilitator",
+                desc: "Cộng đồng dành cho những người trẻ đã ra trường có 1–3 năm kinh nghiệm muốn tìm việc và nhảy việc",
+                link: "https://nextstep27.com/",
+                image: "/images/nextstep.png"
+              },
+              {
+                title: "Conan School",
+                role: "Mentor AI Master",
+                desc: "Cộng đồng dành cho những người bắt đầu hành trình xây dựng doanh nghiệp trong kỷ nguyên AI",
+                link: "https://www.conan.school/",
+                image: "/images/conan_school_v2.png"
               }
             ].map((work, idx) => {
               const isLink = !!work.link;
