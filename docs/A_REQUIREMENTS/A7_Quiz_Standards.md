@@ -46,7 +46,7 @@ Quy trình kiểm tra 3 lớp nhằm đảm bảo người học không chỉ nh
 
 ## 5. TRẠNG THÁI TRIỂN KHAI (THEO WEBSITE HIỆN TẠI)
 
-- **Component**: `website/src/components/Quiz3LayerModal.tsx`, dữ liệu trong trường `quiz3Layer` của `website/src/data/bookData.ts`, mở từ trang `/books/viewer/[id]`.
+- **Component**: `website/src/components/Quiz3LayerModal.tsx`, dữ liệu trong trường `quiz3Layer` của collection `books` trên D1 (tab *Sách L&D* ở admin), mở từ trang `/books/viewer/[id]`.
 - **Phạm vi**: Hiện chỉ chương **LD#1** có bộ quiz 3 lớp. LD#2 đến LD#9 còn để trống `quiz3Layer: []`.
 - **Lớp 1**: Mỗi bộ quiz có **1 câu** trắc nghiệm (chuẩn ở mục 2 yêu cầu 5 câu).
 - **Lớp 2 và 3**: Người học phải viết tối thiểu 20 ký tự mới bấm tiếp được. Hệ thống hiển thị "Logic kỳ vọng" của chuyên gia để người học tự đối chiếu và tự chọn "Đạt" hoặc "Chưa đạt (Viết lại)". Không có chấm tự động.

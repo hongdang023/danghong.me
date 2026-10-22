@@ -1,13 +1,13 @@
 import React from "react";
 import LifeMentorClientPage from "./ClientPage";
-import { lifeMentors } from "@/data/lifeMentorsData";
+import { getMentors } from "@/lib/content";
 
 export async function generateStaticParams() {
-  return lifeMentors.map((mentor) => ({
+  return (await getMentors()).map((mentor) => ({
     id: mentor.id,
   }));
 }
 
-export default function LifeMentorDetailPage() {
-  return <LifeMentorClientPage />;
+export default async function LifeMentorDetailPage() {
+  return <LifeMentorClientPage lifeMentors={await getMentors()} />;
 }

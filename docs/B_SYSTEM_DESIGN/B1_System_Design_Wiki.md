@@ -8,7 +8,7 @@ Tài liệu này là điểm tham chiếu chính cho toàn bộ kiến trúc k�
 
 *   **Frictionless Experience (Trải nghiệm không rào cản)**: Hệ thống mở hoàn toàn, không yêu cầu đăng nhập. Người dùng có thể tiếp cận ngay lập tức mọi tài nguyên (Trial-all).
 *   **Warm Apple Minimalism**: Ngôn ngữ thiết kế tối giản của Apple kết hợp với bảng màu Warm Beige (`#F9F7F5`) mang lại sự chuyên nghiệp và gần gũi của một "Kiến trúc sư học tập".
-*   **Static-First Architecture**: Mọi dữ liệu được lưu trong các file TypeScript/JSON trong repository (`website/src/data`) và được render sẵn thành HTML tĩnh (`output: "export"`) để đạt tốc độ tối đa.
+*   **Static-First Architecture**: Nội dung nằm trong Cloudflare D1 (file trong R2), được fetch lúc build và render sẵn thành HTML tĩnh (`output: "export"`) để đạt tốc độ tối đa. Repo chỉ giữ code.
 
 ---
 
@@ -24,7 +24,7 @@ Tài liệu này là điểm tham chiếu chính cho toàn bộ kiến trúc k�
 ## 3. TIÊU CHUẨN THỰC THI (TECH STACK)
 
 *   **Frontend:** Next.js 16 (App Router, static export), React 19, TypeScript, Tailwind CSS 4, framer-motion (chuyển động), lucide-react (icon). Không dùng thư viện UI component (Shadcn/UI…); component tự viết trong `website/src/components`.
-*   **Content Management:** File TypeScript/JSON trong `website/src/data`. Không sử dụng Backend hay Database ngoài.
+*   **Content Management:** Trang quản trị https://media.danghong.me/admin/ ghi vào D1/R2 (xem [B3](./B3_Data_Architecture.md)).
 *   **Hosting:** Cloudflare Pages (website, docs, media). Xem [C2](../C_IMPLEMENTATION/C2_Deployment.md).
 *   **Palette:** Warm Beige (`#F9F7F5`), Shadow Beige (`#EDE6DE`), Charcoal (`#1D1D1F`), Luxury Crimson (`#8E3A3A`). Chi tiết tại [B5](./B5_Design_System.md).
 
@@ -32,7 +32,7 @@ Tài liệu này là điểm tham chiếu chính cho toàn bộ kiến trúc k�
 
 ## 4. QUY TẮC VẬN HÀNH (AUDIT QUESTIONS)
 
-1.  Dữ liệu mới đã khớp `interface` trong file `website/src/data/*.ts` và `npm run build` pass chưa?
+1.  Dữ liệu mới đã khớp `interface` trong `website/src/lib/content.ts` và `npm run build` pass chưa?
 2.  Hệ thống màu sắc đã tuân thủ đúng bảng màu **Warm Beige** chưa?
 3.  Trải nghiệm người dùng đã hoàn toàn "Frictionless" (không rào cản) chưa?
 4.  Các nút Call to Action (CTA) có điều hướng đúng về Facebook hoặc tài nguyên tải về chưa?

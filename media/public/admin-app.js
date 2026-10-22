@@ -10,7 +10,19 @@
     ["videos", "Video"],
     ["profile", "Hồ sơ"],
     ["about", "Giới thiệu"],
+    // danghong.me: edits go live after "Xuất bản website" rebuilds the static site.
+    ["products", "Sản phẩm", "website"],
+    ["courses", "Khoá học", "website"],
+    ["books", "Sách L&D", "website"],
+    ["masters", "Tổ chức", "website"],
+    ["mentors", "Life mentors", "website"],
+    ["family", "Gia đình", "website"],
+    ["communities", "Cộng đồng", "website"],
+    ["tools", "Công cụ", "website"],
+    ["updates", "Cập nhật", "website"],
+    ["website", "Cài đặt website", "website"],
   ];
+  const DOC_TABS = ["profile", "about", "website"];
   // Form fields per collection; keys not listed here stay editable in "Trường khác (JSON)".
   const FIELDS = {
     albums: [
@@ -55,8 +67,73 @@
       ["description", "Mô tả", "textarea"],
     ],
   };
-  const LABEL_KEY = { albums: "title", stories: "title", people: "name", links: "label", videos: "title" };
-  const SUB_KEY = { albums: "category", stories: "date", people: "role", links: "url", videos: "url" };
+  Object.assign(FIELDS, {
+    products: [
+      ["title", "Tên sản phẩm", "text", true],
+      ["category", "Nhóm (education, life, gems, tools)", "text", true],
+      ["description", "Mô tả ngắn", "textarea", true],
+      ["image", "Ảnh (URL)", "text", true],
+      ["link", "Link", "text", true],
+      ["tags", "Công nghệ (cách nhau bằng dấu phẩy)", "tags"],
+      ["testCode", "Mã dùng thử", "text"],
+    ],
+    courses: [
+      ["name", "Tên khoá học", "text", true],
+      ["provider", "Đơn vị / người dạy", "text", true],
+      ["tags", "Thẻ (cách nhau bằng dấu phẩy)", "tags"],
+      ["reviewUrl", "Link bài review", "text"],
+      ["courseUrl", "Link khoá học", "text"],
+    ],
+    books: [
+      ["chapterNumber", "Số chương (JSON số)", "json", true],
+      ["title", "Tiêu đề", "text", true],
+      ["subtitle", "Phụ đề", "text"],
+      ["pdfPath", "File PDF (URL)", "text", true],
+    ],
+    masters: [
+      ["name", "Tên tổ chức", "text", true],
+      ["link", "Link", "text"],
+      ["image", "Ảnh (URL)", "text"],
+      ["philosophy", "Triết lý", "textarea"],
+      ["lessons", "Bài học", "textarea"],
+    ],
+    mentors: [
+      ["name", "Tên", "text", true],
+      ["badge", "Nhãn", "text"],
+      ["relationship", "Quan hệ", "text"],
+      ["subtitle", "Phụ đề", "text"],
+      ["summary", "Tóm tắt", "textarea"],
+      ["story", "Câu chuyện", "longtext"],
+    ],
+    family: [
+      ["name", "Tên", "text", true],
+      ["role", "Vai trò", "text", true],
+      ["job", "Công việc", "text"],
+      ["coverImage", "Ảnh bìa (URL)", "text"],
+      ["images", "Ảnh (JSON list URL)", "json"],
+    ],
+    communities: [
+      ["name", "Tên cộng đồng", "text", true],
+      ["stats", "Thời gian / thành viên", "text"],
+      ["description", "Mô tả", "textarea"],
+      ["cover_image", "Ảnh bìa (URL)", "text"],
+      ["images", "Ảnh (JSON list URL)", "json"],
+    ],
+    tools: [
+      ["title", "Tên nhóm", "text", true],
+      ["subtitle", "Mô tả nhóm", "text"],
+      ["tools", "Công cụ [{name, description, iconName, link?, tagline?}] (JSON)", "json"],
+    ],
+    updates: [
+      ["title", "Tiêu đề", "text", true],
+      ["content", "Nội dung", "textarea", true],
+      ["type", "Loại (feature, course_update, bugfix, general)", "text", true],
+      ["created_at", "Thời điểm (ISO, vd 2026-10-22T09:00:00.000Z)", "text", true],
+      ["link", "Link", "text"],
+    ],
+  });
+  const LABEL_KEY = { albums: "title", stories: "title", people: "name", links: "label", videos: "title", products: "title", courses: "name", books: "title", masters: "name", mentors: "name", family: "name", communities: "name", tools: "title", updates: "title" };
+  const SUB_KEY = { albums: "category", stories: "date", people: "role", links: "url", videos: "url", products: "category", courses: "provider", books: "subtitle", masters: "link", mentors: "relationship", family: "role", communities: "stats", tools: "subtitle", updates: "created_at" };
 
   let state = null;
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -64,7 +141,7 @@
   const slug = (s) =>
     String(s ?? "")
       .normalize("NFD")
-      .replace(/[̀-ͯ]/g, "")
+      .replace(/[\u0300-\u036f]/g, "")
       .replace(/đ/gi, "d")
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
@@ -126,11 +203,13 @@
 
   function render() {
     const { tab, arg } = route();
-    $("#tabs").innerHTML = TABS.map(([id, label]) => `<a href="#${id}"${id === tab ? ' aria-current="page"' : ""}>${h(label)}</a>`).join("");
+    const link = ([id, label]) => `<a href="#${id}"${id === tab ? ' aria-current="page"' : ""}>${h(label)}</a>`;
+    $("#tabs").innerHTML = `<div class="tabrow"><span class="tabgroup">media</span>${TABS.filter((t) => !t[2]).map(link).join("")}</div>
+<div class="tabrow"><span class="tabgroup">danghong.me</span>${TABS.filter((t) => t[2]).map(link).join("")}<button class="btn sm primary" data-act="publish" ${state.canPublishWebsite ? "" : 'disabled title="Chưa cấu hình WEBSITE_DEPLOY_HOOK"'}>Xuất bản website</button></div>`;
     $("#lists").innerHTML = datalists();
     const view = $("#view");
     if (tab === "files") view.innerHTML = filesView(arg);
-    else if (tab === "profile" || tab === "about") view.innerHTML = documentView(tab);
+    else if (DOC_TABS.includes(tab)) view.innerHTML = documentView(tab);
     else view.innerHTML = collectionView(tab);
   }
 
@@ -157,11 +236,13 @@
 
   // ───────────── Hồ sơ / Giới thiệu
   function documentView(key) {
-    const intro =
-      key === "profile"
-        ? "Tên, chức danh, avatar (đường dẫn file trên R2), bio, expertise…"
-        : "journey, beliefs, philosophy, practices, education, courses, hobbies, movies. Ảnh dùng đường dẫn file trên R2, album dùng id.";
-    return `<div class="head"><h1>${key === "profile" ? "Hồ sơ" : "Giới thiệu"}</h1></div>
+    const intro = {
+      profile: "Tên, chức danh, avatar (đường dẫn file trên R2), bio, expertise…",
+      about: "journey, beliefs, philosophy, practices, education, courses, hobbies, movies. Ảnh dùng đường dẫn file trên R2, album dùng id.",
+      website:
+        "Dữ liệu dùng chung của danghong.me: familyStories (trang Gia đình), toolsPhilosophy (trang Công cụ), courseCategories (bộ lọc Hồng's List), showcaseCategories (tên nhóm trong /api/showcase.json), apiProfile (/api/profile.json).",
+    }[key];
+    return `<div class="head"><h1>${h(TABS.find((t) => t[0] === key)[1])}</h1></div>
   <p class="muted">${h(intro)}</p>
   <form id="doc-form" data-key="${key}" class="panel">
   <textarea name="data" class="code" rows="28" spellcheck="false">${h(JSON.stringify(state.documents[key] ?? {}, null, 2))}</textarea>
@@ -213,7 +294,7 @@
     const data = item?.data ?? {};
     const known = new Set(fields.map((f) => f[0]));
     const extra = Object.fromEntries(Object.entries(data).filter(([k]) => !known.has(k)));
-    const autoId = c === "links" || c === "videos";
+    const autoId = c === "links" || c === "videos" || c === "tools";
     const dlg = $("#dialog");
     dlg.innerHTML = `<form method="dialog" id="item-form" data-collection="${c}" data-id="${h(item?.id ?? "")}">
   <h2>${item ? "Sửa" : "Thêm"} · ${h(TABS.find((t) => t[0] === c)[1])}</h2>
@@ -310,6 +391,8 @@
       return toast("Đã sao chép link.");
     }
     if (act === "edit-file") return openFile(path);
+    if (act === "publish" && confirm("Build lại danghong.me với dữ liệu mới? Mất vài phút."))
+      return run(() => api("publish-website", { method: "POST" }), "Đã gửi yêu cầu build danghong.me.");
     if (act === "delete-file" && confirm("Xoá vĩnh viễn " + path + " khỏi R2?"))
       return run(() => api("files?path=" + encodeURIComponent(path), { method: "DELETE" }), "Đã xoá file.");
   });

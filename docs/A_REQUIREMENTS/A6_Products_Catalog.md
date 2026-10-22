@@ -3,7 +3,7 @@
 Đây là danh sách các sản phẩm, dự án và tài nguyên mà Hồng Đặng đã thực thi, dùng làm bằng chứng cho năng lực "Learning Architect".
 
 > [!NOTE]
-> Dữ liệu hiển thị trên website nằm trong `website/src/data/productData.ts` (14 sản phẩm). Khi thêm sản phẩm, cập nhật cả file đó và tài liệu này.
+> Dữ liệu hiển thị trên website nằm trong collection `products` trên D1 (14 sản phẩm), sửa ở tab *Sản phẩm* của https://media.danghong.me/admin/. Khi thêm sản phẩm, cập nhật cả D1 và tài liệu này.
 >
 > | `category` trong code | Bộ lọc trên `/products-hub` |
 > | :--- | :--- |
@@ -137,7 +137,7 @@ Chuỗi tài liệu chuyên sâu về thiết kế trải nghiệm học tập t
 - **Outcome**: Lưu trữ & tái sử dụng 100% prompt.
   --> Công nghệ sử dụng: Cloudflare Pages
 
-> Trang `/tools` còn liệt kê bộ công cụ Hồng dùng hằng ngày (Google Antigravity, Gemini Pro, NotebookLM, GitHub, Cloudflare, Supabase, Gamma AI, Consensus AI, Canva, Notion, ChatGPT…) từ `toolsData.ts`.
+> Trang `/tools` còn liệt kê bộ công cụ Hồng dùng hằng ngày (Google Antigravity, Gemini Pro, NotebookLM, GitHub, Cloudflare, Supabase, Gamma AI, Consensus AI, Canva, Notion, ChatGPT…) từ collection `tools` trên D1.
 
 ---
 

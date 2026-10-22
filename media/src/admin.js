@@ -1,6 +1,7 @@
 // /admin: password-protected page and JSON API that edit D1 and R2 directly.
 // Auth is HTTP Basic with the ADMIN_PASSWORD secret (any username):
 //   npx wrangler pages secret put ADMIN_PASSWORD --project-name danghong-media
+// Optional WEBSITE_DEPLOY_HOOK secret: Pages deploy hook URL of danghong-me, called by "Xuất bản website".
 import { ADMIN_HTML } from "./admin-ui.js";
 import { COLLECTIONS, DOCUMENTS, loadRaw, typeOf } from "./site.js";
 
@@ -56,7 +57,15 @@ async function api(request, env, route) {
   const method = request.method;
   const [resource, ...rest] = route;
 
-  if (resource === "state" && method === "GET") return json(await loadRaw(db));
+  if (resource === "state" && method === "GET") return json({ ...(await loadRaw(db)), canPublishWebsite: Boolean(env.WEBSITE_DEPLOY_HOOK) });
+
+  // danghong.me is a static build that reads /api/website/*.json, so its edits go live after a rebuild.
+  if (resource === "publish-website" && method === "POST") {
+    if (!env.WEBSITE_DEPLOY_HOOK) return fail("Chưa cấu hình secret WEBSITE_DEPLOY_HOOK.", 503);
+    const res = await fetch(env.WEBSITE_DEPLOY_HOOK, { method: "POST" });
+    if (!res.ok) return fail(`Deploy hook trả lỗi ${res.status}.`, 502);
+    return json({ ok: true });
+  }
 
   if (resource === "documents" && rest.length === 1) {
     const [key] = rest;

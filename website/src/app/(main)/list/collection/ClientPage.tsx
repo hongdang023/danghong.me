@@ -1,17 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { CATEGORY_MAPPING, getFilterCategories } from "@/data/courseData";
 import { CourseCard } from "@/components/CourseCard";
 import { ArrowLeft, Search, Filter, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import PageNavigation from "@/components/PageNavigation";
-import type { Course } from "@/data/courseData";
+import type { Course } from "@/lib/content";
 
-export default function CollectionClientPage({ initialCourses }: { initialCourses: Course[] }) {
+export default function CollectionClientPage({ initialCourses, categoryMapping: CATEGORY_MAPPING }: { initialCourses: Course[]; categoryMapping: Record<string, string[]> }) {
   const [selectedCategory, setSelectedCategory] = useState<string>("Tất cả");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const allCategories = ["Tất cả", ...getFilterCategories()];
+  const allCategories = ["Tất cả", ...Object.keys(CATEGORY_MAPPING)];
 
   const filteredCourses = initialCourses.filter(course => {
     const matchesCategory = selectedCategory === "Tất cả" || 

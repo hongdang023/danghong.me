@@ -1,12 +1,12 @@
 import PDFViewerClientPage from './ClientPage';
-import { LD_SERIES } from '../../../../data/bookData';
+import { getBooks } from '@/lib/content';
 
 export async function generateStaticParams() {
-  return LD_SERIES.map((chapter) => ({
+  return (await getBooks()).map((chapter) => ({
     id: chapter.id,
   }));
 }
 
-export default function PDFViewerPage() {
-  return <PDFViewerClientPage />;
+export default async function PDFViewerPage() {
+  return <PDFViewerClientPage chapters={await getBooks()} />;
 }

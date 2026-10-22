@@ -21,7 +21,7 @@ import {
   Compass,
   Sparkles
 } from "lucide-react";
-import { masterOrganizations } from "@/data/mastersData";
+import type { MasterOrganization } from "@/lib/content";
 import * as motion from "framer-motion/client";
 
 function IBLessonsView() {
@@ -121,7 +121,7 @@ function IBLessonsView() {
   );
 }
 
-export default function MasterDetailPageClient() {
+export default function MasterDetailPageClient({ masterOrganizations }: { masterOrganizations: MasterOrganization[] }) {
   const params = useParams();
   const id = params.id as string;
   const org = masterOrganizations.find((o) => o.id === id);

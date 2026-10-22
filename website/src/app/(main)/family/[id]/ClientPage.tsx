@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ArrowLeft, BookOpen, Heart, Quote, ImageIcon, Gamepad2, Music, Sparkles } from "lucide-react";
-import { familyMembers } from "@/data/familyData";
+import type { FamilyMember } from "@/lib/content";
 import * as motion from "framer-motion/client";
 import GalleryModal from "@/components/community/GalleryModal";
 
-export default function FamilyMemberClientPage() {
+export default function FamilyMemberClientPage({ familyMembers }: { familyMembers: FamilyMember[] }) {
   const params = useParams();
   const id = params.id as string;
   const member = familyMembers.find((m) => m.id === id);

@@ -1,34 +1,57 @@
-# B3. DATA ARCHITECTURE (STATIC DATA FILES)
+# B3. DATA ARCHITECTURE (D1 + R2)
 
-Website hoạt động hoàn toàn tĩnh. Nội dung chữ nằm trong các file TypeScript (và một ít JSON) trong repository, được import trực tiếp vào trang lúc build. Ảnh, screenshot và PDF nằm trên Cloudflare R2, phục vụ qua `media.danghong.me`. Riêng `media.danghong.me` dùng D1 + R2 làm nơi lưu nội dung (mục 6).
+GitHub chỉ giữ **code**. Mọi nội dung của hệ sinh thái nằm trên Cloudflare, account `Dangtuyethong2324@gmail.com's Account`:
+
+| Nơi lưu | Tên | Nội dung |
+| :--- | :--- | :--- |
+| D1 | `danghong-media` (`b1b6abc3-11e6-4a63-8603-335eda1e1758`) | Nội dung chữ của danghong.me và media.danghong.me |
+| R2 | `danghong-media` | Mọi file: ảnh, screenshot, PDF, video. Key = đường dẫn công khai trên `https://media.danghong.me/` |
+
+Sửa nội dung ở **https://media.danghong.me/admin/** (xem [C3](../C_IMPLEMENTATION/C3_Media_Library.md)). Schema: `media/schema.sql`.
 
 ---
 
-## 1. CẤU TRÚC THƯ MỤC DỮ LIỆU (DATA DIRECTORY)
+## 1. BẢNG D1
+
+| Bảng | Nội dung |
+| :--- | :--- |
+| `documents` | Mỗi dòng một object JSON: `profile`, `about` (media) và `website` (dữ liệu dùng chung của danghong.me) |
+| `items` | Danh sách có thứ tự: `collection`, `id`, `position`, `data` (JSON) |
+| `files` | Thông tin từng object trong R2: `path`, `type`, `content_type`, `size`, `title`, `alt`, `description`, `tags` |
+
+Các `collection` trong `items`:
+
+| Collection | Dùng ở | `id` là |
+| :--- | :--- | :--- |
+| `albums`, `stories`, `people`, `links`, `videos` | media.danghong.me | `id` |
+| `products` | danghong.me `/products-hub`, `/api/showcase.json` | `slug` |
+| `courses` | `/list/collection`, `/api/courses.json` | `id` |
+| `books` | `/books`, `/books/viewer/[id]` (kèm `quiz3Layer`) | `id` |
+| `masters` | `/masters`, `/masters/[id]` | `id` |
+| `mentors` | `/masters#life-mentors`, `/life-mentors/[id]` | `id` |
+| `family` | `/family`, `/family/[id]` | `id` |
+| `communities` | `/community` | `id` |
+| `tools` | `/tools` (mỗi dòng là một nhóm công cụ) | không công khai |
+| `updates` | `/updates` | `id` |
+
+Document `website` gồm: `familyStories` (trang Gia đình), `toolsPhilosophy` (trang Công cụ), `courseCategories` (bộ lọc của Hồng's List: tên nhóm → các tag), `showcaseCategories` (category sản phẩm → tên nhóm trong `/api/showcase.json`), `apiProfile` (nội dung `/api/profile.json`).
+
+---
+
+## 2. DANGHONG.ME ĐỌC DỮ LIỆU NHƯ THẾ NÀO
+
+Website vẫn là static export (`output: "export"`). Lúc build, `website/src/lib/content.ts` fetch JSON từ `https://media.danghong.me/api/website/<collection>.json` (và `settings.json` cho document `website`), rồi render sẵn thành HTML. Server page truyền dữ liệu xuống client component qua props; client component chỉ import `type`.
 
 ```text
-website/src/data/
-├── productData.ts       # PRODUCTS: Product[]            → /products-hub
-├── courseData.ts        # COURSES: Course[], CATEGORY_MAPPING → /list/collection
-├── bookData.ts          # LD_SERIES: LDChapter[] (kèm quiz3Layer) → /books, /books/viewer/[id]
-├── mastersData.ts       # masterOrganizations            → /masters, /masters/[id]
-├── lifeMentorsData.ts   # lifeMentors                    → /masters#life-mentors, /life-mentors/[id]
-├── familyData.ts        # familyMembers, familyStories   → /family, /family/[id]
-├── communityData.ts     # momentsData, communitiesData   → /community
-├── toolsData.ts         # toolsPhilosophy, toolsCategoriesData → /tools
-├── updateData.ts        # UPDATES                        → /updates
-└── communities.json     # (không còn được import ở đâu)
+D1 ──► media.danghong.me/api/website/*.json ──(lúc build)──► website/src/lib/content.ts ──► HTML tĩnh
 ```
 
-Ảnh và file (ảnh, screenshot, PDF bộ sách L&D) nằm trong R2 bucket `danghong-media`, thư mục `website/` (`images/`, `screenshots/`, `books/`), và được tham chiếu bằng URL tuyệt đối, ví dụ `image: "https://media.danghong.me/website/screenshots/lightms.png"`. Hai ảnh trùng nội dung với ảnh của media dùng thẳng URL `photos/…` của media.
+*   `content.ts` khai báo `interface` cho mọi loại dữ liệu (`Product`, `Course`, `LDChapter`…). TypeScript kiểm tra dữ liệu lúc build.
+*   Biến môi trường `CONTENT_API_URL` đổi nguồn (mặc định `https://media.danghong.me/api/website`), ví dụ trỏ về `http://localhost:8788/api/website` khi chạy media local.
+*   Build cần mạng; media không trả lời thì build lỗi và site giữ bản cũ.
+*   Ảnh trong dữ liệu là URL tuyệt đối trên R2, ví dụ `https://media.danghong.me/website/screenshots/lightms.png`.
 
----
-
-## 2. ĐỊNH DẠNG DỮ LIỆU (DATA FORMATS)
-
-Mỗi file khai báo một `interface` và export một mảng dữ liệu theo interface đó. TypeScript kiểm tra dữ liệu lúc build, nên thiếu trường bắt buộc sẽ làm build lỗi.
-
-**Ví dụ một Product (`productData.ts`)**:
+**Ví dụ một Product** (`/api/website/products.json`):
 
 ```ts
 {
@@ -48,62 +71,35 @@ Mỗi file khai báo một `interface` và export một mảng dữ liệu theo 
 }
 ```
 
-**Ví dụ một Course (`courseData.ts`)**:
-
-```ts
-{
-  id: "product-101",
-  name: "Product 101 - Không biết gì cũng làm sản phẩm",
-  provider: "The1ight (Lucas Quang Nguyễn)",
-  tags: ["Vibe Coding", "Product Management"],
-  reviewUrl: "https://harureboot.substack.com/p/…", // bài Deep Review, có thể null
-  courseUrl: "https://the1ight.com/…",              // có thể null
-}
-```
-
 ---
 
-## 3. JSON API CÔNG KHAI
+## 3. JSON API CÔNG KHAI CỦA DANGHONG.ME
 
-Các file trong `website/public/api/` được phục vụ nguyên trạng và mô tả tại trang `/api-docs`:
+Sinh lúc build bằng route handler tĩnh trong `website/src/app/api/*/route.ts`, mô tả tại trang `/api-docs`:
 
-| Endpoint | Nội dung |
+| Endpoint | Nguồn |
 | :--- | :--- |
-| `/api/profile.json` | Hồ sơ, triết lý, chuyên môn, mạng xã hội |
-| `/api/courses.json` | Danh sách khóa học |
-| `/api/showcase.json` | Một số sản phẩm tiêu biểu |
+| `/api/profile.json` | `documents.website.apiProfile`, giữ nguyên |
+| `/api/courses.json` | Collection `courses` (`name`, `provider`, `keywords`, `review_link`, `course_link`) |
+| `/api/showcase.json` | Collection `products`, gom theo `category` với tên nhóm từ `showcaseCategories` (`name`, `description`, `link`, `access`, `outcome`, `tech_stack`) |
 
-> [!WARNING]
-> Các file này được viết tay, **không** sinh tự động từ `src/data`. Tại thời điểm audit 2026-10, `courses.json` có 9 khóa (dữ liệu có 10) và `showcase.json` có 3 sản phẩm (dữ liệu có 14). Xem [Audit 2026-10](../audit/2026-10.md).
+Vì sinh từ cùng dữ liệu với các trang, JSON không còn lệch với website (trước đây viết tay nên thiếu sản phẩm, xem [Audit 2026-10](../audit/2026-10.md)).
 
-Thông tin, ảnh, video và link cá nhân dùng chung cho nhiều site nằm trong D1/R2 và publish tại `https://media.danghong.me/api/*.json` (xem mục 6 và [C3](../C_IMPLEMENTATION/C3_Media_Library.md)).
-
----
-
-## 4. QUY TRÌNH QUẢN LÝ NỘI DUNG (CMS WORKFLOW)
-
-1.  **Cập nhật nội dung**: Sửa file trong `website/src/data/` trên một nhánh mới. Ảnh mới tải lên thư mục `website/` ở https://media.danghong.me/admin/ rồi dán URL vào dữ liệu.
-2.  **Kiểm tra**: Mở Pull Request. CI chạy `npm run lint` và `npm run build`; lỗi kiểu dữ liệu sẽ hiện ngay.
-3.  **Phát hành**: Merge vào `main`, Cloudflare Pages build lại site.
-4.  **Data Integrity**: `slug`/`id` phải duy nhất trong mỗi file vì được dùng làm URL (`generateStaticParams`).
+Dữ liệu của media publish tại `https://media.danghong.me/api/*.json` (xem [C3](../C_IMPLEMENTATION/C3_Media_Library.md)).
 
 ---
 
-## 5. LỢI ÍCH KIẾN TRÚC
-1. **Zero Latency**: Không có độ trễ do gọi DB.
-2. **Infinite Scalability**: Website tĩnh dễ dàng cache lên CDN toàn cầu.
-3. **No Setup/Maintenance**: Không tốn chi phí và thời gian bảo trì database.
-4. **Git-based Versioning**: Mọi lịch sử thay đổi nội dung chữ của website được lưu trữ minh bạch trên Git.
+## 4. QUY TRÌNH CẬP NHẬT NỘI DUNG
+
+1.  **Sửa**: https://media.danghong.me/admin/ → nhóm tab *danghong.me* (Sản phẩm, Khoá học, Sách L&D…). Ảnh mới tải lên thư mục `website/` ở tab *Ảnh & file* rồi dán URL.
+2.  **Xuất bản**: bấm **Xuất bản website**. Admin gọi deploy hook của Pages project `danghong-me` (secret `WEBSITE_DEPLOY_HOOK`), Cloudflare build lại site trong vài phút. Push code vào `main` cũng build lại với dữ liệu mới nhất.
+3.  **Data Integrity**: `id`/`slug` duy nhất trong mỗi collection (D1 bắt buộc) vì được dùng làm URL (`generateStaticParams`). Đổi `id` = xoá rồi tạo mục mới.
+4.  **Media** đổi ngay khi lưu, không cần xuất bản.
 
 ---
 
-## 6. MEDIA: D1 + R2
-
-`media.danghong.me` không còn file dữ liệu trong repo. Pages Function đọc trực tiếp:
-
-| Nơi lưu | Tên | Binding | Nội dung |
-| :--- | :--- | :--- | :--- |
-| D1 | `danghong-media` (`b1b6abc3-11e6-4a63-8603-335eda1e1758`) | `DB` | Bảng `documents` (profile, about), `items` (albums, stories, people, links, videos), `files` (thông tin từng file) |
-| R2 | `danghong-media` | `BUCKET` | Mọi file; key = đường dẫn công khai (`photos/…`, `documents/…`, `videos/…`, `website/…`) |
-
-Schema: `media/schema.sql`. Chi tiết bảng, cách sửa qua `/admin/` và JSON API: [C3](../C_IMPLEMENTATION/C3_Media_Library.md).
+## 5. LỢI ÍCH VÀ ĐÁNH ĐỔI
+1. **Zero Latency**: danghong.me vẫn là HTML tĩnh, không gọi DB khi người xem truy cập.
+2. **Sửa không cần code**: nội dung sửa trên web, không cần commit.
+3. **Một nguồn**: trang, JSON API và media đọc cùng một D1.
+4. **Đánh đổi**: lịch sử nội dung không còn trên Git. D1 có Time Travel 30 ngày (`wrangler d1 time-travel`); R2 chưa có sao lưu tự động ([B4](./B4_Infrastructure.md) I4).

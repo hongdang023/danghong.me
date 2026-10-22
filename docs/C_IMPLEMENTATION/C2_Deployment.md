@@ -15,7 +15,16 @@ Ba site đều chạy trên Cloudflare Pages và được build từ cùng một
 *   **Build command**: `npm run build` (thư mục gốc của project: `website`).
 *   **Output**: `out/` (Next.js `output: "export"`).
 *   **Headers**: `website/public/_headers`.
-*   **Environment Variables**: Không cần. Nếu sau này có, quản lý trên Cloudflare Dashboard (không push file `.env`).
+*   **Nội dung**: build fetch `https://media.danghong.me/api/website/*.json` (D1), nên cần mạng và media phải chạy. Xem [B3](../B_SYSTEM_DESIGN/B3_Data_Architecture.md).
+*   **Environment Variables**: không bắt buộc. `CONTENT_API_URL` đổi nguồn nội dung (mặc định `https://media.danghong.me/api/website`). Quản lý trên Cloudflare Dashboard (không push file `.env`).
+*   **Build lại khi sửa nội dung** (thiết lập một lần): Pages project `danghong-me` → *Settings → Builds → Deploy hooks* → tạo hook cho nhánh `main`, rồi lưu URL làm secret của media:
+
+    ```bash
+    cd media
+    npx wrangler pages secret put WEBSITE_DEPLOY_HOOK --project-name danghong-media
+    ```
+
+    Nút **Xuất bản website** ở https://media.danghong.me/admin/ gọi hook này. Chưa có secret thì nút bị tắt.
 
 ---
 

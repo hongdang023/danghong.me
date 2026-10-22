@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ArrowLeft, BookOpen, Heart, Quote } from "lucide-react";
-import { lifeMentors } from "@/data/lifeMentorsData";
+import type { LifeMentor } from "@/lib/content";
 import * as motion from "framer-motion/client";
 
-export default function LifeMentorClientPage() {
+export default function LifeMentorClientPage({ lifeMentors }: { lifeMentors: LifeMentor[] }) {
   const params = useParams();
   const id = params.id as string;
   const mentor = lifeMentors.find((m) => m.id === id);

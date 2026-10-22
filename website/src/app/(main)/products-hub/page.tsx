@@ -1,8 +1,9 @@
 import React from "react";
 import ProductsHubClient from "./ClientPage";
-import { PRODUCTS } from "@/data/productData";
+import { getProducts } from "@/lib/content";
 
-export default function ProductsHub() {
+export default async function ProductsHub() {
+  const PRODUCTS = await getProducts();
   // Map static products to the format expected by the client page (slug -> id)
   const mappedItems = PRODUCTS.map(p => ({
     id: p.slug,

@@ -18,7 +18,7 @@ Tài liệu này là "hệ điều hành" thực thi của dự án. Áp dụng 
 
 - **The Look**: **[B5_Design_System](./B_SYSTEM_DESIGN/B5_Design_System.md)** (Apple 30% x YC 70%).
 - **The Nav**: **[A5_Sitemap](./A_REQUIREMENTS/A5_Sitemap.md)** (5 mục Mega Menu).
-- **The Data**: **[B3_Data_Architecture](./B_SYSTEM_DESIGN/B3_Data_Architecture.md)** (Dữ liệu tĩnh trong `website/src/data`).
+- **The Data**: **[B3_Data_Architecture](./B_SYSTEM_DESIGN/B3_Data_Architecture.md)** (Nội dung trong Cloudflare D1/R2, sửa tại media.danghong.me/admin).
 
 ---
 

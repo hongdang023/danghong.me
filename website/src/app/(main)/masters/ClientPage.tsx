@@ -5,8 +5,7 @@ import React from "react";
 import * as motion from "framer-motion/client";
 import Link from "next/link";
 import { ArrowRight, ExternalLink, Heart, Briefcase, Lightbulb, Compass, Sparkles, User } from "lucide-react";
-import { masterOrganizations } from "@/data/mastersData";
-import { lifeMentors } from "@/data/lifeMentorsData";
+import type { LifeMentor, MasterOrganization } from "@/lib/content";
 
 const IconComponent = ({ name, className }: { name: string; className?: string }) => {
   switch (name) {
@@ -20,7 +19,7 @@ const IconComponent = ({ name, className }: { name: string; className?: string }
   }
 };
 
-export default function MastersClientPage() {
+export default function MastersClientPage({ masterOrganizations, lifeMentors }: { masterOrganizations: MasterOrganization[]; lifeMentors: LifeMentor[] }) {
   const [activeTab, setActiveTab] = React.useState<string>("organizations");
   const lastUrlRef = React.useRef("");
 

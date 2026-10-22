@@ -1,8 +1,8 @@
 import React from "react";
 import CollectionClientPage from "./ClientPage";
-import { COURSES } from "@/data/courseData";
+import { getCourses, getSettings } from "@/lib/content";
 
-export default function CollectionPage() {
-  return <CollectionClientPage initialCourses={COURSES} />;
+export default async function CollectionPage() {
+  const [courses, settings] = await Promise.all([getCourses(), getSettings()]);
+  return <CollectionClientPage initialCourses={courses} categoryMapping={settings.courseCategories} />;
 }
-

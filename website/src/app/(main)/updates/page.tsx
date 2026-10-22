@@ -1,5 +1,5 @@
 import React from "react";
-import { UPDATES } from "@/data/updateData";
+import { getUpdates } from "@/lib/content";
 import { Bell, Zap, BookOpen, Bug } from "lucide-react";
 
 export const metadata = {
@@ -20,7 +20,8 @@ const TypeIcon = ({ type }: { type: string }) => {
   }
 };
 
-export default function UpdatesPage() {
+export default async function UpdatesPage() {
+  const UPDATES = await getUpdates();
   return (
     <div className="min-h-screen bg-background py-16 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">

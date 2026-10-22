@@ -54,7 +54,7 @@ Chi tiết cách deploy và thiết lập token: [C2. Deployment](../C_IMPLEMENT
 
 ### 3.1. Website (`danghong.me`)
 *   Next.js 16, `output: "export"`, không có server Node.js lúc chạy.
-*   Dữ liệu tĩnh trong `website/src/data/*.ts` (xem [B3](./B3_Data_Architecture.md)).
+*   Nội dung lấy từ `https://media.danghong.me/api/website/*.json` (D1) lúc build (xem [B3](./B3_Data_Architecture.md)). Admin media gọi deploy hook (secret `WEBSITE_DEPLOY_HOOK` của `danghong-media`) để build lại.
 *   Header cache: `website/public/_headers` (`/_next/static/*` cache 1 năm, immutable).
 *   Ảnh, screenshot, PDF sách lấy từ R2 qua `https://media.danghong.me/website/…`.
 
@@ -96,4 +96,3 @@ Không có bản ghi `www`. Khi thêm hoặc đổi bản ghi, cập nhật bả
 | I2 | Project cũ `docs-danghong-me` (bản docs trước audit) vẫn còn trên Cloudflare | Xoá sau khi `docs.danghong.me` đã trỏ sang `danghong-docs` |
 | I3 | Chưa có `www.danghong.me` | Thêm CNAME `www` + Redirect Rule về `danghong.me` nếu cần |
 | I4 | R2 `danghong-media` chưa có bản sao lưu tự động (D1 có Time Travel 30 ngày) | Cron Worker sao chép bucket sang bucket backup, hoặc định kỳ `rclone sync` về máy |
-| I5 | Dữ liệu chữ của website (`website/src/data/*.ts`, `website/public/api/*.json`) vẫn nằm trong repo | Chuyển sang D1 và cho website đọc qua JSON API của media lúc build |

@@ -10,8 +10,7 @@ Website được xây dựng trên Next.js 16 với App Router và xuất ra HTM
 website/
 ├── next.config.ts          # output: "export", images.unoptimized: true
 ├── public/
-│   ├── _headers            # Cache header cho Cloudflare Pages
-│   └── api/*.json          # JSON API công khai (profile, courses, showcase)
+│   └── _headers            # Cache header cho Cloudflare Pages
 │                           # Ảnh, screenshot, PDF sách nằm trên R2: https://media.danghong.me/website/…
 └── src/
     ├── app/
@@ -23,15 +22,16 @@ website/
     │   │   ├── about/  masters/  life-mentors/  products-hub/
     │   │   ├── books/  tools/  list/  community/  family/  updates/
     │   ├── books/viewer/[id]/      # Trình đọc PDF toàn màn hình (không Navbar)
+    │   ├── api/{profile,courses,showcase}.json/route.ts  # JSON API công khai, sinh tĩnh lúc build
     │   └── api-docs/               # Trang tài liệu JSON API
     ├── components/          # Navbar, PageNavigation, OutcomeCard, ProductDetail, Quiz3LayerModal…
     │   ├── community/       # CommunityCards, GalleryModal
     │   └── family/          # MarioKartQuiz
-    ├── data/                # Toàn bộ nội dung (xem B3)
+    ├── lib/content.ts       # Type + hàm fetch nội dung từ D1 (qua media.danghong.me/api/website) lúc build, xem B3
     └── utils/identity.ts
 ```
 
-Quy ước trang động: `page.tsx` là Server Component gọi `generateStaticParams()` và truyền dữ liệu cho `ClientPage.tsx` (Client Component) để xử lý tương tác.
+Quy ước: `page.tsx` là Server Component (async) lấy dữ liệu bằng `@/lib/content`, gọi `generateStaticParams()` với trang động, và truyền dữ liệu qua props cho `ClientPage.tsx` (Client Component) để xử lý tương tác. Client Component chỉ `import type` từ `@/lib/content`.
 
 ---
 

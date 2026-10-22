@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, AlertCircle, ArrowRight, BrainCircuit, ShieldCheck, Zap } from "lucide-react";
-import { Quiz3Layer } from "@/data/bookData";
+import type { Quiz3Layer } from "@/lib/content";
 
 interface Quiz3LayerModalProps {
   isOpen: boolean;

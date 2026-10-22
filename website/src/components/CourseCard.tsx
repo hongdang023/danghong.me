@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Course } from "@/data/courseData";
+import type { Course } from "@/lib/content";
 import { Heart, MessageSquare, ExternalLink, BookOpen, Send } from "lucide-react";
 
 

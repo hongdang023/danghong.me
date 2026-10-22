@@ -7,7 +7,7 @@ GitHub chỉ giữ **code**. Nội dung nằm trên Cloudflare:
 *   **D1** `danghong-media`: hồ sơ, giới thiệu, album, câu chuyện, con người, link, video, thông tin từng file.
 *   **R2** `danghong-media`: mọi file (ảnh, PDF, video). Key trong R2 chính là đường dẫn công khai: key `photos/avatar.png` → `https://media.danghong.me/photos/avatar.png`.
 
-Sửa ở trang quản trị [`/admin/`](https://media.danghong.me/admin/) là site đổi ngay, không cần commit hay deploy.
+Sửa ở trang quản trị [`/admin/`](https://media.danghong.me/admin/) là media đổi ngay, không cần commit hay deploy. Trang quản trị cũng chứa nội dung của **danghong.me** (nhóm tab *danghong.me*); phần đó lên web sau khi bấm **Xuất bản website** (xem [B3](../B_SYSTEM_DESIGN/B3_Data_Architecture.md)).
 
 ---
 
@@ -43,8 +43,8 @@ Site có thanh điều hướng với các trang: **Giới thiệu** (`/`), **C�
 
 | Bảng | Nội dung |
 | :--- | :--- |
-| `documents` | Mỗi dòng là một object JSON: `profile`, `about` |
-| `items` | Danh sách có thứ tự (`collection`, `id`, `position`, `data` JSON). `collection` là `albums`, `stories`, `people`, `links`, `videos`. `people` và `links` có trường `group`; site gom nhóm theo thứ tự xuất hiện. |
+| `documents` | Mỗi dòng là một object JSON: `profile`, `about`, `website` (của danghong.me) |
+| `items` | Danh sách có thứ tự (`collection`, `id`, `position`, `data` JSON). `collection` của media là `albums`, `stories`, `people`, `links`, `videos`; của danghong.me xem [B3](../B_SYSTEM_DESIGN/B3_Data_Architecture.md). `people` và `links` có trường `group`; site gom nhóm theo thứ tự xuất hiện. |
 | `files` | Thông tin của mỗi object trong R2: `path`, `type`, `content_type`, `size`, `title`, `alt`, `description`, `tags` |
 
 Cấu trúc thư mục trong R2:
@@ -73,6 +73,7 @@ Mở [media.danghong.me/admin/](https://media.danghong.me/admin/), đăng nhập
 | Thêm câu chuyện | Tab **Câu chuyện**: `body` (đoạn cách nhau một dòng trống), `sections`, hoặc chỉ `link` tới bài gốc. |
 | Thêm người, link, video | Tab tương ứng → *＋ Thêm*. Nút ↑ ↓ đổi thứ tự. |
 | Sửa hồ sơ, giới thiệu | Tab **Hồ sơ** và **Giới thiệu** (sửa JSON: hành trình, niềm tin, triết lý, học vấn, khóa học, sở thích, phim). |
+| Sửa sản phẩm, khoá học, sách, gia đình… của danghong.me | Nhóm tab **danghong.me** → sửa → **Xuất bản website** (build lại trong vài phút). |
 
 `id` chỉ dùng chữ thường không dấu, số và dấu gạch ngang; link và video để trống `id` thì tự tạo. Trường nào không có ô riêng (ví dụ `admirations`, `lessons`, `quotes` của người) nằm trong ô *Trường khác (JSON)*.
 
@@ -102,6 +103,7 @@ Mọi file và JSON đều cho phép CORS (`Access-Control-Allow-Origin: *`), n�
 | `/api/photos.json` | Chỉ các file ảnh |
 | `/api/videos.json` | Danh sách video |
 | `/api/files.json` | Mọi file: `path`, `url`, `type`, `folder`, `size`, `title`, `alt`, `tags`, `albums` |
+| `/api/website/<collection>.json` | Nội dung danghong.me nguyên dạng (`products`, `courses`, `books`, `masters`, `mentors`, `family`, `communities`, `tools`, `updates`); `settings.json` là document `website` |
 
 Ví dụ trong một trang bất kỳ:
 

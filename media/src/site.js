@@ -10,8 +10,24 @@ export const TYPES = {
   document: [".pdf", ".doc", ".docx", ".ppt", ".pptx", ".xls", ".xlsx", ".txt", ".md"],
 };
 
-export const COLLECTIONS = ["albums", "stories", "people", "links", "videos"];
-export const DOCUMENTS = ["profile", "about"];
+export const MEDIA_COLLECTIONS = ["albums", "stories", "people", "links", "videos"];
+// Content of danghong.me, published raw at /api/website/<name>.json and read by the website build.
+// Value = the field that carries the item id in the website's objects (null: id not exposed).
+export const WEBSITE_COLLECTIONS = {
+  products: "slug",
+  courses: "id",
+  books: "id",
+  masters: "id",
+  mentors: "id",
+  family: "id",
+  communities: "id",
+  tools: null,
+  updates: "id",
+};
+export const COLLECTIONS = [...MEDIA_COLLECTIONS, ...Object.keys(WEBSITE_COLLECTIONS)];
+// `website` holds the website's single objects: familyStories, toolsPhilosophy, courseCategories,
+// showcaseCategories, apiProfile.
+export const DOCUMENTS = ["profile", "about", "website"];
 
 export function typeOf(path) {
   const ext = path.slice(path.lastIndexOf(".")).toLowerCase();
@@ -169,4 +185,13 @@ export function apiPayloads(site, baseUrl, generatedAt) {
     "files.json": files,
     "photos.json": files.filter((f) => f.type === "image"),
   };
+}
+
+// The website's content, as the website's own TypeScript types expect it.
+export function websitePayloads(raw) {
+  const out = { "website/settings.json": raw.documents.website ?? {} };
+  for (const [collection, idKey] of Object.entries(WEBSITE_COLLECTIONS)) {
+    out[`website/${collection}.json`] = (raw.items[collection] ?? []).map(({ id, data }) => (idKey ? { [idKey]: id, ...data } : data));
+  }
+  return out;
 }

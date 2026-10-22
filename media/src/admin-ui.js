@@ -19,7 +19,9 @@ header { position:sticky; top:0; z-index:5; background:var(--bg); border-bottom:
 header .wrap { display:flex; align-items:center; gap:1rem; min-height:3.5rem; flex-wrap:wrap; }
 header strong a { color:var(--fg); text-decoration:none; }
 .wrap { max-width:68rem; margin:0 auto; padding:0 1rem; }
-#tabs { display:flex; gap:.25rem; overflow-x:auto; }
+#tabs { display:flex; flex-direction:column; gap:.2rem; padding:.4rem 0; min-width:0; flex:1; }
+.tabrow { display:flex; gap:.25rem; overflow-x:auto; align-items:center; }
+.tabgroup { font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); min-width:6.5rem; }
 #tabs a { color:var(--muted); text-decoration:none; padding:.35rem .7rem; border-radius:999px; white-space:nowrap; font-weight:500; }
 #tabs a[aria-current] { color:var(--accent); background:var(--accent-soft); }
 main { padding:1.25rem 0 4rem; }

@@ -2,11 +2,11 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { LD_SERIES } from "@/data/bookData";
+import type { LDChapter } from "@/lib/content";
 import { ChevronLeft, CheckCircle2, Loader2, ShieldAlert, Zap } from "lucide-react";
 import Quiz3LayerModal from "@/components/Quiz3LayerModal";
 
-export default function PDFViewerClientPage() {
+export default function PDFViewerClientPage({ chapters: LD_SERIES }: { chapters: LDChapter[] }) {
   const { id } = useParams();
   const router = useRouter();
   const [isReady, setIsReady] = useState(false);

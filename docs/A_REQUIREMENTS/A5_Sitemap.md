@@ -45,16 +45,16 @@
 
 | Route | Nguồn dữ liệu | Các trang hiện có |
 | :--- | :--- | :--- |
-| `/masters/[id]` | `mastersData.ts` | `project-zero`, `building-21`, `coursera`, `brilliant`, `ib` |
-| `/life-mentors/[id]` | `lifeMentorsData.ts` | `me-tuyet-le`, `anh-dac`, `anh-quang`, `anh-nhat-anh`, `dien-quang`, `minh-giang` |
-| `/family/[id]` | `familyData.ts` | `bo`, `me`, `huy`, `chau` |
-| `/books/viewer/[id]` | `bookData.ts` | `ld-1` … `ld-9` |
+| `/masters/[id]` | D1 `masters` | `project-zero`, `building-21`, `coursera`, `brilliant`, `ib` |
+| `/life-mentors/[id]` | D1 `mentors` | `me-tuyet-le`, `anh-dac`, `anh-quang`, `anh-nhat-anh`, `dien-quang`, `minh-giang` |
+| `/family/[id]` | D1 `family` | `bo`, `me`, `huy`, `chau` |
+| `/books/viewer/[id]` | D1 `books` | `ld-1` … `ld-9` |
 
 ### 1.2. Trang ngoài Mega Menu
 
 | Route | Mô tả | Trạng thái |
 | :--- | :--- | :--- |
-| `/updates` | Nhật ký cập nhật ("What's New") từ `updateData.ts` | Không có link từ Navbar |
+| `/updates` | Nhật ký cập nhật ("What's New") từ D1 `updates` | Không có link từ Navbar |
 | `/api-docs` | Tài liệu cho các file JSON công khai `/api/profile.json`, `/api/courses.json`, `/api/showcase.json` | Không có link từ Navbar |
 
 ---
@@ -97,7 +97,7 @@ Mỗi panel gồm 2 cột liên kết và 1 thẻ nổi bật (định nghĩa tr
 
 ## 3. CHI TIẾT HỒNG'S LIST (THE CURATION LOGIC)
 
-Đây là khu vực thể hiện tư duy "Architect" thông qua việc giám tuyển tri thức khắt khe. Được xây dựng như một Collection Page (`/list/collection`) với tính năng Tìm kiếm (Search), Lọc theo danh mục (`CATEGORY_MAPPING` trong `courseData.ts`) và Tương tác thực (Voting/Comments - chỉ lưu trong `localStorage` của người xem).
+Đây là khu vực thể hiện tư duy "Architect" thông qua việc giám tuyển tri thức khắt khe. Được xây dựng như một Collection Page (`/list/collection`) với tính năng Tìm kiếm (Search), Lọc theo danh mục (`courseCategories` trong document `website` trên D1) và Tương tác thực (Voting/Comments - chỉ lưu trong `localStorage` của người xem).
 
 ### 3.1. Triết lý Tuyển chọn
 

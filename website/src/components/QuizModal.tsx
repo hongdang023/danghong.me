@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { X, CheckCircle2, AlertCircle, ChevronRight, Target } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LDChapter } from "@/data/bookData";
+import type { LDChapter } from "@/lib/content";
 
 interface QuizModalProps {
   isOpen: boolean;

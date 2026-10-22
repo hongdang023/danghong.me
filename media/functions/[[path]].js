@@ -1,19 +1,20 @@
 // Every request to media.danghong.me lands here (public/ only holds robots.txt and admin-app.js):
 //   /admin/*   → admin page and its API (src/admin.js)
-//   /api/*.json → JSON built from D1
+//   /api/*.json, /api/website/*.json → JSON built from D1
 //   paths ending in "/" or without an extension → HTML rendered from D1
 //   anything else → the object with that key in R2, then public/
 import { handleAdmin } from "../src/admin.js";
 import { renderSite } from "../src/render.js";
-import { apiPayloads, loadRaw, resolveSite } from "../src/site.js";
+import { apiPayloads, loadRaw, resolveSite, websitePayloads } from "../src/site.js";
 
 const PUBLIC_HEADERS = { "Access-Control-Allow-Origin": "*", "X-Content-Type-Options": "nosniff" };
 
 async function buildSite(env) {
   const baseUrl = (env.MEDIA_BASE_URL || "https://media.danghong.me").replace(/\/$/, "");
-  const site = resolveSite(await loadRaw(env.DB), baseUrl);
+  const raw = await loadRaw(env.DB);
+  const site = resolveSite(raw, baseUrl);
   if (site.warnings.length) console.warn(site.warnings.join("\n"));
-  return { site, baseUrl, generatedAt: new Date().toISOString() };
+  return { raw, site, baseUrl, generatedAt: new Date().toISOString() };
 }
 
 async function serveFile(request, env, key) {
@@ -43,8 +44,8 @@ export async function onRequest(context) {
   if (request.method !== "GET" && request.method !== "HEAD") return new Response("Method not allowed", { status: 405 });
 
   if (path.startsWith("/api/")) {
-    const { site, baseUrl, generatedAt } = await buildSite(env);
-    const data = apiPayloads(site, baseUrl, generatedAt)[path.slice(5)];
+    const { raw, site, baseUrl, generatedAt } = await buildSite(env);
+    const data = { ...apiPayloads(site, baseUrl, generatedAt), ...websitePayloads(raw) }[path.slice(5)];
     if (data === undefined) return Response.json({ error: "not found" }, { status: 404, headers: PUBLIC_HEADERS });
     return new Response(JSON.stringify(data, null, 2) + "\n", {
       headers: { ...PUBLIC_HEADERS, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=60" },

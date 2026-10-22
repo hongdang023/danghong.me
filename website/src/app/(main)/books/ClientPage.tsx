@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { ChapterCard } from "@/components/ChapterCard";
-import { LD_SERIES } from "@/data/bookData";
+import type { LDChapter } from "@/lib/content";
 import { Trophy, BookOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import * as motion from "framer-motion/client";
 
-export default function BooksClientPage() {
+export default function BooksClientPage({ chapters: LD_SERIES }: { chapters: LDChapter[] }) {
   const router = useRouter();
   const [unlockedChapters, setUnlockedChapters] = useState<string[]>(["ld-1"]);
   const [completedChapters, setCompletedChapters] = useState<string[]>([]);

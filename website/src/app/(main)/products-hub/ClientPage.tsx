@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { OutcomeCard } from "@/components/OutcomeCard";
 import { ProductDetail } from "@/components/ProductDetail";
 import * as motion from "framer-motion/client";
-import type { Product } from "@/data/productData";
+import type { Product } from "@/lib/content";
 
 type HubItem = Omit<Product, "slug"> & { id: string };
 

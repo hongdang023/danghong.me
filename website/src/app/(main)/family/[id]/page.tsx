@@ -1,13 +1,13 @@
 import React from "react";
 import FamilyMemberClientPage from "./ClientPage";
-import { familyMembers } from "@/data/familyData";
+import { getFamily } from "@/lib/content";
 
 export async function generateStaticParams() {
-  return familyMembers.map((member) => ({
+  return (await getFamily()).map((member) => ({
     id: member.id,
   }));
 }
 
-export default function FamilyMemberDetailPage() {
-  return <FamilyMemberClientPage />;
+export default async function FamilyMemberDetailPage() {
+  return <FamilyMemberClientPage familyMembers={await getFamily()} />;
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import MasterDetailPageClient from "./ClientPage";
-import { masterOrganizations } from "@/data/mastersData";
+import { getMasters } from "@/lib/content";
 
 export async function generateStaticParams() {
-  return masterOrganizations.map((org) => ({
+  return (await getMasters()).map((org) => ({
     id: org.id,
   }));
 }
 
-export default function MasterDetailPage() {
-  return <MasterDetailPageClient />;
+export default async function MasterDetailPage() {
+  return <MasterDetailPageClient masterOrganizations={await getMasters()} />;
 }
