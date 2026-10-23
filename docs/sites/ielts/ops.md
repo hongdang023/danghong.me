@@ -19,6 +19,6 @@ ai_readable: true
 ## Các bước dựng site
 
 1. Chốt các mục Việc còn mở trong [brief](brief.md).
-2. Tạo thư mục mã nguồn trong repo và Pages project trên account `Dangtuyethong2324@gmail.com's Account`.
+2. Tạo thư mục mã nguồn `ielts/` trong repo, push lên `main`. Tạo Pages project `danghong-ielts` trên account `Dangtuyethong2324@gmail.com's Account` bằng **Connect to Git** (Root directory `ielts`), theo [Deployment](../../ecosystem/deployment.md) §2.1. Không tạo bằng `wrangler pages project create` hay `wrangler pages deploy`: project đó sẽ bị khoá ở kiểu Direct Upload, không nối Git được nữa.
 3. Tạo CNAME `ielts` trong zone `danghong.me` (account `Dac2205`), vì zone và Pages ở hai account khác nhau ([Infrastructure](../../ecosystem/infrastructure.md) §2).
 4. Cập nhật bảng thành phần và DNS trong [Infrastructure](../../ecosystem/infrastructure.md), trang này, và đổi `status` các trang của site sang `active`.

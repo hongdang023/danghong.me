@@ -70,6 +70,8 @@ Cloudflare không cho đổi một project tạo bằng upload trực tiếp (Di
 
 Zone `danghong.me` nằm ở account khác ([Infrastructure](infrastructure.md) §2), nên nếu CNAME bị mất khi xoá project, tạo lại tay: `docs` → `danghong-docs.pages.dev`, `media` → `danghong-media.pages.dev` (proxied).
 
+**Site mới (ai, ielts, nextstep…):** luôn tạo bằng *Connect to Git* ngay từ đầu, cùng bảng thông số trên (Root directory là thư mục của site). Không bao giờ tạo project bằng wrangler, vì project tạo kiểu Direct Upload không chuyển sang Git được.
+
 ### 2.2. Thiết lập khác
 
 1.  **Cloudflare Access cho trang quản trị media** (một lần, chỉ chủ site làm):
