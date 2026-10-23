@@ -60,14 +60,14 @@ Hệ quả:
 | Domain | Thư mục | Loại | Project / Worker | Deploy |
 | :--- | :--- | :--- | :--- | :--- |
 | `danghong.me` | `website/` | Pages | `danghong-me` | Pages kết nối Git, build khi push `main` |
-| `docs.danghong.me` | `docs/` | Pages | `danghong-docs` | GitHub Actions `deploy-docs.yml` |
-| `media.danghong.me` | `media/` | Pages | `danghong-media` | GitHub Actions `deploy-media.yml` |
+| `docs.danghong.me` | `docs/` | Pages | `danghong-docs` | Pages kết nối Git (đang chuyển, [Deployment](deployment.md) §2.1) |
+| `media.danghong.me` | `media/` | Pages | `danghong-media` | Pages kết nối Git (đang chuyển, [Deployment](deployment.md) §2.1) |
 | `api.danghong.me` | `api/` | Worker | `api-danghong-me` | Tay: `cd api && npm run deploy` |
 | `ai.danghong.me` | (chưa có) | Kế hoạch | | [sites/ai](../sites/ai/ops.md) |
 | `ielts.danghong.me` | (chưa có) | Kế hoạch | | [sites/ielts](../sites/ielts/ops.md) |
 | `nextstep.danghong.me` | (chưa có) | Kế hoạch | | [sites/nextstep](../sites/nextstep/ops.md) |
 
-Workflow GitHub Actions của docs và media hiện **lỗi** (lần chạy gần nhất 2026-10-23 thất bại); trong lúc chờ sửa, deploy tay bằng wrangler. Chi tiết cách deploy và thiết lập token: [Deployment](deployment.md).
+Chi tiết cách deploy và thiết lập token: [Deployment](deployment.md).
 
 ### 3.1. Website (`danghong.me`)
 *   Next.js 16, `output: "export"`, không có server Node.js lúc chạy.
@@ -113,5 +113,5 @@ Không có bản ghi `www`, `ai`, `ielts`, `nextstep`. Khi thêm hoặc đổi b
 | I2 | Project cũ `docs-danghong-me` (bản docs trước audit) vẫn còn trên Cloudflare | Xoá sau khi `docs.danghong.me` đã trỏ sang `danghong-docs` |
 | I3 | Chưa có `www.danghong.me` | Thêm CNAME `www` + Redirect Rule về `danghong.me` nếu cần |
 | I4 | R2 `danghong-media` chưa có bản sao lưu tự động (D1 có Time Travel 30 ngày) | Cron Worker sao chép bucket sang bucket backup, hoặc định kỳ `rclone sync` về máy |
-| I5 | Workflow `deploy-docs.yml` và `deploy-media.yml` lỗi `Authentication error [code: 10000]` khi gọi Pages API. Secret trong GitHub tạo ngày 2026-05-23, không có quyền Pages trên account `Dangtuyethong2324` | Tạo API token mới theo [Deployment](deployment.md) §2.1, cập nhật hai secret, chạy lại workflow |
+| I5 | docs và media chưa kết nối Git (workflow deploy cũ lỗi token đã xoá 2026-10-24) | Làm [Deployment](deployment.md) §2.1 trên Dashboard |
 | I6 | Chưa có Pages project, DNS cho `ai`, `ielts`, `nextstep` | Tạo khi site có mã nguồn; cùng account `Dangtuyethong2324` và CNAME tay (mục 2) |

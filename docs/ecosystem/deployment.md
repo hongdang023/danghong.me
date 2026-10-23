@@ -3,26 +3,28 @@ id: deployment
 type: standard
 site: ecosystem
 title: Deployment — CI and Cloudflare Pages
-description: "Cách build và deploy từng site danghong.me lên Cloudflare Pages: CI, GitHub Actions, wrangler, token, Access cho admin media, kiểm tra sau deploy."
-description_en: "How each danghong.me site is built and deployed to Cloudflare Pages: CI, GitHub Actions, wrangler, tokens, Access for media admin, post-deploy checks."
+description: "Cách build và deploy từng site danghong.me lên Cloudflare Pages: CI, Pages kết nối Git, wrangler dự phòng, Access cho admin media, kiểm tra sau deploy."
+description_en: "How each danghong.me site is built and deployed to Cloudflare Pages: CI, Git-connected Pages, fallback wrangler, Access for media admin, post-deploy checks."
 owner: hong
 status: active
 version: 2.0
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-24
 ai_readable: true
 ---
 
 # Deployment — CI and Cloudflare Pages
 
-> **Hiện trạng 2026-10-23:** workflow `Deploy docs` và `Deploy media` đang thất bại trên `main`. Deploy tay theo mục 2.2 cho tới khi sửa ([Infrastructure](infrastructure.md) I5). Quy trình làm việc hiện tại: merge thẳng vào `main`, push, rồi deploy.
+> **Hiện trạng 2026-10-24:** đang chuyển docs và media sang **Cloudflare Pages kết nối Git** (giống danghong.me). Hai workflow GitHub Actions deploy cũ đã xoá vì lỗi xác thực token. Cho tới khi hai project được tạo lại theo mục 2.1, deploy tay theo mục 2.3.
 
 Ba site đều chạy trên Cloudflare Pages và được build từ cùng một repository. **Chỉ dùng Cloudflare**: Vercel đã bị tắt bằng `vercel.json` (`"git": { "deploymentEnabled": false }`) ở thư mục gốc và trong `website/`.
 
 | Site | Thư mục | Pages project | Output | Cách deploy |
 | :--- | :--- | :--- | :--- | :--- |
 | danghong.me | `website/` | (đã có sẵn) | `website/out` | Cloudflare Pages kết nối Git (thiết lập trên Dashboard) |
-| docs.danghong.me | `docs/` | `danghong-docs` | `docs/.vitepress/dist` | GitHub Actions + `wrangler pages deploy` |
-| media.danghong.me | `media/` | `danghong-media` | `media/public` + `media/functions` (D1, R2) | GitHub Actions + `wrangler pages deploy` |
+| docs.danghong.me | `docs/` | `danghong-docs` | `docs/.vitepress/dist` | Cloudflare Pages kết nối Git (mục 2) |
+| media.danghong.me | `media/` | `danghong-media` | `media/public` + `media/functions` (D1, R2) | Cloudflare Pages kết nối Git (mục 2) |
+
+Không cần API token trong GitHub: Cloudflare tự lấy code từ repo qua GitHub App "Cloudflare Workers and Pages" đã cài cho danghong.me. CI trong `.github/workflows/ci.yml` chỉ kiểm (lint, test, check, build), không deploy.
 
 ---
 
@@ -44,41 +46,43 @@ Ba site đều chạy trên Cloudflare Pages và được build từ cùng một
 
 ---
 
-## 2. DOCS & MEDIA (WRANGLER QUA GITHUB ACTIONS)
+## 2. DOCS & MEDIA (CLOUDFLARE PAGES KẾT NỐI GIT)
 
-Workflow `.github/workflows/deploy-docs.yml` và `deploy-media.yml` chạy khi có push vào `main` làm thay đổi `docs/**` hoặc `media/**` (hoặc chạy tay trong tab **Actions → Run workflow**). Mỗi workflow:
-
-1.  Cài dependency, rồi build (docs) hoặc chạy test (media; media không có bước build, Functions đọc D1/R2 lúc chạy).
-2.  Tạo Pages project nếu chưa có (`wrangler pages project create … --production-branch main`).
-3.  Deploy bằng `wrangler pages deploy … --branch main`.
-
-Cấu hình project nằm trong `docs/wrangler.toml` và `media/wrangler.toml`. `media/wrangler.toml` khai báo binding D1 (`DB`) và R2 (`BUCKET`); Pages áp dụng chúng mỗi lần deploy. Nội dung media không deploy qua Git: sửa ở `/admin/` là lên ngay.
+Mỗi lần push vào `main`, Cloudflare build và deploy. Push nhánh khác tạo bản preview. Cấu hình project (binding D1 `DB`, R2 `BUCKET`, biến `[vars]`) đọc từ `docs/wrangler.toml` và `media/wrangler.toml`. Nội dung media không deploy qua Git: sửa ở `/admin/` là lên ngay.
 
 ### 2.1. Thiết lập một lần
 
-1.  **Tạo API token** tại Cloudflare Dashboard → *My Profile → API Tokens → Create Token → Custom token*, quyền **Account › Cloudflare Pages › Edit**, **Account › D1 › Read** và **Account › Workers R2 Storage › Read** (để gắn binding của media), chọn account `Dangtuyethong2324@gmail.com's Account` (nơi giữ các Pages project).
-2.  **Lấy Account ID** ở trang *Workers & Pages* (cột bên phải).
-3.  **Thêm GitHub secrets** tại repo → *Settings → Secrets and variables → Actions*:
-    *   `CLOUDFLARE_API_TOKEN`
-    *   `CLOUDFLARE_ACCOUNT_ID`
-4.  **Chạy workflow lần đầu** (Actions → *Deploy docs* / *Deploy media* → Run workflow). Project `danghong-docs` và `danghong-media` sẽ được tạo.
-5.  **Gắn custom domain**: *Workers & Pages* → chọn project → *Custom domains* → *Set up a custom domain*:
-    *   `danghong-docs` → `docs.danghong.me`
-    *   `danghong-media` → `media.danghong.me`
+Cloudflare không cho đổi một project tạo bằng upload trực tiếp (Direct Upload) sang kết nối Git, nên phải **xoá project cũ rồi tạo lại cùng tên**. Giữ cùng tên thì `*.pages.dev`, CNAME và Cloudflare Access không đổi. Site tắt vài phút giữa lúc xoá và lúc build xong.
 
-    Vì `danghong.me` đã ở trên Cloudflare, bản ghi DNS (CNAME) được tạo tự động.
+| Bước | `danghong-docs` | `danghong-media` |
+| :--- | :--- | :--- |
+| 1. Xoá project cũ | *Workers & Pages* → `danghong-docs` → *Settings* → *Delete project* | Như bên trái, với `danghong-media` |
+| 2. Tạo mới | *Create application* → *Pages* → *Connect to Git* → repo `hongdang023/danghong.me` | Như bên trái |
+| Project name | `danghong-docs` | `danghong-media` |
+| Production branch | `main` | `main` |
+| Framework preset | None | None |
+| Build command | `npm run build` | (để trống) |
+| Build output directory | `.vitepress/dist` | `public` |
+| Root directory | `docs` | `media` |
+| Biến môi trường | `NODE_VERSION` = `22` | (không) |
+| 3. Custom domain | `docs.danghong.me` | `media.danghong.me` |
+| 4. Secret | (không) | `WEBSITE_DEPLOY_HOOK` khi có deploy hook (mục 1) |
 
-6.  **Cloudflare Access cho trang quản trị media** (một lần, chỉ chủ site làm):
+Zone `danghong.me` nằm ở account khác ([Infrastructure](infrastructure.md) §2), nên nếu CNAME bị mất khi xoá project, tạo lại tay: `docs` → `danghong-docs.pages.dev`, `media` → `danghong-media.pages.dev` (proxied).
+
+### 2.2. Thiết lập khác
+
+1.  **Cloudflare Access cho trang quản trị media** (một lần, chỉ chủ site làm):
     1.  Dashboard → *Zero Trust* (tạo team nếu chưa có; tên team là `<team>.cloudflareaccess.com`) → *Access → Applications → Add an application → Self-hosted*.
     2.  Domain: `media.danghong.me`, path `admin`; thêm một application nữa (hoặc thêm destination) cho `danghong-media.pages.dev/admin` để bản preview cũng được chặn.
     3.  Policy: *Allow*, Include → *Emails* → `dangtuyethong2324@gmail.com`. Login method: *One-time PIN* (hoặc Google).
-    4.  Copy *Application Audience (AUD) Tag* và tên team vào `ACCESS_AUD`, `ACCESS_TEAM_DOMAIN` trong `media/wrangler.toml`, rồi deploy media.
+    4.  Copy *Application Audience (AUD) Tag* và tên team vào `ACCESS_AUD`, `ACCESS_TEAM_DOMAIN` trong `media/wrangler.toml`, rồi push (Cloudflare tự deploy).
 
     Chưa có `ACCESS_TEAM_DOMAIN` thì `/admin/` trả 503.
 
-### 2.2. Deploy từ máy cá nhân
+### 2.3. Deploy từ máy cá nhân (dự phòng)
 
-Wrangler đăng nhập thấy hai account, nên cần chỉ rõ account:
+Chỉ dùng trước khi chuyển xong (mục 2.1). Sau khi project kết nối Git, Cloudflare không cho upload trực tiếp nữa; muốn deploy lại thì push hoặc bấm *Retry deployment* trên Dashboard. Wrangler đăng nhập thấy hai account, nên cần chỉ rõ account:
 
 ```bash
 npx wrangler login
@@ -94,4 +98,4 @@ cd media && npm run deploy -- --branch main
 *   `https://docs.danghong.me` mở được trang chủ tài liệu và ô tìm kiếm hoạt động.
 *   `https://media.danghong.me/api/index.json` trả về JSON, header có `Access-Control-Allow-Origin: *`.
 *   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` chuyển tới trang đăng nhập của Cloudflare Access.
-*   Tab *Deployments* của từng project hiển thị commit mới nhất của `main`.
+*   Tab *Deployments* của từng project hiển thị commit mới nhất của `main`, nguồn là GitHub.

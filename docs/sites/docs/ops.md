@@ -20,7 +20,7 @@ ai_readable: true
 | Mã nguồn | `docs/` |
 | Pages project | `danghong-docs` |
 | Build | `npm run build` → `docs/.vitepress/dist` |
-| Deploy | GitHub Actions `deploy-docs.yml` (đang lỗi, [Infrastructure](../../ecosystem/infrastructure.md) I5); tạm thời deploy tay |
+| Deploy | Cloudflare Pages kết nối Git: push `main` là tự build (đang chuyển, [Deployment](../../ecosystem/deployment.md) §2.1); trước khi chuyển xong thì deploy tay |
 
 ## Lệnh
 
@@ -30,7 +30,7 @@ npm install
 npm run dev       # http://localhost:5173
 npm run check     # cổng kiểm: frontmatter, description, link, cỡ trang
 npm run build     # build, kiểm link, sinh llms.txt
-CLOUDFLARE_ACCOUNT_ID=574e12931f580feff7ebaf755990b8a2 npm run deploy
+CLOUDFLARE_ACCOUNT_ID=574e12931f580feff7ebaf755990b8a2 npm run deploy   # chỉ trước khi kết nối Git
 ```
 
 ## Chuyển hướng
@@ -41,4 +41,4 @@ CLOUDFLARE_ACCOUNT_ID=574e12931f580feff7ebaf755990b8a2 npm run deploy
 
 | # | Việc |
 | :--- | :--- |
-| DO2 | Sửa workflow deploy docs (I5). |
+| DO2 | Tạo lại project `danghong-docs` kết nối Git ([Deployment](../../ecosystem/deployment.md) §2.1). |
