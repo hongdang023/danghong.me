@@ -16,6 +16,6 @@ ai_readable: true
 
 | Tầng | Áp dụng |
 | :--- | :--- |
-| Theme | [sutucon](../../ecosystem/design-system/themes/sutucon.md), lấy nguyên từ https://sutucon.com |
+| Theme | [sutucon](../../ecosystem/design-system/themes/sutucon.md), lấy nguyên từ [https://sutucon.com/brand] |
 | Lõi | [Core](../../ecosystem/design-system/core.md): lưới, truy cập, tên token, footer hệ sinh thái |
 | Ngoại lệ của site | Chưa có |
