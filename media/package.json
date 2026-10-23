@@ -7,7 +7,7 @@
     "dev": "wrangler pages dev",
     "deploy": "wrangler pages deploy",
     "db:schema": "wrangler d1 execute danghong-media --remote --file schema.sql",
-    "test": "node --test test/"
+    "test": "node --test"
   },
   "devDependencies": {
     "wrangler": "^4.151.3"
