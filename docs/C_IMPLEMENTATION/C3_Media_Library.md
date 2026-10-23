@@ -19,11 +19,11 @@ media/
 ├── src/
 │   ├── site.js             # Đọc D1, ráp album/link/người…, sinh JSON API
 │   ├── render.js           # Giao diện các trang (HTML/CSS)
-│   ├── admin.js            # API của trang quản trị (đăng nhập, ghi D1, upload R2)
+│   ├── admin.js            # API của trang quản trị (ghi D1, upload R2, xuất bản website)
+│   ├── access.js           # Kiểm tra đăng nhập Cloudflare Access + danh sách email được phép
 │   └── admin-ui.js         # Khung HTML của trang quản trị
 ├── public/                 # Thư mục output của Pages: robots.txt, admin-app.js (script trang quản trị)
 ├── schema.sql              # Bảng D1
-├── scripts/migrate.mjs     # Script chuyển dữ liệu một lần từ media.yaml + files/ (đã chạy 22/10/2026)
 ├── test/                   # node --test
 └── wrangler.toml           # Pages project "danghong-media" + binding DB (D1), BUCKET (R2)
 ```
@@ -32,7 +32,7 @@ Mỗi request được xử lý theo thứ tự:
 
 | Đường dẫn | Xử lý |
 | :--- | :--- |
-| `/admin/…` | Trang quản trị và API của nó (cần mật khẩu) |
+| `/admin/…` | Trang quản trị và API của nó (chỉ email được phép, qua Cloudflare Access) |
 | `/api/<tên>.json` | JSON dựng từ D1 |
 | Kết thúc bằng `/`, không có phần mở rộng, hoặc `/assets/site.css` | Trang HTML render từ D1 |
 | Còn lại | Object có key tương ứng trong R2, rồi tới `public/` (`robots.txt`, `admin-app.js`) |
@@ -61,7 +61,14 @@ website/                # tài sản của danghong.me: images/, screenshots/, b
 
 ## 2. THÊM / BỚT NỘI DUNG
 
-Mở [media.danghong.me/admin/](https://media.danghong.me/admin/), đăng nhập (tên đăng nhập bất kỳ, mật khẩu là secret `ADMIN_PASSWORD`).
+Mở [media.danghong.me/admin/](https://media.danghong.me/admin/) và đăng nhập bằng email `dangtuyethong2324@gmail.com` (Cloudflare Access gửi mã một lần vào email). Email khác bị từ chối.
+
+### 2.0. Phân quyền
+
+*   **Cloudflare Access** (Zero Trust) có một Self-hosted application cho `media.danghong.me/admin*`, policy *Allow* chỉ gồm email trên. Access chặn mọi người khác trước khi request tới Function.
+*   **Function kiểm tra lại** (`src/access.js`): JWT `Cf-Access-Jwt-Assertion` phải có chữ ký đúng của team `ACCESS_TEAM_DOMAIN`, đúng `ACCESS_AUD`, còn hạn, và email nằm trong `ADMIN_EMAILS`. Ba biến này nằm trong `media/wrangler.toml`. Thiếu `ACCESS_TEAM_DOMAIN` thì `/admin/` trả 503 (đóng mặc định).
+*   Thêm người quản trị: thêm email vào policy của Access **và** vào `ADMIN_EMAILS`, rồi deploy.
+*   Mọi thao tác ghi cần header `X-Admin: 1` nên trang khác không gửi request thay người đã đăng nhập được.
 
 | Tôi muốn… | Làm gì |
 | :--- | :--- |
@@ -124,7 +131,7 @@ Trang HTML và JSON được cache 60 giây; file R2 được cache 1 ngày, h�
 ```bash
 cd media
 npm install
-echo "ADMIN_PASSWORD=<mật khẩu thử>" > .dev.vars
+echo "ADMIN_DEV_EMAIL=dangtuyethong2324@gmail.com" > .dev.vars   # chỉ có tác dụng trên localhost
 npx wrangler d1 execute danghong-media --local --file schema.sql
 npm run dev       # http://localhost:8788, D1/R2 local trong .wrangler/
 npm test

@@ -52,14 +52,13 @@ Cấu hình project nằm trong `docs/wrangler.toml` và `media/wrangler.toml`. 
 
     Vì `danghong.me` đã ở trên Cloudflare, bản ghi DNS (CNAME) được tạo tự động.
 
-6.  **Mật khẩu trang quản trị media** (một lần, chỉ chủ site làm):
+6.  **Cloudflare Access cho trang quản trị media** (một lần, chỉ chủ site làm):
+    1.  Dashboard → *Zero Trust* (tạo team nếu chưa có; tên team là `<team>.cloudflareaccess.com`) → *Access → Applications → Add an application → Self-hosted*.
+    2.  Domain: `media.danghong.me`, path `admin`; thêm một application nữa (hoặc thêm destination) cho `danghong-media.pages.dev/admin` để bản preview cũng được chặn.
+    3.  Policy: *Allow*, Include → *Emails* → `dangtuyethong2324@gmail.com`. Login method: *One-time PIN* (hoặc Google).
+    4.  Copy *Application Audience (AUD) Tag* và tên team vào `ACCESS_AUD`, `ACCESS_TEAM_DOMAIN` trong `media/wrangler.toml`, rồi deploy media.
 
-    ```bash
-    cd media
-    npx wrangler pages secret put ADMIN_PASSWORD --project-name danghong-media
-    ```
-
-    Chưa đặt secret thì `/admin/` trả 503.
+    Chưa có `ACCESS_TEAM_DOMAIN` thì `/admin/` trả 503.
 
 ### 2.2. Deploy từ máy cá nhân (tùy chọn)
 
@@ -78,5 +77,5 @@ cd media && npm run deploy -- --branch main
 
 *   `https://docs.danghong.me` mở được trang chủ tài liệu và ô tìm kiếm hoạt động.
 *   `https://media.danghong.me/api/index.json` trả về JSON, header có `Access-Control-Allow-Origin: *`.
-*   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` hỏi mật khẩu.
+*   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` chuyển tới trang đăng nhập của Cloudflare Access.
 *   Tab *Deployments* của từng project hiển thị commit mới nhất của `main`.

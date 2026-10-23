@@ -1,7 +1,7 @@
-// /admin: password-protected page and JSON API that edit D1 and R2 directly.
-// Auth is HTTP Basic with the ADMIN_PASSWORD secret (any username):
-//   npx wrangler pages secret put ADMIN_PASSWORD --project-name danghong-media
+// /admin: page and JSON API that edit D1 and R2 directly. Only the emails in ADMIN_EMAILS get in,
+// signed in through Cloudflare Access (see access.js).
 // Optional WEBSITE_DEPLOY_HOOK secret: Pages deploy hook URL of danghong-me, called by "Xuất bản website".
+import { checkAccess } from "./access.js";
 import { ADMIN_HTML } from "./admin-ui.js";
 import { COLLECTIONS, DOCUMENTS, loadRaw, typeOf } from "./site.js";
 
@@ -12,21 +12,6 @@ const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
 
 const json = (data, status = 200) => Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
 const fail = (message, status = 400) => json({ error: message }, status);
-
-function authorized(request, password) {
-  const header = request.headers.get("Authorization") ?? "";
-  if (!header.startsWith("Basic ")) return false;
-  let decoded;
-  try {
-    decoded = atob(header.slice(6));
-  } catch {
-    return false;
-  }
-  const given = new TextEncoder().encode(decoded.slice(decoded.indexOf(":") + 1));
-  const expected = new TextEncoder().encode(password);
-  if (given.length !== expected.length) return false;
-  return crypto.subtle.timingSafeEqual(given, expected);
-}
 
 // Normalises "photos/family/" + "Ảnh 1.JPG" into a safe R2 key, or returns an error string.
 export function fileKey(folder, name) {
@@ -52,12 +37,12 @@ async function readJson(request) {
   }
 }
 
-async function api(request, env, route) {
+async function api(request, env, route, email) {
   const db = env.DB;
   const method = request.method;
   const [resource, ...rest] = route;
 
-  if (resource === "state" && method === "GET") return json({ ...(await loadRaw(db)), canPublishWebsite: Boolean(env.WEBSITE_DEPLOY_HOOK) });
+  if (resource === "state" && method === "GET") return json({ ...(await loadRaw(db)), canPublishWebsite: Boolean(env.WEBSITE_DEPLOY_HOOK), email });
 
   // danghong.me is a static build that reads /api/website/*.json, so its edits go live after a rebuild.
   if (resource === "publish-website" && method === "POST") {
@@ -173,17 +158,9 @@ async function api(request, env, route) {
 }
 
 export async function handleAdmin({ request, env }) {
-  if (!env.ADMIN_PASSWORD) {
-    return new Response("Trang quản trị chưa bật: hãy đặt secret ADMIN_PASSWORD cho project danghong-media.", {
-      status: 503,
-      headers: { "Content-Type": "text/plain; charset=utf-8" },
-    });
-  }
-  if (!authorized(request, env.ADMIN_PASSWORD)) {
-    return new Response("Cần đăng nhập.", {
-      status: 401,
-      headers: { "WWW-Authenticate": 'Basic realm="media.danghong.me admin", charset="UTF-8"', "Content-Type": "text/plain; charset=utf-8" },
-    });
+  const access = await checkAccess(request, env);
+  if (access.error) {
+    return new Response(access.error, { status: access.status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
   }
 
   const { pathname } = new URL(request.url);
@@ -194,12 +171,12 @@ export async function handleAdmin({ request, env }) {
     });
   }
   if (pathname.startsWith("/admin/api/")) {
-    // Browsers resend Basic credentials on cross-site requests; a custom header forces a CORS
+    // Browsers resend the Access cookie on cross-site requests; a custom header forces a CORS
     // preflight (which we never answer), so only the admin page itself can write.
     if (request.method !== "GET" && request.headers.get("X-Admin") !== "1") return fail("Thiếu header X-Admin.", 403);
     const route = pathname.slice("/admin/api/".length).split("/").filter(Boolean).map(decodeURIComponent);
     try {
-      return await api(request, env, route);
+      return await api(request, env, route, access.email);
     } catch (err) {
       console.error(err);
       return fail(`Lỗi máy chủ: ${err.message}`, 500);

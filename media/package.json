@@ -9,9 +9,6 @@
     "db:schema": "wrangler d1 execute danghong-media --remote --file schema.sql",
     "test": "node --test test/"
   },
-  "dependencies": {
-    "yaml": "2.8.1"
-  },
   "devDependencies": {
     "wrangler": "^4.151.3"
   }

@@ -20,6 +20,7 @@ header .wrap { display:flex; align-items:center; gap:1rem; min-height:3.5rem; fl
 header strong a { color:var(--fg); text-decoration:none; }
 .wrap { max-width:68rem; margin:0 auto; padding:0 1rem; }
 #tabs { display:flex; flex-direction:column; gap:.2rem; padding:.4rem 0; min-width:0; flex:1; }
+.who { font-size:.8rem; white-space:nowrap; }
 .tabrow { display:flex; gap:.25rem; overflow-x:auto; align-items:center; }
 .tabgroup { font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); min-width:6.5rem; }
 #tabs a { color:var(--muted); text-decoration:none; padding:.35rem .7rem; border-radius:999px; white-space:nowrap; font-weight:500; }
@@ -67,7 +68,7 @@ dialog::backdrop { background:rgba(0,0,0,.45); }
 </style>
 </head>
 <body>
-<header><div class="wrap"><strong><a href="/" target="_blank">media.danghong.me</a> · quản trị</strong><nav id="tabs"></nav></div></header>
+<header><div class="wrap"><strong><a href="/" target="_blank">media.danghong.me</a> · quản trị</strong><nav id="tabs"></nav><span class="who"><span id="who" class="muted"></span> <a href="/cdn-cgi/access/logout" class="muted">Đăng xuất</a></span></div></header>
 <main class="wrap"><div id="view"><p class="muted">Đang tải…</p></div></main>
 <div id="lists"></div>
 <dialog id="dialog"></dialog>

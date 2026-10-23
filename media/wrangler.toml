@@ -6,6 +6,10 @@ compatibility_date = "2026-10-01"
 
 [vars]
 MEDIA_BASE_URL = "https://media.danghong.me"
+# /admin: only these emails, signed in through Cloudflare Access (see src/access.js and docs C3).
+ADMIN_EMAILS = "dangtuyethong2324@gmail.com"
+ACCESS_TEAM_DOMAIN = ""
+ACCESS_AUD = ""
 
 [[d1_databases]]
 binding = "DB"

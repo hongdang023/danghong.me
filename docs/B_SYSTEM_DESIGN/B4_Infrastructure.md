@@ -64,7 +64,7 @@ Chi tiết cách deploy và thiết lập token: [C2. Deployment](../C_IMPLEMENT
 
 ### 3.3. Media (`media.danghong.me`)
 *   Pages project có Functions (`media/functions/[[path]].js`), binding `DB` → D1 `danghong-media`, `BUCKET` → R2 `danghong-media`. Repo chỉ giữ code.
-*   Trang quản trị `/admin/` (HTTP Basic, secret `ADMIN_PASSWORD` của Pages project) ghi thẳng vào D1/R2.
+*   Trang quản trị `/admin/` ghi thẳng vào D1/R2. Chỉ email trong `ADMIN_EMAILS` (`dangtuyethong2324@gmail.com`) vào được: Cloudflare Access chặn ở edge, Function kiểm tra lại JWT của Access (`media/src/access.js`).
 *   Xem [C3](../C_IMPLEMENTATION/C3_Media_Library.md).
 
 ### 3.4. API (`api.danghong.me`)
