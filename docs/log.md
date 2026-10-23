@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-10-24 | Tạo lại `danghong-docs`, `danghong-media` kết nối Git (qua API, Hồng duyệt) | [Deployment](ecosystem/deployment.md) |
 | 2026-10-24 | Hồng chọn Cloudflare Pages kết nối Git cho docs và media; xoá workflow deploy GitHub Actions (lỗi token) | [Deployment](ecosystem/deployment.md) |
 | 2026-10-24 | Hồng: chức danh (Mentor AI Teen, IELTS Mentor, Community Facilitator), Brand Guidelines sutucon.com/brand, nextstep27.com, thêm LinkedIn | [Identity](ecosystem/identity.md), theme sutucon, nextstep |
 | 2026-10-23 | Hồng: docs.danghong.me là nguồn sự thật cho cả hệ; thêm ai (Sư Tử Con), ielts (Nemo12), nextstep (Next Step); mỗi site có audience và design system theo brand; theme lấy nguyên từ brand gốc; song ngữ. Chuyển cấu trúc A/B/C sang theo site. | Toàn bộ; [ADR-001](decisions/adr-001-site-based-docs.md), [ADR-002](decisions/adr-002-brand-themes-from-source.md) |

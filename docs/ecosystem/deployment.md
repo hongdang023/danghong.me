@@ -14,7 +14,7 @@ ai_readable: true
 
 # Deployment — CI and Cloudflare Pages
 
-> **Hiện trạng 2026-10-24:** đang chuyển docs và media sang **Cloudflare Pages kết nối Git** (giống danghong.me). Hai workflow GitHub Actions deploy cũ đã xoá vì lỗi xác thực token. Cho tới khi hai project được tạo lại theo mục 2.1, deploy tay theo mục 2.3.
+> **Hiện trạng 2026-10-24:** cả ba site (danghong.me, docs, media) dùng **Cloudflare Pages kết nối Git**: push `main` là Cloudflare tự build. Hai project `danghong-docs`, `danghong-media` đã được tạo lại theo mục 2.1 ngày 2026-10-24. Docs chỉ build khi `docs/**` đổi, media khi `media/**` đổi; không tạo preview cho nhánh khác.
 
 Ba site đều chạy trên Cloudflare Pages và được build từ cùng một repository. **Chỉ dùng Cloudflare**: Vercel đã bị tắt bằng `vercel.json` (`"git": { "deploymentEnabled": false }`) ở thư mục gốc và trong `website/`.
 
