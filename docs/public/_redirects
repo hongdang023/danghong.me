@@ -1,0 +1,24 @@
+# URL cũ (cấu trúc A/B/C, trước 2026-10-23) -> cấu trúc theo site. Xem decisions/adr-001.
+/overview                                   /                                         301
+/WORKFLOW                                   /conventions                              301
+/RULES                                      /conventions                              301
+/A_REQUIREMENTS/                            /sites/www/brief                          301
+/A_REQUIREMENTS/A1_Quality_Standards        /ecosystem/quality                        301
+/A_REQUIREMENTS/A2_PRD_3.0                  /sites/www/brief                          301
+/A_REQUIREMENTS/A3_User_Personas            /sites/www/brief                          301
+/A_REQUIREMENTS/A4_User_Stories             /sites/www/brief                          301
+/A_REQUIREMENTS/A5_Sitemap                  /sites/www/sitemap                        301
+/A_REQUIREMENTS/A6_Products_Catalog         /sites/www/content                        301
+/A_REQUIREMENTS/A7_Quiz_Standards           /sites/www/quiz-standards                 301
+/A_REQUIREMENTS/A8_Content_Standards        /ecosystem/content-standards              301
+/A_REQUIREMENTS/A9_Non_Functional           /ecosystem/quality                        301
+/B_SYSTEM_DESIGN/                           /ecosystem/                               301
+/B_SYSTEM_DESIGN/B1_System_Design_Wiki      /sites/www/architecture                   301
+/B_SYSTEM_DESIGN/B2_Web_Architecture        /sites/www/architecture                   301
+/B_SYSTEM_DESIGN/B3_Data_Architecture       /ecosystem/data                           301
+/B_SYSTEM_DESIGN/B4_Infrastructure          /ecosystem/infrastructure                 301
+/B_SYSTEM_DESIGN/B5_Design_System           /ecosystem/design-system/themes/danghong  301
+/C_IMPLEMENTATION/                          /ecosystem/deployment                     301
+/C_IMPLEMENTATION/C1_Development_Standards  /ecosystem/engineering                    301
+/C_IMPLEMENTATION/C2_Deployment             /ecosystem/deployment                     301
+/C_IMPLEMENTATION/C3_Media_Library          /sites/media/ops                          301

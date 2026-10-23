@@ -9,7 +9,7 @@ npm run lint    # ESLint (CI chặn nếu có lỗi)
 npm run build   # sinh thư mục out/ để Cloudflare Pages phục vụ
 ```
 
-- Nội dung: Cloudflare D1, sửa tại https://media.danghong.me/admin/, đọc lúc build qua `src/lib/content.ts` ([B3 Data Architecture](https://docs.danghong.me/B_SYSTEM_DESIGN/B3_Data_Architecture))
-- Cấu trúc thư mục và rendering: [B2 Web Architecture](https://docs.danghong.me/B_SYSTEM_DESIGN/B2_Web_Architecture)
-- Sitemap: [A5 Sitemap](https://docs.danghong.me/A_REQUIREMENTS/A5_Sitemap)
+- Nội dung: Cloudflare D1, sửa tại https://media.danghong.me/admin/, đọc lúc build qua `src/lib/content.ts` ([Data](https://docs.danghong.me/ecosystem/data))
+- Cấu trúc thư mục và rendering: [Web Architecture](https://docs.danghong.me/sites/www/architecture)
+- Sitemap: [Sitemap](https://docs.danghong.me/sites/www/sitemap)
 - Lưu ý cho AI agent: đọc `AGENTS.md` trước khi viết code.

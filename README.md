@@ -13,7 +13,7 @@ Website, docs và media chạy trên **Cloudflare Pages**; API chạy trên **Cl
 
 ## Tài liệu
 
-Mọi tài liệu (yêu cầu, thiết kế, quy chuẩn code, cách deploy) chỉ nằm trong [`docs/`](docs/) và được publish tại **[docs.danghong.me](https://docs.danghong.me)**. Bắt đầu tại [Workflow](docs/WORKFLOW.md).
+Mọi tài liệu (yêu cầu, thiết kế, quy chuẩn code, cách deploy) chỉ nằm trong [`docs/`](docs/) và được publish tại **[docs.danghong.me](https://docs.danghong.me)**. Bắt đầu tại [bản đồ hệ sinh thái](docs/index.md) và [Conventions](docs/conventions.md).
 
 ## Bắt đầu nhanh
 

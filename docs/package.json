@@ -7,10 +7,12 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "deploy": "npm run build && wrangler pages deploy"
+    "deploy": "npm run build && wrangler pages deploy",
+    "check": "node scripts/check-docs.mjs ."
   },
   "devDependencies": {
     "vitepress": "1.6.4",
+    "vitepress-plugin-llms": "1.14.0",
     "wrangler": "4.42.0"
   }
 }
