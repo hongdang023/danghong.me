@@ -11,7 +11,7 @@ summary_en: >-
 owner: hong
 status: draft
 version: 0.1
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-24
 ai_readable: true
 ---
 
@@ -36,4 +36,4 @@ NextStep Community — cộng đồng chuẩn bị năng lực nghề nghiệp (
 
 | # | Việc |
 | :--- | :--- |
-| TX1 | nextstep27.com chưa công bố brand guideline hay file token riêng (CSS được đóng gói theo hash). Xin file nguồn từ đội Next Step. |
+| TX1 | Brand guideline là chính site nextstep27.com (Hồng xác nhận 2026-10-24). Khi code, lấy màu và font từ site này và ánh xạ vào bộ tên chung. |

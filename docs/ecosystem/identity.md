@@ -7,8 +7,8 @@ description: "Bản chuẩn về Hồng Đặng: định vị Learning Architect
 description_en: "Canonical facts about Hồng Đặng: Learning Architect positioning, identity statement, journey, five beliefs, roles per brand, contacts."
 owner: hong
 status: active
-version: 1.0
-last_reviewed: 2026-10-23
+version: 1.1
+last_reviewed: 2026-10-24
 ai_readable: true
 ---
 
@@ -56,17 +56,16 @@ Với mình, một hệ thống giáo dục tốt không chỉ khiến người 
 | Brand | Vai trò của Hồng | Site |
 | :--- | :--- | :--- |
 | danghong.me | Chủ sở hữu, Learning Architect | danghong.me |
-| Sư Tử Con | Mentor lớp AI Teen cho học sinh cấp 2–3 | ai.danghong.me |
-| Nemo12 | Thành viên Nemo12, mảng tiếng Anh / IELTS | ielts.danghong.me |
-| Next Step | Cộng đồng offline tại Hà Nội hỗ trợ người trẻ tìm việc và định hướng nghề nghiệp | nextstep.danghong.me |
-
-Chức danh chính xác của Hồng tại Nemo12 và Next Step chưa ghi trong docs (xem Việc còn mở).
+| Sư Tử Con | Mentor lớp AI Teen (học sinh cấp 2–3) | ai.danghong.me |
+| Nemo12 | IELTS Mentor | ielts.danghong.me |
+| Next Step | Community Facilitator (cộng đồng offline tại Hà Nội hỗ trợ người trẻ tìm việc và định hướng nghề nghiệp) | nextstep.danghong.me |
 
 ## 6. Liên hệ
 
 | Kênh | Địa chỉ | Dùng ở |
 | :--- | :--- | :--- |
 | Facebook cá nhân | https://www.facebook.com/danghong.harunoyuki | CTA "Chat với Hồng" trên danghong.me |
+| LinkedIn | https://www.linkedin.com/in/dangtuyethong/ | Kênh chuyên nghiệp, dùng cho đối tác và báo chí |
 | Newsletter (Substack) | https://harureboot.substack.com/ | Nút Newsletter trên danghong.me |
 | Email quản trị | `dangtuyethong2324@gmail.com` | Chỉ dùng cho quyền admin, không hiển thị công khai |
 
@@ -76,4 +75,3 @@ Chức danh chính xác của Hồng tại Nemo12 và Next Step chưa ghi trong 
 | :--- | :--- |
 | ID1 | `/api/profile.json` của danghong.me từng dùng `facebook.com/hongdang.architect` và `hello@learningarchitect.me`, khác bảng trên ([Audit 2026-10](../audit/2026-10.md) W2). Cần xác nhận kênh đúng. |
 | ID2 | Chưa có bio chuẩn theo độ dài (ngắn, vừa, dài) và theo ngôn ngữ (VI/EN) để các site và báo chí dùng. Nơi lưu dự kiến: document `profile` trên D1. |
-| ID3 | Ghi chức danh chính thức của Hồng tại Sư Tử Con, Nemo12 và Next Step. |

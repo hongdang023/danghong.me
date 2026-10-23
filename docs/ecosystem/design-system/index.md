@@ -31,7 +31,7 @@ Một site dùng **đúng một theme**. Theme ghi đè tầng 1 ở những gì
 | danghong.me | [danghong](themes/danghong.md) | `website/src/app/globals.css` |
 | media.danghong.me | [danghong](themes/danghong.md) | `media/src/render.js` |
 | docs.danghong.me | [danghong](themes/danghong.md) | `docs/.vitepress/theme/custom.css` |
-| ai.danghong.me | [sutucon](themes/sutucon.md) | Brand gốc: https://sutucon.com |
+| ai.danghong.me | [sutucon](themes/sutucon.md) | Brand gốc: https://sutucon.com/brand |
 | ielts.danghong.me | [nemo12](themes/nemo12.md) | Brand gốc: https://docs.nemo12.com/design-system/ |
 | nextstep.danghong.me | [nextstep](themes/nextstep.md) | Brand gốc: https://nextstep27.com |
 

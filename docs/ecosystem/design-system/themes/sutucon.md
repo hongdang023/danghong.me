@@ -11,13 +11,13 @@ summary_en: >-
 owner: hong
 status: draft
 version: 0.1
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-24
 ai_readable: true
 ---
 
 # Theme Sư Tử Con
 
-**Nguồn sự thật:** https://sutucon.com. Lấy nguyên nhận diện, không tự điều chỉnh ([ADR-002](../../../decisions/adr-002-brand-themes-from-source.md)).
+**Nguồn sự thật:** [Brand Guidelines Sư Tử Con](https://sutucon.com/brand) (https://sutucon.com/brand). Lấy nguyên nhận diện, không tự điều chỉnh ([ADR-002](../../../decisions/adr-002-brand-themes-from-source.md)).
 
 ## 1. Brand
 
@@ -27,8 +27,8 @@ Sư Tử Con — "Trường học năng lực tương lai" cho học sinh cấp 
 
 | Hạng mục | Lấy từ | Ghi chú |
 | :--- | :--- | :--- |
-| Màu, font, logo | sutucon.com | Ánh xạ vào tên token ở [Core](../core.md) §4 |
-| Giọng văn | sutucon.com | Hai lớp: học sinh và phụ huynh |
+| Màu, font, logo | https://sutucon.com/brand | Ánh xạ vào tên token ở [Core](../core.md) §4 |
+| Giọng văn | https://sutucon.com/brand | Hai lớp: học sinh và phụ huynh |
 | Lưới, truy cập | [Core](../core.md) | Không đổi |
 | Footer hệ sinh thái | [Core](../core.md) §5 | Bắt buộc |
 
@@ -36,4 +36,4 @@ Sư Tử Con — "Trường học năng lực tương lai" cho học sinh cấp 
 
 | # | Việc |
 | :--- | :--- |
-| TS1 | Lấy file token hoặc brand guideline chính thức từ Sư Tử Con (đường dẫn cụ thể) để ghi vào mục 2. |
+| TS1 | Ánh xạ token trong Brand Guidelines vào bộ tên chung khi bắt đầu code ai.danghong.me. |

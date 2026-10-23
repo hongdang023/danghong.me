@@ -113,5 +113,5 @@ Không có bản ghi `www`, `ai`, `ielts`, `nextstep`. Khi thêm hoặc đổi b
 | I2 | Project cũ `docs-danghong-me` (bản docs trước audit) vẫn còn trên Cloudflare | Xoá sau khi `docs.danghong.me` đã trỏ sang `danghong-docs` |
 | I3 | Chưa có `www.danghong.me` | Thêm CNAME `www` + Redirect Rule về `danghong.me` nếu cần |
 | I4 | R2 `danghong-media` chưa có bản sao lưu tự động (D1 có Time Travel 30 ngày) | Cron Worker sao chép bucket sang bucket backup, hoặc định kỳ `rclone sync` về máy |
-| I5 | Workflow `deploy-docs.yml` và `deploy-media.yml` lỗi khi chạy | Kiểm tra secret `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` (xem [Deployment](deployment.md) §2.1) |
+| I5 | Workflow `deploy-docs.yml` và `deploy-media.yml` lỗi `Authentication error [code: 10000]` khi gọi Pages API. Secret trong GitHub tạo ngày 2026-05-23, không có quyền Pages trên account `Dangtuyethong2324` | Tạo API token mới theo [Deployment](deployment.md) §2.1, cập nhật hai secret, chạy lại workflow |
 | I6 | Chưa có Pages project, DNS cho `ai`, `ielts`, `nextstep` | Tạo khi site có mã nguồn; cùng account `Dangtuyethong2324` và CNAME tay (mục 2) |
