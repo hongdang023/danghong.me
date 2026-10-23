@@ -20,16 +20,16 @@ Mọi site dưới `danghong.me` có brief ở đây: mục đích, người đ�
 
 ## Tìm theo site
 
-| Site | Là gì | Người đọc chính | Brand / Theme | Trạng thái | Brief |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| [danghong.me](https://danghong.me) | Brand mẹ: Hồng là ai, sản phẩm, Hồng's List, cộng đồng | Người muốn hiểu và hợp tác với Hồng | danghong | active | [www](sites/www/brief.md) |
-| ai.danghong.me | Hồng trong vai mentor lớp AI Teen của Sư Tử Con | Học sinh cấp 2–3 và phụ huynh | Sư Tử Con | draft (chưa chạy) | [ai](sites/ai/brief.md) |
-| ielts.danghong.me | Hồng trong Nemo12, mảng IELTS | Học sinh học IELTS và phụ huynh | Nemo12 | draft (chưa chạy) | [ielts](sites/ielts/brief.md) |
-| nextstep.danghong.me | Cộng đồng offline Next Step tại Hà Nội | Sinh viên và người trẻ mới đi làm | Next Step | draft (chưa chạy) | [nextstep](sites/nextstep/brief.md) |
-| [media.danghong.me](https://media.danghong.me) | Kho tư liệu truyền thông về Hồng, và kho dữ liệu cho mọi site | Báo chí, đối tác, ban tổ chức; các site khác | danghong | active | [media](sites/media/brief.md) |
-| [docs.danghong.me](https://docs.danghong.me) | Nguồn sự thật cho cả hệ (trang này) | Hồng và agent làm việc trên repo | danghong | active | [docs](sites/docs/brief.md) |
+| Site | Là gì | Người đọc chính | Theme | Brief |
+| :--- | :--- | :--- | :--- | :--- |
+| [danghong.me](https://danghong.me) | Brand mẹ: Hồng, sản phẩm, Hồng's List | Người muốn hợp tác với Hồng | danghong | [www](sites/www/brief.md) · active |
+| ai.danghong.me | Mentor lớp AI Teen (Sư Tử Con) | Học sinh cấp 2–3, phụ huynh | Sư Tử Con | [ai](sites/ai/brief.md) · draft |
+| ielts.danghong.me | Hồng trong Nemo12 (IELTS) | Học sinh IELTS, phụ huynh | Nemo12 | [ielts](sites/ielts/brief.md) · draft |
+| nextstep.danghong.me | Cộng đồng Next Step, Hà Nội | Sinh viên, người trẻ đi làm | Next Step | [nextstep](sites/nextstep/brief.md) · draft |
+| [media.danghong.me](https://media.danghong.me) | Kho tư liệu và dữ liệu | Báo chí, đối tác, các site | danghong | [media](sites/media/brief.md) · active |
+| [docs.danghong.me](https://docs.danghong.me) | Nguồn sự thật (trang này) | Hồng, agent | danghong | [docs](sites/docs/brief.md) · active |
 
-`api.danghong.me` là dịch vụ, không phải site có người đọc; xem [Hạ tầng](ecosystem/infrastructure.md).
+`draft` là site chưa chạy (chưa có mã nguồn, DNS). `api.danghong.me` là dịch vụ, không phải site có người đọc; xem [Hạ tầng](ecosystem/infrastructure.md).
 
 ## Dùng chung
 
