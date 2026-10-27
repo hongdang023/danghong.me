@@ -107,16 +107,27 @@ Không có bản ghi `www` (không cần, Hồng quyết định 2026-10-27), `a
 
 ## 6. Kế hoạch gộp zone về một account
 
-Mục tiêu: zone `danghong.me` nằm cùng account `Dangtuyethong2324@gmail.com's Account` với mọi Pages project và Worker.
+Mục tiêu: tên miền `danghong.me` (mua qua Cloudflare Registrar ở account `Dac2205`) và zone DNS nằm cùng account `Dangtuyethong2324@gmail.com's Account` với mọi Pages project và Worker. Quy trình theo [Cloudflare: move a Registrar domain between accounts](https://developers.cloudflare.com/registrar/account-options/inter-account-transfer/).
 
-1. Chụp lại toàn bộ bản ghi DNS hiện tại của zone (bảng mục 4, cộng bản ghi MX/TXT nếu có).
-2. Ở account `Dangtuyethong2324`: *Add a domain* → `danghong.me`. Cloudflare cấp hai nameserver mới.
-3. Kiểm tra các bản ghi đã được chép sang; thêm tay bản ghi thiếu.
-4. Ở nơi mua tên miền (registrar): đổi nameserver sang hai nameserver mới.
-5. Chờ zone mới chuyển sang *Active*, rồi xoá zone ở account `Dac2205`.
-6. Gắn lại custom domain cho Pages (Cloudflare tự tạo CNAME), gắn Custom Domain `api.danghong.me` cho Worker.
+**Sao lưu ngày 2026-10-27** (tra DNS công khai; không có MX, TXT, CAA):
 
-Trong lúc đổi nameserver, site có thể chập chờn vài phút đến vài giờ tuỳ registrar.
+| Hostname | Loại | Trỏ tới | Proxied |
+| :--- | :--- | :--- | :--- |
+| `danghong.me` | CNAME | `danghong-me.pages.dev` | Có |
+| `docs` | CNAME | `danghong-docs.pages.dev` | Có |
+| `media` | CNAME | `danghong-media.pages.dev` | Có |
+| `api` | CNAME | `api-danghong-me.dangtuyethong2324.workers.dev` | Có |
+
+| # | Ai | Việc |
+| :--- | :--- | :--- |
+| 1 | Hồng (Dac2205) | Zone `danghong.me` → *DNS → Records → Export* (bản sao lưu đầy đủ); *DNS → Settings → DNSSEC* tắt nếu đang bật |
+| 2 | Hồng (Dangtuyethong2324) | *Add a domain* → `danghong.me` → gói Free (zone mới ở trạng thái chờ) |
+| 3 | Hồng (Dac2205) | *Domain Registration → Manage Domains → danghong.me → Configuration → Move domain → Start*, nhập account ID `574e12931f580feff7ebaf755990b8a2` |
+| 4 | Hồng (email Dangtuyethong2324) | Bấm đồng ý trong email của Cloudflare (hạn 5 ngày) |
+| 5 | Claude | Tạo lại 4 bản ghi ở bảng trên trong zone mới, gắn lại custom domain cho 3 Pages project, gắn Custom Domain `api.danghong.me` cho Worker, kiểm tra từng site |
+| 6 | Claude | Cập nhật mục 2–4 của trang này; xoá ghi chú "CNAME tay" |
+
+Sau khi chuyển: cấu hình cũ ở `Dac2205` mất hết, tên miền bị khoá chuyển 30 ngày, account `Dangtuyethong2324` chịu trách nhiệm gia hạn.
 
 ## Việc còn mở
 
