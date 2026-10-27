@@ -81,7 +81,7 @@ Chi tiết cách deploy và thiết lập token: [Deployment](deployment.md).
 
 ### 3.3. Media (`media.danghong.me`)
 *   Pages project có Functions (`media/functions/[[path]].js`), binding `DB` → D1 `danghong-media`, `BUCKET` → R2 `danghong-media`. Repo chỉ giữ code.
-*   Trang quản trị `/admin/` ghi thẳng vào D1/R2. Đăng nhập bằng mật khẩu: secret `ADMIN_PASSWORD` của Pages project, cookie phiên ký HMAC (`media/src/auth.js`). Không dùng Cloudflare Access.
+*   Trang quản trị `/admin/` ghi thẳng vào D1/R2. **Không có đăng nhập** (không Cloudflare Access, không mật khẩu): ai biết URL đều ghi được.
 *   Xem [media ops](../sites/media/ops.md).
 
 ### 3.4. API (`api.danghong.me`)
@@ -136,5 +136,5 @@ Sau khi chuyển: cấu hình cũ ở `Dac2205` mất hết, tên miền bị kh
 | I1 | `api.danghong.me` lỗi 1014 do zone và Worker ở hai account khác nhau | **Quyết định 2026-10-27:** gộp zone `danghong.me` về account `Dangtuyethong2324`. Các bước ở mục 6. Sau khi gộp: bỏ CNAME tay, gắn Custom Domain cho Worker |
 | I2 | Project cũ `docs-danghong-me` (bản docs trước audit) vẫn còn trên Cloudflare | Xoá sau khi `docs.danghong.me` đã trỏ sang `danghong-docs` |
 | I4 | R2 `danghong-media` chưa có bản sao lưu tự động (D1 có Time Travel 30 ngày) | Cron Worker sao chép bucket sang bucket backup, hoặc định kỳ `rclone sync` về máy |
-| I7 | `/admin/` của media trả 503 cho tới khi đặt secret `ADMIN_PASSWORD` trên Pages project `danghong-media` | Làm [Deployment](deployment.md) §2.2, redeploy |
+| I7 | `/admin/` của media không có xác thực: ai biết URL đều sửa/xoá nội dung, file R2 và bấm Xuất bản website | Chấp nhận (quyết định của Hồng, 27/10/2026); đóng lại bằng Cloudflare Access hoặc cổng mật khẩu khi cần |
 | I6 | Chưa có Pages project, DNS cho `ai`, `ielts`, `nextstep` | Tạo khi site có mã nguồn; cùng account `Dangtuyethong2324` và CNAME tay (mục 2) |

@@ -6,7 +6,7 @@ compatibility_date = "2026-10-01"
 
 [vars]
 MEDIA_BASE_URL = "https://media.danghong.me"
-# /admin is gated by the ADMIN_PASSWORD secret (Pages → Settings → Variables and Secrets; see src/auth.js).
+# /admin has no authentication (see docs/sites/media/ops.md).
 
 [[d1_databases]]
 binding = "DB"

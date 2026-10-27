@@ -1,6 +1,5 @@
-// /admin: page and JSON API that edit D1 and R2 directly. Gated by the ADMIN_PASSWORD secret (see auth.js).
+// /admin: page and JSON API that edit D1 and R2 directly. Not protected: anyone who knows the URL can edit.
 // Optional WEBSITE_DEPLOY_HOOK secret: Pages deploy hook URL of danghong-me, called by "Xuất bản website".
-import { LOGIN_HTML, checkSession, login, sessionCookie } from "./auth.js";
 import { ADMIN_HTML } from "./admin-ui.js";
 import { COLLECTIONS, DOCUMENTS, loadRaw, typeOf } from "./site.js";
 
@@ -36,12 +35,12 @@ async function readJson(request) {
   }
 }
 
-async function api(request, env, route, email) {
+async function api(request, env, route) {
   const db = env.DB;
   const method = request.method;
   const [resource, ...rest] = route;
 
-  if (resource === "state" && method === "GET") return json({ ...(await loadRaw(db)), canPublishWebsite: Boolean(env.WEBSITE_DEPLOY_HOOK), email });
+  if (resource === "state" && method === "GET") return json({ ...(await loadRaw(db)), canPublishWebsite: Boolean(env.WEBSITE_DEPLOY_HOOK)});
 
   // danghong.me is a static build that reads /api/website/*.json, so its edits go live after a rebuild.
   if (resource === "publish-website" && method === "POST") {
@@ -162,23 +161,7 @@ const HTML = { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-
 export async function handleAdmin({ request, env }) {
   const { pathname } = new URL(request.url);
 
-  if (pathname === "/admin/login" && request.method === "POST") {
-    const origin = request.headers.get("Origin");
-    if (origin && origin !== new URL(request.url).origin) return new Response("Forbidden", { status: 403, headers: TEXT });
-    const cookie = await login((await request.formData()).get("password"), env);
-    if (!cookie) return new Response(LOGIN_HTML("Sai mật khẩu."), { status: 401, headers: HTML });
-    return new Response(null, { status: 303, headers: { Location: "/admin/", "Set-Cookie": cookie, "Cache-Control": "no-store" } });
-  }
-  if (pathname === "/admin/logout") {
-    return new Response(null, { status: 303, headers: { Location: "/admin/", "Set-Cookie": sessionCookie("", 0), "Cache-Control": "no-store" } });
-  }
-
   if (pathname === "/admin") return Response.redirect(new URL("/admin/", request.url).toString(), 301);
-  const access = await checkSession(request, env);
-  if (access.error) {
-    if (pathname === "/admin" || pathname === "/admin/") return new Response(access.status === 503 ? access.error : LOGIN_HTML(), { status: access.status, headers: access.status === 503 ? TEXT : HTML });
-    return new Response(access.error, { status: access.status, headers: TEXT });
-  }
 
   if (pathname === "/admin/") {
     return new Response(ADMIN_HTML, {
@@ -186,12 +169,11 @@ export async function handleAdmin({ request, env }) {
     });
   }
   if (pathname.startsWith("/admin/api/")) {
-    // Defence in depth on top of SameSite=Strict: a custom header forces a CORS
-    // preflight (which we never answer), so only the admin page itself can write.
+    // A custom header forces a CORS preflight (which we never answer), so other sites cannot write from a browser.
     if (request.method !== "GET" && request.headers.get("X-Admin") !== "1") return fail("Thiếu header X-Admin.", 403);
     const route = pathname.slice("/admin/api/".length).split("/").filter(Boolean).map(decodeURIComponent);
     try {
-      return await api(request, env, route, access.email);
+      return await api(request, env, route);
     } catch (err) {
       console.error(err);
       return fail(`Lỗi máy chủ: ${err.message}`, 500);

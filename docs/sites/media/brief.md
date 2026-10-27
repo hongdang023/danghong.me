@@ -22,7 +22,7 @@ ai_readable: true
 
 ## 1. Trạng thái hôm nay
 
-Đang chạy. Pages Functions render trang từ D1, phục vụ file từ R2. Có trang quản trị `/admin/` cần mật khẩu admin. Admin chứa cả nội dung của danghong.me ([ops](ops.md)).
+Đang chạy. Pages Functions render trang từ D1, phục vụ file từ R2. Có trang quản trị `/admin/` không đăng nhập (ai biết URL đều sửa được). Admin chứa cả nội dung của danghong.me ([ops](ops.md)).
 
 ## 2. Hai vai trò
 

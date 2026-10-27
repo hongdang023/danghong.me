@@ -173,7 +173,6 @@
 
   async function reload() {
     state = await api("state");
-    $("#who").textContent = state.email || "";
     render();
   }
 

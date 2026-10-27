@@ -3,7 +3,7 @@ id: deployment
 type: standard
 site: ecosystem
 title: Deployment — CI and Cloudflare Pages
-description: "Cách build và deploy từng site danghong.me lên Cloudflare Pages: CI, Pages kết nối Git, wrangler dự phòng, mật khẩu admin media, kiểm tra sau deploy."
+description: "Cách build và deploy từng site danghong.me lên Cloudflare Pages: CI, Pages kết nối Git, wrangler dự phòng, kiểm tra sau deploy."
 description_en: "How each danghong.me site is built and deployed to Cloudflare Pages: CI, Git-connected Pages, fallback wrangler, Access for media admin, post-deploy checks."
 owner: hong
 status: active
@@ -74,7 +74,7 @@ Zone `danghong.me` nằm ở account khác ([Infrastructure](infrastructure.md) 
 
 ### 2.2. Thiết lập khác
 
-1.  **Mật khẩu trang quản trị media** (một lần, chỉ chủ site làm): Dashboard → *Workers & Pages → danghong-media → Settings → Variables and Secrets → Add*, loại *Secret*, tên `ADMIN_PASSWORD`, giá trị tối thiểu 12 ký tự, áp dụng cho Production (và Preview nếu cần), rồi redeploy. Chưa đặt thì `/admin/` trả 503.
+Hiện không có thiết lập nào khác: trang quản trị media không dùng secret đăng nhập (xem [media ops](../sites/media/ops.md) §2.0).
 
 ### 2.3. Deploy từ máy cá nhân (dự phòng)
 
@@ -93,5 +93,5 @@ cd media && npm run deploy -- --branch main
 
 *   `https://docs.danghong.me` mở được trang chủ tài liệu và ô tìm kiếm hoạt động.
 *   `https://media.danghong.me/api/index.json` trả về JSON, header có `Access-Control-Allow-Origin: *`.
-*   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` hiện form nhập mật khẩu (503 nếu chưa đặt `ADMIN_PASSWORD`).
+*   `https://media.danghong.me/photos/avatar.png` trả ảnh từ R2; `https://media.danghong.me/admin/` mở thẳng trang quản trị (không đăng nhập).
 *   Tab *Deployments* của từng project hiển thị commit mới nhất của `main`, nguồn là GitHub.
