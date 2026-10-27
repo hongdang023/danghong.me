@@ -68,7 +68,7 @@ dialog::backdrop { background:rgba(0,0,0,.45); }
 </style>
 </head>
 <body>
-<header><div class="wrap"><strong><a href="/" target="_blank">media.danghong.me</a> · quản trị</strong><nav id="tabs"></nav><span class="who"><span id="who" class="muted"></span> <a href="/cdn-cgi/access/logout" class="muted">Đăng xuất</a></span></div></header>
+<header><div class="wrap"><strong><a href="/" target="_blank">media.danghong.me</a> · quản trị</strong><nav id="tabs"></nav><span class="who"><span id="who" class="muted"></span> <a href="/admin/logout" class="muted">Đăng xuất</a></span></div></header>
 <main class="wrap"><div id="view"><p class="muted">Đang tải…</p></div></main>
 <div id="lists"></div>
 <dialog id="dialog"></dialog>

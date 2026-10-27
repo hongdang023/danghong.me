@@ -26,7 +26,7 @@ Thanh điều hướng khai báo trong `media/src/render.js`.
 ├── /documents/ .............. Tài liệu: mọi file không phải ảnh/video, gồm PDF sách
 └── /edit/ ................... Cập nhật: hướng dẫn sửa và JSON API
 
-/admin/ ...................... Trang quản trị (chỉ email được phép, qua Cloudflare Access)
+/admin/ ...................... Trang quản trị (cần mật khẩu admin)
 /api/<tên>.json .............. JSON API, xem content §3
 /<key R2> .................... File trong R2, ví dụ /photos/avatar.png
 ```

@@ -3,12 +3,12 @@ id: media-ops
 type: ops
 site: media
 title: media.danghong.me Ops
-description: "Vận hành media.danghong.me: cấu trúc code, xử lý request, phân quyền admin bằng Cloudflare Access, cách thêm/bớt nội dung, giới hạn, chạy local, sao lưu."
-description_en: "Running media.danghong.me: code layout, request routing, admin access via Cloudflare Access, adding content, limits, local runs and backups."
+description: "Vận hành media.danghong.me: cấu trúc code, xử lý request, đăng nhập admin bằng mật khẩu, cách thêm/bớt nội dung, giới hạn, chạy local, sao lưu."
+description_en: "Running media.danghong.me: code layout, request routing, admin sign-in by password, adding content, limits, local runs and backups."
 owner: hong
 status: active
 version: 2.0
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-27
 ai_readable: true
 ---
 
@@ -34,7 +34,7 @@ media/
 │   ├── site.js             # Đọc D1, ráp album/link/người…, sinh JSON API
 │   ├── render.js           # Giao diện các trang (HTML/CSS)
 │   ├── admin.js            # API của trang quản trị (ghi D1, upload R2, xuất bản website)
-│   ├── access.js           # Kiểm tra đăng nhập Cloudflare Access + danh sách email được phép
+│   ├── auth.js             # Đăng nhập admin: mật khẩu ADMIN_PASSWORD, cookie phiên ký HMAC
 │   └── admin-ui.js         # Khung HTML của trang quản trị
 ├── public/                 # Thư mục output của Pages: robots.txt, admin-app.js (script trang quản trị)
 ├── schema.sql              # Bảng D1
@@ -46,7 +46,7 @@ Mỗi request được xử lý theo thứ tự:
 
 | Đường dẫn | Xử lý |
 | :--- | :--- |
-| `/admin/…` | Trang quản trị và API của nó (chỉ email được phép, qua Cloudflare Access) |
+| `/admin/…` | Trang quản trị và API của nó (cần mật khẩu admin) |
 | `/api/<tên>.json` | JSON dựng từ D1 |
 | Kết thúc bằng `/`, không có phần mở rộng, hoặc `/assets/site.css` | Trang HTML render từ D1 |
 | Còn lại | Object có key tương ứng trong R2, rồi tới `public/` (`robots.txt`, `admin-app.js`) |
@@ -55,13 +55,13 @@ Các trang công khai và route: [sitemap](sitemap.md).
 
 ## 2. THÊM / BỚT NỘI DUNG
 
-Mở [media.danghong.me/admin/](https://media.danghong.me/admin/) và đăng nhập bằng email `dangtuyethong2324@gmail.com` (Cloudflare Access gửi mã một lần vào email). Email khác bị từ chối.
+Mở [media.danghong.me/admin/](https://media.danghong.me/admin/) và nhập mật khẩu admin.
 
 ### 2.0. Phân quyền
 
-*   **Cloudflare Access** (Zero Trust) có một Self-hosted application cho `media.danghong.me/admin*`, policy *Allow* chỉ gồm email trên. Access chặn mọi người khác trước khi request tới Function.
-*   **Function kiểm tra lại** (`src/access.js`): JWT `Cf-Access-Jwt-Assertion` phải có chữ ký đúng của team `ACCESS_TEAM_DOMAIN`, đúng `ACCESS_AUD`, còn hạn, và email nằm trong `ADMIN_EMAILS`. Ba biến này nằm trong `media/wrangler.toml`. Thiếu `ACCESS_TEAM_DOMAIN` thì `/admin/` trả 503 (đóng mặc định).
-*   Thêm người quản trị: thêm email vào policy của Access **và** vào `ADMIN_EMAILS`, rồi deploy.
+*   **Mật khẩu** là secret `ADMIN_PASSWORD` của Pages project `danghong-media` (Settings → Variables and Secrets → Production, loại *Secret*), tối thiểu 12 ký tự. Chưa đặt hoặc ngắn hơn thì `/admin/` trả 503 (đóng mặc định). Cloudflare Access không còn được dùng.
+*   Đăng nhập tại `/admin/` (form `POST /admin/login`) sinh cookie `admin_session` (HttpOnly, Secure, SameSite=Strict, giới hạn ở `/admin`, sống 7 ngày), ký HMAC-SHA256 bằng chính mật khẩu. Đổi mật khẩu là mọi phiên cũ mất hiệu lực. `/admin/logout` xoá cookie.
+*   Chưa giới hạn số lần thử sai mật khẩu; dùng mật khẩu dài, ngẫu nhiên. Cần chặn brute-force thì thêm Rate limiting rule của Cloudflare cho `/admin/login`.
 *   Mọi thao tác ghi cần header `X-Admin: 1` nên trang khác không gửi request thay người đã đăng nhập được.
 
 | Tôi muốn… | Làm gì |

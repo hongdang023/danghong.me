@@ -1,7 +1,6 @@
-// /admin: page and JSON API that edit D1 and R2 directly. Only the emails in ADMIN_EMAILS get in,
-// signed in through Cloudflare Access (see access.js).
+// /admin: page and JSON API that edit D1 and R2 directly. Gated by the ADMIN_PASSWORD secret (see auth.js).
 // Optional WEBSITE_DEPLOY_HOOK secret: Pages deploy hook URL of danghong-me, called by "Xuất bản website".
-import { checkAccess } from "./access.js";
+import { LOGIN_HTML, checkSession, login, sessionCookie } from "./auth.js";
 import { ADMIN_HTML } from "./admin-ui.js";
 import { COLLECTIONS, DOCUMENTS, loadRaw, typeOf } from "./site.js";
 
@@ -157,21 +156,37 @@ async function api(request, env, route, email) {
   return fail("Không tìm thấy.", 404);
 }
 
+const TEXT = { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" };
+const HTML = { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Frame-Options": "DENY", "X-Robots-Tag": "noindex" };
+
 export async function handleAdmin({ request, env }) {
-  const access = await checkAccess(request, env);
-  if (access.error) {
-    return new Response(access.error, { status: access.status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
+  const { pathname } = new URL(request.url);
+
+  if (pathname === "/admin/login" && request.method === "POST") {
+    const origin = request.headers.get("Origin");
+    if (origin && origin !== new URL(request.url).origin) return new Response("Forbidden", { status: 403, headers: TEXT });
+    const cookie = await login((await request.formData()).get("password"), env);
+    if (!cookie) return new Response(LOGIN_HTML("Sai mật khẩu."), { status: 401, headers: HTML });
+    return new Response(null, { status: 303, headers: { Location: "/admin/", "Set-Cookie": cookie, "Cache-Control": "no-store" } });
+  }
+  if (pathname === "/admin/logout") {
+    return new Response(null, { status: 303, headers: { Location: "/admin/", "Set-Cookie": sessionCookie("", 0), "Cache-Control": "no-store" } });
   }
 
-  const { pathname } = new URL(request.url);
   if (pathname === "/admin") return Response.redirect(new URL("/admin/", request.url).toString(), 301);
+  const access = await checkSession(request, env);
+  if (access.error) {
+    if (pathname === "/admin" || pathname === "/admin/") return new Response(access.status === 503 ? access.error : LOGIN_HTML(), { status: access.status, headers: access.status === 503 ? TEXT : HTML });
+    return new Response(access.error, { status: access.status, headers: TEXT });
+  }
+
   if (pathname === "/admin/") {
     return new Response(ADMIN_HTML, {
       headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Frame-Options": "DENY", "X-Robots-Tag": "noindex" },
     });
   }
   if (pathname.startsWith("/admin/api/")) {
-    // Browsers resend the Access cookie on cross-site requests; a custom header forces a CORS
+    // Defence in depth on top of SameSite=Strict: a custom header forces a CORS
     // preflight (which we never answer), so only the admin page itself can write.
     if (request.method !== "GET" && request.headers.get("X-Admin") !== "1") return fail("Thiếu header X-Admin.", 403);
     const route = pathname.slice("/admin/api/".length).split("/").filter(Boolean).map(decodeURIComponent);

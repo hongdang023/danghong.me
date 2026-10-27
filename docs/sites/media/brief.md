@@ -8,7 +8,7 @@ description_en: "Brief for media.danghong.me: the official media kit about Hồn
 summary_en: >-
   media.danghong.me holds the single copy of photos, videos, documents, links and profile data about Hồng.
   Press and partners browse and download from it; every other site reads its JSON API and R2 files.
-  Its /admin page, locked to one email via Cloudflare Access, is where content for danghong.me is edited too.
+  Its /admin page, behind an admin password, is where content for danghong.me is edited too.
 owner: hong
 status: active
 version: 1.0
@@ -22,7 +22,7 @@ ai_readable: true
 
 ## 1. Trạng thái hôm nay
 
-Đang chạy. Pages Functions render trang từ D1, phục vụ file từ R2. Có trang quản trị `/admin/` chỉ cho email `dangtuyethong2324@gmail.com` (Cloudflare Access). Admin chứa cả nội dung của danghong.me ([ops](ops.md)).
+Đang chạy. Pages Functions render trang từ D1, phục vụ file từ R2. Có trang quản trị `/admin/` cần mật khẩu admin. Admin chứa cả nội dung của danghong.me ([ops](ops.md)).
 
 ## 2. Hai vai trò
 
