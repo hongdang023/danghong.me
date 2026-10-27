@@ -48,7 +48,6 @@ Gốc từ [Audit 2026-10](../../audit/2026-10.md) §3, đối chiếu lại 202
 
 | # | Việc |
 | :--- | :--- |
-| W2 | Kênh liên hệ trong `apiProfile` lệch với Facebook chính ([Identity](../../ecosystem/identity.md) ID1) |
 | W3 | Code không dùng vẫn còn: `src/utils/identity.ts`, `src/components/NotificationCenter.tsx`, `src/components/QuizModal.tsx` |
 | W4 | `/updates` và `/api-docs` không có link nào trỏ tới |
 | W5 | Điểm 4D của khoá học chưa có trong dữ liệu |

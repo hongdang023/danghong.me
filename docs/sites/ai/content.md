@@ -17,8 +17,9 @@ ai_readable: true
 | Nội dung | Mô tả | Trạng thái |
 | :--- | :--- | :--- |
 | Giới thiệu mentor | Hồng trong vai mentor: cách dạy, triết lý (lấy từ Identity) | Mục tiêu |
-| Sản phẩm của học sinh | Dự án học sinh làm trong lớp (cần đồng ý của phụ huynh) | Mục tiêu |
+| Sản phẩm của học sinh | Dự án học sinh làm trong lớp (phụ huynh đã đồng ý cho đăng ảnh, Hồng xác nhận 2026-10-27) | Mục tiêu |
 | Công cụ học tập | Sư tử Con Quiz Challenge (https://sutucon.pages.dev/), Family Dossiers (https://hongdang-family.pages.dev/) | Có, đang liệt kê trên danghong.me |
+| Báo chí | [An Ninh Thủ Đô 2026-10-09: AI vào trường học](https://anninhthudo.vn/tri-tue-nhan-tao-ai-vao-truong-hoc-thay-va-tro-phai-thay-doi-ra-sao-post671418.antd) | Có (D1 links, nhóm Báo chí) |
 | Lịch lớp và học phí | Thuộc Sư Tử Con: link sang sutucon.com, không chép | Link |
 
 Dữ liệu về Hồng (bio, ảnh) đọc từ `https://media.danghong.me/api/profile.json` và R2, không giữ bản sao ([Data](../../ecosystem/data.md)).

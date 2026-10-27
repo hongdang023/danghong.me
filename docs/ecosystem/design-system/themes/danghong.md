@@ -59,7 +59,7 @@ Nơi khai báo token trong code:
 
 ## 4. Hình ảnh và phản hồi
 
-1. **Light-first trên danghong.me:** website không có dark mode; nhịp thay đổi giữa Beige sáng và Shadow Beige. (Media và docs có dark mode, xem bảng mục 2.)
+1. **Light-only trên danghong.me:** website không có và sẽ không thêm dark mode (Hồng quyết định 2026-10-27); nhịp thay đổi giữa Beige sáng và Shadow Beige. (Media và docs có dark mode, xem bảng mục 2.)
 2. **Human-centric:** ưu tiên có con người trong ảnh showcase.
 3. **Tactile feedback:** nút chính màu Crimson, lún xuống khi bấm.
 4. **Card:** viền 0.5px, bo góc 12px, shadow nhẹ.
@@ -73,7 +73,6 @@ Thực dụng, gần gũi, tinh gọn. Chi tiết ở [Content standards](../../
 | # | Việc |
 | :--- | :--- |
 | TD1 | Media dùng tên token khác danghong.me (`--bg` thay vì `--background`...). Đổi về bộ tên ở [Core](../core.md) §4 khi sửa media. |
-| TD2 | Ba site lệch nhau về dark mode: website không có, media và docs có. Cần quyết định có thêm dark mode cho danghong.me không. |
 
 ## Lịch sử
 

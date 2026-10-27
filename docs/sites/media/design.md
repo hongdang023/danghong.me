@@ -20,7 +20,7 @@ ai_readable: true
 
 | Hạng mục | media | Ghi chú |
 | :--- | :--- | :--- |
-| Dark mode | Có, theo `prefers-color-scheme` | danghong.me không có ([theme](../../ecosystem/design-system/themes/danghong.md) TD2) |
+| Dark mode | Có, theo `prefers-color-scheme` | danghong.me không có và không thêm |
 | Tên token | `--bg`, `--soft`, `--fg`, `--muted`, `--accent`, `--accent-soft`, `--line`, `--card`, `--overlay` | Khác bộ tên chuẩn ([theme](../../ecosystem/design-system/themes/danghong.md) TD1) |
 | Lưới ảnh | Album hiển thị lưới ảnh dày, lightbox nền `--overlay` | Ngoại lệ hợp lệ của tầng site |
 | Trang chủ | Dải album cuộn ngang, lưới câu chuyện | |

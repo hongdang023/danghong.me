@@ -8,7 +8,7 @@ description_en: "danghong.me infrastructure: where each subdomain runs, which fo
 owner: hong
 status: active
 version: 2.0
-last_reviewed: 2026-10-23
+last_reviewed: 2026-10-27
 ai_readable: true
 ---
 
@@ -101,17 +101,29 @@ Chi tiết cách deploy và thiết lập token: [Deployment](deployment.md).
 | `media.danghong.me` | CNAME | `danghong-media.pages.dev` | Có |
 | `api.danghong.me` | CNAME | `api-danghong-me.dangtuyethong2324.workers.dev` | Có (đang lỗi 1014) |
 
-Không có bản ghi `www`, `ai`, `ielts`, `nextstep`. Khi thêm hoặc đổi bản ghi, cập nhật bảng này trong cùng commit.
+Không có bản ghi `www` (không cần, Hồng quyết định 2026-10-27), `ai`, `ielts`, `nextstep`. Khi thêm hoặc đổi bản ghi, cập nhật bảng này trong cùng commit.
 
 ---
+
+## 6. Kế hoạch gộp zone về một account
+
+Mục tiêu: zone `danghong.me` nằm cùng account `Dangtuyethong2324@gmail.com's Account` với mọi Pages project và Worker.
+
+1. Chụp lại toàn bộ bản ghi DNS hiện tại của zone (bảng mục 4, cộng bản ghi MX/TXT nếu có).
+2. Ở account `Dangtuyethong2324`: *Add a domain* → `danghong.me`. Cloudflare cấp hai nameserver mới.
+3. Kiểm tra các bản ghi đã được chép sang; thêm tay bản ghi thiếu.
+4. Ở nơi mua tên miền (registrar): đổi nameserver sang hai nameserver mới.
+5. Chờ zone mới chuyển sang *Active*, rồi xoá zone ở account `Dac2205`.
+6. Gắn lại custom domain cho Pages (Cloudflare tự tạo CNAME), gắn Custom Domain `api.danghong.me` cho Worker.
+
+Trong lúc đổi nameserver, site có thể chập chờn vài phút đến vài giờ tuỳ registrar.
 
 ## Việc còn mở
 
 | # | Việc | Cách xử lý đề xuất |
 | :--- | :--- | :--- |
-| I1 | `api.danghong.me` lỗi 1014 do zone và Worker ở hai account khác nhau | Chuyển zone `danghong.me` sang account `Dangtuyethong2324` (gộp một account), hoặc deploy Worker vào account `Dac2205` rồi gắn Custom Domain |
+| I1 | `api.danghong.me` lỗi 1014 do zone và Worker ở hai account khác nhau | **Quyết định 2026-10-27:** gộp zone `danghong.me` về account `Dangtuyethong2324`. Các bước ở mục 6. Sau khi gộp: bỏ CNAME tay, gắn Custom Domain cho Worker |
 | I2 | Project cũ `docs-danghong-me` (bản docs trước audit) vẫn còn trên Cloudflare | Xoá sau khi `docs.danghong.me` đã trỏ sang `danghong-docs` |
-| I3 | Chưa có `www.danghong.me` | Thêm CNAME `www` + Redirect Rule về `danghong.me` nếu cần |
 | I4 | R2 `danghong-media` chưa có bản sao lưu tự động (D1 có Time Travel 30 ngày) | Cron Worker sao chép bucket sang bucket backup, hoặc định kỳ `rclone sync` về máy |
 | I7 | `/admin/` của media trả 503 vì `ACCESS_TEAM_DOMAIN`, `ACCESS_AUD` trong `media/wrangler.toml` còn trống | Làm [Deployment](deployment.md) §2.2 bước Cloudflare Access, điền hai giá trị, push |
 | I6 | Chưa có Pages project, DNS cho `ai`, `ielts`, `nextstep` | Tạo khi site có mã nguồn; cùng account `Dangtuyethong2324` và CNAME tay (mục 2) |

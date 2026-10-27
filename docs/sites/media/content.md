@@ -28,7 +28,8 @@ ai_readable: true
 | Tài sản của danghong.me | Ảnh, screenshot sản phẩm, PDF sách | Có | R2 `website/` |
 | Bio chuẩn | Bio ngắn / vừa / dài, tiếng Việt và tiếng Anh | Mục tiêu | Dự kiến D1 `profile` |
 | Bộ báo chí | Ảnh chân dung chính thức, logo, CV/PDF | Mục tiêu | Dự kiến R2 `press/` |
-| Truyền thông | Bài báo, phỏng vấn, talk, slide | Mục tiêu | Dự kiến D1 `links` (nhóm riêng) và R2 `documents/` |
+| Báo chí | Bài báo có trích lời Hồng (2 bài An Ninh Thủ Đô, tháng 10/2026) | Có | D1 `links`, nhóm "Báo chí" |
+| Truyền thông khác | Phỏng vấn, talk, slide | Mục tiêu | D1 `links` và R2 `documents/` |
 | Chứng nhận và giải thưởng | | Mục tiêu | Chưa quyết |
 | Sản phẩm số ngoài site | Bài Substack, Gemini Gems, AI Websites | Có trên danghong.me | D1 `products`; link Substack ở [Identity](../../ecosystem/identity.md) |
 

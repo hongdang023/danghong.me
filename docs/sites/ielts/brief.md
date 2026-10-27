@@ -25,7 +25,7 @@ ai_readable: true
 
 ## 2. Vai trò
 
-Cửa sổ của Hồng vào brand **Nemo12**. Vai trò của Hồng: **IELTS Mentor**.
+**Trang giới thiệu Hồng cho học sinh IELTS và phụ huynh**: giúp người đọc này hiểu đúng Hồng là ai, làm gì, và vì sao nên học / tham gia cùng Hồng. Mặc nhận diện của brand **Nemo12**. Vai trò của Hồng: **IELTS Mentor**.
 
 Nemo12 dạy IELTS, SAT, Essay và tiếng Anh: mỗi học sinh một lộ trình, có mentor đi cùng, bố mẹ thấy con đang ở đâu. (theo https://nemo12.com, đối chiếu 2026-10-23)
 
@@ -55,5 +55,4 @@ Người đọc hiểu Hồng làm gì trong Nemo12 mảng IELTS và đi tiếp 
 
 | # | Việc |
 | :--- | :--- |
-| IE2 | Xác nhận site là trang về vai trò hay sản phẩm vận hành cho Nemo12 (BA2). |
 | IE3 | Thống nhất với Nemo12 cách gắn tracking và CTA về nền tảng của họ. |

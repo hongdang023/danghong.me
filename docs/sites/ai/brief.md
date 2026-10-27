@@ -25,7 +25,7 @@ ai_readable: true
 
 ## 2. Vai trò
 
-Cửa sổ của Hồng vào brand **Sư Tử Con**. Vai trò của Hồng: **Mentor lớp AI Teen** (học sinh cấp 2–3).
+**Trang giới thiệu Hồng cho phụ huynh và học sinh AI Teen**: giúp người đọc này hiểu đúng Hồng là ai, làm gì, và vì sao nên học / tham gia cùng Hồng. Mặc nhận diện của brand **Sư Tử Con**. Vai trò của Hồng: **Mentor lớp AI Teen** (học sinh cấp 2–3).
 
 Sư Tử Con là "trường học năng lực tương lai" cho học sinh cấp 2–3: học AI, tư duy phản biện và giải quyết vấn đề qua dự án và sản phẩm thực tế, có mentor đồng hành. (theo https://sutucon.com, đối chiếu 2026-10-23)
 
@@ -55,6 +55,4 @@ Phụ huynh và học sinh hiểu Hồng dạy gì, dạy thế nào trong lớp
 
 | # | Việc |
 | :--- | :--- |
-| AI1 | Xác nhận site là trang về vai trò mentor của Hồng, hay sản phẩm Hồng vận hành cho Sư Tử Con ([Brand architecture](../../ecosystem/brand-architecture.md) BA2). |
-| AI2 | Quyền hiển thị ảnh và sản phẩm của học sinh (đồng ý của phụ huynh). |
 | AI3 | Kênh đăng ký chính thức của Sư Tử Con để gắn CTA. |

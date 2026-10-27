@@ -8,7 +8,7 @@ description_en: "Canonical facts about Hồng Đặng: Learning Architect positi
 owner: hong
 status: active
 version: 1.1
-last_reviewed: 2026-10-24
+last_reviewed: 2026-10-27
 ai_readable: true
 ---
 
@@ -69,9 +69,17 @@ Với mình, một hệ thống giáo dục tốt không chỉ khiến người 
 | Newsletter (Substack) | https://harureboot.substack.com/ | Nút Newsletter trên danghong.me |
 | Email quản trị | `dangtuyethong2324@gmail.com` | Chỉ dùng cho quyền admin, không hiển thị công khai |
 
+## 7. Báo chí
+
+| Ngày | Báo | Bài | Chủ đề |
+| :--- | :--- | :--- | :--- |
+| 2026-10-09 | An Ninh Thủ Đô | [Trí tuệ nhân tạo (AI) vào trường học: Thầy và trò phải thay đổi ra sao?](https://anninhthudo.vn/tri-tue-nhan-tao-ai-vao-truong-hoc-thay-va-tro-phai-thay-doi-ra-sao-post671418.antd) | AI trong giáo dục; Hồng chia sẻ từ thực tế dạy AI cho học sinh |
+| 2026-10-22 | An Ninh Thủ Đô | [Thí điểm dạy các môn học bằng tiếng Anh: Cần lộ trình phù hợp](https://anninhthudo.vn/thi-diem-day-cac-mon-hoc-bang-tieng-anh-can-lo-trinh-phu-hop-post672941.antd) | Dạy môn học bằng tiếng Anh |
+
+Danh sách sống nằm trong D1 (`items`, collection `links`, nhóm "Báo chí"), hiện trên https://media.danghong.me/links/. Bài AI dùng cho ai.danghong.me, bài tiếng Anh dùng cho ielts.danghong.me.
+
 ## Việc còn mở
 
 | # | Việc |
 | :--- | :--- |
-| ID1 | `/api/profile.json` của danghong.me từng dùng `facebook.com/hongdang.architect` và `hello@learningarchitect.me`, khác bảng trên ([Audit 2026-10](../audit/2026-10.md) W2). Cần xác nhận kênh đúng. |
 | ID2 | Chưa có bio chuẩn theo độ dài (ngắn, vừa, dài) và theo ngôn ngữ (VI/EN) để các site và báo chí dùng. Nơi lưu dự kiến: document `profile` trên D1. |

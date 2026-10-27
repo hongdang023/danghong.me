@@ -18,6 +18,8 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-10-27 | Hồng: site cửa sổ là trang "bán" thông tin về Hồng cho từng đối tượng; dùng brand guidelines không cần xin phép; phụ huynh đồng ý đăng ảnh học sinh; gộp zone về `dangtuyethong2324`; không cần `www`, không dark mode | [Brand architecture](ecosystem/brand-architecture.md), [Infrastructure](ecosystem/infrastructure.md) |
+| 2026-10-27 | Sửa kênh liên hệ trong D1 (bỏ `hongdang.architect`, `hello@learningarchitect.me`; thêm LinkedIn); thêm nhóm link "Báo chí" với 2 bài An Ninh Thủ Đô | [Identity](ecosystem/identity.md) |
 | 2026-10-24 | Tạo lại `danghong-docs`, `danghong-media` kết nối Git (qua API, Hồng duyệt) | [Deployment](ecosystem/deployment.md) |
 | 2026-10-24 | Hồng chọn Cloudflare Pages kết nối Git cho docs và media; xoá workflow deploy GitHub Actions (lỗi token) | [Deployment](ecosystem/deployment.md) |
 | 2026-10-24 | Hồng: chức danh (Mentor AI Teen, IELTS Mentor, Community Facilitator), Brand Guidelines sutucon.com/brand, nextstep27.com, thêm LinkedIn | [Identity](ecosystem/identity.md), theme sutucon, nextstep |

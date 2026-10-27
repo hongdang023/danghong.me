@@ -25,7 +25,7 @@ ai_readable: true
 
 ## 2. Vai trò
 
-Cửa sổ của Hồng vào brand **Next Step**. Vai trò của Hồng: **Community Facilitator** của cộng đồng offline tại Hà Nội hỗ trợ người trẻ tìm việc và định hướng nghề nghiệp.
+**Trang giới thiệu Hồng cho sinh viên và người trẻ đi làm**: giúp người đọc này hiểu đúng Hồng là ai, làm gì, và vì sao nên học / tham gia cùng Hồng. Mặc nhận diện của brand **Next Step**. Vai trò của Hồng: **Community Facilitator** của cộng đồng offline tại Hà Nội hỗ trợ người trẻ tìm việc và định hướng nghề nghiệp.
 
 NextStep là cộng đồng chuẩn bị năng lực nghề nghiệp (Career Readiness) cho sinh viên xuất sắc (FTU, DAV, NEU...) và người trẻ mới đi làm: khung năng lực, NextStep Cafe, cộng đồng, thử thách Reality Check. (theo https://nextstep27.com, đối chiếu 2026-10-23)
 
@@ -55,5 +55,4 @@ Người trẻ ở Hà Nội biết Next Step có sự kiện gì, Hồng đóng
 
 | # | Việc |
 | :--- | :--- |
-| NS1 | Quan hệ giữa nextstep.danghong.me và nextstep27.com (BA2). |
 | NS2 | Nguồn dữ liệu cho lịch sự kiện: D1 của danghong hay hệ thống của Next Step. |
