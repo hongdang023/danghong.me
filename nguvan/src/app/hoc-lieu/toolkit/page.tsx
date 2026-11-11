@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import { Band, MediaCard, Page } from "@/components/Ui";
 import { GAMES } from "@/lib/games";
 
-export const metadata: Metadata = {
-  title: "Thử chơi",
-  description: "Các trò chơi nhỏ về từ, dấu câu và đọc hiểu, dành cho học sinh.",
-};
+export const metadata: Metadata = { title: "Toolkit", description: "Các trò nhỏ về đọc, từ, câu và tác phẩm. Chơi ngay trên trình duyệt, không điểm, không lưu gì." };
 
-export default function Play() {
+export default function Toolkit() {
   return (
-    <Page eyebrow="Thử chơi" title="Không điểm, không đáp án duy nhất." lead="Chơi để thấy chữ nghĩa thú vị thế nào. Các trò chạy ngay trên trình duyệt và không lưu gì.">
+    <Page eyebrow="Học liệu · Toolkit" title="Không điểm, không đáp án duy nhất." lead="Chơi để thấy chữ nghĩa thú vị thế nào. Các trò chạy ngay trên trình duyệt và không lưu gì.">
       <Band tint="lilac">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {GAMES.map((g) => (

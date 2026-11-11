@@ -26,7 +26,7 @@ export function VerbSwap() {
             type="button"
             onClick={() => setI(k)}
             aria-pressed={k === i}
-            className={`rounded-full border px-6 py-2.5 text-lg ${k === i ? "border-accent bg-accent text-background" : "border-line"}`}
+            className={`rounded-full border px-6 py-2.5 text-lg ${k === i ? "border-accent bg-accent text-on-accent" : "border-line"}`}
           >
             {x.word}
           </button>

@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-12 | Hồng: nguvan đổi thông điệp sang "Xích lại gần văn hơn" (bớt sợ, bớt ghét), sitemap theo mega menu mới (Về cô Hồng, Cách học, Lớp học, Học liệu, Bài viết), xưng "cô", Light/Dark, nền tường vàng phố cổ, ảnh và bìa 5 tác phẩm kèm game, Learning Cycle reDesign, trường phái IB/Building21 tự dựng | [nguvan](sites/nguvan/sitemap.md) |
 | 2026-11-11 | Hồng: nguvan đổi sang theme màu nước (riêng), xưng "cô Hồng", đăng nguyên văn hai câu chuyện, bài viết dạng card có ảnh, trang Thử chơi dẫn game kèm ảnh chụp, navbar mega menu | [nguvan design](sites/nguvan/design.md), [content](sites/nguvan/content.md) |
 | 2026-11-11 | Hồng: thêm nguvan.danghong.me, branding cô giáo Ngữ Văn tại Nemo12, phụ huynh là chính, so sánh với học thuộc lòng, inquiry (IB) và competency-based (Building21), 11 bài Substack làm chất liệu | [nguvan](sites/nguvan/brief.md) |
 | 2026-11-11 | Hồng: chọn hướng Warm Reef (theme lai: khung Nemo12, nền ấm, Inter, nét bút chữa bài) sau bộ 10 câu hỏi thương hiệu; thêm bước chọn vai trò và mục tiêu ở Landing; Teaching Method thêm Competency-based (Building 21), Inquiry-based, Learning Cycle (reDesign, 2016) có dẫn nguồn | [Warm Reef](ecosystem/design-system/themes/warm-reef.md), [ADR-004](decisions/adr-004-hybrid-theme-for-ielts.md), [ielts content](sites/ielts/content.md) |

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { CONTACT_URL, MENU, NEWSLETTER_URL } from "@/lib/site";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const path = usePathname();
@@ -63,17 +64,19 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <a href={NEWSLETTER_URL} className="rounded-full border border-line bg-white/[.06] px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide shadow-sm transition hover:-translate-y-0.5">
+          <ThemeToggle />
+          <a href={NEWSLETTER_URL} className="rounded-full border border-line bg-surface px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide shadow-sm transition hover:-translate-y-0.5">
             Newsletter
           </a>
-          <a href={CONTACT_URL} className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide text-background shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 active:scale-95">
+          <a href={CONTACT_URL} className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 active:scale-95">
             Nhắn cô Hồng
           </a>
         </div>
 
-        <button type="button" aria-label="Mở menu" aria-expanded={mobile} onClick={() => setMobile((m) => !m)} className="rounded-full p-2 xl:hidden">
+        <div className="flex items-center gap-2 xl:hidden"><ThemeToggle />
+        <button type="button" aria-label="Mở menu" aria-expanded={mobile} onClick={() => setMobile((m) => !m)} className="rounded-full p-2">
           {mobile ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        </button></div>
       </div>
 
       {active?.items && (
@@ -89,7 +92,7 @@ export function Navbar() {
               ))}
             </ul>
             {active.featured && (
-              <div className="relative overflow-hidden rounded-3xl border border-line bg-white/[.05] p-8">
+              <div className="relative overflow-hidden rounded-3xl border border-line bg-surface p-8">
                 <span className="wash wash-peach -right-10 -top-10 h-40 w-40" />
                 <span className="relative inline-block rounded-full bg-rose/70 px-3 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-accent">{active.featured.tag}</span>
                 <h3 className="relative mt-4 font-display text-2xl font-normal tracking-tight">{active.featured.title}</h3>

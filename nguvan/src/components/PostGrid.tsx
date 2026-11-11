@@ -17,7 +17,7 @@ export function PostGrid() {
             type="button"
             aria-pressed={t === topic}
             onClick={() => setTopic(t)}
-            className={`rounded-full px-5 py-2.5 text-sm font-bold transition ${t === topic ? "bg-accent text-background shadow-lg shadow-accent/30" : "bg-white/[.06] text-foreground/70 hover:text-foreground"}`}
+            className={`rounded-full px-5 py-2.5 text-sm font-bold transition ${t === topic ? "bg-accent text-on-accent shadow-lg shadow-accent/30" : "bg-surface text-foreground/70 hover:text-foreground"}`}
           >
             {t}
           </button>

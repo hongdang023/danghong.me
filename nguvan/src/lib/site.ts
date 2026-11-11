@@ -14,43 +14,52 @@ export type MenuGroup = {
   featured?: { tag: string; title: string; text: string; href: string; cta: string };
 };
 
-// Navbar kiểu mega menu (docs/sites/nguvan/design.md)
+export const CURRICULUM_URL = "https://pearl.nemo12.com/curriculum/van/";
+
+// Navbar kiểu mega menu (docs/sites/nguvan/sitemap.md). Tên mục tối đa 3 từ.
 export const MENU: MenuGroup[] = [
   {
-    id: "phu-huynh",
-    label: "Phụ huynh",
-    href: "/phu-huynh/",
+    id: "co-hong",
+    label: "Về cô Hồng",
+    href: "/co-hong/",
     items: [
-      { label: "Dấu hiệu con học thật", href: "/phu-huynh/#dau-hieu" },
-      { label: "Vì sao không học thuộc lòng", href: "/phu-huynh/#vi-sao" },
-      { label: "5 câu hỏi hỏi con ở nhà", href: "/phu-huynh/#tai-nha" },
-      { label: "Hỏi đáp", href: "/hoi-dap/" },
+      { label: "Hành trình", href: "/co-hong/hanh-trinh/" },
+      { label: "Học vấn", href: "/co-hong/hoc-van/" },
+      { label: "Niềm tin", href: "/co-hong/niem-tin/" },
+      { label: "Sở thích", href: "/co-hong/so-thich/" },
+      { label: "Tác phẩm", href: "/co-hong/tac-pham/" },
     ],
-    featured: { tag: "Dành cho bố mẹ", title: "Con có thực sự học Văn không?", text: "Những dấu hiệu bố mẹ tự kiểm tra được ngay tại nhà.", href: "/phu-huynh/", cta: "Xem ngay" },
+    featured: { tag: "Điều cô muốn", title: "Cô muốn học Văn thú vị hơn", text: "Điểm Văn cao, nhưng ra đời cô chỉ viết được văn để đi thi. Đó là lý do cô dạy khác.", href: "/co-hong/hanh-trinh/#dieu-co-muon", cta: "Đọc câu chuyện" },
   },
   {
     id: "cach-hoc",
     label: "Cách học",
     href: "/cach-hoc/",
     items: [
-      { label: "Học quen thuộc và học ở đây", href: "/cach-hoc/" },
-      { label: "Học qua tìm tòi (IB)", href: "/cach-hoc/#inquiry" },
-      { label: "Đánh giá theo năng lực", href: "/cach-hoc/#nang-luc" },
+      { label: "Trường phái", href: "/cach-hoc/truong-phai/" },
+      { label: "Triết lý", href: "/cach-hoc/triet-ly/" },
     ],
-    featured: { tag: "Yêu rồi mới hiểu", title: "Vì sao không học thuộc lòng", text: "Cô muốn các em yêu trước, vì yêu rồi mới muốn hiểu.", href: "/cach-hoc/", cta: "Đọc tiếp" },
+    featured: { tag: "Xích lại gần văn hơn", title: "Từ muốn chạy đến bớt sợ", text: "Cô đi cùng các em từng bước vào thế giới của Văn.", href: "/cach-hoc/", cta: "Xem cách cô dẫn" },
   },
   {
-    id: "co-hong",
-    label: "Cô Hồng",
-    href: "/co-hong/",
+    id: "lop-hoc",
+    label: "Lớp học",
+    href: "/lop-hoc/",
     items: [
-      { label: "Câu chuyện của cô", href: "/co-hong/#cau-chuyen" },
-      { label: "Con số và thành tích", href: "/co-hong/#so-lieu" },
-      { label: "Năm tác phẩm cô thích", href: "/co-hong/#tac-pham" },
-      { label: "Nơi cô dạy", href: "/co-hong/#noi-day" },
+      { label: "Một buổi học", href: "/lop-hoc/mot-buoi-hoc/" },
+      { label: "Con tiến bộ", href: "/lop-hoc/#con-tien-bo" },
     ],
-    featured: { tag: "Câu chuyện", title: "Sông Đà trong hai tiếng đồng hồ", text: "Cô từng kể một bài văn suốt hai tiếng mà không chán.", href: "/co-hong/#cau-chuyen", cta: "Đọc câu chuyện" },
+    featured: { tag: "Một buổi học", title: "Bốn vòng của một buổi Văn", text: "Make meaning, Investigate, Synthesize, Reflect. Bấm từng vòng để xem lớp làm gì.", href: "/lop-hoc/mot-buoi-hoc/", cta: "Xem buổi học" },
   },
-  { id: "thu-choi", label: "Thử chơi", href: "/thu-choi/" },
+  {
+    id: "hoc-lieu",
+    label: "Học liệu",
+    href: "/hoc-lieu/",
+    items: [
+      { label: "Toolkit", href: "/hoc-lieu/toolkit/" },
+      { label: "Curriculum", href: CURRICULUM_URL },
+    ],
+    featured: { tag: "Toolkit", title: "Chơi để bước lại gần Văn", text: "Các trò nhỏ về đọc, từ, câu và tác phẩm. Không điểm, không lưu gì.", href: "/hoc-lieu/toolkit/", cta: "Vào Toolkit" },
+  },
   { id: "bai-viet", label: "Bài viết", href: "/bai-viet/" },
 ];

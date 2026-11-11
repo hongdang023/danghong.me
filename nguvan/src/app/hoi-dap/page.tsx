@@ -4,10 +4,10 @@ import { Band, Page } from "@/components/Ui";
 export const metadata: Metadata = { title: "Hỏi đáp" };
 
 const FAQ = [
-  ["Học kiểu này con có theo kịp bài trên lớp không?", "Con học cách đọc, hiểu và lập luận, là nền của mọi bài kiểm tra Văn. Hồng không hứa điểm; hứa là con hiểu mình đang viết gì."],
+  ["Học kiểu này con có theo kịp bài trên lớp không?", "Con học cách đọc, hiểu và lập luận, là nền của mọi bài kiểm tra Văn. Cô không hứa điểm; điều cô hứa là con hiểu mình đang viết gì."],
   ["Con không thích Văn thì sao?", "Rất nhiều bạn không ghét tác phẩm mà ghét cách học. Lớp bắt đầu bằng việc để con tìm lý do muốn đọc."],
   ["Có cho con dùng AI không?", "Có, để đặt câu hỏi và phản biện, không để viết hộ."],
-  ["Hồng dạy ở đâu?", "Hồng là giáo viên Ngữ Văn tại Nemo12. Lịch học và học phí do Nemo12 quy định; hãy nhắn Hồng để được hướng dẫn."],
+  ["Cô dạy ở đâu?", "Cô là giáo viên Ngữ Văn tại Nemo12. Lịch học và học phí do Nemo12 quy định; hãy nhắn cô Hồng để được hướng dẫn."],
   ["Trang này có lưu thông tin của tôi không?", "Không. Trang không có biểu mẫu."],
 ];
 

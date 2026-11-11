@@ -13,12 +13,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://nguvan.danghong.me"),
   title: { default: "Ngữ Văn cùng cô Hồng", template: "%s | Ngữ Văn cùng cô Hồng" },
   description:
-    "Hồng Đặng, cô giáo Ngữ Văn tại Nemo12: học Văn để yêu rồi mới hiểu, không học thuộc lòng. Dành cho phụ huynh và các em học sinh.",
+    "Hồng Đặng, cô giáo Ngữ Văn tại Nemo12: giúp các em bớt sợ, xích lại gần Văn hơn, không học thuộc lòng. Dành cho phụ huynh và các em học sinh.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="vi" className={`${body.variable} ${display.variable} ${hand.variable} h-full`}>
+    <html lang="vi" suppressHydrationWarning className={`${body.variable} ${display.variable} ${hand.variable} h-full`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}` }} />
+      </head>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

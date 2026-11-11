@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Quyền riêng tư" };
 
 export default function Privacy() {
   return (
-    <Page eyebrow="Quyền riêng tư" title="Giữ càng ít càng tốt." lead="Trang này dành cho cả học sinh dưới 18 tuổi, nên mình giữ mọi thứ càng ít càng tốt.">
+    <Page eyebrow="Quyền riêng tư" title="Giữ càng ít càng tốt." lead="Trang này dành cho cả học sinh dưới 18 tuổi, nên cô giữ mọi thứ càng ít càng tốt.">
       <Band tint="sky">
       <ul className="list-disc space-y-2 pl-5 leading-relaxed">
         <li>Trang không có biểu mẫu và không lưu thông tin bạn nhập. Các trò ở mục Thử chơi chạy trên trình duyệt của bạn.</li>
@@ -17,7 +17,7 @@ export default function Privacy() {
         </li>
       </ul>
       <p>
-        Thắc mắc: <a href={CONTACT_URL} className="text-accent underline">liên hệ Hồng</a>.
+        Thắc mắc: <a href={CONTACT_URL} className="text-accent underline">nhắn cô Hồng</a>.
       </p>
       </Band>
     </Page>

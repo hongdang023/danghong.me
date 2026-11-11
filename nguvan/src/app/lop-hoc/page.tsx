@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Band, ContactCta, Page } from "@/components/Ui";
 
 export const metadata: Metadata = {
-  title: "Dành cho phụ huynh",
-  description: "Con sẽ thực sự học Văn như thế nào ở lớp của cô Hồng, bố mẹ nhìn thấy gì, và 5 câu hỏi để hỏi con ở nhà.",
+  title: "Lớp học",
+  description: "Con có thực sự học Văn không? Bố mẹ sẽ thấy gì ở con, và 5 câu hỏi để hỏi con ở nhà.",
 };
 
 const SEE = [
+  ["Con bớt né môn Văn", "Con không còn viện cớ để tránh, thỉnh thoảng còn tự hỏi hoặc kể về một bài đã đọc."],
   ["Con nói được vì sao con nghĩ vậy", "Con trả lời bằng chi tiết trong văn bản, không chỉ đọc lại ý có sẵn."],
-  ["Con đọc tác phẩm trước khi nghe giảng", "Con có cảm nhận của riêng mình để so, để cãi, để sửa."],
   ["Con ít phụ thuộc vào văn mẫu", "Con tự giải thích được từ, tự sửa được câu, tự chỉ ra chỗ mình chưa chắc."],
   ["Bố mẹ biết bước tiếp theo", "Thay vì một con số, bố mẹ nhận được: con đang tiến bộ ở đâu và cần hỗ trợ gì."],
 ];
-
 const ASK = [
   "Con nghĩ nhân vật đang cảm thấy thế nào, và vì sao con nghĩ vậy?",
   "Chi tiết nào trong bài cho con thấy điều đó?",
@@ -22,15 +20,10 @@ const ASK = [
   "Hôm nay con muốn làm gì tiếp theo?",
 ];
 
-export default function Parents() {
+export default function Class() {
   return (
-    <Page
-      eyebrow="Dành cho phụ huynh"
-      title="Con có thực sự học Văn không?"
-      sub="Đó là lo đúng. Đây là điều bố mẹ sẽ thấy."
-      lead="Một lớp Văn vui chưa chắc con học thật. Dưới đây là dấu hiệu bố mẹ có thể tự kiểm tra, ngay tại nhà."
-    >
-      <Band id="dau-hieu" eyebrow="Dấu hiệu" title="Bố mẹ sẽ thấy gì ở con" tint="sage">
+    <Page eyebrow="Lớp học" title="Bố mẹ sẽ thấy gì ở con?" sub="Đó là lo đúng. Đây là điều có thể tự kiểm tra tại nhà." lead="Một lớp Văn vui chưa chắc con học thật. Dưới đây là những dấu hiệu bố mẹ nhìn thấy được, và 5 câu hỏi để hỏi con.">
+      <Band id="con-tien-bo" eyebrow="Con tiến bộ" title="Dấu hiệu con đang xích lại gần Văn" tint="sage">
         <div className="grid gap-4 md:grid-cols-2">
           {SEE.map(([t, d]) => (
             <div key={t} className="card-ed lift p-7">
@@ -39,12 +32,6 @@ export default function Parents() {
             </div>
           ))}
         </div>
-      </Band>
-      <Band id="vi-sao" eyebrow="Vì sao" title="Không học thuộc lòng">
-        <p className="max-w-2xl text-lg text-foreground/70">
-          Học thuộc cho điểm nhanh, nhưng quên cũng nhanh và để lại cảm giác ngán Văn. Mình muốn con yêu trước, vì yêu rồi mới
-          muốn hiểu. Xem thêm ở <Link href="/cach-hoc/" className="font-bold text-accent underline">Cách học</Link>.
-        </p>
       </Band>
       <Band id="tai-nha" eyebrow="Tại nhà" title="5 câu hỏi bố mẹ có thể hỏi con" tint="sky">
         <ol className="grid gap-3">
@@ -55,7 +42,6 @@ export default function Parents() {
             </li>
           ))}
         </ol>
-        <p className="pt-2 text-foreground/60">Thêm gợi ý ở <Link href="/bai-viet/" className="font-bold text-accent underline">Bài viết</Link>.</p>
       </Band>
       <ContactCta />
     </Page>

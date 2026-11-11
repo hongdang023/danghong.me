@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Dấu câu làm việc gì?", descri
 
 export default function Page2() {
   return (
-    <Page compact eyebrow="Thử chơi · Dấu câu" title="Dấu câu làm việc gì?">
+    <Page compact eyebrow="Toolkit · Dấu câu" title="Dấu câu làm việc gì?">
       <Band tint="lilac"><PunctuationFix /></Band>
     </Page>
   );

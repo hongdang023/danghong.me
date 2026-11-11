@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Đổi một từ, đổi cả hình
 
 export default function Page1() {
   return (
-    <Page compact eyebrow="Thử chơi · Từ vựng" title="Đổi một từ, đổi cả hình ảnh">
+    <Page compact eyebrow="Toolkit · Từ vựng" title="Đổi một từ, đổi cả hình ảnh">
       <Band tint="lilac"><VerbSwap /></Band>
     </Page>
   );

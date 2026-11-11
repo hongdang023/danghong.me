@@ -17,21 +17,29 @@ ai_readable: true
 Route đã có trong `nguvan/` (chưa deploy).
 
 ```text
-/ ................. Trang chủ: thông điệp, bảng so sánh, vì sao yên tâm
-├── /phu-huynh/ ... Bố mẹ sẽ thấy gì, 5 câu hỏi hỏi con ở nhà
-├── /cach-hoc/ .... So sánh cách học, inquiry (IB), competency-based (Building21)
-├── /hoc-sinh/ .... Dành cho các em
-├── /thu-choi/ .... Danh sách trò chơi liên quan đến Văn (card có ảnh chụp màn hình)
-│   ├── /thu-choi/doi-tu/ ... Đổi một từ, đổi cả hình ảnh
-│   └── /thu-choi/dau-cau/ .. Dấu câu làm việc gì
-├── /bai-viet/ .... 11 bài Newsletter dạng card có ảnh bìa, lọc theo chủ đề, link Substack
-├── /co-hong/ ..... Câu chuyện của cô (nguyên văn), số liệu, 5 tác phẩm yêu thích, nơi dạy
+/ .................... Trang chủ: "Xích lại gần văn hơn", animation bước lại gần Văn, so sánh, bài mới
+├── /co-hong/ ........ Về cô Hồng (hub 5 góc nhìn)
+│   ├── /co-hong/hanh-trinh/ ... Hành trình, "Điều cô muốn" (nháp), hai câu chuyện nhỏ nguyên văn
+│   ├── /co-hong/hoc-van/ ...... 9,25, điểm Văn ≥ 7, THPT Chuyên Ngoại ngữ, ĐH Kinh tế Quốc dân (chỉ phần liên quan)
+│   ├── /co-hong/niem-tin/ ..... 4 niềm tin (từ danghong.me, đã bỏ "Lãnh đạo là Trao quyền")
+│   ├── /co-hong/so-thich/ ..... Viết lách, vẽ vời, múa đương đại, 4 phim (ảnh từ media)
+│   └── /co-hong/tac-pham/ ..... 5 tác phẩm: ảnh thật (Wikimedia Commons, ghi nguồn), lý do thích (nháp), 1 game nhỏ mỗi tác phẩm
+├── /cach-hoc/ ....... Xích lại gần văn hơn + bảng so sánh (hub)
+│   ├── /cach-hoc/truong-phai/ . Học qua đặt câu hỏi (Inquiry, IB), Competency-based (Building21): tự dựng trên nguvan (không link về danghong.me), link Curriculum Nemo12
+│   └── /cach-hoc/triet-ly/ .... Chậm mà chắc, Ít mà chất, Nghiệm hơn trải (áp vào Văn, nháp)
+├── /lop-hoc/ ........ Con tiến bộ + 5 câu hỏi cho bố mẹ ("Học trò nói", "Bài làm": chờ chất liệu thật)
+│   └── /lop-hoc/mot-buoi-hoc/ . Learning Cycle của reDesign (2016): bấm từng vòng để xem em và cô làm gì (nháp)
+├── /hoc-lieu/ ....... Hub
+│   ├── /hoc-lieu/toolkit/ ..... Trò nhỏ: 5 module (link Gemini, tạm), 2 trò trong site (doi-tu, dau-cau)
+│   └── Curriculum ............. Link ngoài https://pearl.nemo12.com/curriculum/van/
+├── /bai-viet/ ....... 11 bài Newsletter dạng card, lọc theo chủ đề
 ├── /hoi-dap/
 └── /quyen-rieng-tu/
 ```
+Route cũ `/phu-huynh/`, `/hoc-sinh/`, `/thu-choi/...` chuyển hướng 301 bằng `nguvan/public/_redirects`.
 
 | Vị trí | Mục |
 | :--- | :--- |
-| Nav (mega menu) | Phụ huynh ▾ · Cách học ▾ · Cô Hồng ▾ · Thử chơi · Bài viết. `/hoc-sinh/` không nằm trên nav, vào từ trang chủ |
+| Nav (mega menu, tên mục ≤ 3 từ) | Về cô Hồng ▾ (Hành trình · Học vấn · Niềm tin · Sở thích · Tác phẩm) · Cách học ▾ (Trường phái · Triết lý) · Lớp học ▾ (Một buổi học · Con tiến bộ) · Học liệu ▾ (Toolkit · Curriculum) · Bài viết |
 | Nút | Newsletter (viền) · Nhắn cô Hồng (chính) |
 | Footer | Newsletter · Hỏi đáp · Quyền riêng tư · dải "Một phần của danghong.me" ([Core](../../ecosystem/design-system/core.md) §5) |

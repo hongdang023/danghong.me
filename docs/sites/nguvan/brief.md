@@ -28,12 +28,12 @@ Site nội dung để Hồng branding là **cô giáo Ngữ Văn tại Nemo12** 
 
 | Nhóm | Vai | Họ lo gì | Site trả lời bằng |
 | :--- | :--- | :--- | :--- |
-| Phụ huynh | **Chính** | Lớp "vui" nhưng con có học thật không | `/phu-huynh/`, `/thay-hong/` (số liệu), `/cach-hoc/` |
-| Học sinh | Phụ | Văn chán, chỉ học thuộc | `/hoc-sinh/`, `/thu-choi/` |
+| Phụ huynh | **Chính** | Lớp "vui" nhưng con có học thật không | `/lop-hoc/`, `/co-hong/hoc-van/` (số liệu), `/cach-hoc/` |
+| Học sinh | Phụ | Văn chán, chỉ học thuộc | `/hoc-lieu/toolkit/` |
 
 ## 3. Thông điệp
 
-- **Yêu rồi mới hiểu.** Lớn lên nhiều người mới nhận ra mình không ghét tác phẩm, chỉ ghét cách học: học thuộc, soạn văn, không hiểu vì sao phải đọc. Mục tiêu là đa dạng trải nghiệm để các em yêu rồi bước vào thế giới của Văn và ngôn ngữ.
+- **Xích lại gần văn hơn** (thông điệp từ 2026-11-11, thay "Yêu rồi mới hiểu"). Mọi câu chữ đi từ **bớt sợ, bớt ghét** đến đứng lại gần hơn; không hứa hay ép "yêu Văn" ngay (Hồng chốt 2026-11-11). Nhiều học sinh nghe tới môn Văn là sợ và ghét muốn chạy; Hồng đi cùng các em từng bước vào thế giới Văn để bớt sợ. Lớn lên nhiều người mới nhận ra mình không ghét tác phẩm, chỉ ghét cách học: học thuộc, soạn văn, không hiểu vì sao phải đọc. Mục tiêu là đa dạng trải nghiệm để các em yêu rồi bước vào thế giới của Văn và ngôn ngữ.
 - **Bằng chứng người dạy:** 9,25 điểm Văn THPT Quốc gia; điểm Văn chưa bao giờ dưới 7; cựu học sinh THPT Chuyên Ngoại Ngữ.
 - **Phương pháp có gốc:** inquiry-based theo tinh thần IB; competency-based theo tinh thần Building21. Chỉ nói "lấy cảm hứng", không nhận là đối tác hay trường IB.
 - Quan điểm giáo dục rộng hơn đã có trên danghong.me; site này link sang, không viết lại ([Identity](../../ecosystem/identity.md)).
@@ -58,8 +58,8 @@ Hồng là **cô giáo**: dùng "cô Hồng" khi nói về Hồng (không dùng 
 | NV1 | Hồng xác nhận chức danh và cách giới thiệu lớp Văn tại Nemo12 (khối lớp, hình thức, link đăng ký). |
 | NV2 | Kênh liên hệ riêng cho site (hiện dùng Facebook cá nhân). |
 | NV3 | Thống nhất với Nemo12 cách nhắc tên và link. |
-| NV4 | Ảnh phiếu điểm/xác nhận 9,25 (che thông tin nhận dạng) để đăng trên `/thay-hong/`. |
+| NV4 | Ảnh phiếu điểm/xác nhận 9,25 (che thông tin nhận dạng) để đăng trên `/co-hong/hoc-van/`. |
 | NV5 | Hai câu chuyện đăng nguyên văn, có tên bạn Quốc Anh và chuyện thích một bạn lớp 12; hỏi ý các bạn trước khi lên mạng. |
-| NV6 | Sản phẩm tương tác thêm cho học sinh (hiện có 2 trò ở `/thu-choi/`). |
+| NV6 | Sản phẩm tương tác thêm cho học sinh (hiện có 2 trò trong site và 5 trò theo tác phẩm ở `/co-hong/tac-pham/`). |
 | NV8 | Link và ảnh chụp màn hình các game ngoài site liên quan đến Văn (Hồng cung cấp URL). |
 | NV7 | Tạo Pages project và DNS (xem [ops](ops.md)). |

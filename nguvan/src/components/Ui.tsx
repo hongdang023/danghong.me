@@ -30,6 +30,7 @@ export function Page({ eyebrow, title, sub, lead, compact, children }: { eyebrow
           {lead && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground/70">{lead}</p>}
         </div>
       </header>
+      <Lattice />
       {children}
     </>
   );
@@ -88,7 +89,7 @@ export function Stat({ value, label }: { value: string; label: string }) {
 
 export function Quote({ children, by }: { children: ReactNode; by: string }) {
   return (
-    <div className="relative rounded-[28px] border border-line bg-white/[.05] p-8 backdrop-blur">
+    <div className="relative rounded-[28px] border border-line bg-surface p-8 backdrop-blur">
       <div className="absolute -left-1 -top-5 font-display text-8xl text-accent/25">&ldquo;</div>
       <p className="relative font-display text-xl font-medium italic leading-relaxed sm:text-2xl">{children}</p>
       <p className="mt-5 font-hand text-xl text-accent">{by}</p>
@@ -98,7 +99,7 @@ export function Quote({ children, by }: { children: ReactNode; by: string }) {
 
 export function Compare({ rows }: { rows: [string, string, string][] }) {
   return (
-    <div className="overflow-x-auto rounded-[28px] border border-line bg-white/[.06]">
+    <div className="overflow-x-auto rounded-[28px] border border-line bg-surface">
       <table className="w-full min-w-[36rem] text-left text-sm sm:text-base">
         <thead>
           <tr className="border-b border-line bg-peach/40 text-xs uppercase tracking-wider">
@@ -124,10 +125,10 @@ export function Compare({ rows }: { rows: [string, string, string][] }) {
 export function ContactCta({ text = "Hỏi trước, chưa cần quyết định ngay." }: { text?: string }) {
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-        <div className="band-rose relative overflow-hidden rounded-[36px] border border-line p-10 text-center sm:p-16">
-          <p className="mx-auto max-w-xl font-display text-3xl font-normal tracking-tight sm:text-4xl">{text}</p>
-          <a href={CONTACT_URL} className="btn-primary mt-8">Nhắn cô Hồng <ArrowRight size={16} /></a>
+      <div className="mx-auto max-w-4xl px-6 py-8 sm:py-10">
+        <div className="band-rose relative flex flex-col items-center gap-4 overflow-hidden rounded-[24px] border border-line px-6 py-6 text-center sm:flex-row sm:justify-between sm:px-8 sm:text-left">
+          <p className="font-display text-xl font-normal tracking-tight sm:text-2xl">{text}</p>
+          <a href={CONTACT_URL} className="btn-primary shrink-0 !px-5 !py-2.5">Nhắn cô Hồng <ArrowRight size={14} /></a>
         </div>
       </div>
     </section>
@@ -136,7 +137,7 @@ export function ContactCta({ text = "Hỏi trước, chưa cần quyết định
 
 type PhotoProps = { src: string; alt: string; kind?: "arch" | "gate" | "card"; caption?: string; className?: string; priority?: boolean; ratio?: string };
 
-/** Ảnh có khung: "arch" = vòm cổng, "card" = ảnh dán có chú thích viết tay. */
+/** Ảnh có khung: "arch" = vòm cổng, "gate" = khung bo góc, "card" = ảnh dán có chú thích viết tay. */
 export function Photo({ src, alt, kind = "gate", caption, className = "", priority, ratio = "aspect-[3/4]" }: PhotoProps) {
   const frame = kind === "card" ? "frame-card" : kind === "arch" ? "frame-gate arch" : "frame-gate rounded-[24px]";
   return (

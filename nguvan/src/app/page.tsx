@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { BookOpen, Compass, TrendingUp, ArrowRight } from "lucide-react";
+import { StepCloser } from "@/components/StepCloser";
 import { Band, Compare, ContactCta, Eyebrow, Lattice, MediaCard, Photo, Quote, Stat, Wash } from "@/components/Ui";
 import { COMPARE } from "@/lib/compare";
 import { POSTS } from "@/lib/posts";
 
 const WHY = [
   { icon: BookOpen, t: "Người dạy giỏi Văn thật", d: "9,25 điểm Văn kỳ thi THPT Quốc gia; điểm Văn đi học chưa bao giờ dưới 7.", c: "bg-rose" },
-  { icon: Compass, t: "Phương pháp có gốc rễ", d: "Học qua tìm tòi (inquiry) theo tinh thần IB, đánh giá theo năng lực theo tinh thần Building21.", c: "bg-sage" },
+  { icon: Compass, t: "Phương pháp có gốc rễ", d: "Học qua đặt câu hỏi (inquiry) theo tinh thần IB, đánh giá theo năng lực theo tinh thần Building21.", c: "bg-sage" },
   { icon: TrendingUp, t: "Thấy con tiến bộ ở đâu", d: "Không chỉ một con số: con hiểu gì, lập luận ra sao, bước tiếp theo là gì.", c: "bg-sky" },
 ];
 
@@ -20,18 +21,18 @@ export default function Home() {
           <div>
             <Eyebrow>Ngữ Văn · Nemo12 · Hà Nội</Eyebrow>
             <h1 className="mt-5 text-6xl font-light leading-[1.02] tracking-tight sm:text-8xl">
-              Yêu rồi <em className="font-light italic text-accent">mới hiểu.</em>
+              Xích lại gần <em className="font-light italic text-accent">văn hơn.</em>
             </h1>
             <p className="mt-5 font-display text-xl font-semibold text-foreground/80 sm:text-2xl">
-              Học Văn như đi dạo một con phố cũ: chậm lại, nhìn kỹ, rồi thấy mình thương nó.
+              Nghe tới môn Văn là nhiều em muốn chạy. Cô sẽ đi cùng các em, từng bước một, vào thế giới của Văn.
             </p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/65">
-              Nhiều người lớn lên mới nhận ra mình chưa bao giờ ghét tác phẩm. Mình chỉ ghét cách học: học thuộc lòng, soạn văn,
+              Nhiều người lớn lên mới nhận ra mình chưa bao giờ ghét tác phẩm, chỉ ghét cách học: học thuộc lòng, soạn văn,
               và chẳng hiểu vì sao phải đọc những bài xa lạ.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/phu-huynh/" className="btn-primary">Dành cho phụ huynh <ArrowRight size={16} /></Link>
-              <Link href="/hoc-sinh/" className="btn-ghost">Dành cho các em</Link>
+              <Link href="/lop-hoc/" className="btn-primary">Con tiến bộ thế nào <ArrowRight size={16} /></Link>
+              <Link href="/hoc-lieu/toolkit/" className="btn-ghost">Thử Toolkit</Link>
             </div>
           </div>
           <div className="relative mx-auto h-[34rem] w-full max-w-md sm:h-[40rem]">
@@ -43,6 +44,13 @@ export default function Home() {
         <Lattice />
       </section>
 
+      <Band eyebrow="Thử một bước" title="Từ muốn chạy đến bớt sợ">
+        <p className="max-w-2xl text-lg text-foreground/70">
+          Nhiều em nghe tới môn Văn là sợ và ghét. Kéo thanh trượt, hoặc bấm từng bước, để xem điều gì đổi khi em đứng lại gần hơn.
+        </p>
+        <div className="!mt-8"><StepCloser /></div>
+      </Band>
+
       <Band eyebrow="Gặp cô Hồng" tint="rose">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="flex justify-center">
@@ -50,7 +58,7 @@ export default function Home() {
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl font-normal tracking-tight sm:text-4xl">Người kể lại cái hay của Văn.</h2>
-            <Quote by="Hồng, về cách dạy">Mình muốn các em yêu trước. Yêu rồi, các em tự muốn hiểu.</Quote>
+            <Quote by="Cô Hồng, về cách dạy">Cô không cần các em yêu Văn ngay. Chỉ cần bớt sợ một chút, rồi các em sẽ tự muốn đến gần thêm.</Quote>
             <Link href="/co-hong/" className="inline-flex items-center gap-1.5 font-bold text-accent">Đọc câu chuyện của cô <ArrowRight size={14} /></Link>
           </div>
         </div>
@@ -109,7 +117,7 @@ export default function Home() {
         <Link href="/bai-viet/" className="inline-flex items-center gap-1.5 pt-4 font-bold text-accent">Xem tất cả bài viết <ArrowRight size={14} /></Link>
       </Band>
 
-      <ContactCta text="Con có thể bắt đầu yêu Văn từ hôm nay." />
+      <ContactCta text="Con có thể bớt sợ Văn từ hôm nay." />
     </>
   );
 }
