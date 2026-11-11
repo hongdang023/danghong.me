@@ -1,11 +1,11 @@
 // Every request to media.danghong.me lands here (public/ only holds robots.txt and admin-app.js):
 //   /admin/*   → admin page and its API (src/admin.js)
-//   /api/*.json, /api/website/*.json → JSON built from D1
+//   /api/*.json, /api/website/*.json, /api/ielts/*.json → JSON built from D1
 //   paths ending in "/" or without an extension → HTML rendered from D1
 //   anything else → the object with that key in R2, then public/
 import { handleAdmin } from "../src/admin.js";
 import { renderSite } from "../src/render.js";
-import { apiPayloads, loadRaw, resolveSite, websitePayloads } from "../src/site.js";
+import { apiPayloads, ieltsPayloads, loadRaw, resolveSite, websitePayloads } from "../src/site.js";
 
 const PUBLIC_HEADERS = { "Access-Control-Allow-Origin": "*", "X-Content-Type-Options": "nosniff" };
 
@@ -45,7 +45,7 @@ export async function onRequest(context) {
 
   if (path.startsWith("/api/")) {
     const { raw, site, baseUrl, generatedAt } = await buildSite(env);
-    const data = { ...apiPayloads(site, baseUrl, generatedAt), ...websitePayloads(raw) }[path.slice(5)];
+    const data = { ...apiPayloads(site, baseUrl, generatedAt), ...websitePayloads(raw), ...ieltsPayloads(raw) }[path.slice(5)];
     if (data === undefined) return Response.json({ error: "not found" }, { status: 404, headers: PUBLIC_HEADERS });
     return new Response(JSON.stringify(data, null, 2) + "\n", {
       headers: { ...PUBLIC_HEADERS, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=60" },

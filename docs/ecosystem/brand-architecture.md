@@ -24,8 +24,8 @@ danghong.me (brand mẹ: Hồng Đặng, The Learning Architect)
 ├── media.danghong.me ...... brand mẹ (kho tư liệu)
 ├── docs.danghong.me ....... brand mẹ (nguồn sự thật)
 ├── ai.danghong.me ......... cửa sổ vào Sư Tử Con (lớp AI Teen)
-├── ielts.danghong.me ...... cửa sổ vào Nemo12 (IELTS)
 ├── nguvan.danghong.me ..... site nội dung Ngữ Văn của Hồng (nhận diện danghong; Hồng dạy tại Nemo12)
+├── ielts.danghong.me ...... site nội dung IELTS của Hồng (theme Warm Reef: khung Nemo12, dấu riêng Hồng; Hồng dạy tại Nemo12)
 └── nextstep.danghong.me ... cửa sổ vào Next Step (cộng đồng Hà Nội)
 ```
 
@@ -35,7 +35,7 @@ danghong.me (brand mẹ: Hồng Đặng, The Learning Architect)
 | :--- | :--- | :--- | :--- | :--- |
 | danghong.me | https://danghong.me | docs.danghong.me (ở đây) | [danghong](design-system/themes/danghong.md) | danghong.me, media, docs |
 | Sư Tử Con | https://sutucon.com | sutucon.com | [sutucon](design-system/themes/sutucon.md) | ai.danghong.me |
-| Nemo12 | https://nemo12.com | https://docs.nemo12.com | [nemo12](design-system/themes/nemo12.md) | ielts.danghong.me |
+| Nemo12 | https://nemo12.com | https://docs.nemo12.com | [nemo12](design-system/themes/nemo12.md) | khung cho [warm-reef](design-system/themes/warm-reef.md) của ielts.danghong.me |
 | Next Step | https://nextstep27.com | nextstep27.com | [nextstep](design-system/themes/nextstep.md) | nextstep.danghong.me |
 
 ## 3. Luật

@@ -47,6 +47,7 @@ Các `collection` trong `items`:
 | `communities` | `/community` | `id` |
 | `tools` | `/tools` (mỗi dòng là một nhóm công cụ) | không công khai |
 | `updates` | `/updates` | `id` |
+| `ielts-schools` | ielts.danghong.me `/tra-cuu` (đọc lúc build qua `/api/ielts/schools.json`) | `id` (slug trường) |
 
 Document `website` gồm: `familyStories` (trang Gia đình), `toolsPhilosophy` (trang Công cụ), `courseCategories` (bộ lọc của Hồng's List: tên nhóm → các tag), `showcaseCategories` (category sản phẩm → tên nhóm trong `/api/showcase.json`), `apiProfile` (nội dung `/api/profile.json`).
 

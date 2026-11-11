@@ -3,12 +3,12 @@ id: ielts-design
 type: design
 site: ielts
 title: ielts.danghong.me Design
-description: "Thiết kế của ielts.danghong.me: dùng nguyên theme Nemo12 từ brand gốc, lõi design system chung, footer hệ sinh thái."
-description_en: "ielts.danghong.me design: the Nemo12 theme as-is from the brand, the shared design core, and the ecosystem footer."
+description: "Thiết kế của ielts.danghong.me: theme Warm Reef (khung Nemo12, dấu riêng Hồng), luật tối giản, chọn vai trò và mục tiêu, lõi chung. Bản nháp."
+description_en: "ielts.danghong.me design: the Warm Reef theme (Nemo12 frame, Hồng's own marks), minimalism, role and goal picker, shared core. Draft."
 owner: hong
 status: draft
-version: 0.1
-last_reviewed: 2026-10-23
+version: 0.4
+last_reviewed: 2026-11-11
 ai_readable: true
 ---
 
@@ -16,6 +16,41 @@ ai_readable: true
 
 | Tầng | Áp dụng |
 | :--- | :--- |
-| Theme | [nemo12](../../ecosystem/design-system/themes/nemo12.md), lấy nguyên từ https://nemo12.com |
+| Theme | [warm-reef](../../ecosystem/design-system/themes/warm-reef.md): khung Nemo12 (Coral Reef), nền ấm, Inter, nét bút chữa bài. Hồng quyết định 2026-11-11 ([ADR-004](../../decisions/adr-004-hybrid-theme-for-ielts.md)) |
 | Lõi | [Core](../../ecosystem/design-system/core.md): lưới, truy cập, tên token, footer hệ sinh thái |
-| Ngoại lệ của site | Chưa có |
+| Ngoại lệ của site | Ảnh bằng chứng (Hồng, phiếu điểm đã che) bắt buộc là ảnh thật; xem bên dưới |
+
+## Nguyên tắc cho site này
+
+Trang này xây niềm tin cho Hồng, nên giao diện phải **ít chữ, nhiều bằng chứng nhìn thấy được**. Áp dụng luật tối giản của Nemo12 ([theme](../../ecosystem/design-system/themes/nemo12.md) §5):
+
+- Mỗi trang: **một thông điệp, một hình, một nút nhấn chính**. Tối đa 4 đến 6 thẻ.
+- Chữ làm nhãn và tiêu đề; đoạn văn dài thay bằng hình dữ liệu (thanh điểm, so sánh trước/sau) hoặc ảnh thật.
+- Mỗi màn tối đa một nút san hô; nút "Hỏi Hồng" trên thanh đầu trang là nút viền.
+
+## Chọn vai trò và mục tiêu (đầu Landing)
+
+Hai bước giống nemo12.com: **Bạn là ai** (bố mẹ, học sinh, sinh viên) rồi **Mục tiêu** (xét tuyển, du học, ra trường). Lựa chọn đổi lời hứa và câu mô tả ở hero (và sau này, bằng chứng được nhấn, mẫu tin nhắn). Chưa có dữ liệu nào được lưu: chỉ là trạng thái trên trang.
+
+## Component riêng của site
+
+Đã có trong `ielts/src`: thẻ, nút, khung trang, tra cứu trường (`components/SchoolLookup.tsx`, bỏ dấu khi tìm). Cấu trúc trang đang được thiết kế lại theo hướng niềm tin (xem [brief](brief.md)); component mới ghi vào đây khi dựng.
+
+| Component | Việc |
+| :--- | :--- |
+| Nét bút chữa bài | Khoanh, gạch chân, ghi chú viết tay ngắn trên biểu đồ (dấu riêng của Hồng); tối đa một ghi chú mỗi hình |
+| Learning Cycle tương tác | Sơ đồ vòng các giai đoạn, bấm để xem mô tả; chuyển giữa "một buổi học" và "cả đơn vị" (Teaching Method) |
+| Phiếu điểm | Ảnh phiếu IELTS đã che thông tin nhận dạng, kèm bảng điểm dạng chữ để đọc được bằng trình đọc màn hình |
+| Thanh điểm | Bốn kỹ năng của Hồng; Speaking 6.0 được nêu rõ chứ không giấu |
+| Mentor card | Khuôn chung trang Mentor ([sitemap](sitemap.md)) |
+| Tra cứu trường | Ô tìm và bộ lọc chạy trên trình duyệt; mỗi kết quả có link quy chế và ngày kiểm chứng |
+
+## Ảnh
+
+Nemo12 có bộ hình riêng (N12Art, linh vật); site này **không dùng linh vật**. Hình trang trí của Nemo12 dùng được nếu Nemo12 cung cấp (TN3 ở [theme](../../ecosystem/design-system/themes/nemo12.md)). Hình dùng làm bằng chứng phải là ảnh thật, không minh hoạ; học sinh xuất hiện trong ảnh phải có sự đồng ý của phụ huynh.
+
+## Việc còn mở
+
+| # | Việc |
+| :--- | :--- |
+| ID1 | Bản thiết kế (Claude Design) đã theo Warm Reef và sitemap mới; code `ielts/` mới đổi token, chưa đổi cấu trúc trang (SM1). |

@@ -21,6 +21,8 @@
     ["tools", "Công cụ", "website"],
     ["updates", "Cập nhật", "website"],
     ["website", "Cài đặt website", "website"],
+    // ielts.danghong.me: static build that reads /api/ielts/*.json at build time.
+    ["ielts-schools", "Trường (chuẩn đầu ra)", "ielts"],
   ];
   const DOC_TABS = ["profile", "about", "website"];
   // Form fields per collection; keys not listed here stay editable in "Trường khác (JSON)".
@@ -97,6 +99,16 @@
       ["philosophy", "Triết lý", "textarea"],
       ["lessons", "Bài học", "textarea"],
     ],
+    "ielts-schools": [
+      ["name", "Tên trường", "text", true],
+      ["group", "Nhóm (vd Hà Nội, Khối kinh tế)", "text"],
+      ["requirement", "Yêu cầu chuẩn đầu ra (vd Bậc 3 hoặc IELTS 5.0)", "text", true],
+      ["applies", "Áp dụng cho (hệ, chương trình, khoá)", "text"],
+      ["accepted", "Chứng chỉ được chấp nhận", "textarea"],
+      ["sourceUrl", "Link quy chế gốc", "text", true],
+      ["verifiedAt", "Ngày kiểm chứng (YYYY-MM-DD)", "text", true],
+      ["note", "Ghi chú", "textarea"],
+    ],
     mentors: [
       ["name", "Tên", "text", true],
       ["badge", "Nhãn", "text"],
@@ -132,8 +144,8 @@
       ["link", "Link", "text"],
     ],
   });
-  const LABEL_KEY = { albums: "title", stories: "title", people: "name", links: "label", videos: "title", products: "title", courses: "name", books: "title", masters: "name", mentors: "name", family: "name", communities: "name", tools: "title", updates: "title" };
-  const SUB_KEY = { albums: "category", stories: "date", people: "role", links: "url", videos: "url", products: "category", courses: "provider", books: "subtitle", masters: "link", mentors: "relationship", family: "role", communities: "stats", tools: "subtitle", updates: "created_at" };
+  const LABEL_KEY = { albums: "title", stories: "title", people: "name", links: "label", videos: "title", products: "title", courses: "name", books: "title", masters: "name", mentors: "name", family: "name", communities: "name", tools: "title", updates: "title", "ielts-schools": "name" };
+  const SUB_KEY = { albums: "category", stories: "date", people: "role", links: "url", videos: "url", products: "category", courses: "provider", books: "subtitle", masters: "link", mentors: "relationship", family: "role", communities: "stats", tools: "subtitle", updates: "created_at", "ielts-schools": "requirement" };
 
   let state = null;
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -205,7 +217,8 @@
     const { tab, arg } = route();
     const link = ([id, label]) => `<a href="#${id}"${id === tab ? ' aria-current="page"' : ""}>${h(label)}</a>`;
     $("#tabs").innerHTML = `<div class="tabrow"><span class="tabgroup">media</span>${TABS.filter((t) => !t[2]).map(link).join("")}</div>
-<div class="tabrow"><span class="tabgroup">danghong.me</span>${TABS.filter((t) => t[2]).map(link).join("")}<button class="btn sm primary" data-act="publish" ${state.canPublishWebsite ? "" : 'disabled title="Chưa cấu hình WEBSITE_DEPLOY_HOOK"'}>Xuất bản website</button></div>`;
+<div class="tabrow"><span class="tabgroup">danghong.me</span>${TABS.filter((t) => t[2] === "website").map(link).join("")}<button class="btn sm primary" data-act="publish" ${state.canPublishWebsite ? "" : 'disabled title="Chưa cấu hình WEBSITE_DEPLOY_HOOK"'}>Xuất bản website</button></div>
+<div class="tabrow"><span class="tabgroup">ielts</span>${TABS.filter((t) => t[2] === "ielts").map(link).join("")}</div>`;
     $("#lists").innerHTML = datalists();
     const view = $("#view");
     if (tab === "files") view.innerHTML = filesView(arg);

@@ -6,10 +6,12 @@ Repository của Đặng Hồng, gồm website portfolio, tài liệu dự án, 
 | :--- | :--- | :--- |
 | [`website/`](website/) | [danghong.me](https://danghong.me) | Next.js 16 (App Router, static export), TypeScript, Tailwind CSS 4 |
 | [`docs/`](docs/) | [docs.danghong.me](https://docs.danghong.me) | VitePress |
-| [`media/`](media/) | [media.danghong.me](https://media.danghong.me) | `media.yaml` + thư mục `files/`, build bằng Node script |
+| [`media/`](media/) | [media.danghong.me](https://media.danghong.me) | Cloudflare Pages Functions, nội dung trong D1, file trong R2 |
+| [`nguvan/`](nguvan/) | nguvan.danghong.me (chưa deploy) | Next.js 16 (static export), TypeScript, Tailwind CSS 4 |
+| [`ielts/`](ielts/) | ielts.danghong.me (chưa deploy) | Next.js 16 (static export), TypeScript, Tailwind CSS 4 |
 | [`api/`](api/) | [api.danghong.me](https://api.danghong.me) | Cloudflare Workers + Hono |
 
-Website, docs và media chạy trên **Cloudflare Pages**; API chạy trên **Cloudflare Workers**. Docs và media được deploy bằng `wrangler` qua GitHub Actions khi merge vào `main`.
+Website, docs và media chạy trên **Cloudflare Pages**, kết nối Git: push `main` là Cloudflare tự build và deploy. API chạy trên **Cloudflare Workers**. GitHub Actions chỉ kiểm tra (lint, test, build), không deploy.
 
 ## Tài liệu
 
@@ -20,7 +22,8 @@ Mọi tài liệu (yêu cầu, thiết kế, quy chuẩn code, cách deploy) ch�
 ```bash
 cd website && npm install && npm run dev   # http://localhost:3000
 cd docs    && npm install && npm run dev   # http://localhost:5173
-cd media   && npm install && npm run build # sinh media/dist
+cd media   && npm install && npm run dev   # http://localhost:8788 (D1/R2 local)
+cd api     && npm install && npm run dev   # Cloudflare Worker (wrangler)
 ```
 
 ---

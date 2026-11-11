@@ -24,7 +24,11 @@ export const WEBSITE_COLLECTIONS = {
   tools: null,
   updates: "id",
 };
-export const COLLECTIONS = [...MEDIA_COLLECTIONS, ...Object.keys(WEBSITE_COLLECTIONS)];
+// Content of ielts.danghong.me, published at /api/ielts/<name>.json and read by that site's build.
+export const IELTS_COLLECTIONS = {
+  "ielts-schools": "id",
+};
+export const COLLECTIONS = [...MEDIA_COLLECTIONS, ...Object.keys(WEBSITE_COLLECTIONS), ...Object.keys(IELTS_COLLECTIONS)];
 // `website` holds the website's single objects: familyStories, toolsPhilosophy, courseCategories,
 // showcaseCategories, apiProfile.
 export const DOCUMENTS = ["profile", "about", "website"];
@@ -192,6 +196,15 @@ export function websitePayloads(raw) {
   const out = { "website/settings.json": raw.documents.website ?? {} };
   for (const [collection, idKey] of Object.entries(WEBSITE_COLLECTIONS)) {
     out[`website/${collection}.json`] = (raw.items[collection] ?? []).map(({ id, data }) => (idKey ? { [idKey]: id, ...data } : data));
+  }
+  return out;
+}
+
+// ielts.danghong.me's content: /api/ielts/schools.json (one object per school, id included).
+export function ieltsPayloads(raw) {
+  const out = {};
+  for (const [collection, idKey] of Object.entries(IELTS_COLLECTIONS)) {
+    out[`ielts/${collection.replace(/^ielts-/, "")}.json`] = (raw.items[collection] ?? []).map(({ id, data }) => ({ [idKey]: id, ...data }));
   }
   return out;
 }

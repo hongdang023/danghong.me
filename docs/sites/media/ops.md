@@ -72,6 +72,7 @@ Mở [media.danghong.me/admin/](https://media.danghong.me/admin/) (không cần 
 | Thêm câu chuyện | Tab **Câu chuyện**: `body` (đoạn cách nhau một dòng trống), `sections`, hoặc chỉ `link` tới bài gốc. |
 | Thêm người, link, video | Tab tương ứng → *＋ Thêm*. Nút ↑ ↓ đổi thứ tự. |
 | Sửa hồ sơ, giới thiệu | Tab **Hồ sơ** và **Giới thiệu** (sửa JSON: hành trình, niềm tin, triết lý, học vấn, khóa học, sở thích, phim). |
+| Thêm, sửa trường trong công cụ tra cứu của ielts.danghong.me | Nhóm tab **ielts** → *Trường (chuẩn đầu ra)*. Bắt buộc có link quy chế gốc và ngày kiểm chứng. Site IELTS đọc lúc build nên cần build lại (xem [ielts ops](../ielts/ops.md)). |
 | Sửa sản phẩm, khoá học, sách, gia đình… của danghong.me | Nhóm tab **danghong.me** → sửa → **Xuất bản website** (build lại trong vài phút). |
 
 `id` chỉ dùng chữ thường không dấu, số và dấu gạch ngang; link và video để trống `id` thì tự tạo. Trường nào không có ô riêng (ví dụ `admirations`, `lessons`, `quotes` của người) nằm trong ô *Trường khác (JSON)*.

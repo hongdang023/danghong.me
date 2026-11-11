@@ -8,4 +8,6 @@ npm run dev    # http://localhost:8788 (D1/R2 local)
 npm test
 ```
 
-Hướng dẫn đầy đủ và JSON API: [C3 Media Library](https://docs.danghong.me/C_IMPLEMENTATION/C3_Media_Library).
+Một file test: `node --test test/site.test.js`.
+
+Hướng dẫn đầy đủ, route và JSON API: [docs/sites/media](https://docs.danghong.me/sites/media/ops) (`brief`, `sitemap`, `content`, `ops`).

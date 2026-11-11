@@ -32,12 +32,12 @@ Một site dùng **đúng một theme**. Theme ghi đè tầng 1 ở những gì
 | media.danghong.me | [danghong](themes/danghong.md) | `media/src/render.js` |
 | docs.danghong.me | [danghong](themes/danghong.md) | `docs/.vitepress/theme/custom.css` |
 | ai.danghong.me | [sutucon](themes/sutucon.md) | Brand gốc: https://sutucon.com/brand |
-| ielts.danghong.me | [nemo12](themes/nemo12.md) | Brand gốc: https://docs.nemo12.com/design-system/ |
+| ielts.danghong.me | [warm-reef](themes/warm-reef.md) | Khung Nemo12 (https://docs.nemo12.com/design-system/) + dấu riêng Hồng, [ADR-004](../../decisions/adr-004-hybrid-theme-for-ielts.md) |
 | nextstep.danghong.me | [nextstep](themes/nextstep.md) | Brand gốc: https://nextstep27.com |
 
-Bốn theme cho sáu site. Theme của brand khác lấy nguyên từ brand gốc và chỉ link tới nguồn, không chép giá trị ([ADR-002](../../decisions/adr-002-brand-themes-from-source.md)).
+Năm theme cho sáu site. Theme của brand khác lấy nguyên từ brand gốc và chỉ link tới nguồn, không chép giá trị ([ADR-002](../../decisions/adr-002-brand-themes-from-source.md)).
 
 ## Trang
 
 - [Core](core.md): quy tắc dùng chung.
-- Theme: [danghong](themes/danghong.md) · [sutucon](themes/sutucon.md) · [nemo12](themes/nemo12.md) · [nextstep](themes/nextstep.md)
+- Theme: [danghong](themes/danghong.md) · [sutucon](themes/sutucon.md) · [nemo12](themes/nemo12.md) · [warm-reef](themes/warm-reef.md) · [nextstep](themes/nextstep.md)

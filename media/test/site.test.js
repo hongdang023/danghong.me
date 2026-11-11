@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { fileKey } from "../src/admin.js";
 import { renderSite } from "../src/render.js";
-import { apiPayloads, resolveSite } from "../src/site.js";
+import { apiPayloads, ieltsPayloads, resolveSite } from "../src/site.js";
 
 const BASE = "https://media.danghong.me";
 const raw = {
@@ -56,4 +56,10 @@ test("fileKey normalises and rejects unsafe keys", () => {
   assert.ok(fileKey("api", "a.jpg").error);
   assert.ok(fileKey("photos", "noext").error);
   assert.ok(fileKey("", ".env").error);
+});
+
+test("ieltsPayloads exposes schools with their id", () => {
+  const out = ieltsPayloads({ items: { "ielts-schools": [{ id: "neu", data: { name: "ĐH Kinh tế Quốc dân", requirement: "IELTS 5.5" } }] } });
+  assert.deepEqual(out["ielts/schools.json"], [{ id: "neu", name: "ĐH Kinh tế Quốc dân", requirement: "IELTS 5.5" }]);
+  assert.deepEqual(ieltsPayloads({ items: {} })["ielts/schools.json"], []);
 });

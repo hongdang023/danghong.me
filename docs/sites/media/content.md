@@ -67,6 +67,7 @@ Mọi file và JSON đều cho phép CORS (`Access-Control-Allow-Origin: *`), n�
 | `/api/photos.json` | Chỉ các file ảnh |
 | `/api/videos.json` | Danh sách video |
 | `/api/files.json` | Mọi file: `path`, `url`, `type`, `folder`, `size`, `title`, `alt`, `tags`, `albums` |
+| `/api/ielts/schools.json` | Collection `ielts-schools` cho ielts.danghong.me: mỗi trường một object (`id`, `name`, `group`, `requirement`, `applies`, `accepted`, `sourceUrl`, `verifiedAt`, `note`) |
 | `/api/website/<collection>.json` | Nội dung danghong.me nguyên dạng (`products`, `courses`, `books`, `masters`, `mentors`, `family`, `communities`, `tools`, `updates`); `settings.json` là document `website` |
 
 Ví dụ trong một trang bất kỳ:
