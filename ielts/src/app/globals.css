@@ -76,3 +76,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
 }
+
+/* Mega-menu (design: docs/sites/ielts/design.md). Panels open on hover or keyboard focus. */
+.mega .mm { display: flex; align-items: center; height: 72px; }
+.mega .top {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px;
+  border-radius: var(--radius); font-weight: 600; font-size: 15px; color: var(--muted);
+}
+.mega .top.on, .mega .mm:hover .top, .mega .mm:focus-within .top { background: var(--secondary); color: var(--tag-ink); }
+.mega .panel {
+  display: none; position: absolute; left: 0; right: 0; top: 72px; background: var(--card);
+  border-bottom: 1px solid var(--border); box-shadow: 0 22px 40px rgba(32, 27, 24, 0.12);
+}
+.mega .mm:hover .panel, .mega .mm:focus-within .panel { display: block; }
+.mega .pg { display: grid; gap: 40px; padding: 28px 0 32px; }
+.mega .pg.c3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 340px; }
+.mega .pg.c2 { grid-template-columns: minmax(0, 1fr) 340px; }
+.mega .grp { font-weight: 700; font-size: 13px; color: var(--muted); margin: 0 0 8px 12px; }
+.mega .it { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--radius); font-weight: 700; font-size: 16px; }
+.mega .it:hover { background: var(--secondary); }
+.mega .it small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); line-height: 1.4; }
+.mega .feat { background: var(--secondary); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+
+/* Hobbies gallery cards: pattern of danghong.me/community (4:3 photo cards, 24px radius, hover reveal). */
+.hcard {
+  position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; padding: 0; border: 0.5px solid var(--border);
+  border-radius: 24px; overflow: hidden; cursor: pointer; background: #f2e8dc; text-align: left; font: inherit; color: #fff;
+  box-shadow: 0 1px 2px rgba(32, 27, 24, 0.08); transition: transform 0.5s, box-shadow 0.5s;
+}
+.hcard:hover, .hcard:focus-visible { transform: translateY(-4px); box-shadow: 0 22px 40px rgba(32, 27, 24, 0.18); }
+.himg { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s; }
+.hcard:hover .himg { transform: scale(1.05); }
+.hshade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent); opacity: 0.85; transition: opacity 0.5s; }
+.hcard:hover .hshade { opacity: 1; }
+.hbody { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px; transform: translateY(16px); transition: transform 0.5s; }
+.hcard:hover .hbody, .hcard:focus-visible .hbody { transform: translateY(0); }
+.hdescw { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s; }
+.hcard:hover .hdescw, .hcard:focus-visible .hdescw { grid-template-rows: 1fr; }
+.hdesc { overflow: hidden; margin: 0; font-size: 14px; line-height: 1.5; color: #d1d5db; }
+.hbadge {
+  position: absolute; top: 16px; right: 16px; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.2); font-size: 12px; font-weight: 700; opacity: 0; transition: opacity 0.5s;
+}
+.hcard:hover .hbadge, .hcard:focus-visible .hbadge { opacity: 1; }
+.mbtn {
+  position: absolute; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px; background: rgba(0, 0, 0, 0.4); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; z-index: 2;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hcard, .himg, .hbody, .hdescw, .hshade, .hbadge { transition: none; }
+}

@@ -17,11 +17,11 @@ ai_readable: true
 
 # ielts.danghong.me Brief
 
-**Site:** ielts.danghong.me (chưa chạy) · **Theme:** [warm-reef](../../ecosystem/design-system/themes/warm-reef.md) (khung Nemo12) · **Nơi Hồng dạy:** [Nemo12](https://nemo12.com), nguồn sự thật về sản phẩm và giá: https://docs.nemo12.com
+**Site:** ielts.danghong.me · **Theme:** [warm-reef](../../ecosystem/design-system/themes/warm-reef.md) (khung Nemo12) · **Nơi Hồng dạy:** [Nemo12](https://nemo12.com), nguồn sự thật về sản phẩm và giá: https://docs.nemo12.com
 
 ## 1. Trạng thái hôm nay
 
-**Chưa chạy.** Có mã nguồn `ielts/` (cấu trúc cũ, chưa khớp [sitemap](sitemap.md) mới), chưa có Pages project hay DNS.
+**Đang chạy** tại https://ielts.danghong.me từ 2026-11-12, theo [sitemap](sitemap.md) mới. Chi tiết hạ tầng ở [ops](ops.md).
 
 ## 2. Vai trò
 

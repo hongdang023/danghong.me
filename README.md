@@ -8,7 +8,7 @@ Repository của Đặng Hồng, gồm website portfolio, tài liệu dự án, 
 | [`docs/`](docs/) | [docs.danghong.me](https://docs.danghong.me) | VitePress |
 | [`media/`](media/) | [media.danghong.me](https://media.danghong.me) | Cloudflare Pages Functions, nội dung trong D1, file trong R2 |
 | [`nguvan/`](nguvan/) | nguvan.danghong.me (chưa deploy) | Next.js 16 (static export), TypeScript, Tailwind CSS 4 |
-| [`ielts/`](ielts/) | ielts.danghong.me (chưa deploy) | Next.js 16 (static export), TypeScript, Tailwind CSS 4 |
+| [`ielts/`](ielts/) | ielts.danghong.me | Next.js 16 (static export), TypeScript, Tailwind CSS 4 |
 | [`api/`](api/) | [api.danghong.me](https://api.danghong.me) | Cloudflare Workers + Hono |
 
 Website, docs và media chạy trên **Cloudflare Pages**, kết nối Git: push `main` là Cloudflare tự build và deploy. API chạy trên **Cloudflare Workers**. GitHub Actions chỉ kiểm tra (lint, test, build), không deploy.

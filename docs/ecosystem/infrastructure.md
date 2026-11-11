@@ -64,7 +64,7 @@ Hệ quả:
 | `media.danghong.me` | `media/` | Pages | `danghong-media` | Pages kết nối Git, build khi push `main` |
 | `api.danghong.me` | `api/` | Worker | `api-danghong-me` | Tay: `cd api && npm run deploy` |
 | `ai.danghong.me` | (chưa có) | Kế hoạch | | [sites/ai](../sites/ai/ops.md) |
-| `ielts.danghong.me` | (chưa có) | Kế hoạch | | [sites/ielts](../sites/ielts/ops.md) |
+| `ielts.danghong.me` | `danghong-ielts.pages.dev` | Đang chạy | | [sites/ielts](../sites/ielts/ops.md) |
 | `nguvan.danghong.me` | `danghong-nguvan.pages.dev` | Đang chạy | | [sites/nguvan](../sites/nguvan/ops.md) |
 | `nextstep.danghong.me` | (chưa có) | Kế hoạch | | [sites/nextstep](../sites/nextstep/ops.md) |
 

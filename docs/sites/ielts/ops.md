@@ -14,18 +14,23 @@ ai_readable: true
 
 # ielts.danghong.me Ops
 
-**Trạng thái (2026-11-11):** đã có mã nguồn `ielts/` (build và lint qua, chưa deploy). **Chưa** có Pages project, DNS, và `media/` chưa deploy endpoint `/api/ielts/schools.json`.
+**Trạng thái (2026-11-12):** đang chạy tại https://ielts.danghong.me. Pages project `danghong-ielts` (kết nối Git, root `ielts`, build `npm run build`, output `out`, Node 22), CNAME `ielts` → `danghong-ielts.pages.dev` (proxied) trong zone `danghong.me`. Mỗi lần push `main` có thay đổi trong `ielts/**`, Cloudflare tự build và deploy.
 
 ## Stack
 
 Giống [danghong.me](../www/architecture.md): Next.js (App Router, `output: "export"`), TypeScript, Tailwind CSS 4, trong thư mục `ielts/`. Không có server, không lưu dữ liệu người dùng. Next.js ở bản này khác bản quen thuộc: đọc `node_modules/next/dist/docs/` trước khi viết code.
 
-## Các bước dựng site
+## Đã làm
 
-1. Chốt các mục Việc còn mở trong [brief](brief.md), nhất là IE2 (kênh liên hệ) và IE3 (cách nhắc Nemo12).
-2. Deploy `media/` để có `/api/ielts/schools.json`, nhập danh sách trường ở admin (tab **ielts**). Mã nguồn `ielts/` và job CI `ielts` đã có. Tạo Pages project `danghong-ielts` trên account `Dangtuyethong2324@gmail.com's Account` bằng **Connect to Git** (Root directory `ielts`, build `npm run build`, output `out`), theo [Deployment](../../ecosystem/deployment.md) §2.1. Không tạo bằng `wrangler pages project create` hay `wrangler pages deploy`: project đó sẽ bị khoá ở kiểu Direct Upload, không nối Git được nữa.
-3. Tạo CNAME `ielts` trong zone `danghong.me`, vì zone và Pages ở hai account khác nhau ([Infrastructure](../../ecosystem/infrastructure.md) §2; việc I6).
-4. Cập nhật bảng thành phần và DNS trong [Infrastructure](../../ecosystem/infrastructure.md), [Deployment](../../ecosystem/deployment.md), trang này, và đổi `status` các trang của site sang `active`.
+1. Code `ielts/` theo [sitemap](sitemap.md): Landing, About, Teaching Method, Resources (kèm `/resources/tra-cuu/` và `/resources/chon-noi-hoc/`), Students, Newsletter, Hỏi đáp, Quyền riêng tư.
+2. `media/` đã deploy endpoint `/api/ielts/schools.json`. Danh sách trường **còn trống**: Hồng nhập ở tab **ielts** của admin media.
+3. Pages project và CNAME đã tạo ngày 2026-11-12 (bằng API, theo cấu hình của `danghong-nguvan`). `public/_redirects` chuyển route cũ (`/phu-huynh`, `/hoc-sinh`, `/sinh-vien`, `/tra-cuu`, `/phuong-phap`, `/mentor`) sang route mới.
+
+## Việc còn lại
+
+- Chốt kênh liên hệ riêng (IE2): nút "Hỏi Hồng" hiện trỏ Facebook cá nhân.
+- Nhập dữ liệu trường rồi build lại site (chưa có deploy hook).
+- Nội dung chưa đăng vì chưa xác nhận: lời của Hải An và Anh Tú, ảnh vẽ nghệ thuật, mẫu báo cáo tiến độ, bài Newsletter đầu tiên.
 
 ## Lệnh
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # danghong.me
 
-Monorepo: `website/` (danghong.me), `docs/` (docs.danghong.me), `media/` (media.danghong.me), `api/` (api.danghong.me), `ielts/` (ielts.danghong.me) và `nguvan/` (nguvan.danghong.me), đều đã có code, chưa deploy. Subdomain đang lên kế hoạch: ai, nextstep (brief trong `docs/sites/`).
+Monorepo: `website/` (danghong.me), `docs/` (docs.danghong.me), `media/` (media.danghong.me), `api/` (api.danghong.me), `ielts/` (ielts.danghong.me) và `nguvan/` (nguvan.danghong.me). Subdomain đang lên kế hoạch: ai, nextstep (brief trong `docs/sites/`).
 
 ## Lệnh thường dùng
 

@@ -38,6 +38,8 @@ Hai bước giống nemo12.com: **Bạn là ai** (bố mẹ, học sinh, sinh vi
 
 | Component | Việc |
 | :--- | :--- |
+| Mega-menu | Menu riêng cho từng mục cấp 1, mở khi rê chuột hoặc focus; panel gồm nav-item nhỏ (icon, tên, một dòng phụ), nhóm khi cần, và một thẻ nổi bật. Nút "Hỏi Hồng" là nút viền |
+| Bài newsletter nhỏ | Khối trên trang Teaching Method: chuyện, điều đang xảy ra, Hồng dạy thế nào, nguồn; số [n] trỏ về danh sách Nguồn |
 | Nét bút chữa bài | Khoanh, gạch chân, ghi chú viết tay ngắn trên biểu đồ (dấu riêng của Hồng); tối đa một ghi chú mỗi hình |
 | Learning Cycle tương tác | Sơ đồ vòng các giai đoạn, bấm để xem mô tả; chuyển giữa "một buổi học" và "cả đơn vị" (Teaching Method) |
 | Phiếu điểm | Ảnh phiếu IELTS đã che thông tin nhận dạng, kèm bảng điểm dạng chữ để đọc được bằng trình đọc màn hình |
@@ -53,4 +55,4 @@ Nemo12 có bộ hình riêng (N12Art, linh vật); site này **không dùng linh
 
 | # | Việc |
 | :--- | :--- |
-| ID1 | Bản thiết kế (Claude Design) đã theo Warm Reef và sitemap mới; code `ielts/` mới đổi token, chưa đổi cấu trúc trang (SM1). |
+| ID1 | Code `ielts/` đã theo bản thiết kế (Claude Design). Khác biệt có chủ ý: thẻ Hobbies bo 24px theo mẫu danghong.me/community (ngoại lệ của luật một bán kính); Learning Cycle chỉ có cấp một buổi học; chưa có phần Testimonials ảnh chụp. |

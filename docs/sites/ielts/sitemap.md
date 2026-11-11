@@ -16,7 +16,7 @@ ai_readable: true
 
 Cấu trúc do Hồng chốt 2026-11-11, thay cho cấu trúc theo mục tiêu (xét tuyển, du học, ra trường) ở bản 0.2. Mục đích của site là **xây niềm tin cho Hồng**; mục tiêu của người đọc (xét tuyển, du học, ra trường) chỉ là cách mở đầu ở Landing, không còn là trang riêng.
 
-Route dưới đây **chưa có trong mã nguồn**: `ielts/` hiện vẫn là cấu trúc cũ (xem Việc còn mở).
+Các route dưới đây **đã có trong mã nguồn và đang chạy** (2026-11-12). Route cũ được chuyển bằng `ielts/public/_redirects`. Trong code, `/resources/tra-cuu/` và `/resources/chon-noi-hoc/` là hai toolkit; chưa có `/newsletter/<slug>/` vì chưa có bài viết.
 
 ```text
 / ..................... Landing: ảnh Hồng, chọn vai trò và mục tiêu, lời hứa, IELTS Mentor tại Nemo12
@@ -33,13 +33,15 @@ Route dưới đây **chưa có trong mã nguồn**: `ielts/` hiện vẫn là c
 
 ## Mega-menu (kiểu danghong.me)
 
+Mega-menu là **menu thật cho từng mục**: rê chuột hoặc focus bằng bàn phím mở panel riêng, trong panel là các nav-item nhỏ (icon, tên, một dòng phụ), chia nhóm khi cần, kèm một thẻ nổi bật.
+
 Mỗi mục cấp 1 mở ra 3 đến 4 mục con (icon + tên ngắn) và một thẻ nổi bật bên phải. Newsletter là một mục cấp 1. Cuối thanh: nút **Hỏi Hồng** (viền; nút san hô duy nhất của mỗi màn nằm trong trang).
 
 | Cấp 1 | Mục con | Thẻ nổi bật |
 | :--- | :--- | :--- |
 | **About Hồng** | My Journey · Core Beliefs · Education · Hobbies | Hồng thi lại IELTS 25/01/2027 |
-| **Teaching Method** | Triết lý dạy · Sub-skills · Band Descriptors · Hiểu người học, hiểu cách học (có Competency-based, Inquiry-based, Learning Cycle) | Một câu chuyện từ lớp học |
-| **Resources** | Toolkits · Websites | Tra cứu chuẩn đầu ra theo trường |
+| **Teaching Method** | Nhóm "Cách nhìn": Triết lý dạy học · Competency-based · Inquiry-based. Nhóm "Cách dạy": Learning Cycle · Sub-skills · Band Descriptors · Hiểu người học | Learning Cycle (tương tác) |
+| **Resources** | Nhóm "Toolkits": Điểm cần đạt · Band Descriptors · Đếm ngược · Chọn nơi học. Nhóm "Websites": IELTS.org · British Council · IDP IELTS | Tra cứu chuẩn đầu ra theo trường |
 | **Students** | Lớp học · Học viên nói gì · Testimonials | Phản hồi mới nhất |
 | **Newsletter** | Từng kỹ năng · Learning Plan · Nâng 1 band cần bao lâu · Nên tập trung band nào | Bài mới nhất |
 
@@ -60,5 +62,4 @@ Footer chỉ một dòng: Hỏi đáp · Quyền riêng tư · "Một phần c�
 
 | # | Việc |
 | :--- | :--- |
-| SM1 | Viết lại code `ielts/` theo sitemap này (hiện là cấu trúc cũ: phu-huynh, hoc-sinh, sinh-vien, tra-cuu, phuong-phap, mentor). |
 | SM2 | Newsletter lưu trên site (D1, qua media admin) hay chỉ link sang Substack: xem [brief](brief.md) IE7. |
