@@ -57,7 +57,7 @@ Với mình, một hệ thống giáo dục tốt không chỉ khiến người 
 | :--- | :--- | :--- |
 | danghong.me | Chủ sở hữu, Learning Architect | danghong.me |
 | Sư Tử Con | Mentor lớp AI Teen (học sinh cấp 2–3) | ai.danghong.me |
-| Nemo12 | IELTS Mentor | ielts.danghong.me |
+| Nemo12 | IELTS Mentor; cô giáo Ngữ Văn | ielts.danghong.me, nguvan.danghong.me |
 | Next Step | Community Facilitator (cộng đồng offline tại Hà Nội hỗ trợ người trẻ tìm việc và định hướng nghề nghiệp) | nextstep.danghong.me |
 
 ## 6. Liên hệ

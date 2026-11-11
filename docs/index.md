@@ -25,6 +25,7 @@ Mọi site dưới `danghong.me` có brief ở đây: mục đích, người đ�
 | [danghong.me](https://danghong.me) | Brand mẹ: Hồng, sản phẩm, Hồng's List | Người muốn hợp tác với Hồng | danghong | [www](sites/www/brief.md) · active |
 | ai.danghong.me | Mentor lớp AI Teen (Sư Tử Con) | Học sinh cấp 2–3, phụ huynh | Sư Tử Con | [ai](sites/ai/brief.md) · draft |
 | ielts.danghong.me | Hồng trong Nemo12 (IELTS) | Học sinh IELTS, phụ huynh | Nemo12 | [ielts](sites/ielts/brief.md) · draft |
+| nguvan.danghong.me | Site nội dung Ngữ Văn của Hồng (dạy tại Nemo12) | Phụ huynh (chính), học sinh | danghong | [nguvan](sites/nguvan/brief.md) · draft |
 | nextstep.danghong.me | Cộng đồng Next Step, Hà Nội | Sinh viên, người trẻ đi làm | Next Step | [nextstep](sites/nextstep/brief.md) · draft |
 | [media.danghong.me](https://media.danghong.me) | Kho tư liệu và dữ liệu | Báo chí, đối tác, các site | danghong | [media](sites/media/brief.md) · active |
 | [docs.danghong.me](https://docs.danghong.me) | Nguồn sự thật (trang này) | Hồng, agent | danghong | [docs](sites/docs/brief.md) · active |

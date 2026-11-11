@@ -5,6 +5,7 @@ const SITES = [
   { id: "www", label: "danghong.me", extra: [["Web architecture", "architecture"], ["Quiz standards", "quiz-standards"]] },
   { id: "ai", label: "ai.danghong.me · Sư Tử Con" },
   { id: "ielts", label: "ielts.danghong.me · Nemo12" },
+  { id: "nguvan", label: "nguvan.danghong.me" },
   { id: "nextstep", label: "nextstep.danghong.me · Next Step" },
   { id: "media", label: "media.danghong.me" },
   { id: "docs", label: "docs.danghong.me" },

@@ -25,6 +25,7 @@ danghong.me (brand mẹ: Hồng Đặng, The Learning Architect)
 ├── docs.danghong.me ....... brand mẹ (nguồn sự thật)
 ├── ai.danghong.me ......... cửa sổ vào Sư Tử Con (lớp AI Teen)
 ├── ielts.danghong.me ...... cửa sổ vào Nemo12 (IELTS)
+├── nguvan.danghong.me ..... site nội dung Ngữ Văn của Hồng (nhận diện danghong; Hồng dạy tại Nemo12)
 └── nextstep.danghong.me ... cửa sổ vào Next Step (cộng đồng Hà Nội)
 ```
 
