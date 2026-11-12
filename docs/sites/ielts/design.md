@@ -30,7 +30,7 @@ Trang này xây niềm tin cho Hồng, nên giao diện phải **ít chữ, nhi�
 
 ## Chọn vai trò và mục tiêu (đầu Landing)
 
-Hai bước giống nemo12.com: **Bạn là ai** (bố mẹ, học sinh, sinh viên) rồi **Mục tiêu** (xét tuyển, du học, ra trường). Lựa chọn đổi lời hứa và câu mô tả ở hero (và sau này, bằng chứng được nhấn, mẫu tin nhắn). Chưa có dữ liệu nào được lưu: chỉ là trạng thái trên trang.
+Màn chọn kiểu nemo12.com: tiêu đề nhỏ, nhãn "BƯỚC 1 / 2", câu hỏi lớn "Bạn là ai?" và ba thẻ lớn (tên + một dòng phụ), rồi "Mục tiêu của bạn?" với các thẻ theo vai trò (có nút quay lại). Chọn xong, Landing thành hero cá nhân hoá: lời hứa, đoạn thấu hiểu, "Điều đang làm khó", "Cô Hồng làm gì" (3 thẻ), mẫu tin nhắn có nút chép, và một bước tiếp theo. Mỗi trang khác có một dải một dòng tuỳ vai trò; thanh "Đang xem cho" cho phép đổi lựa chọn. Lựa chọn chỉ lưu trong trình duyệt. Các thẻ chọn bo 24px (ngoại lệ của luật một bán kính, như thẻ Hobbies).
 
 ## Component riêng của site
 

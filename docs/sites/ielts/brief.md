@@ -29,20 +29,25 @@ ai_readable: true
 
 Sáu phần: **Landing · About Hồng · Teaching Method · Resources · Students · Newsletter** (chi tiết ở [sitemap](sitemap.md)).
 
-## 3. Người đọc, việc cần làm, và lời hứa ở Landing
+## 3. Người đọc, việc cần làm, và thông điệp theo vai trò
 
-Người đọc nào cũng có một nghi ngờ chung: *"Có nên giao việc học này cho người này không?"* Landing mở bằng hai bước chọn (**Bạn là ai** rồi **Mục tiêu**) và **một lời hứa theo mục tiêu**; giọng văn đổi theo vai trò. Mục tiêu:
+Người đọc nào cũng có một nghi ngờ chung: *"Có nên giao việc học này cho người này không?"* Vì vậy Landing mở bằng **màn chọn kiểu nemo12.com**: bước 1 "Bạn là ai?" (bố mẹ, học sinh, sinh viên), bước 2 "Mục tiêu của bạn?". Lựa chọn được nhớ trong trình duyệt (localStorage, không gửi đi đâu) và **đổi thông điệp trên cả site**: hero ở Landing (lời hứa, nỗi đau, việc cô làm, mẫu tin nhắn), một dòng và một bước tiếp theo riêng ở đầu mỗi trang, và thanh "Đang xem cho" dưới thanh điều hướng. Dữ liệu nằm ở `ielts/src/lib/persona.ts`.
 
-| Mục tiêu | Ai | Nỗi đau | Lời hứa mở đầu (nháp) |
+| Vai trò | Mục tiêu | Nỗi đau chính | Lời hứa mở đầu |
 | :--- | :--- | :--- | :--- |
-| Xét tuyển đại học | Học sinh cấp 3, phụ huynh | Mỗi trường một kiểu; thi một lần ăn luôn | "Biết trường cần bao nhiêu điểm, rồi mới đi thi." |
-| Du học | Học sinh cấp 3, phụ huynh | Trượt vì một kỹ năng thấp; phiếu hết hạn | "Đọc đúng yêu cầu của trường, rồi mới đặt ngày thi." |
-| Chuẩn đầu ra ra trường (Bậc 3) | Sinh viên | Không biết trường cần gì; sợ lỡ hạn, tốn tiền | "Biết trường mình cần gì, trước khi tốn tiền." |
+| Bố mẹ | Con xét tuyển đại học | Nơi nào cũng "cam kết đầu ra"; chỉ nhận một con số điểm; sợ con thi nhiều lần | "Con xét tuyển đại học: bố mẹ chỉ cần biết con đang ở đâu và cần đạt gì." |
+| Bố mẹ | Con du học | Chỉ nhìn điểm tổng; phiếu hết hạn; thi sát hạn | "Con du học: điểm tổng cao vẫn có thể bị loại vì một kỹ năng." |
+| Bố mẹ | Con sắp ra trường | Không biết trường cần Bậc 3 hay IELTS; sợ tốn tiền thi chứng chỉ không nhận | "Con sắp ra trường: bố mẹ cần biết trường yêu cầu gì, trước khi tốn tiền thi." |
+| Học sinh | Xét tuyển đại học | Mỗi trường một kiểu; không biết thiếu kỹ năng nào; thi một lần ăn luôn | "Em biết trường cần bao nhiêu điểm, rồi mới đi thi." |
+| Học sinh | Du học | Một kỹ năng thấp là bị loại; phiếu hết hiệu lực; ôn dàn trải | "Em đọc đúng yêu cầu của trường, rồi mới đặt ngày thi." |
+| Sinh viên | Ra trường (Bậc 3) | Không biết trường yêu cầu gì; sợ lỡ hạn, tốn tiền; mất gốc | "Bạn biết trường mình cần gì, trước khi tốn tiền." |
+| Sinh viên | Du học | Một kỹ năng thấp; vừa học vừa ôn nên ít thời gian; phiếu hết hạn | "Bạn đọc đúng yêu cầu của trường, rồi mới đặt ngày thi." |
 
-Phụ huynh có thêm câu hỏi riêng ("làm sao biết nơi này đáng tin?") nên có checklist 5 câu hỏi trong Resources. Mỗi trang chỉ nói về Hồng ở điểm liên quan đến người đọc đó, không dùng một khối "vì sao tin Hồng" chung.
+Chỉ có 7 cặp vì không phải cặp nào cũng có thật (ví dụ học sinh cấp 3 không "ra trường Bậc 3"). Công cụ tra cứu hiện chỉ có trường ở Việt Nam; các cặp "du học" ghi rõ điều này. Mỗi trang chỉ nói về cô ở điểm liên quan đến người đọc đó, không dùng một khối "vì sao tin cô" chung.
 
 ## 4. Nguyên tắc nội dung
 
+- **Đại từ nhân xưng chung cho cả site: "cô Hồng" và "cô"** (Hồng chốt 2026-11-12). Người đọc được gọi theo vai trò: bố mẹ, em (học sinh), bạn (sinh viên). Tên riêng "Hồng Đặng" ở logo và tên mục điều hướng giữ nguyên.
 - **Mỗi trang một thông điệp**, ít chữ, nhiều bằng chứng nhìn thấy được ([design](design.md)).
 - **Thật trước**: điểm IELTS thật kèm ngày thi, ảnh thật, lời học viên thật có đồng ý bằng văn bản. Thiếu thì để trống, không bịa.
 - **Newsletter có trích nguồn.** Mỗi con số và mỗi nhận định về IELTS phải kèm nguồn uy tín (chuẩn ở [content](content.md) §5). Không nguồn thì không viết thành sự thật.

@@ -23,7 +23,7 @@ export const MENUS: Menu[] = [
       { icon: "cap", title: "Education", sub: "Trường học và điểm IELTS", href: "/about/#education" },
       { icon: "heart", title: "Hobbies", sub: "Phim, Improv, vẽ, viết", href: "/about/#hobbies" },
     ] }],
-    feature: { tag: "IELTS", title: "Hồng thi lại ngày 25/01/2027", cta: "Xem hồ sơ điểm →", href: "/about/#education" },
+    feature: { tag: "IELTS", title: "Cô thi lại ngày 25/01/2027", cta: "Xem hồ sơ điểm →", href: "/about/#education" },
   },
   {
     key: "teaching", label: "Teaching Method", href: "/teaching-method/",
@@ -75,6 +75,6 @@ export const MENUS: Menu[] = [
       { icon: "trend", title: "Nâng 1 band cần bao lâu", sub: "Có trích nguồn", href: "/newsletter/" },
       { icon: "list", title: "Nên tập trung band nào", sub: "Thứ tự ưu tiên", href: "/newsletter/" },
     ] }],
-    feature: { tag: "Substack", title: "Haru Reboot", sub: "Bài viết của Hồng về học tập", cta: "Đăng ký →", href: NEWSLETTER_URL },
+    feature: { tag: "Substack", title: "Haru Reboot", sub: "Bài viết của cô Hồng về học tập", cta: "Đăng ký →", href: NEWSLETTER_URL },
   },
 ];

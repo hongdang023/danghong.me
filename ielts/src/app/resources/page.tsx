@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import ForYou from "@/components/ForYou";
 import { Band, PageHead, Wrap } from "@/components/Ui";
 import type { IconName } from "@/lib/site";
 
@@ -36,6 +37,7 @@ export default function Resources() {
   return (
     <>
       <PageHead tag="Resources" title="Công cụ để bạn tự học được." />
+      <ForYou page="resources" />
       <section id="toolkits" className="pb-14 pt-8">
         <Wrap>
           <h2 className="text-[28px]">Toolkits</h2>

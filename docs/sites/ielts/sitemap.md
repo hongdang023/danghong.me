@@ -19,7 +19,7 @@ Cấu trúc do Hồng chốt 2026-11-11, thay cho cấu trúc theo mục tiêu (
 Các route dưới đây **đã có trong mã nguồn và đang chạy** (2026-11-12). Route cũ được chuyển bằng `ielts/public/_redirects`. Trong code, `/resources/tra-cuu/` và `/resources/chon-noi-hoc/` là hai toolkit; chưa có `/newsletter/<slug>/` vì chưa có bài viết.
 
 ```text
-/ ..................... Landing: ảnh Hồng, chọn vai trò và mục tiêu, lời hứa, IELTS Mentor tại Nemo12
+/ ..................... Landing: chọn vai trò (bước 1) và mục tiêu (bước 2), rồi hero theo lựa chọn; IELTS Mentor tại Nemo12
 ├── /about/ ........... About Hồng: My Journey, Core Beliefs, Education, Hobbies
 ├── /teaching-method/ . Triết lý dạy, sub-skills, Band Descriptors, câu chuyện học viên, Learner/Learning Understanding
 ├── /resources/ ....... Toolkits và Websites để học IELTS

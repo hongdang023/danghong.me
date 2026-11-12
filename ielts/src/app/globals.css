@@ -81,7 +81,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .mega .mm { display: flex; align-items: center; height: 72px; }
 .mega .top {
   display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px;
-  border-radius: var(--radius); font-weight: 600; font-size: 15px; color: var(--muted);
+  border-radius: var(--radius); font-weight: 600; font-size: 15px; color: var(--muted); white-space: nowrap;
 }
 .mega .top.on, .mega .mm:hover .top, .mega .mm:focus-within .top { background: var(--secondary); color: var(--tag-ink); }
 .mega .panel {

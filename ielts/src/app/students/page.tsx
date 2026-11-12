@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import ForYou from "@/components/ForYou";
 import { Band, PageHead, Tag, Wrap } from "@/components/Ui";
 
 export const metadata: Metadata = {
   title: "Students",
-  description: "Học viên nói gì về Hồng: lời viết sau buổi học, và phần tự tổng kết bằng lời của học viên.",
+  description: "Học viên nói gì về cô Hồng: lời viết sau buổi học, và phần tự tổng kết bằng lời của học viên.",
 };
 
 const WHO = "Khánh Ly · sinh viên năm 2, ĐH Đại Nam";
@@ -22,7 +23,8 @@ function Q({ tag, children }: { tag: string; children: string }) {
 export default function Students() {
   return (
     <>
-      <PageHead tag="Students" title="Học viên nói gì về Hồng." />
+      <PageHead tag="Students" title="Học viên nói gì về cô Hồng." />
+      <ForYou page="students" />
       <Band id="voices">
         <h2 className="text-[28px] text-white">Học viên nói gì</h2>
         <div className="mt-5 grid gap-3.5 md:grid-cols-2">

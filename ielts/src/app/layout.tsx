@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Caveat, Inter } from "next/font/google";
 import "./globals.css";
 import MegaNav from "@/components/MegaNav";
+import PersonaBar from "@/components/PersonaBar";
+import PersonaProvider from "@/components/PersonaProvider";
 import { PARENT_SITE } from "@/lib/site";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600", "700", "800"] });
@@ -19,8 +21,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="vi" className={`${inter.variable} ${caveat.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
-        <MegaNav />
-        <main className="flex-1">{children}</main>
+        <PersonaProvider>
+          <MegaNav />
+          <PersonaBar />
+          <main className="flex-1">{children}</main>
+        </PersonaProvider>
         <footer className="border-t border-line text-sm text-muted">
           <div className="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-2 px-4 py-6 sm:px-6">
             <Link href="/hoi-dap/">Hỏi đáp</Link>

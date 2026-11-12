@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ForYou from "@/components/ForYou";
 import Hobbies from "@/components/Hobbies";
 import Icon from "@/components/Icon";
 import { MEDIA, type IconName } from "@/lib/site";
@@ -42,6 +43,8 @@ export default function About() {
           <img src={`${MEDIA}/photos/avatar.png`} alt="Chân dung Hồng Đặng" className="h-[380px] w-full object-cover object-[50%_18%]" />
         </div>
       </section>
+
+      <ForYou page="about" />
 
       <section id="journey" className="py-14">
         <Wrap>
@@ -104,8 +107,8 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <div className="mt-1 text-right font-hand text-2xl leading-tight text-accent" style={{ transform: "rotate(-2deg)" }}>thấp nhất, và Hồng nói thẳng ↑</div>
-            <p className="mt-4 text-sm text-muted">Hồng thi lại ngày 25/01/2027 để nghiêm túc theo đuổi việc làm giáo viên.</p>
+            <div className="mt-1 text-right font-hand text-2xl leading-tight text-accent" style={{ transform: "rotate(-2deg)" }}>thấp nhất, và cô nói thẳng ↑</div>
+            <p className="mt-4 text-sm text-muted">Cô thi lại ngày 25/01/2027 để nghiêm túc theo đuổi việc làm giáo viên.</p>
           </div>
         </div>
       </Band>

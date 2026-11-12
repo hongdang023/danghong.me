@@ -79,7 +79,7 @@ export default function MegaNav() {
             ))}
           </div>
         </details>
-        <a href={CONTACT_URL} className="btn btn-outline hidden sm:inline-flex">Hỏi Hồng</a>
+        <a href={CONTACT_URL} className="btn btn-outline hidden sm:inline-flex">Hỏi cô Hồng</a>
       </div>
     </header>
   );

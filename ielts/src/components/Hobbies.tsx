@@ -31,7 +31,7 @@ const HOBBIES: Hobby[] = [
     ],
   },
   { id: "draw", name: "Vẽ nghệ thuật", stat: "Nét vẽ tay", desc: "Sở thích vẽ nghệ thuật.", cover: 0, cols: 1, ph: "Vẽ tay", photos: [] },
-  { id: "write", name: "Viết lách", stat: "Newsletter Haru Reboot", desc: "Hồng ghi chép và suy ngẫm qua viết lách trên Substack.", cover: 0, cols: 1, ph: "Haru Reboot", photos: [] },
+  { id: "write", name: "Viết lách", stat: "Newsletter Haru Reboot", desc: "Cô ghi chép và suy ngẫm qua viết lách trên Substack.", cover: 0, cols: 1, ph: "Haru Reboot", photos: [] },
 ];
 
 export default function Hobbies() {
