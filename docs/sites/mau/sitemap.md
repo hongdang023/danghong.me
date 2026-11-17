@@ -18,7 +18,7 @@ Một trang tĩnh `index.html`, chuyển trang bằng hash. Thanh điều hướ
 
 | Hash | Mục | Nội dung |
 | :--- | :--- | :--- |
-| `#tong-quan` | Tổng quan | Ma trận ưu tiên Môn × Cấp (bấm bong bóng xem kết luận và việc nên làm), chia sẻ theo môn, bốn điều lặp lại |
+| `#tong-quan` | Tổng quan | Ma trận ưu tiên Môn × Cấp (bấm bong bóng xem kết luận và việc nên làm), chia sẻ theo môn, công thức chung (4 tín hiệu, cảnh báo về “FREE”, cơ chế nhận) |
 | `#mon-van`, `#mon-anh`, `#mon-toan`, `#mon-ly`, `#mon-hoa`, `#mon-tin` | Môn học ▾ | Khuyến nghị một câu (chỉ Ngữ văn có), so 3 mẫu nhiều chia sẻ nhất theo 5 tín hiệu, bản mổ xẻ 6 ô cạnh khung điền cho brand, mục Chỉ số phụ gập sẵn |
 | `#thu-vien` | Thư viện | Cả 108 bài, bộ lọc môn, cấp, nhãn bình luận, từ khóa; bấm một dòng xem chi tiết; ngôi sao để lưu mẫu |
 | `#da-luu` | Đã lưu | Mẫu đã lưu theo môn, ghép với bài nháp của brand |

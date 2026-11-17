@@ -58,6 +58,10 @@ Cờ "nghi spam" khi từ 35% bình luận có link, số điện thoại, Zalo,
 
 Mỗi môn lấy 3 bài có link và nhiều chia sẻ nhất, vì chia sẻ là tín hiệu chính (bình luận bị thổi phồng bởi bài yêu cầu bình luận từ khóa). Năm tín hiệu theo thứ tự: chia sẻ, bình luận có lặp từ khóa không, nhắm ai và lúc nào, loại tài liệu và con số, người đăng và tuổi bài (chia sẻ mỗi ngày). Bản mổ xẻ 6 ô (đối tượng, lời hứa, bằng chứng, cơ chế nhận, câu mở đầu, thời điểm) lấy từ `curated.json` nếu có, không thì tự điền từ dữ liệu và cần rà tay.
 
+## Công thức chung (khối `formula` trong `curated.json`)
+
+Viết tay từ 108 bài, quét 2026-11-17. Bốn tín hiệu có chia sẻ trung vị cao hơn khi có: con số cụ thể (23 so với 11), ghi rõ có đáp án (43 so với 11), album từ 4 ảnh (27 so với 8), gọi đúng khóa hoặc mốc (30 so với 12). "FREE" đứng một mình không tạo hook (12 so với 16). Link để sẵn lan hơn bắt nhắn "ib" (95 so với 4). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi.
+
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.

@@ -80,10 +80,7 @@
     const key = c => c.k + '-' + c.l;
     const cur = cs.find(c => key(c) === S.cell) || cs[0];
     const v = classify(cur.n, cur.s);
-    const P = A.patterns, im = A.byImgs;
-    const pt = k => P.find(x => x.k.startsWith(k));
-    const free = pt('Mở bằng'), num = pt('Có con số'), kh = pt('Gọi đúng');
-    const i1 = im.find(x => x.k === '1 ảnh'), i2 = im.find(x => x.k === '2+ ảnh');
+    const F = C.formula;
     const meds = KEYS.map(k => ({ k, v: med(byS(k), 'shares') }));
     const mx = Math.max(...meds.map(m => m.v), 1);
     return `
@@ -111,11 +108,12 @@
     </div>
     <div class="grid2">
       <div class="card"><h3>Chia sẻ theo môn</h3><p class="sub" style="font-size:14px;margin-bottom:24px">Trung vị mỗi bài</p>${meds.map(m => bar(SUBJ[m.k].short, m.k, m.v, mx)).join('')}</div>
-      <div class="card"><h3>Điều lặp lại</h3><p class="sub" style="font-size:14px;margin-bottom:12px">Có yếu tố này so với không có</p>
-        <div class="rep"><b class="big">${free.medC}</b><span><b>bình luận khi mở bằng TẶNG hoặc FREE</b><br>so với ${free.medC0}</span></div>
-        <div class="rep"><b class="big">${num.medS}</b><span><b>chia sẻ khi có con số cụ thể</b><br>so với ${num.medS0}</span></div>
-        <div class="rep"><b class="big">${kh.medC}</b><span><b>bình luận khi gọi đúng khóa, như 2K9</b><br>so với ${kh.medC0}</span></div>
-        <div class="rep"><b class="big">${i2.medS}</b><span><b>chia sẻ với album từ 2 ảnh</b><br>so với ${i1.medS} với 1 ảnh</span></div>
+      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:12px">Chia sẻ trung vị: có tín hiệu so với không có</p>
+        ${F.signals.map(x => `<div class="rep"><b class="big">${x.a}</b><span><b>${esc(x.t)}</b><br>so với ${x.b}</span></div>`).join('')}
+        <div class="note" style="margin-top:12px"><b>${esc(F.line)}</b><br>Ví dụ: ${esc(F.example)}</div>
+        <div class="note">${esc(F.warn)}</div>
+        <div class="note">${esc(F.cta)}</div>
+        <div class="note">Tránh trong tên bài: ${F.avoid.map(w => '“' + esc(w) + '”').join(', ')}. ${esc(F.note)}</div>
       </div>
     </div>
     <p class="foot">Số bài mẫu là số bài trong thư viện, không phải số đối thủ trên Facebook. Mỗi môn chỉ có 12–20 bài, nên ô nào dưới 2 bài chỉ để tham khảo. Bài chưa xác định được cấp không nằm trong biểu đồ.</p>`;

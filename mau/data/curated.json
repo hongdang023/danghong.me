@@ -6,27 +6,104 @@
     "confidence": "Độ chắc: thấp, mẫu nhỏ",
     "defaultSample": "van-01",
     "reasons": [
-      { "title": "Chia sẻ cao nhất nằm ở bộ đề, không ở bài nhiều bình luận", "body": "Ba bài nhiều chia sẻ nhất môn: 131, 112 và 110. Bài nhiều bình luận nhất (204) chỉ có 8 chia sẻ, vì yêu cầu bình luận đúng một từ khóa để nhận sách." },
-      { "title": "Bài bám mốc kiểm tra lan nhanh hơn", "body": "Đề giữa học kì I lớp 9: 112 chia sẻ sau 12 ngày, khoảng 9 chia sẻ mỗi ngày. Bộ 100 đề đăng tháng 8: 110 chia sẻ sau 93 ngày, khoảng 1 chia sẻ mỗi ngày." },
-      { "title": "Con số và album xem trước", "body": "Hai trong ba bài đầu có album 5 ảnh, và tên bài nói rõ loại và số lượng (100 đề, bộ đề truyện truyền kì)." }
+      {
+        "title": "Chia sẻ cao nhất nằm ở bộ đề, không ở bài nhiều bình luận",
+        "body": "Ba bài nhiều chia sẻ nhất môn: 131, 112 và 110. Bài nhiều bình luận nhất (204) chỉ có 8 chia sẻ, vì yêu cầu bình luận đúng một từ khóa để nhận sách."
+      },
+      {
+        "title": "Bài bám mốc kiểm tra lan nhanh hơn",
+        "body": "Đề giữa học kì I lớp 9: 112 chia sẻ sau 12 ngày, khoảng 9 chia sẻ mỗi ngày. Bộ 100 đề đăng tháng 8: 110 chia sẻ sau 93 ngày, khoảng 1 chia sẻ mỗi ngày."
+      },
+      {
+        "title": "Con số và album xem trước",
+        "body": "Hai trong ba bài đầu có album 5 ảnh, và tên bài nói rõ loại và số lượng (100 đề, bộ đề truyện truyền kì)."
+      }
     ],
-    "mine": ["Lớp 9, ôn thi vào 10", "[N] đề, có đáp án", "Album 5 ảnh xem trước", "[Chọn: nhắn “ib”, bình luận từ khóa hoặc link]", "[N] ĐỀ NGỮ VĂN 9 – ÔN THI VÀO 10", "[Ngày đăng, gần mốc kiểm tra]"],
+    "mine": [
+      "Lớp 9, ôn thi vào 10",
+      "[N] đề, có đáp án",
+      "Album 5 ảnh xem trước",
+      "[Chọn: nhắn “ib”, bình luận từ khóa hoặc link]",
+      "[N] ĐỀ NGỮ VĂN 9 – ÔN THI VÀO 10",
+      "[Ngày đăng, gần mốc kiểm tra]"
+    ],
     "samples": {
       "van-04": {
         "badge": "Nhiều chia sẻ nhất",
-        "slots": ["Chưa rõ lớp", "Bộ đề truyện truyền kì", "Album 5 ảnh", "Link hoặc Drive, đọc từ chữ bài", "“BỘ ĐỀ TRUYỆN TRUYỀN KÌ”", "07/10, giữa học kì I"],
+        "slots": [
+          "Chưa rõ lớp",
+          "Bộ đề truyện truyền kì",
+          "Album 5 ảnh",
+          "Link hoặc Drive, đọc từ chữ bài",
+          "“BỘ ĐỀ TRUYỆN TRUYỀN KÌ”",
+          "07/10, giữa học kì I"
+        ],
         "learn": "Tên bài ngắn, đúng một loại tài liệu, kèm album 5 ảnh. Chưa biết người xem nhận tài liệu bằng cách nào."
       },
       "van-02": {
         "badge": "Lan nhanh nhất",
-        "slots": ["Lớp 9, một trường cụ thể", "Đề kiểm tra giữa học kì I", "1 ảnh đề", "Chưa đọc được bình luận", "“ĐỀ KIỂM TRA GIỮA HỌC KÌ I – NGỮ VĂN 9”", "05/11, đúng giữa học kì"],
+        "slots": [
+          "Lớp 9, một trường cụ thể",
+          "Đề kiểm tra giữa học kì I",
+          "1 ảnh đề",
+          "Chưa đọc được bình luận",
+          "“ĐỀ KIỂM TRA GIỮA HỌC KÌ I – NGỮ VĂN 9”",
+          "05/11, đúng giữa học kì"
+        ],
         "learn": "Bám đúng mốc kiểm tra của lớp. Khoảng 9 chia sẻ mỗi ngày, nhanh nhất trong ba mẫu."
       },
       "van-01": {
         "badge": "Đủ cơ chế nhận",
-        "slots": ["Lớp 9, ôn thi lên 10", "100 đề thi", "Album 5 ảnh xem trước", "Nhắn “ib”", "“BỘ 100 ĐỀ THI LỚP 9 – ÔN THI LÊN 10”", "Tháng 8, trước năm học"],
+        "slots": [
+          "Lớp 9, ôn thi lên 10",
+          "100 đề thi",
+          "Album 5 ảnh xem trước",
+          "Nhắn “ib”",
+          "“BỘ 100 ĐỀ THI LỚP 9 – ÔN THI LÊN 10”",
+          "Tháng 8, trước năm học"
+        ],
         "learn": "Con số nằm ngay đầu tên bài, nói rõ lớp và mục tiêu. Mời nhận bằng nhắn tin."
       }
     }
+  },
+  "formula": {
+    "line": "[Tặng] + [Con số + loại tài liệu] + [Khóa hoặc mốc] + [Có đáp án] + album xem trước",
+    "example": "TẶNG 100 đề Toán 9 ôn vào 10, có đáp án (kèm album 5 ảnh)",
+    "signals": [
+      {
+        "t": "Con số cụ thể",
+        "a": 23,
+        "b": 11,
+        "u": "chia sẻ"
+      },
+      {
+        "t": "Ghi rõ có đáp án",
+        "a": 43,
+        "b": 11,
+        "u": "chia sẻ"
+      },
+      {
+        "t": "Album từ 4 ảnh",
+        "a": 27,
+        "b": 8,
+        "u": "chia sẻ"
+      },
+      {
+        "t": "Gọi đúng khóa hoặc mốc",
+        "a": 30,
+        "b": 12,
+        "u": "chia sẻ"
+      }
+    ],
+    "warn": "“FREE” đứng một mình không tạo hook: 34 bài dùng, trung vị 12 chia sẻ so với 16 khi không dùng.",
+    "cta": "Link hoặc Drive để sẵn: 95 chia sẻ. Bắt nhắn “ib”: 4 chia sẻ.",
+    "avoid": [
+      "môn",
+      "thầy",
+      "dành cho",
+      "tặng tài liệu",
+      "2025"
+    ],
+    "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau."
   }
 }
