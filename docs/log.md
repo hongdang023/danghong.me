@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-17 | Hồng: deploy `mau.danghong.me` lên Cloudflare Pages (project `danghong-mau`, CNAME trong zone), ai có link đều xem được | [mau ops](sites/mau/ops.md), [Infrastructure](ecosystem/infrastructure.md) |
 | 2026-11-17 | Hồng duyệt thiết kế lại (Claude Design): 5 mục điều hướng, ma trận ưu tiên, trang môn theo khuyến nghị, so 3 mẫu, mổ xẻ 6 ô, Đã lưu, Bài mới từng bước; áp vào `mau/` | [mau sitemap](sites/mau/sitemap.md), [design](sites/mau/design.md), [content](sites/mau/content.md) |
 | 2026-11-17 | Hồng: kiểm bình luận các bài mẫu (loại spam, phân biệt xin tài liệu và hỏi thông tin); link bài gốc thật thay link ảnh | [mau content](sites/mau/content.md) |
 | 2026-11-17 | Hồng: tìm bài post mẫu (tặng tài liệu) cho 6 môn K12, gom thành thư viện mau.danghong.me, rút điểm chung, viết bài mới; giao diện tối giản kiểu Apple, dashboard, ít chữ, có link bài mẫu | [mau](sites/mau/brief.md), [ops](sites/mau/ops.md) |

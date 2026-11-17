@@ -14,12 +14,15 @@ ai_readable: true
 
 # mau.danghong.me Ops
 
+**Trạng thái (2026-11-17):** đã deploy. Pages project `danghong-mau` (Connect to Git, repo `hongdang023/danghong.me`, nhánh `main`, Root directory `mau`, không có build command, output để trống, preview tắt, chỉ build khi `mau/*` đổi), tạo qua Cloudflare API trong account chứa các Pages project. CNAME `mau` (proxied) trong zone `danghong.me` trỏ `danghong-mau.pages.dev`. Tên miền tùy chỉnh đã xác minh, chứng chỉ SSL cấp trong vài phút đầu.
+
 | Hạng mục | Giá trị |
 | :--- | :--- |
-| Domain | `mau.danghong.me` (kế hoạch; chưa tạo DNS) |
+| Domain | `mau.danghong.me` (CNAME → `danghong-mau.pages.dev`) |
 | Mã nguồn | `mau/` (HTML, CSS, JS thuần; không có bước build) |
-| Pages project | Chưa tạo. Dự kiến `danghong-mau`, output directory `mau`, không build command |
-| Truy cập | Nội bộ; `noindex`. Chưa có xác thực. Cân nhắc Cloudflare Access trước khi công bố link |
+| Pages project | `danghong-mau` |
+| Deploy | Push `main` có đổi `mau/*` thì Cloudflare tự deploy |
+| Truy cập | Ai có link đều xem được (không đăng nhập); `noindex` để máy tìm kiếm không đưa lên |
 
 ## Chạy thử ở máy
 
@@ -43,4 +46,3 @@ Dữ liệu là file JSON trong `mau/data/`. Quét Facebook bằng đăng nhập
 - Chụp ảnh từng bài (hiện chỉ có link gốc; 15 bài chưa có link).
 - Lấy chữ đầy đủ cho 19 bài chưa khớp (kêu gọi hành động mới thống kê được trên 74 bài).
 - Rà tay nhãn nỗi đau, nhu cầu, lớp, cấp (đang suy bằng luật từ khóa).
-- Tạo Pages project, DNS `mau.danghong.me`, và bảo vệ truy cập; cập nhật [infrastructure](../../ecosystem/infrastructure.md).

@@ -23,6 +23,7 @@ Ba site đều chạy trên Cloudflare Pages và được build từ cùng một
 | danghong.me | `website/` | (đã có sẵn) | `website/out` | Cloudflare Pages kết nối Git (thiết lập trên Dashboard) |
 | docs.danghong.me | `docs/` | `danghong-docs` | `docs/.vitepress/dist` | Cloudflare Pages kết nối Git (mục 2) |
 | media.danghong.me | `media/` | `danghong-media` | `media/public` + `media/functions` (D1, R2) | Cloudflare Pages kết nối Git (mục 2) |
+| mau.danghong.me | `mau/` | `danghong-mau` | `mau` (tĩnh, không build) | Cloudflare Pages kết nối Git (mục 2), Root directory `mau` |
 
 Không cần API token trong GitHub: Cloudflare tự lấy code từ repo qua GitHub App "Cloudflare Workers and Pages" đã cài cho danghong.me. CI trong `.github/workflows/ci.yml` chỉ kiểm (lint, test, check, build), không deploy.
 
