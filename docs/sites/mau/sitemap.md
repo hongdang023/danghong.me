@@ -22,7 +22,7 @@ Một trang tĩnh `index.html`, chuyển trang bằng hash. Thanh điều hướ
 | `#mon-van`, `#mon-anh`, `#mon-toan`, `#mon-ly`, `#mon-hoa`, `#mon-tin` | Môn học ▾ | Khuyến nghị một câu (chỉ Ngữ văn có), so 3 mẫu nhiều chia sẻ nhất theo 5 tín hiệu, bản mổ xẻ 6 ô cạnh khung điền cho brand, mục Chỉ số phụ gập sẵn |
 | `#thu-vien` | Thư viện | Cả 120 bài, bộ lọc môn, cấp, nhãn bình luận, từ khóa; bấm một dòng xem chi tiết; ngôi sao để lưu mẫu |
 | `#da-luu` | Đã lưu | Mẫu đã lưu theo môn, ghép với bài nháp của brand |
-| `#bai-moi` | Bài mới | Bốn bước: nhắm ai, chọn mẫu, mổ xẻ, viết khung; bước cuối có bài nháp để chép |
+| `#bai-moi` | Bài mới | Lắp bài trong một màn hình: chọn môn và mục tiêu (lan rộng hoặc thu người quan tâm), bấm từ khóa vào 5 ô (dòng mở, tài liệu gì, gọi đúng người, bằng chứng, cách nhận); bài hiện ngay bên phải, có nút chép |
 
 ## Bộ lọc của Thư viện
 

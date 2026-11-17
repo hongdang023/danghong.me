@@ -607,5 +607,271 @@
         ]
       }
     ]
+  },
+  "frame": {
+    "opens": [
+      {
+        "k": "TẶNG",
+        "n": "bình luận gấp 7 lần"
+      },
+      {
+        "k": "TẶNG MIỄN PHÍ",
+        "n": "nói rõ miễn phí"
+      },
+      {
+        "k": "[FREE PDF]",
+        "n": "kiểu Tiếng Anh/IELTS"
+      },
+      {
+        "k": "CHIA SẺ",
+        "n": ""
+      }
+    ],
+    "proofs": [
+      {
+        "k": "có đáp án",
+        "n": "đáp án và lời giải đều cao hơn"
+      },
+      {
+        "k": "có lời giải chi tiết",
+        "n": ""
+      },
+      {
+        "k": "kèm video chữa đề",
+        "n": "16 chia sẻ · Tin học"
+      },
+      {
+        "k": "kèm phiên âm, nghĩa, ví dụ",
+        "n": "638 chia sẻ · Tiếng Anh"
+      }
+    ],
+    "recvs": [
+      {
+        "k": "Bình luận “{CODE}” để nhận link",
+        "note": "Thu nhiều bình luận cùng một mã. Phù hợp mục tiêu thu người quan tâm."
+      },
+      {
+        "k": "Link tải để sẵn ở bình luận đầu",
+        "note": "Trung vị 95 chia sẻ (6 bài), cao hơn bắt nhắn tin. Phù hợp mục tiêu lan rộng."
+      },
+      {
+        "k": "Nhắn “ib” để nhận",
+        "note": "Trung vị 4 chia sẻ (12 bài), thấp nhất."
+      }
+    ],
+    "subjects": {
+      "van": {
+        "code": "VĂN10",
+        "n": "100",
+        "types": [
+          {
+            "k": "ĐỀ THI",
+            "n": "110 chia sẻ"
+          },
+          {
+            "k": "ĐỀ KIỂM TRA GIỮA HỌC KÌ I",
+            "n": "112"
+          },
+          {
+            "k": "BỘ ĐỀ TRUYỆN TRUYỀN KÌ",
+            "n": "131"
+          },
+          {
+            "k": "ĐỀ LUYỆN THI HSG",
+            "n": "70"
+          }
+        ],
+        "targets": [
+          {
+            "k": "LỚP 9 – ÔN THI LÊN 10",
+            "n": "110"
+          },
+          {
+            "k": "NGỮ VĂN 9 – GIỮA HỌC KÌ I",
+            "n": "112"
+          },
+          {
+            "k": "THPT – LUYỆN THI HỌC SINH GIỎI",
+            "n": "70"
+          }
+        ]
+      },
+      "anh": {
+        "code": "SPEAKING",
+        "n": "100",
+        "types": [
+          {
+            "k": "TỪ VỰNG C1–C2",
+            "n": "638 chia sẻ"
+          },
+          {
+            "k": "IELTS READING ACADEMIC PDF",
+            "n": "258"
+          },
+          {
+            "k": "CHUYÊN ĐỀ TRỌNG ÂM",
+            "n": "238"
+          },
+          {
+            "k": "ĐỀ KIỂM TRA SAU UNIT",
+            "n": "194"
+          }
+        ],
+        "targets": [
+          {
+            "k": "ÔN THI VÀO 10 – 2K11",
+            "n": "238"
+          },
+          {
+            "k": "KHỐI 8 – CHUẨN FORM MỚI NHẤT",
+            "n": "194"
+          },
+          {
+            "k": "JANUARY – JUNE 2026",
+            "n": "258"
+          }
+        ]
+      },
+      "toan": {
+        "code": "TOAN10",
+        "n": "10",
+        "types": [
+          {
+            "k": "TUYỂN TẬP ĐỀ KHẢO SÁT",
+            "n": "93 chia sẻ"
+          },
+          {
+            "k": "ĐỀ ÔN TẬP NÂNG CAO",
+            "n": "43"
+          },
+          {
+            "k": "ĐỀ KIỂM TRA HỌC KÌ",
+            "n": "44"
+          }
+        ],
+        "targets": [
+          {
+            "k": "TOÁN 9 – THÁNG 11",
+            "n": "93"
+          },
+          {
+            "k": "HK1 TOÁN 9",
+            "n": "43"
+          },
+          {
+            "k": "ÔN THI VÀO LỚP 10",
+            "n": "64"
+          },
+          {
+            "k": "THI VÀO LỚP 6",
+            "n": "112"
+          }
+        ]
+      },
+      "ly": {
+        "code": "LY12",
+        "n": "6",
+        "types": [
+          {
+            "k": "LỜI GIẢI CHI TIẾT ĐỀ THI THỬ",
+            "n": "56 chia sẻ"
+          },
+          {
+            "k": "TUYỂN TẬP CÂU HỎI CHƯƠNG",
+            "n": "41"
+          },
+          {
+            "k": "SƠ ĐỒ TƯ DUY",
+            "n": "38"
+          },
+          {
+            "k": "ĐỀ HSG TỈNH MỚI THI",
+            "n": "126 bình luận"
+          }
+        ],
+        "targets": [
+          {
+            "k": "TẶNG 2K9 – VẬT LÍ 12",
+            "n": "41"
+          },
+          {
+            "k": "THI THỬ TỐT NGHIỆP THPT 2026",
+            "n": "56"
+          },
+          {
+            "k": "CHƯƠNG 1, CHƯƠNG 2",
+            "n": "38"
+          }
+        ]
+      },
+      "hoa": {
+        "code": "HOA12",
+        "n": "20",
+        "types": [
+          {
+            "k": "ĐỀ THI THỬ",
+            "n": "85 chia sẻ"
+          },
+          {
+            "k": "EBOOK CHƯƠNG",
+            "n": "76"
+          },
+          {
+            "k": "BỘ KHÓA HỌC",
+            "n": "149"
+          },
+          {
+            "k": "SƠ ĐỒ TƯ DUY FULL",
+            "n": "36"
+          }
+        ],
+        "targets": [
+          {
+            "k": "HÓA 12",
+            "n": "85"
+          },
+          {
+            "k": "HÓA 10 CHƯƠNG TRÌNH MỚI",
+            "n": "36"
+          },
+          {
+            "k": "2K8 – CHƯƠNG CARBOHYDRATE",
+            "n": "76"
+          }
+        ]
+      },
+      "tin": {
+        "code": "TIN12",
+        "n": "10",
+        "types": [
+          {
+            "k": "ĐỀ KSCL GIỮA KỲ 1",
+            "n": "18 chia sẻ"
+          },
+          {
+            "k": "ĐỀ THI THỬ TỐT NGHIỆP",
+            "n": "15"
+          },
+          {
+            "k": "ĐỀ KHẢO SÁT ONLINE",
+            "n": "10"
+          }
+        ],
+        "targets": [
+          {
+            "k": "MÔN TIN HỌC – ĐỘC QUYỀN",
+            "n": "18"
+          },
+          {
+            "k": "SỞ GIÁO DỤC (ghi tên sở)",
+            "n": "15"
+          },
+          {
+            "k": "TRƯỜNG THPT (ghi tên trường)",
+            "n": "16"
+          }
+        ]
+      }
+    }
   }
 }

@@ -26,7 +26,7 @@
 
   let saved = (() => { try { return JSON.parse(localStorage.getItem('mau.saved') || '[]'); } catch { return []; } })();
   const persist = () => { try { localStorage.setItem('mau.saved', JSON.stringify(saved)); } catch { /* bỏ qua */ } };
-  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', w: { step: 1, subj: 'van', goal: null, pick: null }, menu: false, goal2: 'share' };
+  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', b: { subj: 'van', open: 'TẶNG', type: '', target: '', proofs: ['có đáp án'], album: true, recv: '', n: null, code: '' }, menu: false, goal2: 'share' };
 
   const classify = (n, s) => n < 2 ? 'Mẫu quá ít' : (s >= 20 ? (n <= 5 ? 'Làm trước' : 'Đông nhưng hút') : (n <= 5 ? 'Thử nhỏ' : 'Bỏ qua'));
   const ACT = { 'Làm trước': 'Làm trước. Ít bài mẫu mà chia sẻ khá.', 'Đông nhưng hút': 'Chỉ vào nếu có điểm khác biệt rõ.', 'Thử nhỏ': 'Thử một hai bài rồi đo lại.', 'Bỏ qua': 'Để sau.', 'Mẫu quá ít': 'Chưa đủ dữ liệu. Quét thêm trước khi quyết.' };
@@ -230,33 +230,45 @@
   }
 
   /* ---------- Bài mới (từng bước) ---------- */
+  function bdef() { const FS = C.frame.subjects[S.b.subj]; if (!S.b.type) S.b.type = FS.types[0].k; if (!S.b.target) S.b.target = FS.targets[0].k; }
   function wizard() {
-    const w = S.w, k = w.subj, sj = SUBJ[k], st = w.step;
-    const labels = ['Nhắm ai', 'Chọn mẫu', 'Mổ xẻ', 'Viết khung'];
-    const levels = [1, 2, 3].map(l => { const s = byS(k).filter(p => p.level === 'Cấp ' + l); return { id: 'c' + l, l, n: s.length, s: med(s, 'shares') }; }).filter(x => x.n);
-    const goal = w.goal || (levels.find(x => classify(x.n, x.s) === 'Làm trước') || levels[0] || {}).id;
-    const lvl = goal ? +goal.slice(1) : null;
-    let pool = byS(k).filter(p => p.link && (!lvl || p.level === 'Cấp ' + lvl)).sort((a, b) => b.shares - a.shares).slice(0, 3);
-    if (!pool.length) pool = top3(k);
-    const pick = pool.find(p => p.id === w.pick) || pool[0];
-    const dr = N.posts.find(x => x.subject === sj.name);
-    let body = '';
-    if (st === 1) body = `<h1>Bài này nhắm ai?</h1><p class="lead">Chọn môn và cấp. Mỗi lựa chọn ghi số bài mẫu để bạn biết độ chắc.</p>
-      <div class="chips" style="margin-top:28px">${KEYS.map(x => `<button class="chip${x === k ? ' on' : ''}" data-act="wsubj" data-k="${x}"><i class="dot" style="--c:${x === k ? 'currentColor' : cv(x)}"></i>${SUBJ[x].short}</button>`).join('')}</div>
-      <div class="opts">${levels.map(x => { const v = classify(x.n, x.s); return `<button class="opt${goal === x.id ? ' on' : ''}" data-act="wgoal" data-id="${x.id}"><span class="a"><b>Cấp ${x.l}</b><small>${x.n} bài mẫu · chia sẻ trung vị ${x.s}</small></span><span class="pill${v === 'Làm trước' ? ' c' : ''}">${v}</span></button>`; }).join('') || '<div class="empty">Môn này chưa có bài xác định được cấp</div>'}</div>`;
-    if (st === 2) body = `<h1>Học theo mẫu nào?</h1><p class="lead">Ba bài nhiều chia sẻ nhất${lvl ? ` của Cấp ${lvl}` : ''}.</p>
-      <div class="opts">${pool.map(p => `<button class="opt${pick && pick.id === p.id ? ' on' : ''}" data-act="wpick" data-id="${p.id}"><span class="a"><b>${esc(p.hook.slice(0, 90))}</b><small>${esc(p.src.slice(0, 40))} · ${fd(p.date)}</small></span><span class="sh"><b>${fmt(p.shares)}</b>chia sẻ</span><span class="pill c">${esc(cmtInfo(p).t)}</span></button>`).join('')}</div>`;
-    if (st === 3 && pick) { const s = slotsFor(pick); body = `<h1>Mổ xẻ thành 6 ô.</h1><p class="lead">${esc(pick.hook.slice(0, 100))}</p>
-      <div class="slots">${META.map((m, i) => `<div class="slot"><span>${m[0]}</span><b>${esc(s.vals[i])}</b></div>`).join('')}</div>
-      <div class="learn"><small>Học được gì từ mẫu này</small><div>${esc(s.learn)}</div></div>`; }
-    if (st === 4) { const mine = mineFor(k); body = `<h1>Điền cho ${esc(sj.brand)}.</h1><p class="lead">Thay phần trong ngoặc vuông bằng tài liệu thật.</p>
-      <div class="slots">${META.map((m, i) => `<div class="slot"><span>${m[0]}</span><input type="text" value="${esc(mine[i])}" aria-label="${m[0]}"></div>`).join('')}</div>
-      ${dr ? `<div class="card" style="margin-top:20px"><div class="note" style="margin:0">Bài nháp gợi ý</div><pre class="dr">${esc(dr.title + '\n\n' + dr.body)}</pre></div>` : ''}`; }
-    return `<div class="w" style="--c:${cv(k)}"><div class="meta" style="margin-top:0"><span style="color:${cv(k)};font-weight:600">${esc(sj.name)}</span><span>${esc(sj.brand)}</span></div>
-      <div class="steps">${labels.map((l, i) => `<div class="${st === i + 1 ? 'on' : st > i + 1 ? 'done' : ''}"><i>${i + 1}</i>${l}</div>`).join('')}</div>
-      ${body}
-      <div class="wnav"><button class="btn ghost" data-act="wback" style="visibility:${st === 1 ? 'hidden' : 'visible'}">Quay lại</button><button class="btn" data-act="wnext">${st === 4 ? 'Chép bài nháp' : 'Tiếp tục'}</button></div></div>`;
+    bdef();
+    const B = S.b, k = B.subj, sj = SUBJ[k], FR = C.frame, FS = FR.subjects[k], F = C.formula;
+    const sg = i => { const x = F.signals[i], cm = S.goal2 === 'cmt'; return `<span class="bdg">${cm ? x.ca : x.a} so với ${cm ? x.cb : x.b} ${cm ? 'bình luận' : 'chia sẻ'}</span>`; };
+    const one = (arr, key) => arr.map(x => `<button class="kc${B[key] === x.k ? ' on' : ''}" data-act="bsel" data-id="${esc(key)}" data-k="${esc(x.k)}">${esc(x.k)}${x.n ? `<i>${esc(x.n)}</i>` : ''}</button>`).join('');
+    const multi = (arr, key) => arr.map(x => `<button class="kc${B[key].includes(x.k) ? ' on' : ''}" data-act="bmulti" data-id="${esc(key)}" data-k="${esc(x.k)}">${esc(x.k)}${x.n ? `<i>${esc(x.n)}</i>` : ''}</button>`).join('');
+    const code = B.code || FS.code, n = B.n === '' ? '' : (B.n || FS.n);
+    const proofs = B.proofs.filter(p => !/album/.test(p));
+    const title = `${B.open} ${n ? n + ' ' : ''}${B.type}${B.target ? ' – ' + B.target : ''}${proofs.length ? ', ' + proofs[0] : ''}`;
+    const recv = (B.recv || FR.recvs[0].k).replace('{CODE}', code);
+    const lc = t => t.toLowerCase().replace(/c(\d)/g, 'C$1').replace(/2k/g, '2K');
+    const lines = [`Bộ ${n ? n + ' ' : ''}${lc(B.type)}${B.target ? ' dành cho ' + lc(B.target) : ''}${proofs.length ? ', ' + proofs.join(', ') : ''}.`];
+    if (B.album) lines.push('Xem trước 5 trang trong album ↓');
+    lines.push(recv + '. Miễn phí.');
+    const text = title + '\n\n' + lines.join('\n\n');
+    const len = text.length, lenOk = len >= 150 && len <= 400;
+    const ref = byS(k).filter(p => p.link).sort((p, q) => (S.goal2 === 'cmt' ? q.comments - p.comments : q.shares - p.shares))[0];
+    return `<div class="bld" style="--c:${cv(k)}">
+      <h1>Lắp bài trong 1 phút.</h1><p class="lead">Chọn môn và mục tiêu, bấm từ khóa vào từng ô. Bài hiện ngay bên phải, chép là dùng.</p>
+      <div class="top2"><div class="chips">${KEYS.map(x => `<button class="chip${x === k ? ' on' : ''}" data-act="bsubj" data-k="${x}"><i class="dot" style="--c:${x === k ? 'currentColor' : cv(x)}"></i>${SUBJ[x].short}</button>`).join('')}</div>
+        <div class="seg">${['share', 'cmt'].map(g => `<button type="button" class="${S.goal2 === g ? 'on' : ''}" data-act="goal2" data-id="${g}">${esc(F.goals[g])}</button>`).join('')}</div></div>
+      <div class="bcols"><div class="bl">
+        <div class="bs"><div class="bh"><b>1 · Dòng mở</b>${sg(5)}</div><div class="bw">TẶNG hay FREE làm người xem xin nhận nhiều hơn.</div><div class="kcs">${one(FR.opens, 'open')}</div></div>
+        <div class="bs"><div class="bh"><b>2 · Tài liệu gì</b>${sg(0)}</div><div class="bw">Số lượng + loại tài liệu. Chọn loại tài liệu đã lan trong môn ${esc(sj.short)}, rồi nhập số lượng.</div><div class="kcs">${one(FS.types, 'type')}</div>
+          <label class="inl">Số lượng <input id="bn" type="text" inputmode="numeric" value="${esc(n)}" placeholder="vd 100"></label></div>
+        <div class="bs"><div class="bh"><b>3 · Gọi đúng người, đúng lúc</b>${sg(3)}</div><div class="bw">Gọi lớp, kỳ thi hoặc mốc kiểm tra. Bám mốc giữa kỳ, cuối kỳ cũng tăng bình luận.</div><div class="kcs">${one(FS.targets, 'target')}</div></div>
+        <div class="bs"><div class="bh"><b>4 · Bằng chứng</b>${sg(1)}</div><div class="bw">Ghi rõ có đáp án và cho xem trước album.</div><div class="kcs">${multi(FR.proofs, 'proofs')}<button class="kc${B.album ? ' on' : ''}" data-act="balbum"><span>album 5 ảnh xem trước</span><i>${F.signals[2].a} so với ${F.signals[2].b}</i></button></div></div>
+        <div class="bs"><div class="bh"><b>5 · Cách nhận</b></div><div class="bw">Một câu, rõ người xem làm gì để nhận.</div><div class="kcs">${FR.recvs.map(r => `<button class="kc${(B.recv || FR.recvs[0].k) === r.k ? ' on' : ''}" data-act="bsel" data-id="recv" data-k="${esc(r.k)}">${esc(r.k.replace('{CODE}', code))}</button>`).join('')}</div>
+          <div class="note">${esc((FR.recvs.find(r => r.k === (B.recv || FR.recvs[0].k)) || {}).note || '')}</div>
+          <label class="inl">Mã nhận <input id="bcode" type="text" value="${esc(code)}"></label></div>
+      </div>
+      <div class="br"><div class="card prev"><div class="k"><i class="dot" style="--c:${cv(k)}"></i>Bài của bạn · ${esc(sj.brand)}</div><pre class="dr">${esc(text)}</pre>
+        <div class="len ${lenOk ? 'ok' : 'no'}">${len} ký tự · nên 150–400, vì bài quá dài ít chia sẻ hơn</div>
+        <div class="acts" style="margin-top:14px"><button class="btn" data-act="bcopy">Chép bài</button></div>
+        ${ref ? `<div class="note" style="margin-top:16px">Mẫu thật để so: <a href="${esc(ref.link)}" target="_blank" rel="noopener">${esc(ref.hook.slice(0, 70))} ↗</a> · ${fmt(S.goal2 === 'cmt' ? ref.comments : ref.shares)} ${S.goal2 === 'cmt' ? 'bình luận' : 'chia sẻ'}</div>` : ''}
+        <div class="note">Phần số liệu trên từng ô là trung vị khi tên bài có yếu tố đó so với không có. Mẫu nhỏ, hãy đo lại bằng bài của bạn.</div></div></div></div></div>`;
   }
+  const bText = () => { const t = document.querySelector('.bld .dr'); return t ? t.textContent : ''; };
 
   /* ---------- Điều hướng và vẽ ---------- */
   function renderNav(tab) {
@@ -296,17 +308,15 @@
     if (a === 'copyframe') { const mine = mineFor(k); copy(META.map((m, i) => `${m[0]}: ${mine[i]}`).join('\n'), b); return; }
     if (a === 'copylink') { copy(location.href, b); return; }
     if (a === 'copydraft') { const dr = N.posts.find(x => x.subject === SUBJ[k].name); if (dr) copy(dr.title + '\n\n' + dr.body, b); return; }
-    if (a === 'wsubj') { S.w = { step: 1, subj: k, goal: null, pick: null }; if (b.tagName === 'A') return; render(true); return; }
-    if (a === 'wgoal') { S.w.goal = id; S.w.pick = null; render(true); return; }
-    if (a === 'wpick') { S.w.pick = id; render(true); return; }
-    if (a === 'wback') { S.w.step = Math.max(1, S.w.step - 1); render(); return; }
-    if (a === 'wnext') {
-      if (S.w.step === 4) { const dr = N.posts.find(x => x.subject === SUBJ[S.w.subj].name); if (dr) copy(dr.title + '\n\n' + dr.body, b); return; }
-      S.w.step += 1; render(); return;
-    }
+    if (a === 'wsubj') { S.b = { subj: k, open: 'TẶNG', type: '', target: '', proofs: ['có đáp án'], album: true, recv: '', n: null, code: '' }; if (b.tagName === 'A') return; render(true); return; }
+    if (a === 'bsubj') { S.b = { subj: k, open: S.b.open, type: '', target: '', proofs: S.b.proofs, album: S.b.album, recv: S.b.recv, n: null, code: '' }; bdef(); render(true); return; }
+    if (a === 'bsel') { S.b[id] = S.b[id] === b.dataset.k && id !== 'recv' ? '' : b.dataset.k; render(true); return; }
+    if (a === 'bmulti') { const l = S.b[id]; S.b[id] = l.includes(b.dataset.k) ? l.filter(x => x !== b.dataset.k) : l.concat(b.dataset.k); render(true); return; }
+    if (a === 'balbum') { S.b.album = !S.b.album; render(true); return; }
+    if (a === 'bcopy') { copy(bText(), b); return; }
   });
   document.addEventListener('change', e => { const id = e.target.id; if (['level', 'cmt', 'sort'].includes(id)) { S[id] = e.target.value; S.open = null; render(true); } });
-  document.addEventListener('input', e => { if (e.target.id === 'q') { S.q = e.target.value; const pos = e.target.selectionStart; render(true); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); } });
+  document.addEventListener('input', e => { if (e.target.id === 'bn' || e.target.id === 'bcode') { if (e.target.id === 'bn') S.b.n = e.target.value; else S.b.code = e.target.value; const pos = e.target.selectionStart, id = e.target.id; render(true); const el = document.getElementById(id); el.focus(); el.setSelectionRange(pos, pos); return; } if (e.target.id === 'q') { S.q = e.target.value; const pos = e.target.selectionStart; render(true); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); } });
   window.addEventListener('hashchange', () => { S.menu = false; render(); });
 
   Promise.all(['posts', 'analysis', 'newposts', 'curated'].map(n => fetch(`data/${n}.json`).then(r => r.json())))

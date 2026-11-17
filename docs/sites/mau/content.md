@@ -70,6 +70,10 @@ Trên trang Tổng quan, dưới Công thức chung: loại tài liệu, ngườ
 
 Trang môn có hai danh sách: ba bài nhiều chia sẻ nhất (lan rộng, bảng so sánh năm tín hiệu) và ba bài nhiều bình luận nhất có link, đã bỏ bài nghi spam (thu người quan tâm, kèm cơ chế nhận tài liệu).
 
+## Khung bài trên trang Bài mới (khối `frame` trong `curated.json`)
+
+Khung 5 ô dùng chung cho mọi môn. Mỗi ô có chip từ khóa bấm chọn: dòng mở (`opens`), loại tài liệu và đối tượng theo từng môn (`subjects.<môn>.types`, `targets`, lấy từ tên bài thật đã lan, kèm số chia sẻ hoặc bình luận), bằng chứng (`proofs`), cách nhận (`recvs`). Số liệu trên đầu mỗi ô lấy từ `formula.signals` và đổi theo nút Lan rộng hoặc Thu người quan tâm. Bài được lắp tự động (tên bài, một câu thân bài, album, cách nhận) và báo số ký tự so với mức nên 150–400. Cần viết lại chip khi dữ liệu đổi.
+
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.
