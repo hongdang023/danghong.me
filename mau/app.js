@@ -21,11 +21,12 @@
   const med = (a, k) => { const v = a.map(p => p[k]).filter(x => x != null).sort((x, y) => x - y); return v.length ? v[Math.floor(v.length / 2)] : 0; };
   const byS = k => D.posts.filter(p => p.subject === k);
   const top3 = k => byS(k).filter(p => p.link).sort((a, b) => b.shares - a.shares).slice(0, 3);
+  const topC = k => byS(k).filter(p => p.link && !(p.cmt && p.cmt.spamFlag)).sort((a, b) => b.comments - a.comments).slice(0, 3);
   const spd = p => p.age ? p.shares / p.age : null;
 
   let saved = (() => { try { return JSON.parse(localStorage.getItem('mau.saved') || '[]'); } catch { return []; } })();
   const persist = () => { try { localStorage.setItem('mau.saved', JSON.stringify(saved)); } catch { /* bỏ qua */ } };
-  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', w: { step: 1, subj: 'van', goal: null, pick: null }, menu: false };
+  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', w: { step: 1, subj: 'van', goal: null, pick: null }, menu: false, goal2: 'share' };
 
   const classify = (n, s) => n < 2 ? 'Mẫu quá ít' : (s >= 20 ? (n <= 5 ? 'Làm trước' : 'Đông nhưng hút') : (n <= 5 ? 'Thử nhỏ' : 'Bỏ qua'));
   const ACT = { 'Làm trước': 'Làm trước. Ít bài mẫu mà chia sẻ khá.', 'Đông nhưng hút': 'Chỉ vào nếu có điểm khác biệt rõ.', 'Thử nhỏ': 'Thử một hai bài rồi đo lại.', 'Bỏ qua': 'Để sau.', 'Mẫu quá ít': 'Chưa đủ dữ liệu. Quét thêm trước khi quyết.' };
@@ -108,11 +109,13 @@
     </div>
     <div class="grid2">
       <div class="card"><h3>Chia sẻ theo môn</h3><p class="sub" style="font-size:14px;margin-bottom:24px">Trung vị mỗi bài</p>${meds.map(m => bar(SUBJ[m.k].short, m.k, m.v, mx)).join('')}</div>
-      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:20px">${esc(F.how)}</p>
-        ${F.signals.map(x => { const m = Math.max(x.a, x.b); return `<div class="sg"><div class="sgt">${esc(x.t)} <button class="tip" type="button" aria-label="Giải thích: ${esc(x.t)}">ⓘ<span class="tt"><b>${esc(x.what)}</b><br>${esc(x.why)}</span></button></div>
-          <div class="row sgr" style="--c:var(--acc)"><span>Có</span><span class="t"><i style="width:${x.a / m * 100}%"></i></span><span class="v">${x.a}</span></div>
-          <div class="row sgr" style="--c:var(--mut)"><span>Không có</span><span class="t"><i style="width:${x.b / m * 100}%"></i></span><span class="v">${x.b}</span></div></div>`; }).join('')}
-        <div class="fm"><div class="kl">Cách viết tên bài</div><b>${esc(F.line)}</b><div>Ví dụ: ${esc(F.example)}</div></div>
+      <div class="card"><h3>Công thức chung</h3>
+        <div class="seg" role="tablist">${['share', 'cmt'].map(g => `<button type="button" role="tab" aria-selected="${S.goal2 === g}" class="${S.goal2 === g ? 'on' : ''}" data-act="goal2" data-id="${g}">${esc(F.goals[g])}</button>`).join('')}</div>
+        <p class="sub" style="font-size:14px;margin:14px 0 20px">${esc(S.goal2 === 'cmt' ? F.how_cmt : F.how_share)}</p>
+        ${F.signals.map(x => { const A = S.goal2 === 'cmt' ? x.ca : x.a, B = S.goal2 === 'cmt' ? x.cb : x.b, m = Math.max(A, B); return `<div class="sg"><div class="sgt">${esc(x.t)} <button class="tip" type="button" aria-label="Giải thích: ${esc(x.t)}">ⓘ<span class="tt"><b>${esc(x.what)}</b><br>${esc(x.why)}</span></button></div>
+          <div class="row sgr" style="--c:${A >= B ? 'var(--acc)' : 'var(--mut)'}"><span>Có · ${x.n} bài</span><span class="t"><i style="width:${A / m * 100}%"></i></span><span class="v">${A}</span></div>
+          <div class="row sgr" style="--c:${A >= B ? 'var(--mut)' : 'var(--acc)'}"><span>Không có</span><span class="t"><i style="width:${B / m * 100}%"></i></span><span class="v">${B}</span></div></div>`; }).join('')}
+        <div class="fm"><div class="kl">Nên làm</div><b>${esc(S.goal2 === 'cmt' ? F.pick_cmt : F.pick_share)}</b><div class="kl" style="margin-top:10px">Công thức viết tên bài</div><div><b style="display:inline;font-size:14.5px">${esc(F.line)}</b></div><div>Ví dụ: ${esc(F.example)}</div></div>
         <details class="more2"><summary>Lưu ý thêm</summary><div class="note">${esc(F.warn)}</div><div class="note">${esc(F.cta)}</div><div class="note">Tránh trong tên bài: ${F.avoid.map(w => '“' + esc(w) + '”').join(', ')}.</div><div class="note">${esc(F.note)}</div></details>
       </div>
     </div>
@@ -147,12 +150,15 @@
       row(5, 'Người đăng và tuổi bài', t3.map((p, i) => { const s = sps[i]; return cell(s ? `${dec(s)} mỗi ngày` : '–', `${p.srcType.toLowerCase()} · ${p.age || '–'} ngày`, s != null && s === maxSp, false); })),
     ].join('');
     const compare = t3.length ? `
-      <div class="sec"><h2>Chọn một mẫu để học.</h2><p class="sub">Năm tín hiệu quan trọng nhất, theo thứ tự. Ô tô màu là điểm mạnh nhất của hàng.</p>
+      <div class="sec"><h2>Chọn một mẫu để học.</h2><p class="sub">Ba bài nhiều chia sẻ nhất, tức bài lan rộng nhất. Ô tô màu là điểm mạnh nhất của hàng.</p>
       <div class="wrap"><div class="cmp">
         <div class="cr h"><span></span>${cols.map(c => `<div class="ch">${c.bd ? `<span class="pill c" style="--c:${cv(k)}">${esc(c.bd)}</span>` : ''}<div class="tt">${esc(c.p.hook.slice(0, 80))}</div><div class="ss">${esc(c.p.src.slice(0, 40))} · ${fd(c.p.date)}</div></div>`).join('')}</div>
         ${rows}
         <div class="cr f" style="border-top:1px solid var(--line)"><span></span>${cols.map(c => `<div class="acts"><button class="btn sm" style="${c.p.id === sel ? `background:${cv(k)};color:#fff` : ''}" data-act="pick" data-k="${k}" data-id="${c.p.id}">${c.p.id === sel ? 'Đang học mẫu này' : 'Học mẫu này'}</button><a href="${esc(c.p.link)}" target="_blank" rel="noopener">Mở bài ↗</a></div>`).join('')}</div>
       </div></div></div>` : '';
+    const tc = topC(k);
+    const leads = tc.length ? `<div class="sec"><h2>Mẫu để thu người quan tâm.</h2><p class="sub">Ba bài nhiều bình luận nhất, đã bỏ bài nghi spam. Xem người xem làm gì để nhận tài liệu.</p>
+      <div class="grid3" style="margin-top:24px">${tc.map(p => { const ci = cmtInfo(p); return `<div class="card" style="--c:${cv(k)}"><div class="big2">${fmt(p.comments)}<small>bình luận · ${fmt(p.shares)} chia sẻ</small></div><div class="tt2">${esc(p.hook.slice(0, 90))}</div><div class="note">${esc(p.src.slice(0, 40))} · ${fd(p.date)}</div><div class="pill c" style="--c:${cv(k)};margin-top:12px">${esc(ci.t)}</div><div class="note">${esc(ci.sub)}</div><div class="acts" style="margin-top:14px"><a class="btn sm ghost" href="${esc(p.link)}" target="_blank" rel="noopener">Mở bài gốc ↗</a><button class="btn sm ghost" data-act="save" data-id="${p.id}">${saved.includes(p.id) ? 'Bỏ lưu' : 'Lưu'}</button></div></div>`; }).join('')}</div></div>` : '';
     const anat = cur ? (() => {
       const s = slotsFor(cur);
       return `<div class="sec"><h2>Mổ xẻ, rồi điền cho brand.</h2><p class="sub">Đang học: ${esc(cur.hook.slice(0, 90))}</p>
@@ -171,7 +177,7 @@
     return `
     <div class="chips">${KEYS.map(x => `<a class="chip${x === k ? ' on' : ''}" href="#mon-${x}"><i class="dot" style="--c:${x === k ? 'currentColor' : cv(x)}"></i>${SUBJ[x].short}${SUBJ[x].star ? ' ★' : ''}</a>`).join('')}</div>
     <div class="meta"><span style="color:${cv(k)};font-weight:600">${esc(sj.name)}</span><span>${esc(sj.brand)}</span><span>·</span><span>dựa trên ${ps.length} bài</span><span class="pill warn">${esc(cu ? cu.confidence : 'Chưa rà tay, mẫu nhỏ')}</span></div>
-    ${head}${compare}${anat}${more}
+    ${head}${compare}${leads}${anat}${more}
     <p class="foot">Mẫu nhỏ (${ps.length} bài). Phần trong ngoặc vuông là chỗ giữ chỗ, cần thay bằng tài liệu thật. Chia sẻ mỗi ngày giúp so bài mới với bài cũ.</p>`;
   }
 
@@ -281,6 +287,7 @@
     const a = b.dataset.act, id = b.dataset.id, k = b.dataset.k;
     if (a === 'stop') return;
     if (a === 'dd') { S.menu = !S.menu; render(true); return; }
+    if (a === 'goal2') { S.goal2 = id; render(true); return; }
     if (a === 'cell') { S.cell = id; render(true); return; }
     if (a === 'pick') { S.sel[k] = id; render(true); return; }
     if (a === 'save') { e.stopPropagation(); saved = saved.includes(id) ? saved.filter(x => x !== id) : saved.concat(id); persist(); render(true); return; }

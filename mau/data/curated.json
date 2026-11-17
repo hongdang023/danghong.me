@@ -126,38 +126,66 @@
     "signals": [
       {
         "t": "Tên bài có con số (100 đề, 40 bài mẫu…)",
-        "a": 23,
-        "b": 11,
-        "u": "chia sẻ",
+        "a": 25,
+        "b": 10,
+        "ca": 55,
+        "cb": 17,
+        "n": 34,
         "what": "Tên bài có số lượng rõ, như “100 đề” hay “40 bài mẫu”.",
-        "why": "Người xem thấy ngay mình nhận được bao nhiêu, nên dễ quyết định chia sẻ cho bạn bè. Tên bài không có số thì khó hình dung giá trị."
+        "why": "Người xem thấy ngay mình nhận được bao nhiêu, nên dễ quyết định chia sẻ hoặc xin nhận."
       },
       {
         "t": "Có ghi rõ “có đáp án” hoặc “lời giải”",
-        "a": 43,
-        "b": 11,
-        "u": "chia sẻ",
+        "a": 41,
+        "b": 10,
+        "ca": 44,
+        "cb": 19,
+        "n": 24,
         "what": "Bài nói rõ tài liệu có đáp án hoặc lời giải.",
-        "why": "Phụ huynh và học sinh cần đối chiếu để tự học. Có đáp án nghĩa là dùng được ngay, nên họ chia sẻ cho người khác."
+        "why": "Phụ huynh và học sinh cần đối chiếu để tự học. Có đáp án nghĩa là dùng được ngay."
       },
       {
         "t": "Có album từ 4 ảnh xem trước",
-        "a": 27,
+        "a": 26,
         "b": 8,
-        "u": "chia sẻ",
+        "ca": 18,
+        "cb": 23,
+        "n": 34,
         "what": "Bài có album từ 4 ảnh xem trước ruột tài liệu.",
-        "why": "Xem trước giúp tin rằng tài liệu thật, không phải bài câu bình luận. Tin rồi thì mới chia sẻ."
+        "why": "Xem trước giúp tin tài liệu thật, nên dễ chia sẻ. Nhưng không làm tăng bình luận: người xem đã thấy đủ nên ít cần xin thêm."
       },
       {
-        "t": "Gọi đúng lớp, kỳ thi hoặc mốc (vào 10, giữa kì…)",
+        "t": "Nhắm đúng “vào 10” hoặc “vào 6”",
         "a": 30,
-        "b": 12,
-        "u": "chia sẻ",
-        "what": "Tên bài gọi đúng lớp, kỳ thi hoặc mốc, như “vào 10”, “giữa kì”.",
-        "why": "Người xem thấy bài viết cho đúng mình và đúng lúc đang cần, nên lan nhanh hơn trong nhóm phụ huynh và lớp học."
+        "b": 11,
+        "ca": 11,
+        "cb": 23,
+        "n": 12,
+        "what": "Tên bài nhắm đúng kỳ thi chuyển cấp.",
+        "why": "Học sinh và phụ huynh thấy đúng việc mình lo, nên gửi cho nhau. Bình luận lại thấp hơn, có thể vì kiểu bài này không bắt xin nhận."
+      },
+      {
+        "t": "Bám mốc giữa kì, cuối kì",
+        "a": 21,
+        "b": 11,
+        "ca": 44,
+        "cb": 19,
+        "n": 9,
+        "what": "Tên bài gọi đúng đợt kiểm tra đang diễn ra.",
+        "why": "Đúng lúc cần dùng nên vừa lan nhanh vừa có nhiều người xin. Chỉ 9 bài nên chưa chắc."
+      },
+      {
+        "t": "Tên bài mở bằng TẶNG, FREE hoặc “chia sẻ”",
+        "a": 12,
+        "b": 11,
+        "ca": 66,
+        "cb": 11,
+        "n": 51,
+        "what": "Tên bài nói thẳng đây là tài liệu tặng.",
+        "why": "Không làm bài lan hơn (12 so với 11), nhưng người xem thấy là miễn phí nên xin nhận nhiều gấp 6 lần."
       }
     ],
-    "warn": "“FREE” đứng một mình không tạo hook: 34 bài dùng, trung vị 12 chia sẻ so với 16 khi không dùng.",
+    "warn": "“FREE” hoặc “TẶNG” ít giúp lan rộng (12 so với 11 chia sẻ) nhưng thu bình luận gấp 6 lần (66 so với 11). Album xem trước giúp chia sẻ, không giúp bình luận.",
     "cta": "Link hoặc Drive để sẵn: 95 chia sẻ. Bắt nhắn “ib”: 4 chia sẻ.",
     "avoid": [
       "môn",
@@ -166,8 +194,16 @@
       "tặng tài liệu",
       "2025"
     ],
-    "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
-    "how": "Mỗi bài được chia sẻ khoảng bao nhiêu lần, khi có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là người xem thấy bài đáng gửi cho bạn."
+    "note": "Tính trên 100 bài, đã bỏ 8 bài nghi spam bình luận. Mẫu nhỏ (9–51 bài mỗi dòng), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
+    "how": "Số chia sẻ khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là bài lan ra, tìm được người xem mới.",
+    "how_share": "Số chia sẻ khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là bài lan ra, tìm được người xem mới.",
+    "how_cmt": "Số bình luận khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Bình luận nhiều nghĩa là nhiều người giơ tay xin tài liệu hoặc hỏi thêm.",
+    "goals": {
+      "share": "Lan rộng",
+      "cmt": "Thu người quan tâm"
+    },
+    "pick_share": "Muốn lan rộng: con số, có đáp án, album xem trước, nhắm đúng vào 10.",
+    "pick_cmt": "Muốn thu người quan tâm: mở bằng TẶNG hoặc FREE, có con số, bám mốc kiểm tra, có đáp án."
   },
   "more": {
     "title": "Ba yếu tố khác",

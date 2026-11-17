@@ -60,13 +60,15 @@ Mỗi môn lấy 3 bài có link và nhiều chia sẻ nhất, vì chia sẻ là
 
 ## Công thức chung (khối `formula` trong `curated.json`)
 
-Viết tay từ 108 bài, quét 2026-11-17. Bốn tín hiệu có chia sẻ trung vị cao hơn khi có: con số cụ thể (23 so với 11), ghi rõ có đáp án (43 so với 11), album từ 4 ảnh (27 so với 8), gọi đúng khóa hoặc mốc (30 so với 12). "FREE" đứng một mình không tạo hook (12 so với 16). Link để sẵn lan hơn bắt nhắn "ib" (95 so với 4). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi. Mỗi tín hiệu có tooltip ⓘ (`what`, `why`) giải thích tín hiệu là gì và vì sao quan trọng, kèm số lần so với nhóm không có.
-
-Ba lý do ở đầu trang môn (`reasons` trong `curated.json`) mỗi mục có thêm `kw`: các từ khóa trong tên bài lấy từ chính các bài mẫu, kèm số chia sẻ, hiện thành chip khi mở mục.
+Hai mục tiêu, bấm chuyển trên trang Tổng quan: **Lan rộng** (chia sẻ) và **Thu người quan tâm** (bình luận). Chia sẻ đo bài lan ra; bình luận đo người giơ tay xin tài liệu, quan trọng với phễu. Số liệu trung vị trên 100 bài (đã bỏ 8 bài nghi spam bình luận), quét 2026-11-17, mỗi dòng 9–51 bài. Có so với không có, chia sẻ / bình luận: con số 25 / 10 và 55 / 17; có đáp án 41 / 10 và 44 / 19; album từ 4 ảnh 26 / 8 và 18 / 23 (không tăng bình luận); nhắm vào 10 hoặc vào 6 30 / 11 và 11 / 23; bám mốc giữa, cuối kì 21 / 11 và 44 / 19; mở bằng TẶNG hoặc FREE 12 / 11 và 66 / 11 (không giúp lan, nhưng gấp 6 lần bình luận). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi. Mỗi tín hiệu có tooltip ⓘ (`what`, `why`).
 
 ## Ba yếu tố khác (khối `more` trong `curated.json`)
 
 Trên trang Tổng quan, dưới Công thức chung: loại tài liệu, người đăng, độ dài và cách viết, mỗi nhóm có chia sẻ trung vị và số bài. Rút từ 108 bài ngày 2026-11-17: đề và bộ đề ổn định nhất (trung vị 23, 42 bài); nguồn kiểu "kho tài liệu" thấp (8 so với 17); bài trên 700 ký tự thấp hơn bài 150–700 ký tự (10 so với 21). Giới hạn: chưa có số người theo dõi của page, nội dung bài đọc được 74 bài và cắt ở 700 ký tự, loại tài liệu phân loại tự động.
+
+## Hai danh sách mẫu trên trang môn
+
+Trang môn có hai danh sách: ba bài nhiều chia sẻ nhất (lan rộng, bảng so sánh năm tín hiệu) và ba bài nhiều bình luận nhất có link, đã bỏ bài nghi spam (thu người quan tâm, kèm cơ chế nhận tài liệu).
 
 ## Giới hạn
 
