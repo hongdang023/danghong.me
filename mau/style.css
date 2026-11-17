@@ -211,3 +211,10 @@ pre.dr{white-space:pre-wrap;font:inherit;margin:12px 0 0;padding:16px;border-rad
 .kws .kl{font-size:13px;color:var(--mut);margin-right:4px}
 .kwc{font-size:13.5px;font-weight:600;padding:6px 12px;border-radius:99px;background:color-mix(in srgb,var(--c) 12%,transparent);color:var(--c)}
 .kwc i{font-style:normal;font-weight:400;color:var(--mut);margin-left:4px}
+.sg{padding:16px 0;border-top:1px solid var(--line)}
+.sgt{font-size:16px;font-weight:600;margin-bottom:12px}
+.sgr{grid-template-columns:70px 1fr 36px;margin-bottom:8px;font-size:14px;color:var(--mut)}
+.fm{margin-top:8px;padding:18px 20px;border-radius:18px;background:var(--soft);font-size:14.5px;line-height:1.5}
+.fm b{display:block;font-size:16px;margin:4px 0 8px}
+.fm .kl{font-size:12.5px;color:var(--mut)}
+.more2{border:0;margin-top:14px}.more2 summary{font-size:14px;color:var(--acc)}

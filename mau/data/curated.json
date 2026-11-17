@@ -125,7 +125,7 @@
     "example": "TẶNG 100 đề Toán 9 ôn vào 10, có đáp án (kèm album 5 ảnh)",
     "signals": [
       {
-        "t": "Con số cụ thể",
+        "t": "Tên bài có con số (100 đề, 40 bài mẫu…)",
         "a": 23,
         "b": 11,
         "u": "chia sẻ",
@@ -133,7 +133,7 @@
         "why": "Người xem thấy ngay mình nhận được bao nhiêu, nên dễ quyết định chia sẻ cho bạn bè. Tên bài không có số thì khó hình dung giá trị."
       },
       {
-        "t": "Ghi rõ có đáp án",
+        "t": "Có ghi rõ “có đáp án” hoặc “lời giải”",
         "a": 43,
         "b": 11,
         "u": "chia sẻ",
@@ -141,7 +141,7 @@
         "why": "Phụ huynh và học sinh cần đối chiếu để tự học. Có đáp án nghĩa là dùng được ngay, nên họ chia sẻ cho người khác."
       },
       {
-        "t": "Album từ 4 ảnh",
+        "t": "Có album từ 4 ảnh xem trước",
         "a": 27,
         "b": 8,
         "u": "chia sẻ",
@@ -149,7 +149,7 @@
         "why": "Xem trước giúp tin rằng tài liệu thật, không phải bài câu bình luận. Tin rồi thì mới chia sẻ."
       },
       {
-        "t": "Gọi đúng khóa hoặc mốc",
+        "t": "Gọi đúng lớp, kỳ thi hoặc mốc (vào 10, giữa kì…)",
         "a": 30,
         "b": 12,
         "u": "chia sẻ",
@@ -167,6 +167,6 @@
       "2025"
     ],
     "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
-    "how": "Mỗi số là chia sẻ của bài ở giữa nhóm (trung vị). Chia sẻ là dấu hiệu người xem thấy bài đủ hay để gửi cho người khác, nên là thước đo hook tốt nhất. Di chuột vào ⓘ để xem vì sao."
+    "how": "Mỗi bài được chia sẻ khoảng bao nhiêu lần, khi có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là người xem thấy bài đáng gửi cho bạn."
   }
 }

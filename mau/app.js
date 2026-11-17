@@ -108,12 +108,12 @@
     </div>
     <div class="grid2">
       <div class="card"><h3>Chia sẻ theo môn</h3><p class="sub" style="font-size:14px;margin-bottom:24px">Trung vị mỗi bài</p>${meds.map(m => bar(SUBJ[m.k].short, m.k, m.v, mx)).join('')}</div>
-      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:12px">${esc(F.how)}</p>
-        ${F.signals.map(x => `<div class="rep"><b class="big">${x.a}</b><span><b>${esc(x.t)}</b> <button class="tip" type="button" aria-label="Giải thích: ${esc(x.t)}">ⓘ<span class="tt"><b>${esc(x.what)}</b><br>${esc(x.why)}</span></button><br>chia sẻ khi có · ${x.b} khi không có · gấp ${(x.a / x.b).toFixed(1).replace('.0', '')} lần</span></div>`).join('')}
-        <div class="note" style="margin-top:12px"><b>${esc(F.line)}</b><br>Ví dụ: ${esc(F.example)}</div>
-        <div class="note">${esc(F.warn)}</div>
-        <div class="note">${esc(F.cta)}</div>
-        <div class="note">Tránh trong tên bài: ${F.avoid.map(w => '“' + esc(w) + '”').join(', ')}. ${esc(F.note)}</div>
+      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:20px">${esc(F.how)}</p>
+        ${F.signals.map(x => { const m = Math.max(x.a, x.b); return `<div class="sg"><div class="sgt">${esc(x.t)} <button class="tip" type="button" aria-label="Giải thích: ${esc(x.t)}">ⓘ<span class="tt"><b>${esc(x.what)}</b><br>${esc(x.why)}</span></button></div>
+          <div class="row sgr" style="--c:var(--acc)"><span>Có</span><span class="t"><i style="width:${x.a / m * 100}%"></i></span><span class="v">${x.a}</span></div>
+          <div class="row sgr" style="--c:var(--mut)"><span>Không có</span><span class="t"><i style="width:${x.b / m * 100}%"></i></span><span class="v">${x.b}</span></div></div>`; }).join('')}
+        <div class="fm"><div class="kl">Cách viết tên bài</div><b>${esc(F.line)}</b><div>Ví dụ: ${esc(F.example)}</div></div>
+        <details class="more2"><summary>Lưu ý thêm</summary><div class="note">${esc(F.warn)}</div><div class="note">${esc(F.cta)}</div><div class="note">Tránh trong tên bài: ${F.avoid.map(w => '“' + esc(w) + '”').join(', ')}.</div><div class="note">${esc(F.note)}</div></details>
       </div>
     </div>
     <p class="foot">Số bài mẫu là số bài trong thư viện, không phải số đối thủ trên Facebook. Mỗi môn chỉ có 12–20 bài, nên ô nào dưới 2 bài chỉ để tham khảo. Bài chưa xác định được cấp không nằm trong biểu đồ.</p>`;
