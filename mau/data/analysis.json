@@ -41,19 +41,19 @@
   },
   {
    "k": "Hóa học",
-   "n": 16,
+   "n": 15,
    "medC": 125,
-   "medS": 5,
-   "avgC": 212,
-   "avgS": 17
+   "medS": 4,
+   "avgC": 224,
+   "avgS": 18
   },
   {
    "k": "Tin học",
-   "n": 12,
+   "n": 13,
    "medC": 20,
    "medS": 4,
    "avgC": 27,
-   "avgS": 4
+   "avgS": 5
   }
  ],
  "byCta": [

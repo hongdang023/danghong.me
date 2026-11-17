@@ -550,7 +550,7 @@
   "tin": {
     "headline": "Chưa có mẫu đáng học cho Tin học. Thử bài thông tin kỳ thi cụ thể.",
     "sub": "Cả môn chia sẻ rất thấp, nên dùng để thử nhỏ chứ chưa nên đầu tư.",
-    "confidence": "Độ chắc: rất thấp, mẫu 12 bài",
+    "confidence": "Độ chắc: rất thấp, mẫu 13 bài",
     "reasons": [
       {
         "title": "Cả môn chia sẻ thấp, bài tự học chung chung không lan",
@@ -572,7 +572,7 @@
       },
       {
         "title": "Thông tin kỳ thi có ngày, địa phương",
-        "body": "Hai bài nhiều chia sẻ nhất đều nói về kỳ thi cụ thể, có ngày hoặc tên vùng.",
+        "body": "Hai trong ba bài nhiều chia sẻ nhất nói về kỳ thi cụ thể, có ngày hoặc tên vùng.",
         "kw": [
           {
             "k": "KỲ THI OLYMPIC TIN HỌC MIỀN TRUNG VÀ TÂY NGUYÊN - LẦN THỨ VII - NĂM 2026",
@@ -585,12 +585,16 @@
         ]
       },
       {
-        "title": "Bài tặng giáo án và bài khóa học ít chia sẻ",
-        "body": "Bài tặng giáo án Tin học các lớp chỉ 1 chia sẻ. Bài khóa học Python có 88 bình luận nhưng chỉ 8 chia sẻ.",
+        "title": "Giáo án tặng ít chia sẻ, bài khóa học nhỉnh hơn",
+        "body": "Bài tặng giáo án Tin học các lớp chỉ 1 chia sẻ. Bài khóa học nhận 8 đến 11 chia sẻ và 35 đến 88 bình luận.",
         "kw": [
           {
             "k": "TẶNG FREE KHBG W+PPT MÔN TIN HỌC 6 • 7 • 8 • 9 • 10 • 11 • 12",
             "n": "1 chia sẻ"
+          },
+          {
+            "k": "2K9 MẤT GỐC TIN HỌC? ĐÃ CÓ KHÓA “HỌC LẠI TỪ ĐẦU”",
+            "n": "11 chia sẻ · 35 bình luận"
           },
           {
             "k": "KHÓA HỌC LẬP TRÌNH PYTHON CHO HỌC SINH (LỚP 6–10)",
