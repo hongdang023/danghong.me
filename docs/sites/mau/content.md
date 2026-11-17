@@ -62,6 +62,8 @@ Mỗi môn lấy 3 bài có link và nhiều chia sẻ nhất, vì chia sẻ là
 
 Viết tay từ 108 bài, quét 2026-11-17. Bốn tín hiệu có chia sẻ trung vị cao hơn khi có: con số cụ thể (23 so với 11), ghi rõ có đáp án (43 so với 11), album từ 4 ảnh (27 so với 8), gọi đúng khóa hoặc mốc (30 so với 12). "FREE" đứng một mình không tạo hook (12 so với 16). Link để sẵn lan hơn bắt nhắn "ib" (95 so với 4). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi. Mỗi tín hiệu có tooltip ⓘ (`what`, `why`) giải thích tín hiệu là gì và vì sao quan trọng, kèm số lần so với nhóm không có.
 
+Ba lý do ở đầu trang môn (`reasons` trong `curated.json`) mỗi mục có thêm `kw`: các từ khóa trong tên bài lấy từ chính các bài mẫu, kèm số chia sẻ, hiện thành chip khi mở mục.
+
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.

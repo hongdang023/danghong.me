@@ -129,7 +129,7 @@
     const mine = mineFor(k);
     const head = cu
       ? `<h1 class="hero">${esc(cu.headline)}</h1><p class="lead">${esc(cu.sub)}</p>
-         <div class="why">${cu.reasons.map((r, i) => `<details><summary><span class="n">${i + 1}</span><span class="tt">${esc(r.title)}</span><span class="pm" aria-hidden="true">+</span></summary><div class="bd">${esc(r.body)}</div></details>`).join('')}</div>`
+         <div class="why" style="--c:${cv(k)}">${cu.reasons.map((r, i) => `<details><summary><span class="n">${i + 1}</span><span class="tt">${esc(r.title)}</span><span class="pm" aria-hidden="true">+</span></summary><div class="bd">${esc(r.body)}${r.kw ? `<div class="kws"><span class="kl">Từ khóa trong tên bài</span>${r.kw.map(w => `<span class="kwc">${esc(w.k)} <i>${esc(w.n)}</i></span>`).join("")}</div>` : ""}</div></details>`).join('')}</div>`
       : `<h1 class="hero">${esc(sj.name)}</h1><p class="lead">Chưa có khuyến nghị cho môn này vì chưa rà tay các mẫu. Dưới đây là 3 bài nhiều chia sẻ nhất để bạn so sánh.</p>`;
     const cols = t3.map((p, i) => {
       const bd = slotsFor(p).badge || (p.shares === maxS ? 'Nhiều chia sẻ nhất' : (sps[i] === maxSp ? 'Lan nhanh nhất' : ''));

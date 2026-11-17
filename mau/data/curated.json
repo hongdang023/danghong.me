@@ -8,15 +8,69 @@
     "reasons": [
       {
         "title": "Chia sẻ cao nhất nằm ở bộ đề, không ở bài nhiều bình luận",
-        "body": "Ba bài nhiều chia sẻ nhất môn: 131, 112 và 110. Bài nhiều bình luận nhất (204) chỉ có 8 chia sẻ, vì yêu cầu bình luận đúng một từ khóa để nhận sách."
+        "body": "Ba bài nhiều chia sẻ nhất môn: 131, 112 và 110. Bài nhiều bình luận nhất (204) chỉ có 8 chia sẻ, vì yêu cầu bình luận đúng một từ khóa để nhận sách.",
+        "kw": [
+          {
+            "k": "BỘ ĐỀ TRUYỆN TRUYỀN KÌ",
+            "n": "131 chia sẻ"
+          },
+          {
+            "k": "BỘ 100 ĐỀ THI LỚP 9",
+            "n": "110"
+          },
+          {
+            "k": "TUYỂN CHỌN 105 ĐỀ",
+            "n": "70"
+          },
+          {
+            "k": "TỔNG HỢP TRI THỨC NGỮ VĂN",
+            "n": "77"
+          }
+        ]
       },
       {
         "title": "Bài bám mốc kiểm tra lan nhanh hơn",
-        "body": "Đề giữa học kì I lớp 9: 112 chia sẻ sau 12 ngày, khoảng 9 chia sẻ mỗi ngày. Bộ 100 đề đăng tháng 8: 110 chia sẻ sau 93 ngày, khoảng 1 chia sẻ mỗi ngày."
+        "body": "Đề giữa học kì I lớp 9: 112 chia sẻ sau 12 ngày, khoảng 9 chia sẻ mỗi ngày. Bộ 100 đề đăng tháng 8: 110 chia sẻ sau 93 ngày, khoảng 1 chia sẻ mỗi ngày.",
+        "kw": [
+          {
+            "k": "ĐỀ KIỂM TRA GIỮA HỌC KÌ I",
+            "n": "112 chia sẻ sau 12 ngày"
+          },
+          {
+            "k": "ÔN THI LÊN 10",
+            "n": "110"
+          },
+          {
+            "k": "LỚP 9",
+            "n": "112"
+          },
+          {
+            "k": "TÊN TRƯỜNG cụ thể",
+            "n": "112"
+          }
+        ]
       },
       {
         "title": "Con số và album xem trước",
-        "body": "Hai trong ba bài đầu có album 5 ảnh, và tên bài nói rõ loại và số lượng (100 đề, bộ đề truyện truyền kì)."
+        "body": "Hai trong ba bài đầu có album 5 ảnh, và tên bài nói rõ loại và số lượng (100 đề, bộ đề truyện truyền kì).",
+        "kw": [
+          {
+            "k": "100 ĐỀ",
+            "n": "110 chia sẻ"
+          },
+          {
+            "k": "105 ĐỀ – BÀI VĂN",
+            "n": "70"
+          },
+          {
+            "k": "100 BÀI VĂN NLXH",
+            "n": "16"
+          },
+          {
+            "k": "Album 5 ảnh xem trước",
+            "n": "2 trong 3 bài đầu"
+          }
+        ]
       }
     ],
     "mine": [
