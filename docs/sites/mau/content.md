@@ -60,7 +60,7 @@ Mỗi môn lấy 3 bài có link và nhiều chia sẻ nhất, vì chia sẻ là
 
 ## Công thức chung (khối `formula` trong `curated.json`)
 
-Viết tay từ 108 bài, quét 2026-11-17. Bốn tín hiệu có chia sẻ trung vị cao hơn khi có: con số cụ thể (23 so với 11), ghi rõ có đáp án (43 so với 11), album từ 4 ảnh (27 so với 8), gọi đúng khóa hoặc mốc (30 so với 12). "FREE" đứng một mình không tạo hook (12 so với 16). Link để sẵn lan hơn bắt nhắn "ib" (95 so với 4). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi.
+Viết tay từ 108 bài, quét 2026-11-17. Bốn tín hiệu có chia sẻ trung vị cao hơn khi có: con số cụ thể (23 so với 11), ghi rõ có đáp án (43 so với 11), album từ 4 ảnh (27 so với 8), gọi đúng khóa hoặc mốc (30 so với 12). "FREE" đứng một mình không tạo hook (12 so với 16). Link để sẵn lan hơn bắt nhắn "ib" (95 so với 4). Mẫu nhỏ, Tiếng Anh kéo số chung lên; cần viết lại khi dữ liệu đổi. Mỗi tín hiệu có tooltip ⓘ (`what`, `why`) giải thích tín hiệu là gì và vì sao quan trọng, kèm số lần so với nhóm không có.
 
 ## Giới hạn
 

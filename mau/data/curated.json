@@ -74,25 +74,33 @@
         "t": "Con số cụ thể",
         "a": 23,
         "b": 11,
-        "u": "chia sẻ"
+        "u": "chia sẻ",
+        "what": "Tên bài có số lượng rõ, như “100 đề” hay “40 bài mẫu”.",
+        "why": "Người xem thấy ngay mình nhận được bao nhiêu, nên dễ quyết định chia sẻ cho bạn bè. Tên bài không có số thì khó hình dung giá trị."
       },
       {
         "t": "Ghi rõ có đáp án",
         "a": 43,
         "b": 11,
-        "u": "chia sẻ"
+        "u": "chia sẻ",
+        "what": "Bài nói rõ tài liệu có đáp án hoặc lời giải.",
+        "why": "Phụ huynh và học sinh cần đối chiếu để tự học. Có đáp án nghĩa là dùng được ngay, nên họ chia sẻ cho người khác."
       },
       {
         "t": "Album từ 4 ảnh",
         "a": 27,
         "b": 8,
-        "u": "chia sẻ"
+        "u": "chia sẻ",
+        "what": "Bài có album từ 4 ảnh xem trước ruột tài liệu.",
+        "why": "Xem trước giúp tin rằng tài liệu thật, không phải bài câu bình luận. Tin rồi thì mới chia sẻ."
       },
       {
         "t": "Gọi đúng khóa hoặc mốc",
         "a": 30,
         "b": 12,
-        "u": "chia sẻ"
+        "u": "chia sẻ",
+        "what": "Tên bài gọi đúng lớp, kỳ thi hoặc mốc, như “vào 10”, “giữa kì”.",
+        "why": "Người xem thấy bài viết cho đúng mình và đúng lúc đang cần, nên lan nhanh hơn trong nhóm phụ huynh và lớp học."
       }
     ],
     "warn": "“FREE” đứng một mình không tạo hook: 34 bài dùng, trung vị 12 chia sẻ so với 16 khi không dùng.",
@@ -104,6 +112,7 @@
       "tặng tài liệu",
       "2025"
     ],
-    "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau."
+    "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
+    "how": "Mỗi số là chia sẻ của bài ở giữa nhóm (trung vị). Chia sẻ là dấu hiệu người xem thấy bài đủ hay để gửi cho người khác, nên là thước đo hook tốt nhất. Di chuột vào ⓘ để xem vì sao."
   }
 }

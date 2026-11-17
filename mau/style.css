@@ -202,3 +202,8 @@ pre.dr{white-space:pre-wrap;font:inherit;margin:12px 0 0;padding:16px;border-rad
   .row{grid-template-columns:90px 1fr 36px}
 }
 @media(max-width:860px){.bub{width:28px;height:28px;margin:-14px 0 0 -14px;font-size:10px}}
+
+.rep{position:relative}.tip{position:static;border:0;background:none;color:var(--mut);font:inherit;font-size:15px;cursor:help;padding:0 2px}
+.tip .tt{display:none;position:absolute;left:100px;right:0;top:calc(100% - 8px);z-index:30;padding:14px 16px;border-radius:14px;background:#2A2A2D;color:#F5F5F7;border:1px solid #48484A;font-size:13.5px;line-height:1.5;text-align:left;font-weight:400;box-shadow:0 12px 40px rgba(0,0,0,.45);opacity:1}
+.tip .tt b{color:#fff;font-weight:600}
+.tip:hover .tt,.tip:focus .tt{display:block}

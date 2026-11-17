@@ -108,8 +108,8 @@
     </div>
     <div class="grid2">
       <div class="card"><h3>Chia sẻ theo môn</h3><p class="sub" style="font-size:14px;margin-bottom:24px">Trung vị mỗi bài</p>${meds.map(m => bar(SUBJ[m.k].short, m.k, m.v, mx)).join('')}</div>
-      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:12px">Chia sẻ trung vị: có tín hiệu so với không có</p>
-        ${F.signals.map(x => `<div class="rep"><b class="big">${x.a}</b><span><b>${esc(x.t)}</b><br>so với ${x.b}</span></div>`).join('')}
+      <div class="card"><h3>Công thức chung</h3><p class="sub" style="font-size:14px;margin-bottom:12px">${esc(F.how)}</p>
+        ${F.signals.map(x => `<div class="rep"><b class="big">${x.a}</b><span><b>${esc(x.t)}</b> <button class="tip" type="button" aria-label="Giải thích: ${esc(x.t)}">ⓘ<span class="tt"><b>${esc(x.what)}</b><br>${esc(x.why)}</span></button><br>chia sẻ khi có · ${x.b} khi không có · gấp ${(x.a / x.b).toFixed(1).replace('.0', '')} lần</span></div>`).join('')}
         <div class="note" style="margin-top:12px"><b>${esc(F.line)}</b><br>Ví dụ: ${esc(F.example)}</div>
         <div class="note">${esc(F.warn)}</div>
         <div class="note">${esc(F.cta)}</div>
