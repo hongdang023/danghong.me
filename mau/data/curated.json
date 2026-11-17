@@ -1,5 +1,5 @@
 {
-  "note": "Viết tay ngày 2026-11-17 từ 3 bài nhiều chia sẻ nhất của Ngữ văn. Cần viết lại khi dữ liệu thay đổi.",
+  "note": "Viết tay ngày 2026-11-17 từ các bài nhiều chia sẻ và bình luận của từng môn. Cần viết lại khi dữ liệu thay đổi.",
   "van": {
     "headline": "Làm bộ đề lớp 9 theo mốc kiểm tra, có con số và album xem trước.",
     "sub": "Đăng đúng lúc học sinh cần, nói rõ tặng gì, cho xem trước rồi mới mời nhận.",
@@ -303,6 +303,299 @@
             11,
             59
           ]
+        ]
+      }
+    ]
+  },
+  "toan": {
+    "headline": "Làm bộ 10 đề theo mốc kiểm tra, ghi rõ có đáp án và lời giải chi tiết.",
+    "sub": "Tặng bộ đề nhỏ, đúng đợt kiểm tra của lớp, nói rõ cách xem lời giải.",
+    "confidence": "Độ chắc: vừa, mẫu 20 bài",
+    "reasons": [
+      {
+        "title": "Bộ 10 đề đúng đợt kiểm tra lan rất nhanh",
+        "body": "Bài tuyển tập 10 đề khảo sát tháng 11 lớp 9 đạt 93 chia sẻ sau 10 ngày. Bài bộ 10 đề ôn tập HK1 lớp 9 đạt 43 chia sẻ và 91 bình luận chỉ sau 1 ngày.",
+        "kw": [
+          {
+            "k": "TUYỂN TẬP 10 ĐỀ KHẢO SÁT THÁNG 11 – TOÁN 9",
+            "n": "93 chia sẻ"
+          },
+          {
+            "k": "Bộ 10 đề ôn tập nâng cao HK1 Toán 9",
+            "n": "43"
+          },
+          {
+            "k": "Bộ 10 Đề kiểm tra học kì 2 môn toán lớp 9",
+            "n": "44"
+          }
+        ]
+      },
+      {
+        "title": "Ghi rõ có đáp án và lời giải chi tiết",
+        "body": "Ba trong năm bài nhiều chia sẻ nhất đều ghi đáp án hoặc lời giải ngay trong tên bài. Người xem biết dùng được ngay, không phải tự dò.",
+        "kw": [
+          {
+            "k": "có đáp án, lời giải chi tiết",
+            "n": "43"
+          },
+          {
+            "k": "có lời giải chi tiết",
+            "n": "44"
+          },
+          {
+            "k": "có đáp án PDF đầy đủ",
+            "n": "64"
+          },
+          {
+            "k": "TẶNG MIỄN PHÍ",
+            "n": "43"
+          }
+        ]
+      },
+      {
+        "title": "Nhắm đúng kỳ thi chuyển cấp",
+        "body": "Bài vào lớp 6 và vào lớp 10 chiếm đa số bài nhiều chia sẻ. Có bài ghi cả tên trường và năm thi, người xem biết ngay bài viết cho con mình.",
+        "kw": [
+          {
+            "k": "thi tuyển sinh vào lớp 6 các trường",
+            "n": "112"
+          },
+          {
+            "k": "Bộ đề toán ôn thi vào lớp 10",
+            "n": "64"
+          },
+          {
+            "k": "VÀO 6 THCS CHU VĂN AN 2025 – 2026",
+            "n": "34"
+          }
+        ]
+      }
+    ]
+  },
+  "anh": {
+    "headline": "Tặng tài liệu IELTS cụ thể: có con số, có phiên âm hoặc audio, nguồn rõ.",
+    "sub": "Người xem Tiếng Anh chia sẻ rất nhiều khi tài liệu nói rõ có gì bên trong.",
+    "confidence": "Độ chắc: thấp, vài bài rất lớn kéo số",
+    "reasons": [
+      {
+        "title": "Nói rõ trong tài liệu có gì, kèm con số",
+        "body": "Bài 100 từ vựng C1–C2 đạt 638 chia sẻ và 993 bình luận. Bài tặng ebook IELTS Reading 2026 đạt 258 chia sẻ và 905 bình luận. Cả hai liệt kê thứ nhận được ngay trong tên bài.",
+        "kw": [
+          {
+            "k": "100 TỪ VỰNG CẤP ĐỘ C1–C2 Kèm phiên âm – nghĩa – từ đồng nghĩa – ví dụ",
+            "n": "638 chia sẻ"
+          },
+          {
+            "k": "IELTS Reading Academic January - June 2026 | PDF Free Download",
+            "n": "258"
+          },
+          {
+            "k": "bộ 100 câu tủ trọng âm",
+            "n": "238"
+          }
+        ]
+      },
+      {
+        "title": "Nguồn uy tín và định dạng đầy đủ",
+        "body": "Hai bài ghi nguồn hoặc định dạng nhận được 499 và 305 chia sẻ. Cả hai chỉ có 3 đến 4 bình luận, nên lan ra qua chia sẻ chứ không qua xin nhận.",
+        "kw": [
+          {
+            "k": "TÀI LIỆU XỊN XÒ TỪ NXB OXFORD đầy đủ pdf +audio",
+            "n": "499"
+          },
+          {
+            "k": "295 NGÀY CÀY IELTS NÂNG TRÌNH có pdf + video đầy đủ",
+            "n": "305"
+          },
+          {
+            "k": "FREE EBOOK: HÀNH TRÌNH TỰ HỌC IELTS 8.5",
+            "n": "4,4K"
+          }
+        ]
+      },
+      {
+        "title": "Gọi đúng khóa và nói rõ cách nhận",
+        "body": "Bài có “2k11” và câu cách nhận ngay trong bài đạt 238 chia sẻ và 405 bình luận. Bài đề kiểm tra lớp 8 ghi cả chuẩn form mới đạt 194.",
+        "kw": [
+          {
+            "k": "tặng các bạn 2k11 bộ 100 câu tủ trọng âm Ôn thi vào 10",
+            "n": "238"
+          },
+          {
+            "k": "Chỉ cần Follow page, like bài + comment “2k11”",
+            "n": "405 bình luận"
+          },
+          {
+            "k": "[TẶNG 2 ĐỀ KIỂM TRA SAU UNIT 1 - KHỐI 8 - CHUẨN FORM MỚI NHẤT 40 CÂU]",
+            "n": "194"
+          }
+        ]
+      }
+    ]
+  },
+  "ly": {
+    "headline": "Tặng lời giải chi tiết cho đề thi thật hoặc đề mới thi, gọi đúng 2K9.",
+    "sub": "Vật lý được chia sẻ khi có lời giải và bám đúng chương, đúng đợt thi.",
+    "confidence": "Độ chắc: thấp đến vừa, mẫu 20 bài",
+    "reasons": [
+      {
+        "title": "Lời giải chi tiết cho đề thi thật",
+        "body": "Ba bài nhiều chia sẻ nhất nằm trong nhóm lời giải hoặc đáp án: 86, 56 và 41 chia sẻ. Người xem cần đối chiếu sau khi làm đề.",
+        "kw": [
+          {
+            "k": "Lời giải tham khảo đề thi VPhO 42",
+            "n": "86 chia sẻ"
+          },
+          {
+            "k": "10 TRANG LỜI GIẢI CHI TIẾT | ĐỀ THI THỬ TỐT NGHIỆP THPT 2026",
+            "n": "56"
+          },
+          {
+            "k": "GIẢI CHI TIẾT-SIÊU PHẨM 600 CÂU KHÍ LÍ TƯỞNG",
+            "n": "29"
+          }
+        ]
+      },
+      {
+        "title": "Gọi đúng 2K9 và đúng chương",
+        "body": "Bài tặng câu hỏi chương 2 Vật lí 12 đạt 41 chia sẻ và 448 bình luận chỉ sau 4 ngày. Sơ đồ tư duy chương 1 đạt 38.",
+        "kw": [
+          {
+            "k": "THẦY TẶNG 2K9 TÀI LIỆU ÔN TẬP",
+            "n": "41 chia sẻ"
+          },
+          {
+            "k": "TUYỂN TẬP CÂU HỎI CHƯƠNG 2 – VẬT LÍ 12 KÈM ĐÁP ÁN",
+            "n": "448 bình luận"
+          },
+          {
+            "k": "TẶNG 2K9 XPS: Sơ đồ tư duy chương 1",
+            "n": "38"
+          }
+        ]
+      },
+      {
+        "title": "Đề học sinh giỏi mới thi thu nhiều bình luận",
+        "body": "Hai bài tặng đề HSG tỉnh vừa thi có 126 và 200 bình luận, nhiều hơn bài lời giải. Chia sẻ chỉ ở mức 20 đến 25.",
+        "kw": [
+          {
+            "k": "Đề thi chính thức HSG tỉnh Gia Lai năm học 2026-2027 mới thi",
+            "n": "126 bình luận"
+          },
+          {
+            "k": "Mới nhất Đề thi Minh họa HSG Phú Thọ",
+            "n": "200"
+          }
+        ]
+      }
+    ]
+  },
+  "hoa": {
+    "headline": "Tặng cả gói có số liệu rõ: số bài giảng, số đề, chia theo chương.",
+    "sub": "Hóa học ít chia sẻ. Một bài gói đầy đủ vượt xa phần còn lại.",
+    "confidence": "Độ chắc: thấp, một bài vượt trội",
+    "reasons": [
+      {
+        "title": "Một gói đầy đủ có con số vượt trội",
+        "body": "Bài tặng bộ khóa học đạt 149 chia sẻ và 540 bình luận, gấp 4 lần bài đứng thứ hai. Tên bài liệt kê cả số bài giảng và số đề.",
+        "kw": [
+          {
+            "k": "TẶNG BỘ KHÓA HỌC FREE BAO GỒM",
+            "n": "149 chia sẻ"
+          },
+          {
+            "k": "Chương 1 + 2 + 3 (22 BÀI GIẢNG)",
+            "n": "540 bình luận"
+          },
+          {
+            "k": "BỘ ĐỀ GIỮA HK (18 ĐỀ)",
+            "n": ""
+          }
+        ]
+      },
+      {
+        "title": "Sơ đồ tư duy và bộ đề lý thuyết chia theo chương",
+        "body": "Hai bài đứng sau đạt 36 và 25 chia sẻ, đều gọi rõ lớp hoặc khóa và có album ảnh xem trước.",
+        "kw": [
+          {
+            "k": "SƠ ĐỒ TƯ DUY FULL HÓA 10 CHƯƠNG TRÌNH MỚI",
+            "n": "36 chia sẻ"
+          },
+          {
+            "k": "BỘ 10 ĐỀ LÝ THUYẾT GIÚP 2K8 TỔNG ÔN LÝ THUYẾT CARBOHYDRATE",
+            "n": "25"
+          },
+          {
+            "k": "100 CÂU LÝ THUYẾT ALKENE - ALKYNE HOÁ 11",
+            "n": "17"
+          }
+        ]
+      },
+      {
+        "title": "Tài liệu tóm tắt thu bình luận rất cao nhưng ít lan",
+        "body": "Bài tóm tắt 73 trang có 1200 bình luận nhưng chỉ 7 chia sẻ. Bài này chưa có link nên chưa kiểm được bình luận thật.",
+        "kw": [
+          {
+            "k": "73 TRANG PDF - TÓM TẮT KIẾN THỨC HOÁ HỌC 12",
+            "n": "1200 bình luận"
+          },
+          {
+            "k": "Nhận một lần - Học cả một năm",
+            "n": "7 chia sẻ"
+          }
+        ]
+      }
+    ]
+  },
+  "tin": {
+    "headline": "Chưa có mẫu đáng học cho Tin học. Thử bài thông tin kỳ thi cụ thể.",
+    "sub": "Cả môn chia sẻ rất thấp, nên dùng để thử nhỏ chứ chưa nên đầu tư.",
+    "confidence": "Độ chắc: rất thấp, mẫu 12 bài",
+    "reasons": [
+      {
+        "title": "Cả môn chia sẻ thấp, bài tự học chung chung không lan",
+        "body": "Chia sẻ trung vị chỉ 4, bài cao nhất đạt 11. Các bài tặng tài liệu lập trình cơ bản chỉ được 1 đến 5 chia sẻ.",
+        "kw": [
+          {
+            "k": "Tặng tài liệu học Python và C++ cơ bản",
+            "n": "1 chia sẻ"
+          },
+          {
+            "k": "khoá học 25 buổi lập trình thi đấu",
+            "n": "5"
+          },
+          {
+            "k": "tài liệu (miễn phí) này có thể đến tay các thầy cô, phụ huynh và học sinh",
+            "n": "5"
+          }
+        ]
+      },
+      {
+        "title": "Thông tin kỳ thi có ngày, địa phương",
+        "body": "Hai bài nhiều chia sẻ nhất đều nói về kỳ thi cụ thể, có ngày hoặc tên vùng.",
+        "kw": [
+          {
+            "k": "KỲ THI OLYMPIC TIN HỌC MIỀN TRUNG VÀ TÂY NGUYÊN - LẦN THỨ VII - NĂM 2026",
+            "n": "11 chia sẻ"
+          },
+          {
+            "k": "ĐỀ KHẢO SÁT ONLINE NGÀY 02/11/2026 MÔN TIN HỌC - SỞ NINH BÌNH",
+            "n": "10"
+          }
+        ]
+      },
+      {
+        "title": "Bài tặng giáo án và bài khóa học ít chia sẻ",
+        "body": "Bài tặng giáo án Tin học các lớp chỉ 1 chia sẻ. Bài khóa học Python có 88 bình luận nhưng chỉ 8 chia sẻ.",
+        "kw": [
+          {
+            "k": "TẶNG FREE KHBG W+PPT MÔN TIN HỌC 6 • 7 • 8 • 9 • 10 • 11 • 12",
+            "n": "1 chia sẻ"
+          },
+          {
+            "k": "KHÓA HỌC LẬP TRÌNH PYTHON CHO HỌC SINH (LỚP 6–10)",
+            "n": "8 chia sẻ · 88 bình luận"
+          }
         ]
       }
     ]
