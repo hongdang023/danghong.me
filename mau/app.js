@@ -116,6 +116,7 @@
         <details class="more2"><summary>Lưu ý thêm</summary><div class="note">${esc(F.warn)}</div><div class="note">${esc(F.cta)}</div><div class="note">Tránh trong tên bài: ${F.avoid.map(w => '“' + esc(w) + '”').join(', ')}.</div><div class="note">${esc(F.note)}</div></details>
       </div>
     </div>
+    ${(() => { const M = C.more; return `<div class="sec2"><h2>${esc(M.title)}</h2><p class="lead" style="font-size:16px;margin-bottom:20px">${esc(M.sub)}</p><div class="grid3">${M.groups.map(g => { const m = Math.max(...g.rows.map(r => r[1])); return `<div class="card"><h3>${esc(g.q)}</h3>${g.rows.map(r => `<div class="row sgr2" style="--c:var(--acc)"><span>${esc(r[0])}</span><span class="t"><i style="width:${Math.max(3, r[1] / m * 100)}%"></i></span><span class="v">${r[1]}<small>${r[2]} bài</small></span></div>`).join('')}<div class="note"><b>${esc(g.take)}</b></div><div class="note">${esc(g.conf)}</div></div>`; }).join('')}</div></div>`; })()}
     <p class="foot">Số bài mẫu là số bài trong thư viện, không phải số đối thủ trên Facebook. Mỗi môn chỉ có 12–20 bài, nên ô nào dưới 2 bài chỉ để tham khảo. Bài chưa xác định được cấp không nằm trong biểu đồ.</p>`;
   }
 

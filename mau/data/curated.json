@@ -168,5 +168,107 @@
     ],
     "note": "Mẫu nhỏ (108 bài), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
     "how": "Mỗi bài được chia sẻ khoảng bao nhiêu lần, khi có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là người xem thấy bài đáng gửi cho bạn."
+  },
+  "more": {
+    "title": "Ba yếu tố khác",
+    "sub": "Số chia sẻ khoảng mỗi bài, theo từng nhóm. Số bài ghi bên cạnh: càng ít bài càng kém chắc.",
+    "groups": [
+      {
+        "q": "Loại tài liệu",
+        "take": "Làm đề và bộ đề: ổn định ở hầu hết các môn. Tóm tắt, lý thuyết ít được chia sẻ.",
+        "conf": "Sách cao vì 7 trong 12 bài là Tiếng Anh. Đề (42 bài) ổn định hơn. Phân loại tự động, 23 bài chưa rõ loại.",
+        "rows": [
+          [
+            "Sách, ebook",
+            39,
+            12
+          ],
+          [
+            "Đề, bộ đề",
+            23,
+            42
+          ],
+          [
+            "Tóm tắt, lý thuyết",
+            8,
+            19
+          ],
+          [
+            "Khóa học, video",
+            8,
+            4
+          ],
+          [
+            "Chưa rõ loại",
+            4,
+            23
+          ]
+        ]
+      },
+      {
+        "q": "Ai đăng",
+        "take": "Cộng đồng hay thầy cô đăng thì gần như nhau. Nguồn kiểu “kho tài liệu” thấp hơn rõ. Mỗi nguồn cho kết quả khá đồng đều, nên page đăng có thể quan trọng hơn cách viết.",
+        "conf": "Chưa có số người theo dõi của page nên chưa tách được page lớn hay nhỏ.",
+        "rows": [
+          [
+            "Thầy cô",
+            16,
+            45
+          ],
+          [
+            "Cộng đồng",
+            14,
+            59
+          ],
+          [
+            "Nguồn thầy cô, CLB, trung tâm",
+            17,
+            75
+          ],
+          [
+            "Nguồn kiểu kho tài liệu",
+            8,
+            33
+          ]
+        ]
+      },
+      {
+        "q": "Độ dài và cách viết",
+        "take": "Bài rất dài thấp hơn bài vừa. Nên có kêu gọi nhận tài liệu và có link hoặc cách nhận rõ.",
+        "conf": "Chỉ đọc được nội dung 74 bài, tối đa 700 ký tự. Gạch đầu dòng thấp hơn (10 so với 21) nhưng chưa rõ vì sao.",
+        "rows": [
+          [
+            "Bài từ 150 đến 700 ký tự",
+            21,
+            31
+          ],
+          [
+            "Bài trên 700 ký tự",
+            10,
+            43
+          ],
+          [
+            "Có kêu gọi nhận, tải",
+            17,
+            44
+          ],
+          [
+            "Không có kêu gọi",
+            11,
+            30
+          ],
+          [
+            "Có link trong bài",
+            17,
+            15
+          ],
+          [
+            "Không có link",
+            11,
+            59
+          ]
+        ]
+      }
+    ]
   }
 }
