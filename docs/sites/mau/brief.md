@@ -22,7 +22,7 @@ ai_readable: true
 
 ## 1. Trạng thái hôm nay
 
-Đã deploy lên Cloudflare Pages (project `danghong-mau`, 2026-11-17), tên miền `mau.danghong.me`, ai có link đều xem được. Dữ liệu: 108 bài (Ngữ văn 20, Toán 20, Tiếng Anh/IELTS 20, Vật lý 20, Hóa học 15, Tin học 13), quét ngày 2026-11-17. Đã kiểm bình luận 93 bài có link (đọc các bình luận đầu, mẫu nhỏ). Chưa đủ mục tiêu 20 bài cho Hóa học và Tin học; chưa có ảnh chụp.
+Đã deploy lên Cloudflare Pages (project `danghong-mau`, 2026-11-17), tên miền `mau.danghong.me`, ai có link đều xem được. Dữ liệu: 120 bài, mỗi môn 20 bài (Ngữ văn, Toán, Tiếng Anh/IELTS, Vật lý, Hóa học, Tin học), quét ngày 2026-11-17. Đã kiểm bình luận 103 bài có link (đọc các bình luận đầu, mẫu nhỏ). 12 bài thêm cho Hóa học và Tin học (cùng ngày) chưa có ảnh chụp; 2 bài Tin học không có link nên chưa kiểm bình luận. Chưa có ảnh chụp từng bài.
 
 ## 2. Mục đích
 

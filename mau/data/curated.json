@@ -128,64 +128,64 @@
         "t": "Tên bài có con số (100 đề, 40 bài mẫu…)",
         "a": 25,
         "b": 10,
-        "ca": 55,
-        "cb": 17,
-        "n": 34,
+        "ca": 49,
+        "cb": 19,
+        "n": 35,
         "what": "Tên bài có số lượng rõ, như “100 đề” hay “40 bài mẫu”.",
         "why": "Người xem thấy ngay mình nhận được bao nhiêu, nên dễ quyết định chia sẻ hoặc xin nhận."
       },
       {
         "t": "Có ghi rõ “có đáp án” hoặc “lời giải”",
-        "a": 41,
-        "b": 10,
+        "a": 30,
+        "b": 11,
         "ca": 44,
-        "cb": 19,
-        "n": 24,
+        "cb": 20,
+        "n": 27,
         "what": "Bài nói rõ tài liệu có đáp án hoặc lời giải.",
         "why": "Phụ huynh và học sinh cần đối chiếu để tự học. Có đáp án nghĩa là dùng được ngay."
       },
       {
         "t": "Có album từ 4 ảnh xem trước",
-        "a": 26,
+        "a": 23,
         "b": 8,
-        "ca": 18,
+        "ca": 35,
         "cb": 23,
-        "n": 34,
+        "n": 42,
         "what": "Bài có album từ 4 ảnh xem trước ruột tài liệu.",
-        "why": "Xem trước giúp tin tài liệu thật, nên dễ chia sẻ. Nhưng không làm tăng bình luận: người xem đã thấy đủ nên ít cần xin thêm."
+        "why": "Xem trước giúp tin tài liệu thật, nên dễ chia sẻ và dễ có người xin nhận."
       },
       {
         "t": "Nhắm đúng “vào 10” hoặc “vào 6”",
         "a": 30,
-        "b": 11,
+        "b": 14,
         "ca": 11,
-        "cb": 23,
+        "cb": 35,
         "n": 12,
         "what": "Tên bài nhắm đúng kỳ thi chuyển cấp.",
         "why": "Học sinh và phụ huynh thấy đúng việc mình lo, nên gửi cho nhau. Bình luận lại thấp hơn, có thể vì kiểu bài này không bắt xin nhận."
       },
       {
-        "t": "Bám mốc giữa kì, cuối kì",
-        "a": 21,
-        "b": 11,
-        "ca": 44,
-        "cb": 19,
-        "n": 9,
+        "t": "Bám mốc giữa kỳ, cuối kỳ",
+        "a": 18,
+        "b": 14,
+        "ca": 56,
+        "cb": 23,
+        "n": 12,
         "what": "Tên bài gọi đúng đợt kiểm tra đang diễn ra.",
-        "why": "Đúng lúc cần dùng nên vừa lan nhanh vừa có nhiều người xin. Chỉ 9 bài nên chưa chắc."
+        "why": "Đúng lúc cần dùng nên nhiều người xin tài liệu. Chia sẻ chỉ nhỉnh hơn một chút."
       },
       {
         "t": "Tên bài mở bằng TẶNG, FREE hoặc “chia sẻ”",
-        "a": 12,
-        "b": 11,
-        "ca": 66,
+        "a": 15,
+        "b": 14,
+        "ca": 74,
         "cb": 11,
-        "n": 51,
+        "n": 60,
         "what": "Tên bài nói thẳng đây là tài liệu tặng.",
-        "why": "Không làm bài lan hơn (12 so với 11), nhưng người xem thấy là miễn phí nên xin nhận nhiều gấp 6 lần."
+        "why": "Không làm bài lan hơn rõ rệt (15 so với 14), nhưng người xem thấy là miễn phí nên xin nhận nhiều gấp 6 lần."
       }
     ],
-    "warn": "“FREE” hoặc “TẶNG” ít giúp lan rộng (12 so với 11 chia sẻ) nhưng thu bình luận gấp 6 lần (66 so với 11). Album xem trước giúp chia sẻ, không giúp bình luận.",
+    "warn": "“FREE” hoặc “TẶNG” ít giúp lan rộng (15 so với 14 chia sẻ) nhưng thu bình luận gấp khoảng 7 lần (74 so với 11). Nhắm vào 10 giúp chia sẻ nhưng ít bình luận (11 so với 35).",
     "cta": "Link hoặc Drive để sẵn: 95 chia sẻ. Bắt nhắn “ib”: 4 chia sẻ.",
     "avoid": [
       "môn",
@@ -194,7 +194,7 @@
       "tặng tài liệu",
       "2025"
     ],
-    "note": "Tính trên 100 bài, đã bỏ 8 bài nghi spam bình luận. Mẫu nhỏ (9–51 bài mỗi dòng), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
+    "note": "Tính trên 112 bài, đã bỏ 8 bài nghi spam bình luận. Mẫu nhỏ (12–60 bài mỗi dòng), Tiếng Anh kéo số chung lên. Các tín hiệu thường đi cùng nhau.",
     "how": "Số chia sẻ khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là bài lan ra, tìm được người xem mới.",
     "how_share": "Số chia sẻ khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Chia sẻ nhiều nghĩa là bài lan ra, tìm được người xem mới.",
     "how_cmt": "Số bình luận khoảng mỗi bài, khi tên bài có hoặc không có yếu tố này. Bình luận nhiều nghĩa là nhiều người giơ tay xin tài liệu hoặc hỏi thêm.",
@@ -203,7 +203,7 @@
       "cmt": "Thu người quan tâm"
     },
     "pick_share": "Muốn lan rộng: con số, có đáp án, album xem trước, nhắm đúng vào 10.",
-    "pick_cmt": "Muốn thu người quan tâm: mở bằng TẶNG hoặc FREE, có con số, bám mốc kiểm tra, có đáp án."
+    "pick_cmt": "Muốn thu người quan tâm: mở bằng TẶNG hoặc FREE, bám mốc giữa kỳ hoặc cuối kỳ, có con số, có đáp án."
   },
   "more": {
     "title": "Ba yếu tố khác",
@@ -212,22 +212,22 @@
       {
         "q": "Loại tài liệu",
         "take": "Làm đề và bộ đề: ổn định ở hầu hết các môn. Tóm tắt, lý thuyết ít được chia sẻ.",
-        "conf": "Sách cao vì 7 trong 12 bài là Tiếng Anh. Đề (42 bài) ổn định hơn. Phân loại tự động, 23 bài chưa rõ loại.",
+        "conf": "Sách cao vì 7 trong 13 bài là Tiếng Anh. Đề (51 bài) ổn định hơn. Phân loại tự động, 24 bài chưa rõ loại.",
         "rows": [
           [
             "Sách, ebook",
             39,
-            12
+            13
           ],
           [
             "Đề, bộ đề",
-            23,
-            42
+            21,
+            51
           ],
           [
             "Tóm tắt, lý thuyết",
-            8,
-            19
+            11,
+            20
           ],
           [
             "Khóa học, video",
@@ -237,7 +237,7 @@
           [
             "Chưa rõ loại",
             4,
-            23
+            24
           ]
         ]
       },
@@ -248,18 +248,18 @@
         "rows": [
           [
             "Thầy cô",
-            16,
-            45
+            17,
+            46
           ],
           [
             "Cộng đồng",
-            14,
-            59
+            15,
+            65
           ],
           [
             "Nguồn thầy cô, CLB, trung tâm",
-            17,
-            75
+            16,
+            87
           ],
           [
             "Nguồn kiểu kho tài liệu",
@@ -491,13 +491,13 @@
     ]
   },
   "hoa": {
-    "headline": "Tặng cả gói có số liệu rõ: số bài giảng, số đề, chia theo chương.",
-    "sub": "Hóa học ít chia sẻ. Một bài gói đầy đủ vượt xa phần còn lại.",
-    "confidence": "Độ chắc: thấp, một bài vượt trội",
+    "headline": "Tặng gói tài liệu chia theo chương, nói rõ số bài giảng, số đề, có video hoặc ebook.",
+    "sub": "Hóa học ít chia sẻ nhưng nhiều bình luận. Gói có số liệu rõ lan hơn hẳn.",
+    "confidence": "Độ chắc: thấp đến vừa, mẫu 20 bài",
     "reasons": [
       {
-        "title": "Một gói đầy đủ có con số vượt trội",
-        "body": "Bài tặng bộ khóa học đạt 149 chia sẻ và 540 bình luận, gấp 4 lần bài đứng thứ hai. Tên bài liệt kê cả số bài giảng và số đề.",
+        "title": "Gói đầy đủ có con số và video",
+        "body": "Hai bài đứng đầu đều liệt kê rõ số lượng: bộ khóa học 22 bài giảng kèm 18 đề đạt 149 chia sẻ, tổng hợp 20 đề thi thử có video giải chi tiết đạt 85.",
         "kw": [
           {
             "k": "TẶNG BỘ KHÓA HỌC FREE BAO GỒM",
@@ -508,75 +508,65 @@
             "n": "540 bình luận"
           },
           {
-            "k": "BỘ ĐỀ GIỮA HK (18 ĐỀ)",
-            "n": ""
+            "k": "Tổng hợp 20 đề thi thử tốt nghiệp THPT năm 2026 môn Hóa (Có video giải chi tiết)",
+            "n": "85"
           }
         ]
       },
       {
-        "title": "Sơ đồ tư duy và bộ đề lý thuyết chia theo chương",
-        "body": "Hai bài đứng sau đạt 36 và 25 chia sẻ, đều gọi rõ lớp hoặc khóa và có album ảnh xem trước.",
+        "title": "Ebook và chuyên đề theo từng chương",
+        "body": "Ebook chương 2 Carbohydrate đạt 76 chia sẻ và 246 bình luận. Chuyên đề HSG tỉnh Hóa 10–11–12 đạt 59 chia sẻ, người xem để lại gmail để nhận.",
         "kw": [
           {
+            "k": "TẶNG EBOOK CHƯƠNG 2 CARBOHYDRATE | HÓA HỌC 12",
+            "n": "76 chia sẻ"
+          },
+          {
+            "k": "TẶNG CHUYÊN ĐỀ ÔN THI HSG TỈNH HÓA 10 - 11 -12",
+            "n": "59"
+          },
+          {
             "k": "SƠ ĐỒ TƯ DUY FULL HÓA 10 CHƯƠNG TRÌNH MỚI",
-            "n": "36 chia sẻ"
-          },
-          {
-            "k": "BỘ 10 ĐỀ LÝ THUYẾT GIÚP 2K8 TỔNG ÔN LÝ THUYẾT CARBOHYDRATE",
-            "n": "25"
-          },
-          {
-            "k": "100 CÂU LÝ THUYẾT ALKENE - ALKYNE HOÁ 11",
-            "n": "17"
+            "n": "36"
           }
         ]
       },
       {
-        "title": "Tài liệu tóm tắt thu bình luận rất cao nhưng ít lan",
-        "body": "Bài tóm tắt 73 trang có 1200 bình luận nhưng chỉ 7 chia sẻ. Bài này chưa có link nên chưa kiểm được bình luận thật.",
+        "title": "Bình luận cao, nhưng phần lớn chỉ để xin nhận",
+        "body": "Nhiều bài Hóa có bình luận gấp hàng chục lần chia sẻ. Người xem bình luận “em ạ”, “học xuyên hè” hoặc để lại gmail theo yêu cầu của bài.",
         "kw": [
           {
             "k": "73 TRANG PDF - TÓM TẮT KIẾN THỨC HOÁ HỌC 12",
-            "n": "1200 bình luận"
+            "n": "1200 bình luận · 7 chia sẻ"
           },
           {
-            "k": "Nhận một lần - Học cả một năm",
-            "n": "7 chia sẻ"
+            "k": "QUÀ TRUNG THU TẶNG 2K10 … Bạn nào muốn nhận thì cmt nhé",
+            "n": "204 bình luận · 4 chia sẻ"
+          },
+          {
+            "k": "HỌC XUYÊN TẾT - 100 CÂU LÝ THUYẾT ALKENE - ALKYNE HOÁ 11 … Thả tym + comment",
+            "n": "214 bình luận · 17 chia sẻ"
           }
         ]
       }
     ]
   },
   "tin": {
-    "headline": "Chưa có mẫu đáng học cho Tin học. Thử bài thông tin kỳ thi cụ thể.",
-    "sub": "Cả môn chia sẻ rất thấp, nên dùng để thử nhỏ chứ chưa nên đầu tư.",
-    "confidence": "Độ chắc: rất thấp, mẫu 13 bài",
+    "headline": "Tặng đề thi theo mốc kiểm tra hoặc thi thử, kèm video chữa đề và mã nhận rõ ràng.",
+    "sub": "Đề KSCL giữa kỳ và đề thi thử theo từng trường, từng sở được chia sẻ và bình luận nhiều nhất.",
+    "confidence": "Độ chắc: thấp, 6 trong 20 bài đến từ một page (BKTin)",
     "reasons": [
       {
-        "title": "Cả môn chia sẻ thấp, bài tự học chung chung không lan",
-        "body": "Chia sẻ trung vị chỉ 4, bài cao nhất đạt 11. Các bài tặng tài liệu lập trình cơ bản chỉ được 1 đến 5 chia sẻ.",
+        "title": "Đề giữa kỳ và thi thử gọi đúng trường, đúng sở",
+        "body": "Năm bài của BKTin đạt 9 đến 18 chia sẻ và 72 đến 217 bình luận, cao hơn trung vị cả môn (9 chia sẻ, 27 bình luận). Mỗi bài gọi tên một trường hoặc một sở cụ thể.",
         "kw": [
           {
-            "k": "Tặng tài liệu học Python và C++ cơ bản",
-            "n": "1 chia sẻ"
+            "k": "TẶNG ĐỀ THI KSCL GIỮA KỲ 1 MÔN TIN HỌC - ĐỘC QUYỀN BKTIN",
+            "n": "18 chia sẻ · 217 bình luận"
           },
           {
-            "k": "khoá học 25 buổi lập trình thi đấu",
-            "n": "5"
-          },
-          {
-            "k": "tài liệu (miễn phí) này có thể đến tay các thầy cô, phụ huynh và học sinh",
-            "n": "5"
-          }
-        ]
-      },
-      {
-        "title": "Thông tin kỳ thi có ngày, địa phương",
-        "body": "Hai trong ba bài nhiều chia sẻ nhất nói về kỳ thi cụ thể, có ngày hoặc tên vùng.",
-        "kw": [
-          {
-            "k": "KỲ THI OLYMPIC TIN HỌC MIỀN TRUNG VÀ TÂY NGUYÊN - LẦN THỨ VII - NĂM 2026",
-            "n": "11 chia sẻ"
+            "k": "ĐỀ THI THỬ TỐT NGHIỆP LẦN 1 - SỞ THÁI NGUYÊN",
+            "n": "15"
           },
           {
             "k": "ĐỀ KHẢO SÁT ONLINE NGÀY 02/11/2026 MÔN TIN HỌC - SỞ NINH BÌNH",
@@ -585,20 +575,34 @@
         ]
       },
       {
-        "title": "Giáo án tặng ít chia sẻ, bài khóa học nhỉnh hơn",
-        "body": "Bài tặng giáo án Tin học các lớp chỉ 1 chia sẻ. Bài khóa học nhận 8 đến 11 chia sẻ và 35 đến 88 bình luận.",
+        "title": "Có video chữa đề và hướng dẫn nhận bằng một mã",
+        "body": "Bài có video chữa đề đạt 16 chia sẻ và 158 bình luận. Người xem được dặn bình luận một mã ngắn như “GK1”, nên phần lớn bình luận trùng một từ khóa.",
         "kw": [
           {
-            "k": "TẶNG FREE KHBG W+PPT MÔN TIN HỌC 6 • 7 • 8 • 9 • 10 • 11 • 12",
-            "n": "1 chia sẻ"
+            "k": "TẶNG ĐỀ THI + VIDEO CHỮA ĐỀ KSCL GIỮA KỲ 1 MÔN TIN HỌC",
+            "n": "16 chia sẻ"
           },
           {
-            "k": "2K9 MẤT GỐC TIN HỌC? ĐÃ CÓ KHÓA “HỌC LẠI TỪ ĐẦU”",
-            "n": "11 chia sẻ · 35 bình luận"
+            "k": "Các em thực hiện đủ 3 bước để nhận file PDF kèm đáp án",
+            "n": "217 bình luận"
           },
           {
-            "k": "KHÓA HỌC LẬP TRÌNH PYTHON CHO HỌC SINH (LỚP 6–10)",
-            "n": "8 chia sẻ · 88 bình luận"
+            "k": "bình luận “GK1”",
+            "n": ""
+          }
+        ]
+      },
+      {
+        "title": "Bài tập theo dạng và lời giải đề chuyên lan được dù ít bình luận",
+        "body": "Bài tổng hợp dạng quy hoạch động từ đề học sinh giỏi đạt 31 chia sẻ, cao nhất môn, nhưng chỉ 4 bình luận. Bài lời giải đề chuyên Tin Hà Nội 2025 đạt 9. Hai bài này chưa có link để kiểm bình luận.",
+        "kw": [
+          {
+            "k": "Một số dạng bài tập quy hoạch động … từ các bộ đề thi học sinh giỏi",
+            "n": "31 chia sẻ"
+          },
+          {
+            "k": "Lời giải đề thi chuyên Tin Hà Nội 2025",
+            "n": "9"
           }
         ]
       }

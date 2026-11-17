@@ -1,10 +1,10 @@
 {
  "totals": {
-  "posts": 108,
-  "comments": 11826,
-  "shares": 9499,
-  "likes": 15967,
-  "withLink": 93
+  "posts": 120,
+  "comments": 13145,
+  "shares": 9850,
+  "likes": 17366,
+  "withLink": 103
  },
  "bySubject": [
   {
@@ -41,19 +41,19 @@
   },
   {
    "k": "Hóa học",
-   "n": 15,
-   "medC": 125,
-   "medS": 4,
-   "avgC": 224,
-   "avgS": 18
+   "n": 20,
+   "medC": 168,
+   "medS": 7,
+   "avgC": 204,
+   "avgS": 25
   },
   {
    "k": "Tin học",
-   "n": 13,
-   "medC": 20,
-   "medS": 4,
-   "avgC": 27,
-   "avgS": 5
+   "n": 20,
+   "medC": 27,
+   "medS": 9,
+   "avgC": 48,
+   "avgS": 9
   }
  ],
  "byCta": [
@@ -374,15 +374,15 @@
  "byVerdict": [
   {
    "k": "Bình luận theo từ khóa",
-   "n": 35
+   "n": 42
   },
   {
    "k": "Mẫu quá ít",
-   "n": 20
+   "n": 21
   },
   {
    "k": "Chủ yếu xin tài liệu",
-   "n": 13
+   "n": 15
   },
   {
    "k": "Tự nhiên",
@@ -459,7 +459,7 @@
    "g": 6
   }
  ],
- "postLinks": 56,
- "cmtChecked": 93,
+ "postLinks": 65,
+ "cmtChecked": 103,
  "spamFlag": 8
 }
