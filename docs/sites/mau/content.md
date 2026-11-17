@@ -64,7 +64,7 @@ Hai mục tiêu, bấm chuyển trên trang Tổng quan: **Lan rộng** (chia s�
 
 ## Ba yếu tố khác (khối `more` trong `curated.json`)
 
-Trên trang Tổng quan, dưới Công thức chung: loại tài liệu, người đăng, độ dài và cách viết, mỗi nhóm có chia sẻ trung vị và số bài. Rút từ 108 bài ngày 2026-11-17: đề và bộ đề ổn định nhất (trung vị 21, 51 bài); nguồn kiểu "kho tài liệu" thấp (8 so với 16); bài trên 700 ký tự thấp hơn bài 150–700 ký tự (10 so với 21). Giới hạn: chưa có số người theo dõi của page, nội dung bài đọc được 74 bài và cắt ở 700 ký tự, loại tài liệu phân loại tự động.
+Trên trang Tổng quan, dưới Công thức chung: loại tài liệu, người đăng, độ dài và cách viết, mỗi nhóm có chia sẻ trung vị và số bài. Rút từ 120 bài ngày 2026-11-17: đề và bộ đề ổn định nhất (trung vị 21, 51 bài); nguồn kiểu "kho tài liệu" thấp (8 so với 16); bài trên 700 ký tự thấp hơn bài 150–700 ký tự (10 so với 21). Giới hạn: chưa có số người theo dõi của page, nội dung bài đọc được 74 bài và cắt ở 700 ký tự, loại tài liệu phân loại tự động.
 
 ## Hai danh sách mẫu trên trang môn
 
