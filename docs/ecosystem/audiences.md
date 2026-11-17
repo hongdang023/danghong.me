@@ -23,6 +23,7 @@ Mỗi site một tệp người đọc. Trang này là bản đồ tổng; chân
 | [nguvan.danghong.me](../sites/nguvan/brief.md) | Phụ huynh (chính), học sinh (phụ) | | Yên tâm con thực sự học Văn; các em yêu Văn | danghong | Ấm, nói chuyện, không hứa điểm | Nhắn Hồng |
 | [ielts.danghong.me](../sites/ielts/brief.md) | Ba nhóm ngang nhau: phụ huynh, học sinh cấp 3 (xét tuyển, du học), sinh viên (chuẩn đầu ra Bậc 3) | | Hiểu cách Hồng dạy, thấy bằng chứng, tra chuẩn đầu ra theo trường | Warm Reef | Ấm áp, có số liệu và nguồn; đổi giọng theo vai trò và mục tiêu | Liên hệ trực tiếp Hồng |
 | [nextstep.danghong.me](../sites/nextstep/brief.md) | Sinh viên (FTU, DAV, NEU...) và người trẻ mới đi làm tại Hà Nội | Doanh nghiệp, người đồng hành | Định hướng nghề thực tế, năng lực thật, kết nối | Next Step | Đồng hành, thực tế, ngang hàng | Đăng ký sự kiện offline |
+| [mau.danghong.me](../sites/mau/brief.md) | Hồng và nhóm truyền thông các brand K12 | Người viết nội dung từng brand | Chọn bài mẫu hiệu quả, rút điểm chung, chép bài mới | không theo brand | Ngắn, nhiều số liệu, ít chữ | Mở bài gốc, Chép bài mới |
 | [media.danghong.me](../sites/media/brief.md) | Báo chí, đối tác, ban tổ chức sự kiện | Các site khác (đọc JSON) | Tư liệu chính thức, tải được | danghong | Trung tính, thông tin | Tải / sao chép link tư liệu |
 | [docs.danghong.me](../sites/docs/brief.md) | Hồng và agent làm việc trên repo | Người cộng tác kỹ thuật | Hiện trạng đúng, luật rõ | danghong | Kỹ thuật, ngắn | (không có) |
 

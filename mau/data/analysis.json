@@ -1,0 +1,465 @@
+{
+ "totals": {
+  "posts": 108,
+  "comments": 11826,
+  "shares": 9499,
+  "likes": 15967,
+  "withLink": 93
+ },
+ "bySubject": [
+  {
+   "k": "Ngữ văn",
+   "n": 20,
+   "medC": 14,
+   "medS": 12,
+   "avgC": 29,
+   "avgS": 33
+  },
+  {
+   "k": "Toán",
+   "n": 20,
+   "medC": 11,
+   "medS": 22,
+   "avgC": 30,
+   "avgS": 29
+  },
+  {
+   "k": "Tiếng Anh/IELTS",
+   "n": 20,
+   "medC": 74,
+   "medS": 122,
+   "avgC": 243,
+   "avgS": 376
+  },
+  {
+   "k": "Vật lý",
+   "n": 20,
+   "medC": 41,
+   "medS": 17,
+   "avgC": 104,
+   "avgS": 21
+  },
+  {
+   "k": "Hóa học",
+   "n": 16,
+   "medC": 125,
+   "medS": 5,
+   "avgC": 212,
+   "avgS": 17
+  },
+  {
+   "k": "Tin học",
+   "n": 12,
+   "medC": 20,
+   "medS": 4,
+   "avgC": 27,
+   "avgS": 4
+  }
+ ],
+ "byCta": [
+  {
+   "k": "Không rõ",
+   "n": 88,
+   "medC": 30,
+   "medS": 11,
+   "avgC": 110,
+   "avgS": 98
+  },
+  {
+   "k": "Link/Drive",
+   "n": 16,
+   "medC": 19,
+   "medS": 25,
+   "avgC": 116,
+   "avgS": 50
+  },
+  {
+   "k": "Comment",
+   "n": 4,
+   "medC": 52,
+   "medS": 67,
+   "avgC": 78,
+   "avgS": 50
+  },
+  {
+   "k": "Inbox",
+   "n": 3,
+   "medC": 16,
+   "medS": 1,
+   "avgC": 15,
+   "avgS": 8
+  },
+  {
+   "k": "Theo dõi",
+   "n": 1,
+   "medC": 1200,
+   "medS": 7,
+   "avgC": 1200,
+   "avgS": 7
+  }
+ ],
+ "byPain": [
+  {
+   "k": "Sắp thi, áp lực",
+   "n": 75
+  },
+  {
+   "k": "Chưa có lộ trình",
+   "n": 32
+  },
+  {
+   "k": "Mất gốc",
+   "n": 30
+  },
+  {
+   "k": "Khó tìm tài liệu chuẩn",
+   "n": 17
+  },
+  {
+   "k": "Tốn thời gian soạn",
+   "n": 14
+  },
+  {
+   "k": "Không rõ",
+   "n": 12
+  },
+  {
+   "k": "Cần điểm/band cao",
+   "n": 6
+  }
+ ],
+ "byNeed": [
+  {
+   "k": "Đề thi thật + đáp án",
+   "n": 52
+  },
+  {
+   "k": "Luyện đề",
+   "n": 48
+  },
+  {
+   "k": "Combo trọn bộ",
+   "n": 45
+  },
+  {
+   "k": "Chuyên đề/lý thuyết",
+   "n": 35
+  },
+  {
+   "k": "Không rõ",
+   "n": 16
+  },
+  {
+   "k": "Từ vựng/ngữ pháp",
+   "n": 12
+  },
+  {
+   "k": "Bài mẫu",
+   "n": 3
+  }
+ ],
+ "byKw": [
+  {
+   "k": "thpt",
+   "n": 30,
+   "medC": 18,
+   "medS": 7,
+   "avgC": 63,
+   "avgS": 13
+  },
+  {
+   "k": "bộ đề",
+   "n": 27,
+   "medC": 19,
+   "medS": 23,
+   "avgC": 55,
+   "avgS": 37
+  },
+  {
+   "k": "đề thi",
+   "n": 26,
+   "medC": 18,
+   "medS": 25,
+   "avgC": 79,
+   "avgS": 67
+  },
+  {
+   "k": "pdf",
+   "n": 20,
+   "medC": 37,
+   "medS": 64,
+   "avgC": 129,
+   "avgS": 100
+  },
+  {
+   "k": "file word",
+   "n": 18,
+   "medC": 6,
+   "medS": 25,
+   "avgC": 87,
+   "avgS": 59
+  },
+  {
+   "k": "HSG",
+   "n": 15,
+   "medC": 12,
+   "medS": 17,
+   "avgC": 118,
+   "avgS": 20
+  },
+  {
+   "k": "vào 10 / vào 6",
+   "n": 14,
+   "medC": 11,
+   "medS": 34,
+   "avgC": 56,
+   "avgS": 52
+  },
+  {
+   "k": "2k9 / 2k8…",
+   "n": 13,
+   "medC": 61,
+   "medS": 17,
+   "avgC": 192,
+   "avgS": 35
+  },
+  {
+   "k": "đáp án / lời giải",
+   "n": 13,
+   "medC": 30,
+   "medS": 30,
+   "avgC": 49,
+   "avgS": 36
+  },
+  {
+   "k": "sách",
+   "n": 9,
+   "medC": 74,
+   "medS": 10,
+   "avgC": 152,
+   "avgS": 521
+  },
+  {
+   "k": "lý thuyết",
+   "n": 8,
+   "medC": 188,
+   "medS": 4,
+   "avgC": 235,
+   "avgS": 8
+  },
+  {
+   "k": "tự học",
+   "n": 7,
+   "medC": 74,
+   "medS": 39,
+   "avgC": 142,
+   "avgS": 693
+  }
+ ],
+ "bySrcType": [
+  {
+   "k": "Cộng đồng",
+   "n": 59,
+   "medC": 18,
+   "medS": 14,
+   "avgC": 60,
+   "avgS": 111
+  },
+  {
+   "k": "Thầy cô",
+   "n": 45,
+   "medC": 44,
+   "medS": 16,
+   "avgC": 159,
+   "avgS": 57
+  },
+  {
+   "k": "Trung tâm",
+   "n": 4,
+   "medC": 194,
+   "medS": 95,
+   "avgC": 276,
+   "avgS": 91
+  }
+ ],
+ "byGrade": [
+  {
+   "k": "Cấp 3",
+   "n": 47,
+   "medC": 35,
+   "medS": 14,
+   "avgC": 123,
+   "avgS": 143
+  },
+  {
+   "k": "Không rõ",
+   "n": 41,
+   "medC": 19,
+   "medS": 12,
+   "avgC": 120,
+   "avgS": 49
+  },
+  {
+   "k": "Cấp 2",
+   "n": 15,
+   "medC": 14,
+   "medS": 20,
+   "avgC": 68,
+   "avgS": 40
+  },
+  {
+   "k": "Cấp 1",
+   "n": 5,
+   "medC": 19,
+   "medS": 30,
+   "avgC": 29,
+   "avgS": 36
+  }
+ ],
+ "patterns": [
+  {
+   "k": "Mở bằng TẶNG / FREE",
+   "n": 38,
+   "medC": 52,
+   "medS": 7,
+   "medC0": 15,
+   "medS0": 19
+  },
+  {
+   "k": "Có con số cụ thể (100 đề, 73 trang…)",
+   "n": 34,
+   "medC": 47,
+   "medS": 25,
+   "medC0": 19,
+   "medS0": 10
+  },
+  {
+   "k": "Gọi đúng khóa/tuổi (2K9…)",
+   "n": 11,
+   "medC": 41,
+   "medS": 11,
+   "medC0": 19,
+   "medS0": 16
+  },
+  {
+   "k": "Dạng [NHÃN] đầu bài",
+   "n": 21,
+   "medC": 69,
+   "medS": 8,
+   "medC0": 15,
+   "medS0": 16
+  }
+ ],
+ "byImgs": [
+  {
+   "k": "0 ảnh",
+   "n": 17,
+   "medC": 4,
+   "medS": 25
+  },
+  {
+   "k": "1 ảnh",
+   "n": 39,
+   "medC": 44,
+   "medS": 6
+  },
+  {
+   "k": "2+ ảnh",
+   "n": 52,
+   "medC": 27,
+   "medS": 23
+  }
+ ],
+ "commentsMoreThanLikes": 45,
+ "byVerdict": [
+  {
+   "k": "Bình luận theo từ khóa",
+   "n": 35
+  },
+  {
+   "k": "Mẫu quá ít",
+   "n": 20
+  },
+  {
+   "k": "Chủ yếu xin tài liệu",
+   "n": 13
+  },
+  {
+   "k": "Tự nhiên",
+   "n": 12
+  },
+  {
+   "k": "Chưa đọc được",
+   "n": 11
+  },
+  {
+   "k": "Có người hỏi thông tin",
+   "n": 2
+  }
+ ],
+ "byCtaCap": [
+  {
+   "k": "Không thấy",
+   "n": 27
+  },
+  {
+   "k": "Inbox",
+   "n": 24
+  },
+  {
+   "k": "Comment / để lại thông tin",
+   "n": 23
+  },
+  {
+   "k": "Link / Drive",
+   "n": 21
+  },
+  {
+   "k": "Chia sẻ / tag",
+   "n": 12
+  },
+  {
+   "k": "Thả tim / theo dõi",
+   "n": 10
+  },
+  {
+   "k": "Comment từ khóa",
+   "n": 9
+  }
+ ],
+ "gatedBySubject": [
+  {
+   "k": "Ngữ văn",
+   "n": 10,
+   "g": 8
+  },
+  {
+   "k": "Toán",
+   "n": 8,
+   "g": 2
+  },
+  {
+   "k": "Tiếng Anh/IELTS",
+   "n": 13,
+   "g": 8
+  },
+  {
+   "k": "Tin học",
+   "n": 7,
+   "g": 2
+  },
+  {
+   "k": "Vật lý",
+   "n": 13,
+   "g": 9
+  },
+  {
+   "k": "Hóa học",
+   "n": 11,
+   "g": 6
+  }
+ ],
+ "postLinks": 56,
+ "cmtChecked": 93,
+ "spamFlag": 8
+}

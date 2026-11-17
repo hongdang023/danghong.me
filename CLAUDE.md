@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # danghong.me
 
-Monorepo: `website/` (danghong.me), `docs/` (docs.danghong.me), `media/` (media.danghong.me), `api/` (api.danghong.me), `ielts/` (ielts.danghong.me) và `nguvan/` (nguvan.danghong.me). Subdomain đang lên kế hoạch: ai, nextstep (brief trong `docs/sites/`).
+Monorepo: `website/` (danghong.me), `docs/` (docs.danghong.me), `media/` (media.danghong.me), `api/` (api.danghong.me), `ielts/` (ielts.danghong.me) và `nguvan/` (nguvan.danghong.me) và `mau/` (mau.danghong.me, thư viện bài post mẫu K12, HTML/CSS/JS thuần). Subdomain đang lên kế hoạch: ai, nextstep (brief trong `docs/sites/`).
 
 ## Lệnh thường dùng
 
@@ -16,6 +16,7 @@ Mỗi thư mục là một package độc lập (không có workspace gốc): `c
 | `media/` | `npm run dev` (wrangler Pages, D1/R2 local, :8788) · `npm test` · một file: `node --test test/site.test.js` · `npm run db:schema` (chạy `schema.sql` lên D1 **remote**) |
 | `ielts/` | `npm run dev` (:3000) · `npm run lint` · `npm run build` (static export; đọc dữ liệu trường từ `media/api/ielts/schools.json`, lỗi thì danh sách trống) |
 | `nguvan/` | `npm run dev` (:3000) · `npm run lint` · `npm run build` (static export, không cần mạng) |
+| `mau/` | Không có build. Xem thử: `python3 -m http.server 3200` trong `mau/` |
 | `api/` | `npm run dev` · `npm run typecheck` (chưa có test, chưa gắn route `api.danghong.me`) |
 | `docs/` | `npm run dev` (:5173) · `npm run check && npm run build` |
 

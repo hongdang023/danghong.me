@@ -27,6 +27,7 @@ Mọi site dưới `danghong.me` có brief ở đây: mục đích, người đ�
 | nguvan.danghong.me | Site nội dung Ngữ Văn của Hồng (dạy tại Nemo12) | Phụ huynh (chính), học sinh | danghong | [nguvan](sites/nguvan/brief.md) · draft |
 | ielts.danghong.me | Site nội dung IELTS của Hồng (dạy tại Nemo12) | Phụ huynh, học sinh cấp 3, sinh viên | Warm Reef | [ielts](sites/ielts/brief.md) · draft |
 | nextstep.danghong.me | Cộng đồng Next Step, Hà Nội | Sinh viên, người trẻ đi làm | Next Step | [nextstep](sites/nextstep/brief.md) · draft |
+| mau.danghong.me | Thư viện bài post mẫu K12 (nội bộ): chọn mẫu, rút điểm chung, viết bài tạo phễu | Hồng, nhóm truyền thông | danghong | [mau](sites/mau/brief.md) · draft |
 | [media.danghong.me](https://media.danghong.me) | Kho tư liệu và dữ liệu | Báo chí, đối tác, các site | danghong | [media](sites/media/brief.md) · active |
 | [docs.danghong.me](https://docs.danghong.me) | Nguồn sự thật (trang này) | Hồng, agent | danghong | [docs](sites/docs/brief.md) · active |
 

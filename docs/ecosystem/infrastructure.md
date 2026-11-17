@@ -66,6 +66,7 @@ Hệ quả:
 | `ai.danghong.me` | (chưa có) | Kế hoạch | | [sites/ai](../sites/ai/ops.md) |
 | `ielts.danghong.me` | `danghong-ielts.pages.dev` | Đang chạy | | [sites/ielts](../sites/ielts/ops.md) |
 | `nguvan.danghong.me` | `danghong-nguvan.pages.dev` | Đang chạy | | [sites/nguvan](../sites/nguvan/ops.md) |
+| `mau.danghong.me` | `mau/` | Kế hoạch | Chưa tạo project (dự kiến `danghong-mau`) | [sites/mau](../sites/mau/ops.md) |
 | `nextstep.danghong.me` | (chưa có) | Kế hoạch | | [sites/nextstep](../sites/nextstep/ops.md) |
 
 Chi tiết cách deploy và thiết lập token: [Deployment](deployment.md).

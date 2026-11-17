@@ -1,0 +1,32 @@
+{
+  "note": "Viết tay ngày 2026-11-17 từ 3 bài nhiều chia sẻ nhất của Ngữ văn. Cần viết lại khi dữ liệu thay đổi.",
+  "van": {
+    "headline": "Làm bộ đề lớp 9 theo mốc kiểm tra, có con số và album xem trước.",
+    "sub": "Đăng đúng lúc học sinh cần, nói rõ tặng gì, cho xem trước rồi mới mời nhận.",
+    "confidence": "Độ chắc: thấp, mẫu nhỏ",
+    "defaultSample": "van-01",
+    "reasons": [
+      { "title": "Chia sẻ cao nhất nằm ở bộ đề, không ở bài nhiều bình luận", "body": "Ba bài nhiều chia sẻ nhất môn: 131, 112 và 110. Bài nhiều bình luận nhất (204) chỉ có 8 chia sẻ, vì yêu cầu bình luận đúng một từ khóa để nhận sách." },
+      { "title": "Bài bám mốc kiểm tra lan nhanh hơn", "body": "Đề giữa học kì I lớp 9: 112 chia sẻ sau 12 ngày, khoảng 9 chia sẻ mỗi ngày. Bộ 100 đề đăng tháng 8: 110 chia sẻ sau 93 ngày, khoảng 1 chia sẻ mỗi ngày." },
+      { "title": "Con số và album xem trước", "body": "Hai trong ba bài đầu có album 5 ảnh, và tên bài nói rõ loại và số lượng (100 đề, bộ đề truyện truyền kì)." }
+    ],
+    "mine": ["Lớp 9, ôn thi vào 10", "[N] đề, có đáp án", "Album 5 ảnh xem trước", "[Chọn: nhắn “ib”, bình luận từ khóa hoặc link]", "[N] ĐỀ NGỮ VĂN 9 – ÔN THI VÀO 10", "[Ngày đăng, gần mốc kiểm tra]"],
+    "samples": {
+      "van-04": {
+        "badge": "Nhiều chia sẻ nhất",
+        "slots": ["Chưa rõ lớp", "Bộ đề truyện truyền kì", "Album 5 ảnh", "Link hoặc Drive, đọc từ chữ bài", "“BỘ ĐỀ TRUYỆN TRUYỀN KÌ”", "07/10, giữa học kì I"],
+        "learn": "Tên bài ngắn, đúng một loại tài liệu, kèm album 5 ảnh. Chưa biết người xem nhận tài liệu bằng cách nào."
+      },
+      "van-02": {
+        "badge": "Lan nhanh nhất",
+        "slots": ["Lớp 9, một trường cụ thể", "Đề kiểm tra giữa học kì I", "1 ảnh đề", "Chưa đọc được bình luận", "“ĐỀ KIỂM TRA GIỮA HỌC KÌ I – NGỮ VĂN 9”", "05/11, đúng giữa học kì"],
+        "learn": "Bám đúng mốc kiểm tra của lớp. Khoảng 9 chia sẻ mỗi ngày, nhanh nhất trong ba mẫu."
+      },
+      "van-01": {
+        "badge": "Đủ cơ chế nhận",
+        "slots": ["Lớp 9, ôn thi lên 10", "100 đề thi", "Album 5 ảnh xem trước", "Nhắn “ib”", "“BỘ 100 ĐỀ THI LỚP 9 – ÔN THI LÊN 10”", "Tháng 8, trước năm học"],
+        "learn": "Con số nằm ngay đầu tên bài, nói rõ lớp và mục tiêu. Mời nhận bằng nhắn tin."
+      }
+    }
+  }
+}

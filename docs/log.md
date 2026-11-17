@@ -18,6 +18,9 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-17 | Hồng duyệt thiết kế lại (Claude Design): 5 mục điều hướng, ma trận ưu tiên, trang môn theo khuyến nghị, so 3 mẫu, mổ xẻ 6 ô, Đã lưu, Bài mới từng bước; áp vào `mau/` | [mau sitemap](sites/mau/sitemap.md), [design](sites/mau/design.md), [content](sites/mau/content.md) |
+| 2026-11-17 | Hồng: kiểm bình luận các bài mẫu (loại spam, phân biệt xin tài liệu và hỏi thông tin); link bài gốc thật thay link ảnh | [mau content](sites/mau/content.md) |
+| 2026-11-17 | Hồng: tìm bài post mẫu (tặng tài liệu) cho 6 môn K12, gom thành thư viện mau.danghong.me, rút điểm chung, viết bài mới; giao diện tối giản kiểu Apple, dashboard, ít chữ, có link bài mẫu | [mau](sites/mau/brief.md), [ops](sites/mau/ops.md) |
 | 2026-11-11 | Hồng: nguvan đổi sang theme màu nước (riêng), xưng "cô Hồng", đăng nguyên văn hai câu chuyện, bài viết dạng card có ảnh, trang Thử chơi dẫn game kèm ảnh chụp, navbar mega menu | [nguvan design](sites/nguvan/design.md), [content](sites/nguvan/content.md) |
 | 2026-11-11 | Hồng: thêm nguvan.danghong.me, branding cô giáo Ngữ Văn tại Nemo12, phụ huynh là chính, so sánh với học thuộc lòng, inquiry (IB) và competency-based (Building21), 11 bài Substack làm chất liệu | [nguvan](sites/nguvan/brief.md) |
 | 2026-11-12 | Hồng: chọn vai trò kiểu nemo12.com (2 bước) và thông điệp, thông tin khác nhau theo từng vai trò và mục tiêu trên cả site; đại từ chung "cô Hồng", "cô" | [ielts brief](sites/ielts/brief.md), [ielts design](sites/ielts/design.md) |
