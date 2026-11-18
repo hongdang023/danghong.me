@@ -80,7 +80,7 @@ Khung 5 ô dùng chung cho mọi môn. Mỗi ô có chip từ khóa bấm chọn
 
 ## Số người theo dõi (file `sources.json`)
 
-Bước 2 của [brief nghiên cứu NGUVAN](research-nguvan.md), mới làm cho nguồn của Ngữ văn và Tiếng Anh (2026-11-18). Mỗi nguồn có loại (trang hoặc nhóm), số người theo dõi hoặc thành viên (đọc từ tìm kiếm Facebook, làm tròn theo Facebook), bài viết mỗi ngày với nhóm, và độ khớp: `exact` (tên khớp), `ambiguous` (nhiều trang hoặc nhóm cùng tên, chưa chắc đúng), `not_found`. 29 trên 31 nguồn tìm thấy, 5 nguồn mơ hồ, 2 không thấy (Tài liệu môn Văn Cô Quỳnh, IELTS Mlem). Số người theo dõi là số **hiện tại**, bài có thể đăng khi page nhỏ hơn. Chuẩn hóa: chia sẻ hoặc bình luận chia 1.000 người theo dõi. Các môn Toán, Vật lý, Hóa học, Tin học chưa đo.
+Bước 2 của [brief nghiên cứu NGUVAN](research-nguvan.md), mới làm cho nguồn của Ngữ văn và Tiếng Anh (2026-11-18). Mỗi nguồn có loại (trang hoặc nhóm), số người theo dõi hoặc thành viên (đọc từ tìm kiếm Facebook, làm tròn theo Facebook), bài viết mỗi ngày với nhóm, và độ khớp: `exact` (tên khớp), `ambiguous` (nhiều trang hoặc nhóm cùng tên, chưa chắc đúng), `not_found`. 29 trên 31 nguồn tìm thấy (25 khớp tên, 4 mơ hồ), 2 không thấy (Tài liệu môn Văn Cô Quỳnh, IELTS Mlem). Số người theo dõi là số **hiện tại**, bài có thể đăng khi page nhỏ hơn. Chuẩn hóa: chia sẻ hoặc bình luận chia 1.000 người theo dõi. Các môn Toán, Vật lý, Hóa học, Tin học chưa đo.
 
 ## Giới hạn
 
