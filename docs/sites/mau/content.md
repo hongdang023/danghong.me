@@ -78,6 +78,10 @@ Khung 5 ô dùng chung cho mọi môn. Mỗi ô có chip từ khóa bấm chọn
 
 `posts.json` được publish công khai (site và repo GitHub công khai), nên **không giữ email và số điện thoại của người khác**. Email trong bình luận mẫu và số điện thoại trong chữ bài được thay bằng `[email]` và `[sđt]` (2026-11-18). Khi gộp dữ liệu quét mới, thay thế trước khi ghi vào `posts.json`. Dữ liệu thô chưa thay thế chỉ ở máy Hồng, không đưa vào repo. Script tính lại các số trên trang nằm ở `tools/mau/` (`yeu-to.mjs`, `nguoi-dang-do-dai-loai.mjs`), chạy bằng `node tools/mau/<tên>.mjs` từ gốc repo; chúng đọc `mau/data/posts.json`.
 
+## Số người theo dõi (file `sources.json`)
+
+Bước 2 của [brief nghiên cứu NGUVAN](research-nguvan.md), mới làm cho nguồn của Ngữ văn và Tiếng Anh (2026-11-18). Mỗi nguồn có loại (trang hoặc nhóm), số người theo dõi hoặc thành viên (đọc từ tìm kiếm Facebook, làm tròn theo Facebook), bài viết mỗi ngày với nhóm, và độ khớp: `exact` (tên khớp), `ambiguous` (nhiều trang hoặc nhóm cùng tên, chưa chắc đúng), `not_found`. 29 trên 31 nguồn tìm thấy, 5 nguồn mơ hồ, 2 không thấy (Tài liệu môn Văn Cô Quỳnh, IELTS Mlem). Số người theo dõi là số **hiện tại**, bài có thể đăng khi page nhỏ hơn. Chuẩn hóa: chia sẻ hoặc bình luận chia 1.000 người theo dõi. Các môn Toán, Vật lý, Hóa học, Tin học chưa đo.
+
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.

@@ -1,0 +1,285 @@
+{
+ "updated": "2026-11-18",
+ "note": "Số người theo dõi (trang) và thành viên (nhóm) đọc từ tìm kiếm Facebook ngày readAt, làm tròn theo Facebook. \"ambiguous\" là có nhiều trang hoặc nhóm cùng tên, chưa chắc đúng. \"not_found\" là không thấy. Chỉ phủ nguồn của Ngữ văn và Tiếng Anh.",
+ "items": [
+  {
+   "src": "Trạm văn",
+   "kind": "page",
+   "count": 126000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Trang tramvan.thcs; bài nguồn \"Album\" cùng trang",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "CLB Bồi dưỡng văn học Bảo Thơ",
+   "kind": "page",
+   "count": 13000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Học Văn Cô Minh Hiên",
+   "kind": "page",
+   "count": 438000,
+   "perDay": "",
+   "match": "ambiguous",
+   "note": "Có thêm trang \"Học Văn Cô Minh Hiên - THCS Lớp 6,7,8,9\" 147K; lấy trang tên khớp",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Chia Sẻ Tài Liệu - Luyện Thi Thpt Quốc Gia",
+   "kind": "group",
+   "count": 71000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Tài liệu môn Văn Cô Quỳnh",
+   "kind": "",
+   "count": null,
+   "perDay": "",
+   "match": "not_found",
+   "note": "Không thấy trang hoặc nhóm cùng tên",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Tài liệu - Giáo án - Đề Thi",
+   "kind": "group",
+   "count": 12000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Hồng Diễm Dạy Văn",
+   "kind": "page",
+   "count": 57000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Mầm Education",
+   "kind": "page",
+   "count": 6400,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Văn Chương Mạn Đàm",
+   "kind": "page",
+   "count": 108000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "HỘI DẠY VĂN-HỌC VĂN THPT",
+   "kind": "group",
+   "count": 605000,
+   "perDay": "10",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "NovaTeen",
+   "kind": "page",
+   "count": 1000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Bồi Dưỡng Học Sinh Giỏi Văn",
+   "kind": "group",
+   "count": 430000,
+   "perDay": "40+",
+   "match": "ambiguous",
+   "note": "Hai nhóm cùng tên: 430K (40+ bài/ngày) và 112K (70+ bài/ngày); lấy nhóm lớn hơn",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Cửa Sổ Văn Chương",
+   "kind": "page",
+   "count": 42000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Ngữ Văn THCS",
+   "kind": "group",
+   "count": 176000,
+   "perDay": "90+",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Thầy Nguyễn Thành Luân - Ôn Thi Tiếng Anh",
+   "kind": "page",
+   "count": 198000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Có trang trùng tên 18 người theo dõi",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "IELTS Nguyễn Huyền",
+   "kind": "page",
+   "count": 310000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Trang ieltsfocusmode",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "9prep.com",
+   "kind": "page",
+   "count": 3400,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Tiếng Anh Cô Phượng Đống Đa",
+   "kind": "page",
+   "count": 13000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Trang english13637",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "TỰ HỌC IELTS WRITING & SPEAKING",
+   "kind": "group",
+   "count": 233400,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Học Tiếng Anh với Cô Trang Anh",
+   "kind": "page",
+   "count": 714000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Trang Mrstranganh",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Ở đâyy có nhiều tài liệu học tập chill chill",
+   "kind": "page",
+   "count": 53000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "The Forum IELTS Community",
+   "kind": "group",
+   "count": 511500,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "IELTS Mlem",
+   "kind": "",
+   "count": null,
+   "perDay": "",
+   "match": "not_found",
+   "note": "Không thấy trang cùng tên",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "TỰ HỌC IELTS",
+   "kind": "group",
+   "count": 125300,
+   "perDay": "",
+   "match": "exact",
+   "note": "Nhóm id 738230156586625",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Tài liệu IELTS Fighter",
+   "kind": "page",
+   "count": 137000,
+   "perDay": "",
+   "match": "exact",
+   "note": "Khác với \"IELTS Fighter - Chiến binh IELTS\" 1,1 triệu",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "IELTS Tips & Tricks",
+   "kind": "group",
+   "count": 90000,
+   "perDay": "90+",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Thầy Trung Hiếu",
+   "kind": "page",
+   "count": 31000,
+   "perDay": "",
+   "match": "ambiguous",
+   "note": "Nhiều trang trùng tên; chưa chắc đúng người",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "English Lab",
+   "kind": "page",
+   "count": 2900,
+   "perDay": "",
+   "match": "ambiguous",
+   "note": "Hai trang: 2,9K và 18K",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Học IELTS",
+   "kind": "group",
+   "count": 616400,
+   "perDay": "",
+   "match": "exact",
+   "note": "Nhóm hocielts247",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "ASTAR-FREE ENGLISH LESSONS",
+   "kind": "group",
+   "count": 40000,
+   "perDay": "90+",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  },
+  {
+   "src": "Học IELTS 8.0 Cùng Tiến",
+   "kind": "page",
+   "count": 87000,
+   "perDay": "",
+   "match": "exact",
+   "note": "",
+   "readAt": "2026-11-18"
+  }
+ ]
+}
