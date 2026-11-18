@@ -14,7 +14,7 @@ ai_readable: true
 
 # mau.danghong.me Content
 
-Dữ liệu nằm trong repo, không nằm trong D1/R2 của media: `mau/data/posts.json` (bài mẫu), `mau/data/analysis.json` (số liệu gộp), `mau/data/newposts.json` (bài viết mới), `mau/data/curated.json` (khuyến nghị và mổ xẻ 6 ô viết tay, hiện chỉ cho Ngữ văn). Mẫu đã lưu nằm trong `localStorage` của trình duyệt, không có nơi lưu chung.
+Dữ liệu nằm trong repo, không nằm trong D1/R2 của media: `mau/data/posts.json` (bài mẫu), `mau/data/analysis.json` (số liệu gộp), `mau/data/newposts.json` (bài viết mới), `mau/data/curated.json` (khuyến nghị và mổ xẻ 6 ô viết tay, hiện chỉ cho Ngữ văn), `mau/data/hero.json` (brand, community và bài mẫu theo dòng A/B/C/D của nghiên cứu NGUVAN). Mẫu đã lưu nằm trong `localStorage` của trình duyệt, không có nơi lưu chung.
 
 ## Trường của mỗi bài mẫu
 
@@ -85,3 +85,7 @@ Bước 2 của [brief nghiên cứu NGUVAN](research-nguvan.md), mới làm cho
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.
+
+## Hero NGUVAN (file `hero.json`)
+
+Dữ liệu của ba trang `#dong`, `#brand`, `#cong-dong`. Dựng bằng `node tools/mau/build-hero.mjs` từ `nguvan-hero-research/samples-brand.json` và `samples-community.json` (ngày đọc 2026-11-18). Gồm: 10 brand (nhóm, số theo dõi, phân bố dòng, ghi chú), 15 community (thành viên, bài/ngày, số bài ≥10 bình luận), 4 dòng (định nghĩa, hook, cơ chế nhận, mẫu đáng học nhất) và 121 bài mẫu (46 brand, 75 community; **67 bài đã gắn dòng**). Dòng gắn là suy đoán chưa rà tay. Không chứa tên hay số điện thoại người khác. Chỉ hiển thị dữ liệu, chưa có bộ lọc theo bộ sách hay kênh.
