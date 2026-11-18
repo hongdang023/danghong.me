@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-18 | Hồng: chạy Bước 1 brief NGUVAN, longlist 30 brand và 25 community (Facebook) | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: đọc lại và cập nhật brief NGUVAN cho đúng và đủ yêu cầu (bản 2.2) | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: bắt đầu Bước 2 brief NGUVAN, quét số người theo dõi cho nguồn Ngữ văn và Tiếng Anh | [mau content](sites/mau/content.md) |
 | 2026-11-18 | Hồng: brief nghiên cứu cần 5 bài mẫu mỗi brand và community, phân vào các dòng content để học làm hero content | [Brief nghiên cứu](sites/mau/research-nguvan.md) |

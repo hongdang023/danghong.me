@@ -164,7 +164,7 @@ Mỗi nhãn có cờ `nguồn nhãn`: **đã kiểm** (người xem trực tiế
 - Cách đọc: tìm kiếm trang hoặc nhóm theo tên trên Facebook (đăng nhập sẵn) hoặc mở thẳng link trang hoặc nhóm nếu có; với nhóm ghi thêm số bài mỗi ngày nếu Facebook hiển thị.
 - Mỗi nguồn ghi **độ khớp**: `exact` (tên khớp), `ambiguous` (nhiều trang hoặc nhóm cùng tên, ghi các số), `not_found`. Không đoán khi mơ hồ.
 - Lưu cùng cấu trúc với `mau/data/sources.json`.
-- **Tiến độ:** đã làm cho nguồn có sẵn trong mau (Văn và Anh). Chưa làm cho ứng viên mới của longlist, vì longlist (Bước 1) chưa chạy.
+- **Tiến độ:** đã làm cho nguồn có sẵn trong mau (Văn và Anh). Số của ứng viên mới đã đọc kèm trong longlist (từ kết quả tìm kiếm, chưa kiểm từng trang); chưa ghi độ khớp.
 
 **Bước 3: Chấm và chốt.** Áp dụng mục 8 cho TẤT CẢ ứng viên (cả loại), chọn 15 brand và 15 community.
 
@@ -247,7 +247,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
-- Bước 1 (longlist) chưa chạy; Bước 2 mới xong cho nguồn Văn và Anh có sẵn trong mau.
+- Bước 1 xong 2026-11-18: 30 brand, 25 community trong `nguvan-hero-research/longlist-dot1.json` (chưa chấm, chưa loại). Bước 2 mới đủ số cho nguồn có sẵn; ứng viên mới có số tìm kiếm, cần kiểm ở Bước 3.
 - Chốt cách thu số người theo dõi cho hàng loạt ứng viên mới.
 - Hồng duyệt hạn mức nhóm con của Đợt 1.
 - Hồng xác nhận định nghĩa 4 dòng và nhóm D ở mục 3 trước khi gắn dòng cho hàng loạt bài.
