@@ -11,13 +11,22 @@ Ngày đọc: 2026-11-18. Theo quyết định của Hồng, không lấy quy đ
 | Hiệu lực | từ **31/05/2026** (Điều 5.1) |
 | Thay thế | **Thông tư 01/2014/TT-BGDĐT** (Điều 5.2) |
 | Chuyển tiếp | chương trình đào tạo, kiểm tra đánh giá đang theo TT 01/2014 được dùng tiếp **đến hết 31/12/2027** (Điều 5.3) |
-| Nguồn | moet.gov.vn, trang văn bản và file PDF `33_2026_TT_BGDDT_signed_8bff2.pdf` (bản scan; đã đọc trang 1–5: thông tư, Điều 1–6, bảng cấp, mô tả nghe tổng quát) |
+| Nguồn | moet.gov.vn, trang văn bản và file PDF `33_2026_TT_BGDDT_signed_8bff2.pdf` (bản scan 103 trang; đã đọc thông tư, Điều 1–6, bảng cấp và mô tả tổng quát Bậc 3 của Nghe, Đọc, Nói, Viết) |
 
 **Cấu trúc (từ Phụ lục, mục I):** 3 cấp. Sơ cấp: Tiền Bậc 1 (Pre-A1), Bậc 1 (A1), Bậc 2 (A2). Trung cấp: **Bậc 3 (B1)**, Bậc 4 (B2). Cao cấp: Bậc 5 (C1), Bậc 6 (C2).
 
 **Khác bản 2014:** thêm **Tiền Bậc 1 (Pre-A1)**. Điều 3.6 nêu khung là "căn cứ để công nhận các cấp độ của chứng chỉ ngoại ngữ nước ngoài tương đương với các bậc" trong tuyển sinh, đào tạo đại học; **bảng quy đổi cụ thể không nằm trong thông tư** này (xem mục 2).
 
-**Mô tả Bậc 3, Nghe tổng quát (tóm tắt):** hiểu thông tin thực tế đơn giản về chủ đề hằng ngày hoặc công việc, và hiểu điểm chính của bài nói tiêu chuẩn, rõ ràng về vấn đề quen thuộc ở công việc, trường học, giải trí, kể cả đoạn trần thuật ngắn. Mô tả Bậc 3 của Nói, Đọc, Viết **chưa đọc** (nằm ở các trang sau của Phụ lục, 103 trang).
+**Mô tả Bậc 3 theo kỹ năng, mục tổng quát (đã đọc, tóm tắt):**
+
+| Kỹ năng | Bậc 3 (B1) trong Phụ lục |
+| :--- | :--- |
+| Nghe | hiểu thông tin thực tế đơn giản về chủ đề hằng ngày hoặc công việc; hiểu điểm chính của bài nói tiêu chuẩn, rõ ràng về vấn đề quen thuộc ở công việc, trường học, giải trí, kể cả đoạn trần thuật ngắn |
+| Đọc | đọc các văn bản thực tế đơn giản về chủ đề liên quan lĩnh vực và sở thích của mình với mức hiểu vừa đủ |
+| Nói (độc thoại sản sinh) | trình bày khá trôi chảy một mô tả đơn giản về nhiều chủ đề mình quan tâm, theo trình tự từng ý mạch lạc; có thể bày tỏ cảm xúc về điều đã trải nghiệm và đưa lý do giải thích, kể cốt truyện sách hoặc phim, mô tả ước mơ, hy vọng |
+| Viết (sản sinh) | viết các văn bản đơn giản có tính kết nối về một loạt chủ đề quen thuộc trong lĩnh vực quan tâm, bằng cách liên kết các yếu tố rời rạc ngắn hơn thành trình tự tuyến tính |
+
+Chưa đọc: các mục chi tiết hơn (tương tác, trung gian, thư từ, ghi chép…) của Phụ lục 103 trang; mô tả Bậc 3 ở trên chỉ là mục tổng quát của từng kỹ năng (trang 1–23 và 46 của bản scan).
 
 ## 2. Mức tối thiểu tương ứng Bậc 3 trong văn bản của Bộ (đã đọc văn bản chính thức)
 

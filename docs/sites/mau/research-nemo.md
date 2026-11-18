@@ -286,7 +286,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 
 ## Việc còn mở
 
-- **Bước 0 chạy 2026-11-18** (một phần): đã có `nemo-hero-research/certificates.md`, `exit-requirements.md`, `skills-map.md`. Đã đọc văn bản chính thức: Thông tư 33/2026/TT-BGDĐT (khung mới, thay TT 01/2014, hiệu lực 31/05/2026), Phụ lục I Quy chế thi tốt nghiệp THPT (ngưỡng tối thiểu của Bộ cho chứng chỉ, tương ứng Bậc 3), Quyết định 729/QĐ-BGDĐT (VSTEP). **Chưa xác minh:** cấu trúc TOEIC hiện hành, Cambridge (kỹ năng, Starters/Movers/Flyers), IELTS giấy hay máy và hiệu lực, thi tốt nghiệp THPT tiếng Anh, mô tả Bậc 3 cho Nói, Đọc, Viết.
+- **Bước 0 chạy 2026-11-18** (một phần): đã có `nemo-hero-research/certificates.md`, `exit-requirements.md`, `skills-map.md`. Đã đọc văn bản chính thức: Thông tư 33/2026/TT-BGDĐT (khung mới, thay TT 01/2014, hiệu lực 31/05/2026), Phụ lục I Quy chế thi tốt nghiệp THPT (ngưỡng tối thiểu của Bộ cho chứng chỉ, tương ứng Bậc 3), Quyết định 729/QĐ-BGDĐT (VSTEP). Bổ sung cùng ngày: IELTS (từ giữa 2026 chỉ thi trên máy; khuyến nghị hiệu lực 2 năm), TOEIC Listening & Reading (200 câu, 2 giờ, thang 10–990), Cambridge Starters/Movers/Flyers, mô tả Bậc 3 cho 4 kỹ năng. **Còn chưa xác minh:** TOEIC bản máy và Speaking & Writing hiện hành, cấu trúc Cambridge từ A2 Key, đề thi tốt nghiệp THPT tiếng Anh, tình trạng hiệu lực của QĐ 729 (VSTEP).
 - **Hồng xin vào các group sinh viên trọng điểm** bằng tài khoản đang dùng trong Chrome (đã quyết cấp tài khoản). Chốt danh sách group sau Bước 1 (longlist).
 - Hồng bổ sung dữ kiện mentor còn thiếu (mục 3: Hồng dạy nhóm nào, có kinh nghiệm dạy sinh viên không, tuổi; anh Đắc: con học lớp mấy, hệ nào, kinh nghiệm đồng hành) trước Bước 7.
 - NGUVAN xong Bước 6 thì mới bắt đầu Bước 1–5 của NEMO.
