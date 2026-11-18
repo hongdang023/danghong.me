@@ -246,8 +246,5 @@ pre.dr{white-space:pre-wrap;font:inherit;margin:12px 0 0;padding:16px;border-rad
 @media(max-width:900px){.bcols{grid-template-columns:1fr}.br{position:static}}
 
 /* Hero NGUVAN */
-.hs h4{margin:8px 0 0;font-size:18px;line-height:1.35}
-.hs .hn{display:flex;gap:22px;margin-top:16px}.hs .hn span{display:block;font-size:13px;color:var(--mut)}.hs .hn b{display:block;font-size:20px;color:var(--fg);font-variant-numeric:tabular-nums}
-.hl{margin:16px 0 0;padding:0;list-style:none;font-size:14px;display:grid;gap:6px}.hl b{display:inline-block;min-width:96px;color:var(--mut);font-weight:500}
-.hb{cursor:pointer}.hb.on{outline:2px solid var(--acc)}.hb .lines{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.hb .mut{margin:12px 0 0;color:var(--mut);font-size:14px}
-.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.pairs p{margin:4px 0 0}
+.mut{color:var(--mut)}
+details p{margin:8px 0 0;font-size:14.5px}

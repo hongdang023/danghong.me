@@ -26,7 +26,7 @@
 
   let saved = (() => { try { return JSON.parse(localStorage.getItem('mau.saved') || '[]'); } catch { return []; } })();
   const persist = () => { try { localStorage.setItem('mau.saved', JSON.stringify(saved)); } catch { /* bỏ qua */ } };
-  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', b: { subj: 'van', open: 'TẶNG', type: '', target: '', proofs: ['có đáp án'], album: true, recv: '', n: null, code: '' }, menu: false, menu2: false, goal2: 'share', L: 'A', hb: null, hc: null };
+  const S = { subj: 'Tất cả', level: '', cmt: '', q: '', sort: 'score', open: null, sel: {}, cell: 'van-2', b: { subj: 'van', open: 'TẶNG', type: '', target: '', proofs: ['có đáp án'], album: true, recv: '', n: null, code: '' }, menu: false, menu2: false, goal2: 'share', hf: { L: '', kind: '', src: '', q: '', sort: 'shares' }, hn: 20, ho: null };
 
   const classify = (n, s) => n < 2 ? 'Mẫu quá ít' : (s >= 20 ? (n <= 5 ? 'Làm trước' : 'Đông nhưng hút') : (n <= 5 ? 'Thử nhỏ' : 'Bỏ qua'));
   const ACT = { 'Làm trước': 'Làm trước. Ít bài mẫu mà chia sẻ khá.', 'Đông nhưng hút': 'Chỉ vào nếu có điểm khác biệt rõ.', 'Thử nhỏ': 'Thử một hai bài rồi đo lại.', 'Bỏ qua': 'Để sau.', 'Mẫu quá ít': 'Chưa đủ dữ liệu. Quét thêm trước khi quyết.' };
@@ -271,52 +271,59 @@
   const bText = () => { const t = document.querySelector('.bld .dr'); return t ? t.textContent : ''; };
 
 
-  /* ---------- Hero NGUVAN: học theo dòng, brand, community ---------- */
-  const LN = { A: 'A · Tặng, đóng gói đề', B: 'B · Phương pháp', C: 'C · Tâm lý, rào cản', D: 'D · Khác' };
-  const hnum = s => s.likes != null || s.comments != null || s.shares != null
-    ? `<span><b>${fmt(s.shares)}</b>chia sẻ</span><span><b>${fmt(s.comments)}</b>bình luận</span><span><b>${fmt(s.likes)}</b>thích</span>`
+  /* ---------- Hero NGUVAN: mẫu theo dòng, brand, community ---------- */
+  const LN = { A: 'A · Tặng đề, tài liệu', B: 'B · Phương pháp', C: 'C · Tâm lý, rào cản', D: 'D · Khác' };
+  const hs = id => H.samples.find(x => x.id === id);
+  const hTitle = s => s.kind === 'brand' ? s.why : (s.text || s.pain || '').slice(0, 100);
+  const hNums = s => s.likes != null || s.comments != null || s.shares != null
+    ? `<span><b>${fmt(s.shares)}</b>chia sẻ</span><span><b>${fmt(s.comments)}</b>bình luận</span>`
     : `<span><b>${esc(s.raw || '–')}</b>số liệu</span>`;
-  const hs = (id) => H.samples.find(x => x.id === id);
-  function hsample(s) {
-    const lead = s.kind === 'brand' ? s.hook : (s.pain || s.text || '');
-    return `<div class="card hs"><div class="k">${esc(s.src)} · ${fd(s.date)}${s.dong ? ` · dòng ${esc(s.dong)}${s.phu ? '/' + esc(s.phu) : ''}` : ' · chưa gắn dòng'}</div>
-      <h4>${esc(s.kind === 'brand' ? s.why : (s.text || lead).slice(0, 110))}</h4>
-      <div class="nums hn">${hnum(s)}</div>
-      <ul class="hl">${s.kind === 'brand' ? `<li><b>Hook</b> ${esc(s.hook)}</li><li><b>Offer</b> ${esc(s.offer)}</li><li><b>Cơ chế nhận</b> ${esc(s.mech)}</li>` : `${s.pain ? `<li><b>Pain</b> ${esc(s.pain)}</li>` : ''}${s.who ? `<li><b>Ai đăng</b> ${esc(s.who)}</li>` : ''}`}
-        <li><b>Bình luận đọc</b> ${esc(s.read)}</li>${s.note ? `<li><b>Ghi chú</b> ${esc(s.note)}</li>` : ''}</ul>
-      <div style="margin-top:14px"><a href="${esc(s.url)}" target="_blank" rel="noopener">Mở bài gốc ↗</a></div></div>`;
+  function hFiltered() {
+    const f = S.hf, q = f.q.toLowerCase();
+    const r = H.samples.filter(s => (!f.L || s.dong === f.L) && (!f.kind || s.kind === f.kind) && (!f.src || s.srcId === f.src) &&
+      (!q || (hTitle(s) + ' ' + s.src + ' ' + (s.hook || '') + ' ' + (s.pain || '') + ' ' + (s.text || '')).toLowerCase().includes(q)));
+    const k = f.sort;
+    r.sort((a, b) => k === 'date' ? (b.date || '').localeCompare(a.date || '') : (b[k] ?? -1) - (a[k] ?? -1));
+    return r;
+  }
+  function hDetail(s) {
+    const rows = s.kind === 'brand'
+      ? [['Hook', s.hook], ['Offer', s.offer], ['Cơ chế nhận', s.mech]]
+      : [['Pain', s.pain], ['Ai đăng', s.who], ['Nội dung', s.text]];
+    return `<div class="det">${rows.filter(r => r[1]).map(r => `<p><b>${r[0]}:</b> ${esc(r[1])}</p>`).join('')}
+      <div>Thích ${fmt(s.likes)} · Bình luận đọc: ${esc(s.read)}${s.dong ? ` · dòng ${esc(s.dong)}${s.phu ? '/' + esc(s.phu) : ''}` : ' · chưa gắn dòng'}</div>${s.note ? `<div>${esc(s.note)}</div>` : ''}
+      <div style="margin-top:10px"><a href="${esc(s.url)}" target="_blank" rel="noopener" data-act="stop">Mở bài gốc trên Facebook ↗</a></div></div>`;
   }
   function heroLines() {
-    const L = H.lines[S.L], ss = H.samples.filter(x => x.dong === S.L).sort((a, b) => (b.shares || 0) + (b.comments || 0) - (a.shares || 0) - (a.comments || 0));
-    return `<h1 class="sm">Học theo dòng</h1><p class="sub">${H.samples.filter(x => x.dong).length} bài đã gắn dòng (46 brand, 21 community). Dòng gắn là suy đoán chưa rà tay.</p>
-    <div class="chips">${['A', 'B', 'C', 'D'].map(k => `<button class="chip${S.L === k ? ' on' : ''}" data-act="line" data-id="${k}">${esc(LN[k])} · ${H.lines[k].nBrand + H.lines[k].nComm}</button>`).join('')}</div>
-    <div class="card" style="margin-top:20px"><h3>${esc(L.name)}</h3><p class="sub" style="margin:6px 0 18px">${esc(L.def)}</p>
-      <div class="pairs"><div><div class="k">Số mẫu</div><p>${L.nBrand} của brand, ${L.nComm} của community</p></div>
-      <div><div class="k">Hook lặp lại</div><p>${L.hooks.map(esc).join('; ')}</p></div>
-      <div><div class="k">Cơ chế nhận</div><p>${esc(L.mech)}</p></div>
-      <div><div class="k">Chia sẻ so với bình luận</div><p>${esc(L.split)}</p></div></div>
-      ${L.thin ? `<p class="note" style="margin-top:14px"><b>Mẫu mỏng.</b> ${esc(L.thinNote)}</p>` : ''}</div>
-    <h3 style="margin:36px 0 4px">${L.picks.length} mẫu đáng học nhất của dòng</h3>
-    <div class="grid2">${L.picks.map(id => hsample(hs(id))).join('')}</div>
-    <h3 style="margin:36px 0 4px">Tất cả ${ss.length} bài của dòng ${S.L}</h3>
-    <div class="grid2">${ss.filter(x => !L.picks.includes(x.id)).map(hsample).join('')}</div>
-    <p class="foot">Số thích, bình luận, chia sẻ lấy lúc đọc ngày ${fd(H.readAt)}. Bình luận phần lớn là cơ chế xin nhận ("Ib", từ khóa), không phải mức quan tâm thật. Nguồn: nguvan-hero-research/.</p>`;
+    const f = S.hf, rows = hFiltered(), shown = rows.slice(0, S.hn), L = f.L && H.lines[f.L];
+    const cnt = k => H.samples.filter(x => x.dong === k).length;
+    const srcs = (f.kind === 'brand' ? H.brands.map(b => [b.id, b.name]) : f.kind === 'community' ? H.communities.map(c => [c.name, c.name]) : []);
+    return `<h1 class="sm">Mẫu hero</h1><p class="sub">${rows.length} bài. Chọn dòng hoặc nguồn để lọc, bấm một bài để xem chi tiết.</p>
+    <div class="chips">${[['', 'Tất cả dòng'], ...['A', 'B', 'C', 'D'].map(k => [k, `${LN[k]} · ${cnt(k)}`])].map(([k, l]) => `<button class="chip${f.L === k ? ' on' : ''}" data-act="hl" data-id="${k}">${esc(l)}</button>`).join('')}</div>
+    ${L ? `<div class="card" style="margin-top:16px;padding:22px 26px"><b>${esc(L.name)}.</b> ${esc(L.def)} <span class="mut">${L.nBrand} bài brand, ${L.nComm} bài community.</span>
+      <details style="margin-top:10px"><summary style="cursor:pointer;color:var(--acc)">Cách làm của dòng này</summary>
+        <p><b>Hook lặp lại:</b> ${L.hooks.map(esc).join('; ')}</p><p><b>Cơ chế nhận:</b> ${esc(L.mech)}</p><p><b>Chia sẻ và bình luận:</b> ${esc(L.split)}</p>${L.thin ? `<p><b>Mẫu mỏng.</b> ${esc(L.thinNote)}</p>` : ''}</details></div>` : ''}
+    <div class="tools"><select id="hkind" aria-label="Loại nguồn">${[['', 'Brand và community'], ['brand', 'Chỉ brand'], ['community', 'Chỉ community']].map(([v, l]) => `<option value="${v}"${f.kind === v ? ' selected' : ''}>${l}</option>`).join('')}</select>
+      ${srcs.length ? `<select id="hsrc" aria-label="Nguồn"><option value="">Mọi nguồn</option>${srcs.map(([v, l]) => `<option value="${esc(v)}"${f.src === v ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select>` : ''}
+      <input id="hq" type="search" placeholder="Tìm từ khóa" value="${esc(f.q)}" aria-label="Tìm từ khóa">
+      <select id="hsort" aria-label="Sắp xếp">${[['shares', 'Chia sẻ'], ['comments', 'Bình luận'], ['date', 'Mới nhất']].map(([v, l]) => `<option value="${v}"${f.sort === v ? ' selected' : ''}>${l}</option>`).join('')}</select></div>
+    ${shown.length ? `<div class="list">${shown.map(s => `<div class="item" data-act="hopen" data-id="${s.id}"><div class="main"><div class="s"><span class="pill${s.dong ? ' c' : ''}" style="--c:var(--acc)">${s.dong ? 'Dòng ' + esc(s.dong) : 'Chưa gắn dòng'}</span>${s.kind === 'brand' ? 'Brand' : 'Community'}</div><div class="h">${esc(hTitle(s))}</div><div class="m">${esc(s.src)} · ${fd(s.date)}</div></div>
+      <div class="nm">${hNums(s)}</div><div class="r"><a href="${esc(s.url)}" target="_blank" rel="noopener" data-act="stop">Mở ↗</a></div></div>${S.ho === s.id ? hDetail(s) : ''}`).join('')}</div>
+      ${rows.length > shown.length ? `<div style="text-align:center;margin-top:20px"><button class="btn ghost" data-act="hmore">Xem thêm (còn ${rows.length - shown.length})</button></div>` : ''}` : '<div class="empty">Không có bài nào khớp</div>'}
+    <p class="foot">Dòng gắn là suy đoán chưa rà tay. Số liệu lấy lúc đọc ngày ${fd(H.readAt)}. Bình luận phần lớn là cơ chế xin nhận ("Ib", từ khóa).</p>`;
   }
+  const hLinkSrc = (id, kind) => `<a href="#dong" data-act="hgo" data-id="${esc(id)}" data-k="${kind}">Xem bài mẫu →</a>`;
   function heroBrands() {
-    const open = S.hb && H.brands.find(b => b.id === S.hb), ss = open ? H.samples.filter(x => x.srcId === open.id) : [];
-    return `<h1 class="sm">Brand</h1><p class="sub">10 brand sau khi đọc bài (4 brand đã bị loại vì không đủ điều kiện). Bấm một brand để xem bài mẫu.</p>
-    <div class="grid2">${H.brands.map(b => `<div class="card hb${S.hb === b.id ? ' on' : ''}" data-act="hbrand" data-id="${b.id}" role="button" tabindex="0"><div class="k">Nhóm ${esc(b.nhom)} · ${esc(b.followers)} theo dõi</div><h4>${esc(b.name)}</h4>
-      <div class="lines">${['A', 'B', 'C', 'D'].map((L, i) => b.lines[i] ? `<span class="pill">${L} ${b.lines[i]}</span>` : '').join('')}<span class="pill">${b.n} bài mẫu</span></div><p class="mut">${esc(b.note)}</p></div>`).join('')}</div>
-    ${open ? `<h3 style="margin:40px 0 4px">${esc(open.name)}: ${ss.length} bài mẫu</h3><div class="grid2">${ss.map(hsample).join('')}</div>` : ''}
-    <p class="foot">Loại sau khi đọc: Học cùng VietJack (chỉ Toán, KHTN), NXB Giáo dục VN (bài cuối 10/10), Khoa Ngữ văn ĐHSP HN (không nhắm phụ huynh), Cô Thu dạy văn chất lượng cao (nội dung tiểu học).</p>`;
+    return `<h1 class="sm">Brand</h1><p class="sub">10 brand còn lại sau khi đọc bài.</p>
+    <div class="list">${H.brands.map(b => `<div class="item" style="cursor:default"><div class="main"><div class="s">Nhóm ${esc(b.nhom)} · ${esc(b.followers)} theo dõi</div><div class="h">${esc(b.name)}</div><div class="m">${esc(b.note)}</div></div>
+      <div class="r">${['A', 'B', 'C', 'D'].map((L, i) => b.lines[i] ? `<span class="pill">${L} ${b.lines[i]}</span>` : '').join('')}${hLinkSrc(b.id, 'brand')}</div></div>`).join('')}</div>
+    <p class="foot">Đã loại sau khi đọc: Học cùng VietJack (chỉ Toán, KHTN), NXB Giáo dục VN (bài cuối 10/10), Khoa Ngữ văn ĐHSP HN (không nhắm phụ huynh), Cô Thu dạy văn chất lượng cao (nội dung tiểu học).</p>`;
   }
   function heroComms() {
-    const open = S.hc && H.communities.find(c => c.name === S.hc), ss = open ? H.samples.filter(x => x.srcId === open.name) : [];
-    return `<h1 class="sm">Community</h1><p class="sub">15 group Facebook công khai, mỗi group 5 bài. Luật nhóm chưa xem được (chưa là thành viên). Bấm một group để xem bài.</p>
-    <div class="grid2">${H.communities.map(c => `<div class="card hb${S.hc === c.name ? ' on' : ''}" data-act="hcomm" data-id="${esc(c.name)}" role="button" tabindex="0"><div class="k">${esc(c.kind)} · ${esc(c.members)} thành viên · ${esc(c.perDay)} bài/ngày</div><h4>${esc(c.name)}</h4>
-      <div class="lines"><span class="pill${c.c10 ? ' c' : ''}">${c.c10}/5 bài ≥10 bình luận</span><span class="pill">${c.opened} bài đã đọc bình luận</span></div><p class="mut">${esc(c.note)}</p></div>`).join('')}</div>
-    ${open ? `<h3 style="margin:40px 0 4px">${esc(open.name)}: ${ss.length} bài</h3><div class="grid2">${ss.map(hsample).join('')}</div>` : ''}
-    <p class="foot">Bài chưa gắn dòng chỉ có số liệu từ feed (chưa đọc bình luận). Không lưu tên hay số điện thoại người khác.</p>`;
+    return `<h1 class="sm">Community</h1><p class="sub">15 group Facebook công khai. Luật nhóm chưa xem được vì chưa là thành viên.</p>
+    <div class="list">${H.communities.map(c => `<div class="item" style="cursor:default"><div class="main"><div class="s">${esc(c.kind)} · ${esc(c.members)} thành viên · ${esc(c.perDay)} bài/ngày</div><div class="h">${esc(c.name)}</div><div class="m">${esc(c.note)}</div></div>
+      <div class="r"><span class="pill${c.c10 ? ' c' : ''}" style="--c:var(--acc)">${c.c10}/5 bài ≥10 bình luận</span>${hLinkSrc(c.name, 'community')}</div></div>`).join('')}</div>
+    <p class="foot">Bài chưa gắn dòng chỉ có số liệu từ feed. Không lưu tên hay số điện thoại người khác.</p>`;
   }
 
   /* ---------- Điều hướng và vẽ ---------- */
@@ -328,8 +335,8 @@
       <a href="#thu-vien" class="${tab === 'thu-vien' ? 'on' : ''}">Thư viện</a>
       <a href="#da-luu" class="${tab === 'da-luu' ? 'on' : ''}">Đã lưu${saved.length ? ' · ' + saved.length : ''}</a>
       <a href="#bai-moi" class="${tab === 'bai-moi' ? 'on' : ''}">Bài mới</a>
-      <span class="dd"><button data-act="dd2" class="${['dong', 'brand', 'cong-dong'].includes(tab) ? 'on' : ''}" aria-expanded="${S.menu2}" aria-haspopup="true">${tab === 'dong' ? 'Học theo dòng' : tab === 'brand' ? 'Brand' : tab === 'cong-dong' ? 'Community' : 'Hero NGUVAN'} ▾</button>
-      ${S.menu2 ? `<div class="menu"><a href="#dong">Học theo dòng</a><a href="#brand">Brand</a><a href="#cong-dong">Community</a></div>` : ''}</span>`;
+      <span class="dd"><button data-act="dd2" class="${['dong', 'brand', 'cong-dong'].includes(tab) ? 'on' : ''}" aria-expanded="${S.menu2}" aria-haspopup="true">${tab === 'dong' ? 'Mẫu hero' : tab === 'brand' ? 'Brand' : tab === 'cong-dong' ? 'Community' : 'Hero NGUVAN'} ▾</button>
+      ${S.menu2 ? `<div class="menu"><a href="#dong">Mẫu hero</a><a href="#brand">Brand</a><a href="#cong-dong">Community</a></div>` : ''}</span>`;
   }
   let lastTab = '';
   function render(keep) {
@@ -351,9 +358,10 @@
     if (a === 'stop') return;
     if (a === 'dd') { S.menu = !S.menu; S.menu2 = false; render(true); return; }
     if (a === 'dd2') { S.menu2 = !S.menu2; S.menu = false; render(true); return; }
-    if (a === 'line') { S.L = id; render(true); return; }
-    if (a === 'hbrand') { S.hb = S.hb === id ? null : id; render(true); return; }
-    if (a === 'hcomm') { S.hc = S.hc === id ? null : id; render(true); return; }
+    if (a === 'hl') { S.hf.L = id; S.hn = 20; S.ho = null; render(true); return; }
+    if (a === 'hopen') { if (e.target.closest('a,button')) return; S.ho = S.ho === id ? null : id; render(true); return; }
+    if (a === 'hmore') { S.hn += 20; render(true); return; }
+    if (a === 'hgo') { S.hf = { L: '', kind: k, src: id, q: '', sort: 'shares' }; S.hn = 20; S.ho = null; return; }
     if (a === 'goal2') { S.goal2 = id; render(true); return; }
     if (a === 'cell') { S.cell = id; render(true); return; }
     if (a === 'pick') { S.sel[k] = id; render(true); return; }
@@ -370,8 +378,8 @@
     if (a === 'balbum') { S.b.album = !S.b.album; render(true); return; }
     if (a === 'bcopy') { copy(bText(), b); return; }
   });
-  document.addEventListener('change', e => { const id = e.target.id; if (['level', 'cmt', 'sort'].includes(id)) { S[id] = e.target.value; S.open = null; render(true); } });
-  document.addEventListener('input', e => { if (e.target.id === 'bn' || e.target.id === 'bcode') { if (e.target.id === 'bn') S.b.n = e.target.value; else S.b.code = e.target.value; const pos = e.target.selectionStart, id = e.target.id; render(true); const el = document.getElementById(id); el.focus(); el.setSelectionRange(pos, pos); return; } if (e.target.id === 'q') { S.q = e.target.value; const pos = e.target.selectionStart; render(true); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); } });
+  document.addEventListener('change', e => { const id = e.target.id; if (id === 'hkind') { S.hf.kind = e.target.value; S.hf.src = ''; S.hn = 20; S.ho = null; render(true); return; } if (id === 'hsrc') { S.hf.src = e.target.value; S.hn = 20; S.ho = null; render(true); return; } if (id === 'hsort') { S.hf.sort = e.target.value; S.ho = null; render(true); return; } if (['level', 'cmt', 'sort'].includes(id)) { S[id] = e.target.value; S.open = null; render(true); } });
+  document.addEventListener('input', e => { if (e.target.id === 'bn' || e.target.id === 'bcode') { if (e.target.id === 'bn') S.b.n = e.target.value; else S.b.code = e.target.value; const pos = e.target.selectionStart, id = e.target.id; render(true); const el = document.getElementById(id); el.focus(); el.setSelectionRange(pos, pos); return; } if (e.target.id === 'hq') { S.hf.q = e.target.value; S.hn = 20; const pos = e.target.selectionStart; render(true); const q = $('#hq'); q.focus(); q.setSelectionRange(pos, pos); return; } if (e.target.id === 'q') { S.q = e.target.value; const pos = e.target.selectionStart; render(true); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); } });
   window.addEventListener('hashchange', () => { S.menu = false; S.menu2 = false; render(); });
 
   Promise.all(['posts', 'analysis', 'newposts', 'curated', 'hero'].map(n => fetch(`data/${n}.json`).then(r => r.json())))

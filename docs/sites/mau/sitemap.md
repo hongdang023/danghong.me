@@ -23,9 +23,9 @@ Một trang tĩnh `index.html`, chuyển trang bằng hash. Thanh điều hướ
 | `#thu-vien` | Thư viện | Cả 120 bài, bộ lọc môn, cấp, nhãn bình luận, từ khóa; bấm một dòng xem chi tiết; ngôi sao để lưu mẫu |
 | `#da-luu` | Đã lưu | Mẫu đã lưu theo môn, ghép với bài nháp của brand |
 | `#bai-moi` | Bài mới | Lắp bài trong một màn hình: chọn môn và mục tiêu (lan rộng hoặc thu người quan tâm), bấm từ khóa vào 5 ô (dòng mở, tài liệu gì, gọi đúng người, bằng chứng, cách nhận); bài hiện ngay bên phải, có nút chép |
-| `#dong` | Học theo dòng | Chọn dòng A, B, C hoặc D (menu **Hero NGUVAN**): định nghĩa, số mẫu, hook lặp lại, cơ chế nhận, chia sẻ so với bình luận, 4–5 mẫu đáng học nhất kèm bài còn lại của dòng |
-| `#brand` | Brand | 10 brand sau khi đọc bài (nhóm 1a…2c, quy mô, phân bố dòng); bấm một brand để xem bài mẫu |
-| `#cong-dong` | Community | 15 group Facebook công khai (thành viên, bài/ngày, số bài ≥10 bình luận); bấm một group để xem bài |
+| `#dong` | Mẫu hero | Menu **Hero NGUVAN**. Danh sách 121 bài mẫu như Thư viện: lọc theo dòng A/B/C/D, brand hoặc community, nguồn cụ thể, tìm từ khóa, sắp theo chia sẻ, bình luận, mới nhất; bấm một bài để xem hook, offer, cơ chế nhận, bình luận đã đọc và link gốc. Chọn một dòng thì hiện thêm khung "Cách làm của dòng này" |
+| `#brand` | Brand | 10 brand sau khi đọc bài (nhóm, quy mô, phân bố dòng); mỗi dòng có link "Xem bài mẫu" sang `#dong` đã lọc theo brand đó |
+| `#cong-dong` | Community | 15 group Facebook công khai (thành viên, bài/ngày, số bài ≥10 bình luận); mỗi dòng có link "Xem bài mẫu" sang `#dong` đã lọc theo group |
 
 ## Bộ lọc của Thư viện
 
