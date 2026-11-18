@@ -74,3 +74,16 @@ Ngày đọc: 2026-11-18. Nguồn: trang Facebook và kết quả tìm kiếm, �
 2. Giữ Khoa Ngữ văn ĐHSP HN (lệch đối tượng) và NXB GDVN (quá hạn 9 ngày) hay thay bằng dự bị (Tuyensinh247, OLM, Loigiaihay)?
 3. Chấp nhận chấm điểm có trọng số ở Bước 4–5, khi đã đọc bài mẫu?
 4. Brand 2b: tôi chưa xác minh được ai dưới 30 tuổi. Hồng có biết ai không?
+
+## Cập nhật sau khi Hồng duyệt: tìm thêm 3 brand (2026-11-18)
+
+Tìm thêm bằng 10 truy vấn trang Facebook, kiểm hoạt động của 6 ứng viên mới. Kết quả: **14 brand, còn 1 chỗ trống (nhóm 2c)**.
+
+| Nhóm | Thêm | Theo dõi | Bài mới nhất | Ghi chú |
+| :--- | :--- | :--- | :--- | :--- |
+| 2a | Học Văn Bằng Công Thức Cùng Cô Diệu Thu (`Hocvanbangcongthuc`) | 275K | 17/11 | ThS, hơn 10 năm dạy lớp 6–12; có bài 625 thích. Kênh lớn nên xếp 2a |
+| 2c | Cùng con học tốt lớp 6,7,8,9 (`triduc.cungconhoctot`) | 2,4K | 5/11 | nhắm phụ huynh, Toán-Văn-Anh-KHTN; nhỏ, nhiều môn |
+
+**Chuyển nhóm:** Cô giáo Nanh dạy văn (16K, ThS ĐHSP Hà Nội, tuổi chưa rõ) chuyển từ 2a sang **2b**, vì 2a đã có Lớp văn cô Thu và Diệu Thu. Nhóm 2b nay có Cô Nanh, Bảo Thơ, Cô Thu chất lượng cao: **cả ba chưa xác minh dưới 30 tuổi**, Hồng cần xác nhận.
+
+**Vẫn thiếu:** 1 brand 2c (nói với phụ huynh). Đã loại: Đồng hành cùng con (7,2K, bài mới nhưng nói Toán, Hóa, Sinh), Tuyensinh247 Học Cùng Con (bài cuối 12/2024), Học Văn Cô Diệu Thu 55K (bài cuối 8/2026, cùng chủ với trang 275K), Học văn mỗi ngày (bài cuối 3/2024), Mẹ Nguyễn Giang (2023). Ở Việt Nam trang Facebook nói thẳng với phụ huynh về Văn THCS rất ít; nên cân nhắc lấy chỗ này từ Đợt 2 (TikTok, YouTube) hoặc hạ 2c xuống 2.

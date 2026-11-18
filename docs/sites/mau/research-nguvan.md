@@ -247,7 +247,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
-- Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số): đề xuất 12 brand, 15 community trong `nguvan-hero-research/chot-dot1.md`, chờ Hồng duyệt.
+- Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số): Hồng duyệt; sau khi tìm thêm còn 14 brand (thiếu 1 ở nhóm 2c), 15 community, trong `nguvan-hero-research/chot-dot1.md`.
 - Bước 1 xong 2026-11-18: 30 brand, 25 community trong `nguvan-hero-research/longlist-dot1.json` (chưa chấm, chưa loại). Bước 2 mới đủ số cho nguồn có sẵn; ứng viên mới có số tìm kiếm, cần kiểm ở Bước 3.
 - Chốt cách thu số người theo dõi cho hàng loạt ứng viên mới.
 - Hồng duyệt hạn mức nhóm con của Đợt 1.
