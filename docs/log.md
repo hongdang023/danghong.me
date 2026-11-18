@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-18 | Hồng: chạy Bước 2 brief NEMO, số theo dõi và độ khớp cho 33 brand, 31 community | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng: chạy Bước 7 brief NGUVAN, viết 6 bản nháp hero content | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: chốt 15 community, chạy Bước 6 brief NGUVAN, gom mẫu theo dòng | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: chạy Bước 1 brief NEMO, longlist 33 brand và 31 community (Facebook) | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
