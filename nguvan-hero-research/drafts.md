@@ -92,3 +92,65 @@ Ngày: 2026-11-18. Đối tượng: **phụ huynh có con lớp 6 hoặc 7, môn
 1. Điền các chỗ `[CẦN … BỔ SUNG]` bằng dữ kiện thật, hoặc bỏ dòng đó.
 2. Xác nhận 4 dòng A/B/C/D và nhóm D (bản nháp phụ thuộc vào đây).
 3. Chọn bản nào sẽ thử (khuyến nghị bắt đầu bằng 1 bản A và 1 bản B để so sánh bình luận và chia sẻ).
+
+---
+
+# Bản đăng hoàn chỉnh: A1 và B1 (Hồng, "bạn quyết")
+
+Tôi chọn các điểm không phải dữ kiện thật; **chỉ giữ chỗ trống ở những điều chỉ Hồng biết** (đánh dấu `[CẦN HỒNG XÁC NHẬN]`). Không có số liệu, kết quả hay lời trích nào được bịa.
+
+**Các lựa chọn tôi đã quyết**
+- A1: nhắm **lớp 6 và lớp 7**, **cuối kỳ 1**; cơ chế **bình luận "LỚP 6" hoặc "LỚP 7"** rồi inbox hỏi bộ sách; **không nêu "số lượng có hạn"** (vì chưa có dữ kiện thật); xưng **"cô"**.
+- B1: chủ đề **"Câu hỏi đọc hiểu nêu tác dụng của biện pháp tu từ: trả lời đủ 3 ý"** (gọi tên, chỉ ra trong câu, nói tác dụng). Chọn chủ đề khác với bài mẫu của Lớp văn cô Thu để không sao chép. Hồng cần xác nhận cách dạy này đúng với chương trình và thói quen của mình.
+- Giọng: ấm, ngắn, không đe dọa, không hứa điểm.
+
+## A1: bài đăng fanpage (ảnh 1 tấm)
+
+**Chữ trên ảnh:**
+> ĐỀ ÔN CUỐI KỲ 1 · VĂN LỚP 6 · VĂN LỚP 7
+> Cô gửi đúng lớp, đúng bộ sách
+
+**Chú thích bài đăng:**
+> Ba mẹ đang tìm đề ôn cuối kỳ 1 môn Văn cho con lớp 6 hoặc lớp 7?
+>
+> Cô Hồng soạn [CẦN HỒNG XÁC NHẬN: tên bộ tài liệu, số đề, có lời giải hay không, định dạng] để con ôn cuối kỳ 1.
+>
+> Mỗi bạn học một bộ sách khác nhau, nên cô sẽ hỏi nhanh vài câu rồi gửi đúng bộ phù hợp với con, không gửi đại trà.
+>
+> 👉 Ba mẹ bình luận **"LỚP 6"** hoặc **"LỚP 7"**, cô sẽ nhắn riêng cho mình ạ.
+>
+> (Bình luận chỉ để cô biết nhắn cho ai. Ba mẹ không cần tag hay chia sẻ.)
+
+**Kịch bản inbox (cô Hồng gửi khi nhận bình luận):**
+1. "Chào ba mẹ, cô Hồng bên NGUVAN12 đây ạ. Con nhà mình đang học lớp 6 hay lớp 7 ạ?"
+2. "Trường con học bộ sách nào: Kết nối tri thức, Chân trời sáng tạo, Cánh diều, hay mình chưa rõ ạ? (Chưa rõ cũng không sao, cô sẽ hỏi thêm.)"
+3. "Mình cần ôn cuối kỳ 1, đúng không ạ? Con đang thấy khó nhất phần nào: đọc hiểu, viết đoạn, hay làm bài nghị luận?"
+4. Sau khi ba mẹ trả lời: gửi **đúng bộ** `[CẦN HỒNG XÁC NHẬN: file nào ứng với lớp, bộ sách nào]` + một câu "Ba mẹ cho cô biết con làm xong thấy thế nào nhé."
+
+**Kiểm trước khi đăng:** tài liệu có bản quyền của bên khác không; không hứa điểm; không để lộ tên hay ảnh bài làm của học sinh.
+
+## B1: bài đăng fanpage (ảnh "3 bước")
+
+**Chữ trên ảnh:**
+> "NÊU TÁC DỤNG CỦA BIỆN PHÁP TU TỪ" · TRẢ LỜI ĐỦ 3 Ý
+> ① Gọi tên biện pháp
+> ② Chỉ ra nó nằm ở đâu trong câu
+> ③ Nói nó làm câu văn hay hơn ở chỗ nào
+> (Lưu lại để con luyện nhé)
+
+**Chú thích bài đăng:**
+> Con làm bài đọc hiểu, gặp câu hỏi "nêu tác dụng của biện pháp tu từ" mà chỉ viết một câu cho xong?
+>
+> Một cách nhỏ để con trả lời đủ ý: nhớ **3 ý** như trong ảnh.
+>
+> Ví dụ từ bài [CẦN HỒNG XÁC NHẬN: tên văn bản trong sách lớp 6 hoặc 7, bộ sách]: [CẦN HỒNG XÁC NHẬN: câu văn mẫu + biện pháp tu từ + cách trả lời theo 3 ý].
+>
+> Ba mẹ lưu bài này để cùng con luyện vài câu mỗi tuần nhé. Nếu ba mẹ thấy bài hữu ích, ba mẹ có thể chia sẻ cho phụ huynh khác.
+
+**Không có cơ chế nhận, không tặng:** đúng với dòng B. Đo bằng **chia sẻ và lưu**, không đo bằng bình luận.
+
+## Còn lại để đăng được
+
+- Hồng điền 4 chỗ `[CẦN HỒNG XÁC NHẬN]` (tên bộ tài liệu, file theo lớp/bộ sách, văn bản và ví dụ cho B1).
+- Hồng xác nhận cách dạy "3 ý" đúng với chương trình.
+- Kiểm bản quyền tài liệu ở A1.
