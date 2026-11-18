@@ -42,6 +42,7 @@ Không dành cho công chúng. Trang có `noindex`.
 - Thư viện bài mẫu, mỗi bài một dòng, có link gốc, số bình luận, chia sẻ, thích, ngày đăng.
 - Tổng quan dạng dashboard: số liệu theo môn và các điểm lặp lại.
 - Bài mới viết theo mẫu, mỗi brand một bài.
+- Nghiên cứu brand và community cho NGUVAN (dòng content A–D, phụ huynh lớp 6–7): xem [brief nghiên cứu](research-nguvan.md). Chưa làm, mới là kế hoạch.
 - Ngoài phạm vi: thu thập thông tin người xem (phễu) nằm ở các brand, không nằm ở site này.
 
 ## 5. Môn và brand
