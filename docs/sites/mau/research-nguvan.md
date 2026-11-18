@@ -249,6 +249,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
+- Bước 6 chạy 2026-11-18: gom mẫu theo dòng A/B/C/D trong `nguvan-hero-research/patterns.md` (67 bài đã gắn dòng); dòng C phía brand mỏng (3 bài, 1 brand); khoảng trống: brand Văn nói thẳng với phụ huynh lớp 6–7; chờ Hồng xác nhận dòng trước Bước 7.
 - Bước 5 chạy 2026-11-18: 15 group đều có đủ 5 bài (75 bài, có link và số liệu) trong `nguvan-hero-research/samples-community.json`; 21 bài đã đọc bình luận; 7 group không có bài nào ≥10 bình luận; chưa xem được luật nhóm vì chưa là thành viên; xem `buoc5-community.md`.
 - Bước 4 chạy 2026-11-18: 46 bài mẫu của 10 brand trong `nguvan-hero-research/samples-brand.json`, loại 4 brand sau khi đọc bài; hạ hạn mức brand xuống 10 (Hồng duyệt), xem `buoc4-brand.md`. Bình luận đọc được thường dưới 20/bài (Facebook chỉ hiện một phần); bình luận của reel chưa đọc được.
 - Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số): Hồng duyệt; sau khi tìm thêm còn 14 brand (thiếu 1 ở nhóm 2c), 15 community, trong `nguvan-hero-research/chot-dot1.md`.
