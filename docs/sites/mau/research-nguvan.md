@@ -249,6 +249,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
+- Bước 5 chạy 2026-11-18 (một phần): 15 group đã quan sát, 11 bài mở và đọc bình luận, còn lại chỉ đọc feed; chưa xem được luật nhóm vì chưa là thành viên; xem `nguvan-hero-research/buoc5-community.md`.
 - Bước 4 chạy 2026-11-18: 46 bài mẫu của 10 brand trong `nguvan-hero-research/samples-brand.json`, loại 4 brand sau khi đọc bài; hạ hạn mức brand xuống 10 (Hồng duyệt), xem `buoc4-brand.md`. Bình luận đọc được thường dưới 20/bài (Facebook chỉ hiện một phần); bình luận của reel chưa đọc được.
 - Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số): Hồng duyệt; sau khi tìm thêm còn 14 brand (thiếu 1 ở nhóm 2c), 15 community, trong `nguvan-hero-research/chot-dot1.md`.
 - Bước 1 xong 2026-11-18: 30 brand, 25 community trong `nguvan-hero-research/longlist-dot1.json` (chưa chấm, chưa loại). Bước 2 mới đủ số cho nguồn có sẵn; ứng viên mới có số tìm kiếm, cần kiểm ở Bước 3.
