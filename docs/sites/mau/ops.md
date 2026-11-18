@@ -36,10 +36,6 @@ python3 -m http.server 3200
 
 Dữ liệu là file JSON trong `mau/data/`. Quét Facebook bằng đăng nhập của Hồng, chọn và chấm điểm theo [content](content.md), rồi ghi đè `posts.json` và `analysis.json`. Sửa `last_reviewed` và ngày cập nhật trong `posts.json`.
 
-## Dữ liệu thô (chỉ trên máy Hồng)
-
-File quét thô từ Facebook và script xử lý nằm ở `~/Documents/mau.danghong.me/` (ngoài repo, không sao lưu tự động): `raw/` (thẻ tìm kiếm và bình luận đã đọc, quét 2026-11-17), `scripts/` (lọc ứng viên, gộp bài, phân tích). Dữ liệu site đọc nằm trong repo, `mau/data/`. Script chọn và gán nhãn của lần quét đầu đã mất; điểm tổng hợp của 12 bài thêm là ước lượng.
-
 ## Việc còn mở
 
 - Hồng xác nhận ghép môn và brand.
