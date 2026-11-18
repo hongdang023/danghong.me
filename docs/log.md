@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-18 | Hồng chốt brief NEMO: chuẩn đầu ra lấy Bậc 3 của Bộ GD&ĐT (không lấy từng trường), cấp tài khoản thành viên, Hồng dạy mọi kỹ năng | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng duyệt đối chiếu và yêu cầu brief NEMO IELTS bản sửa (Đợt 1: 12 brand, 15 community, chỉ Facebook, S1 và S2) | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng: chạy Bước 5 brief NGUVAN, quan sát 15 group, mở và đọc 11 bài, còn lại chỉ đọc feed | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: hạ hạn mức brand Đợt 1 của brief NGUVAN từ 15 xuống 10 | [Brief nghiên cứu](sites/mau/research-nguvan.md) |

@@ -48,7 +48,7 @@ Mỗi bài mẫu gắn **người nhận**: học viên, phụ huynh, hoặc c�
 
 ## 3. Hai mentor (người thật)
 
-- **Hồng**: cựu học sinh Chuyên Ngoại Ngữ, IELTS 7.5. [CẦN BỔ SUNG: dạy kỹ năng nào, nhóm nào, có kinh nghiệm dạy sinh viên không, tuổi]
+- **Hồng**: cựu học sinh Chuyên Ngoại Ngữ, IELTS 7.5, **dạy tất cả các kỹ năng tiếng Anh** (Hồng xác nhận 2026-11-18). [CẦN BỔ SUNG: dạy nhóm nào, có kinh nghiệm dạy sinh viên không, tuổi]
 - **Anh Đắc**: phụ huynh. [CẦN BỔ SUNG: con học lớp mấy, hệ nào, kinh nghiệm đồng hành con học tiếng Anh]
 
 Mọi nháp viết theo góc nhìn hai người. Chỉ dùng dữ kiện đã ghi; KHÔNG bịa câu chuyện, số liệu hay lời trích (ví dụ "từng mất gốc", "tăng X band"). Chỗ cần thì để placeholder [CẦN MENTOR BỔ SUNG].
@@ -91,8 +91,8 @@ Mỗi chứng chỉ ghi: ai thi, mục đích, cấu trúc kỹ năng, thang đi
 ### 5.2. `exit-requirements.md` (phục vụ S1)
 
 - Tìm văn bản chính thức của Bộ GD&ĐT về khung 6 bậc và bảng quy đổi chứng chỉ; ghi số hiệu, ngày.
-- **(đổi) 6 trường ĐH** đa dạng (công lập hoặc tư thục, khối ngành, vùng miền), lấy từ website chính thức: mức yêu cầu, chứng chỉ chấp nhận, mốc thời gian, hình thức thi nội bộ nếu có. Hồng chọn hoặc duyệt danh sách trường trước khi làm (xem Việc còn mở).
-- Tóm tắt điểm giống và khác giữa các trường. KHÔNG kết luận chung: mỗi trường khác nhau và đổi theo năm.
+- **(đổi) Không lấy quy định từng trường ĐH.** Hồng chốt (2026-11-18): lấy **Bậc 3 theo quy định của Bộ GD&ĐT** làm mốc chuẩn đầu ra tham chiếu cho S1. Cần ghi từ văn bản chính thức (không từ trí nhớ): Bậc 3 của khung 6 bậc tương ứng trình độ nào, ngưỡng điểm quy đổi của từng chứng chỉ (IELTS, TOEIC, VSTEP, Cambridge…) theo bảng của Bộ, số hiệu và ngày văn bản, văn bản còn hiệu lực hay đã thay thế.
+- Ghi rõ giới hạn: đây là mốc của Bộ; **từng trường có thể đặt mức khác**, nên nội dung NEMO không được nói đây là yêu cầu của mọi trường. Nháp chỉ nêu Bậc 3 kèm nguồn và ngày.
 
 ### 5.3. `skills-map.md`
 
@@ -186,11 +186,11 @@ Dùng làm longlist khởi đầu, không coi là kết luận.
 
 **Chấm điểm 0–5:** độ khớp đối tượng (S1 ưu tiên) 25%; độ giàu pain tâm lý 25%; mức hoạt động và độ sâu bình luận 20%; luật nhóm và cơ hội 15%; truy cập dữ liệu công khai 10%; chất lượng thảo luận 5%.
 
-**Ngưỡng:** ≥3.5/5. Group kín mà điểm khác cao vẫn vào danh sách, đánh dấu "cần tài khoản thành viên để quan sát". **Hội sinh viên theo trường thường kín hoặc duyệt thành viên**; Đợt 1 chỉ lấy group công khai và ghi các group kín đáng quan tâm vào `gaps.md`.
+**Ngưỡng:** ≥3.5/5. Group kín mà điểm khác cao vẫn vào danh sách, đánh dấu "cần tài khoản thành viên để quan sát". **Hội sinh viên theo trường thường kín hoặc duyệt thành viên.** **(đổi) Hồng cấp tài khoản thành viên** (2026-11-18): Hồng tự xin vào các group sinh viên trọng điểm bằng tài khoản đang dùng trong Chrome và tuân thủ luật nhóm; tôi chỉ đọc bằng tài khoản đó và ghi "đọc bằng tài khoản thành viên", không suy đoán phần không thấy. Group nào Hồng chưa vào được thì ghi "kín" vào `gaps.md`.
 
 ## 10. Quy trình (dừng ở 2 checkpoint)
 
-**Bước 0:** bản đồ chứng chỉ, chuẩn đầu ra, skills-map (mục 5). **Chạy trước và song song với NGUVAN** vì không dùng Facebook.
+**Bước 0:** bản đồ chứng chỉ, mốc Bậc 3 của Bộ, skills-map (mục 5). **Chạy trước và song song với NGUVAN** vì không dùng Facebook.
 
 **Bước 1: Longlist.** ~25 brand và ~25 community ứng viên bằng tìm kiếm Facebook (Chrome đã đăng nhập), bắt đầu từ nguồn có sẵn trong mau; ghi nguồn tìm thấy.
 
@@ -276,7 +276,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 
 ## 16. Definition of done (Đợt 1)
 
-- [ ] Bản đồ chứng chỉ (phạm vi Đợt 1) và chuẩn đầu ra của 6 trường có nguồn chính thức và ngày đọc
+- [ ] Bản đồ chứng chỉ (phạm vi Đợt 1) và mốc Bậc 3 của Bộ GD&ĐT (kèm bảng quy đổi) có nguồn chính thức và ngày đọc
 - [ ] 12 brand và 15 community đã được duyệt; độ phủ thực tế được báo (lệch thì giải thích)
 - [ ] Mỗi mục có nhãn, cờ nguồn nhãn, điểm từng tiêu chí và lý do chọn
 - [ ] Mỗi brand có 3 bài mẫu (2 cao + 1 thấp) và mỗi community có 5 bài, đủ metadata hoặc "n/a" có lý do; bình luận ghi "đọc n/N"
@@ -286,8 +286,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 
 ## Việc còn mở
 
-- **Hồng chọn 6 trường ĐH** cho `exit-requirements.md` (đặc biệt trường của sinh viên mục tiêu), hoặc cho phép tôi đề xuất danh sách để duyệt trước khi làm.
-- **Tài khoản thành viên** cho các group sinh viên trọng điểm: hiện chỉ lấy group công khai, ghi group kín vào `gaps.md`. Hồng quyết có cung cấp tài khoản thành viên không.
-- Hồng bổ sung dữ kiện mentor (mục 3) trước Bước 7.
+- **Hồng xin vào các group sinh viên trọng điểm** bằng tài khoản đang dùng trong Chrome (đã quyết cấp tài khoản). Chốt danh sách group sau Bước 1 (longlist).
+- Hồng bổ sung dữ kiện mentor còn thiếu (mục 3: Hồng dạy nhóm nào, có kinh nghiệm dạy sinh viên không, tuổi; anh Đắc: con học lớp mấy, hệ nào, kinh nghiệm đồng hành) trước Bước 7.
 - NGUVAN xong Bước 6 thì mới bắt đầu Bước 1–5 của NEMO.
 - Đợt 2: S3, S4, chứng chỉ phụ, TikTok, Threads, Instagram, YouTube, mở rộng 30+30, ngưỡng dòng content gốc.
