@@ -3,8 +3,8 @@ id: mau-research-nemo
 type: reference
 site: mau
 title: Brief nghiên cứu brand và community cho NEMO IELTS
-description: "Brief nghiên cứu Đợt 1 cho NEMO: 12 brand, 15 community, chỉ Facebook, ưu tiên sinh viên và THPT, cộng bản đồ chứng chỉ và chuẩn đầu ra."
-description_en: "Research brief for NEMO phase 1: 12 brands, 15 communities, Facebook only, university and high-school priority, plus certificate and exit-requirement map."
+description: "Brief nghiên cứu Đợt 1 cho NEMO: 14 brand, 15 community, chỉ Facebook, ưu tiên sinh viên và THPT, cộng bản đồ chứng chỉ và chuẩn đầu ra."
+description_en: "Research brief for NEMO phase 1: 14 brands, 15 communities, Facebook only, university and high-school priority, plus certificate and exit-requirement map."
 owner: hong
 status: draft
 version: 2.0
@@ -108,7 +108,9 @@ Ma trận chứng chỉ × kỹ năng (Listening, Reading, Speaking, Writing, Gr
 
 Bản đầu yêu cầu 30 brand, 30 community, 3 bài mỗi brand (90 bài), 8 bản nháp và Bước 0 đầy đủ. Brief NGUVAN cho thấy một lượt thật chỉ chạy được cỡ 10 brand và 15 community, nên chia hai đợt.
 
-### Đợt 1: 12 brand, 15 community, chỉ Facebook, S1 và S2
+### Đợt 1: 14 brand, 15 community, chỉ Facebook, S1 và S2
+
+**Nâng brand từ 12 lên 14 (Hồng duyệt 2026-11-19):** nhóm 2b, 2c không có brand Facebook đạt điều kiện; hạn mức nhóm con chỉ còn là gợi ý.
 
 Longlist: ~25 brand và ~25 community ứng viên.
 
@@ -129,7 +131,7 @@ Hạn mức con là gợi ý; lệch thì giải thích. Nguồn khởi điểm 
 - Phụ huynh và học sinh THPT: 4
 - Giáo viên tiếng Anh: 3
 
-**Khối lượng bài mẫu:** 3 bài mỗi brand, nên **~36 bài brand**. Community: 5 bài mỗi group (đổi so với 2–3 ở bản đầu, để đủ pain), đọc ≥10 bình luận mỗi bài khi có.
+**Khối lượng bài mẫu:** 3 bài mỗi brand, nên **~42 bài brand**. Community: 5 bài mỗi group (đổi so với 2–3 ở bản đầu, để đủ pain), đọc ≥10 bình luận mỗi bài khi có.
 
 ### Độ phủ (đổi): mục tiêu gợi ý, lệch thì giải thích
 
@@ -196,9 +198,9 @@ Dùng làm longlist khởi đầu, không coi là kết luận.
 
 **Bước 2: Số người theo dõi.** Ghi số người theo dõi hoặc thành viên của mọi ứng viên kèm ngày đọc và độ khớp `exact`, `ambiguous`, `not_found`; lưu cùng cấu trúc `sources.json`.
 
-**Bước 3: Chấm và chốt.** Áp dụng mục 9 cho tất cả ứng viên (cả loại), chọn 12 brand và 15 community.
+**Bước 3: Chấm và chốt.** Áp dụng mục 9 cho tất cả ứng viên (cả loại), chọn 14 brand và 15 community (đã nâng hạn mức brand).
 
-**>>> DỪNG LẦN 1: gửi bảng 12 brand, 15 community và ứng viên bị loại (kèm lý do) để duyệt. <<<**
+**>>> DỪNG LẦN 1: gửi bảng 14 brand, 15 community và ứng viên bị loại (kèm lý do) để duyệt. <<<**
 
 **Bước 4: Chi tiết brand.** 3 bài mỗi brand (2 cao + 1 trung bình hoặc thấp), metadata mục 11, chỉ gán mã mở. Mở bài bằng link riêng; ghi bình luận "đọc n/N".
 
@@ -277,7 +279,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 ## 16. Definition of done (Đợt 1)
 
 - [ ] Bản đồ chứng chỉ (phạm vi Đợt 1) và mốc Bậc 3 của Bộ GD&ĐT (kèm bảng quy đổi) có nguồn chính thức và ngày đọc
-- [ ] 12 brand và 15 community đã được duyệt; độ phủ thực tế được báo (lệch thì giải thích)
+- [ ] 14 brand và 15 community đã được duyệt; độ phủ thực tế được báo (lệch thì giải thích)
 - [ ] Mỗi mục có nhãn, cờ nguồn nhãn, điểm từng tiêu chí và lý do chọn
 - [ ] Mỗi brand có 3 bài mẫu (2 cao + 1 thấp) và mỗi community có 5 bài, đủ metadata hoặc "n/a" có lý do; bình luận ghi "đọc n/N"
 - [ ] Dòng content rút từ dữ liệu, có độ tin cậy và bằng chứng; có danh sách khoảng trống

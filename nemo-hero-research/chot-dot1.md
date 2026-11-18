@@ -85,3 +85,5 @@ Ngày đọc: 2026-11-18. Nguồn: trang Facebook và group, đăng nhập sẵn
 | Học tiếng Anh cùng con (`mshoa.tienganhcungcon`, 49K; ứng viên 2c phát hiện thêm) | **loại** | bài cuối 10/10/2026 (40 ngày) |
 
 **Hệ quả:** nhóm 2a thêm 2 brand (nay 4), **nhóm 2b và 2c vẫn trống**. Hai lựa chọn: (a) nâng Đợt 1 lên **14 brand** (12 + IELTS Nguyễn Huyền + thầy Nguyễn Thành Luân), hoặc (b) giữ 12 bằng cách thay hai brand tương tác thấp nhất (PREP, ELSA Speak Vietnam) bằng hai brand này. Đề xuất (b): đủ S1 và S2, 1a chỉ còn 0 brand nhưng 1a (app) ít cho bài học về nội dung; cần Hồng quyết. Tôi chọn (a) làm mặc định nếu Hồng không có ý kiến, vì ELSA và PREP vẫn là mẫu cơ chế funnel của app.
+
+**Hồng chốt 2026-11-19: 14 brand.** Danh sách: ELSA Speak Vietnam, PREP, Langmaster, LangGo, Anh ngữ SEC, IELTS Fighter, DOL English, VSTEP SV, British Council Vietnam English, IELTS by IDP, Cô Trang Anh, IELTS Đinh Thắng, IELTS Nguyễn Huyền, thầy Nguyễn Thành Luân. Nhóm 2b và 2c để trống (chỗ trống ghi vào `gaps.md`).
