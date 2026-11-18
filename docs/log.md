@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-18 | Hồng: chạy Bước 1 brief NEMO, longlist 33 brand và 31 community (Facebook) | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng: làm cho đủ bài community Bước 5 NGUVAN, bắt dữ liệu feed, 75 bài của 15 group | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: chạy Bước 0 brief NEMO, bản đồ chứng chỉ và mốc Bậc 3 theo Bộ GD&ĐT (đã đọc Thông tư 33/2026, Phụ lục I Quy chế thi THPT, QĐ 729) | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng chốt brief NEMO: chuẩn đầu ra lấy Bậc 3 của Bộ GD&ĐT (không lấy từng trường), cấp tài khoản thành viên, Hồng dạy mọi kỹ năng | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
