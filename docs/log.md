@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-19 | Hồng: chạy Bước 4 brief NEMO, đọc 42 bài mẫu của 14 brand, ghi mã mở | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-19 | Hồng chốt 14 brand cho Đợt 1 NEMO (thêm IELTS Nguyễn Huyền, thầy Nguyễn Thành Luân) | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng: chạy Bước 3 brief NEMO, lọc điều kiện và đề xuất 12 brand, 15 community, chờ duyệt | [Brief nghiên cứu NEMO](sites/mau/research-nemo.md) |
 | 2026-11-18 | Hồng: đưa dữ liệu NGUVAN lên mau (tab Học theo dòng, Brand, Community) | [mau sitemap](sites/mau/sitemap.md), [mau content](sites/mau/content.md) |

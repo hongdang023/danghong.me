@@ -288,6 +288,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 
 ## Việc còn mở
 
+- **Bước 4 chạy 2026-11-19:** 42 bài mẫu của 14 brand trong `nemo-hero-research/samples-brand.json` và `buoc4-brand.md` (mã mở, chưa gán dòng). Chưa đọc được bình luận của reel/video, 1 bài của IDP không xem được; S1 chuẩn đầu ra gần như không có trong feed (chỉ DOL và VSTEP SV).
 - **Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số):** đề xuất 12 brand (thiếu nhóm 2b, 2c) và 15 community trong `nemo-hero-research/chot-dot1.md`, chờ Hồng duyệt. Mở lại 6 nguồn chưa kiểm (2026-11-19): thêm IELTS Nguyễn Huyền và thầy Nguyễn Thành Luân (đạt), nhóm 2b và 2c vẫn trống.
 - **Bước 2 chạy 2026-11-18:** `nemo-hero-research/sources-dot1.json` (cùng cấu trúc `sources.json`): 33 brand (28 khớp tên, 5 mơ hồ, 3 không có số: Langmaster, IELTS Fighter, IELTS by IDP vì tìm kiếm không hiện số và trang không tải được), 31 community (29 khớp, 2 mơ hồ, đủ số thành viên). Số lấy từ tìm kiếm Facebook, chưa mở từng trang.
 - **Bước 1 chạy 2026-11-18:** 33 brand và 31 community trong `nemo-hero-research/longlist-dot1.json` (chưa chấm, chưa loại; số theo dõi từ kết quả tìm kiếm, chưa kiểm từng trang). Chạy trên một tab Chrome riêng, tách khỏi phiên NGUVAN.
