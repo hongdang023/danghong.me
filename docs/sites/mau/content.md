@@ -74,6 +74,10 @@ Trang môn có hai danh sách: ba bài nhiều chia sẻ nhất (lan rộng, b�
 
 Khung 5 ô dùng chung cho mọi môn. Mỗi ô có chip từ khóa bấm chọn: dòng mở (`opens`), loại tài liệu và đối tượng theo từng môn (`subjects.<môn>.types`, `targets`, lấy từ tên bài thật đã lan, kèm số chia sẻ hoặc bình luận), bằng chứng (`proofs`), cách nhận (`recvs`). Số liệu trên đầu mỗi ô lấy từ `formula.signals` và đổi theo nút Lan rộng hoặc Thu người quan tâm. Bài được lắp tự động (tên bài, một câu thân bài, album, cách nhận) và báo số ký tự so với mức nên 150–400. Cần viết lại chip khi dữ liệu đổi.
 
+## Dữ liệu cá nhân và công cụ phân tích
+
+`posts.json` được publish công khai (site và repo GitHub công khai), nên **không giữ email và số điện thoại của người khác**. Email trong bình luận mẫu và số điện thoại trong chữ bài được thay bằng `[email]` và `[sđt]` (2026-11-18). Khi gộp dữ liệu quét mới, thay thế trước khi ghi vào `posts.json`. Dữ liệu thô chưa thay thế chỉ ở máy Hồng, không đưa vào repo. Script tính lại các số trên trang nằm ở `tools/mau/` (`yeu-to.mjs`, `nguoi-dang-do-dai-loai.mjs`), chạy bằng `node tools/mau/<tên>.mjs` từ gốc repo; chúng đọc `mau/data/posts.json`.
+
 ## Giới hạn
 
 Chỉ lấy các kết quả đầu của mỗi từ khóa. Nhãn bình luận dựa trên mẫu nhỏ và luật từ khóa, là dấu hiệu chứ không phải kết luận; Facebook xếp bình luận theo "phù hợp nhất" nên có thiên lệch. Chữ đầy đủ của bài chỉ khớp được cho khoảng 74/93 bài.
