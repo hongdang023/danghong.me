@@ -71,3 +71,17 @@ Ngày đọc: 2026-11-18. Nguồn: trang Facebook và group, đăng nhập sẵn
 2. **S1 chuẩn đầu ra chỉ có 1 brand (VSTEP SV)** và các group theo trường rất ít (UTT, IUH, HANU, HNUE đều nhỏ hoặc lạc đề). Chấp nhận, hay mở rộng tìm thêm brand và group theo trường?
 3. **Chấm điểm có trọng số** để ở Bước 4–5 sau khi đọc bài mẫu?
 4. **Xin vào nhóm:** tôi gợi ý xin vào Cộng đồng học TOEIC, Review đề thi TOEIC mỗi ngày, Tự ôn thi VSTEP, Cộng đồng luyện thi VSTEP B1-B2-C1, Tự học tiếng anh cho người mất gốc.
+
+## Cập nhật 2026-11-19: mở lại 6 nguồn chưa kiểm
+
+| Nguồn | Kết quả | Ghi chú |
+| :--- | :--- | :--- |
+| IELTS Nguyễn Huyền (310K, `ieltsfocusmode`) | **đạt** | bài 18/11 có 117 thích 45 chia sẻ; feed chỉ hiện 1 bài trong 12 tháng gần nhất trước đó là 2025, nhịp đăng thưa |
+| Thầy Nguyễn Thành Luân - Ôn Thi Tiếng Anh (198K) | **đạt** | 3 bài 17/11 (18/1, 39/6/10, 5/1/1); S2 (THPT) |
+| 9prep.com (3,4K) | **sát ngưỡng** | bài cuối 20/10 (30 ngày), tương tác 1–3; dự bị cho nhóm 2b |
+| Tiếng Anh Cô Phượng Đống Đa (13K) | **loại** | bài cuối 11/7/2026 |
+| MF Edu - Đồng hành học tiếng Anh cùng con (331) | **chưa kiểm** | quy mô rất nhỏ; không có tên đường dẫn |
+| Tự Học IELTS (288K, profile.php) | **chưa kiểm** | không có tên đường dẫn, có thể trùng với Tự học IELTS 8.0 (đã loại) |
+| Học tiếng Anh cùng con (`mshoa.tienganhcungcon`, 49K; ứng viên 2c phát hiện thêm) | **loại** | bài cuối 10/10/2026 (40 ngày) |
+
+**Hệ quả:** nhóm 2a thêm 2 brand (nay 4), **nhóm 2b và 2c vẫn trống**. Hai lựa chọn: (a) nâng Đợt 1 lên **14 brand** (12 + IELTS Nguyễn Huyền + thầy Nguyễn Thành Luân), hoặc (b) giữ 12 bằng cách thay hai brand tương tác thấp nhất (PREP, ELSA Speak Vietnam) bằng hai brand này. Đề xuất (b): đủ S1 và S2, 1a chỉ còn 0 brand nhưng 1a (app) ít cho bài học về nội dung; cần Hồng quyết. Tôi chọn (a) làm mặc định nếu Hồng không có ý kiến, vì ELSA và PREP vẫn là mẫu cơ chế funnel của app.
