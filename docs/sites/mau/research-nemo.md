@@ -29,7 +29,7 @@ Chỉ số **(đổi)**:
 Việc cần làm, theo thứ tự:
 
 1. **Bản đồ chứng chỉ và chuẩn đầu ra** (mục 5), nguồn chính thức.
-2. **12 brand** để học cách làm content và funnel.
+2. **14 brand** để học cách làm content và funnel.
 3. **15 community** để nghe pain thật và biết luật chơi.
 4. **Dòng content rút từ dữ liệu** (mục 4), rồi viết nháp.
 
@@ -135,7 +135,7 @@ Hạn mức con là gợi ý; lệch thì giải thích. Nguồn khởi điểm 
 
 ### Độ phủ (đổi): mục tiêu gợi ý, lệch thì giải thích
 
-Bản đầu đặt các ngưỡng cứng (IELTS ≥15, TOEIC ≥5, VSTEP ≥4, Cambridge ≥6, ≥15 brand S1, ≥10 brand cho nhóm mất gốc…). Không đạt được với 12 brand và chỉ Facebook. Đợt 1 chỉ **đo và báo** độ phủ thực tế theo phân khúc, chứng chỉ, kỹ năng và định vị an toàn tâm lý, kèm chỗ thiếu.
+Bản đầu đặt các ngưỡng cứng (IELTS ≥15, TOEIC ≥5, VSTEP ≥4, Cambridge ≥6, ≥15 brand S1, ≥10 brand cho nhóm mất gốc…). Không đạt được với 14 brand và chỉ Facebook. Đợt 1 chỉ **đo và báo** độ phủ thực tế theo phân khúc, chứng chỉ, kỹ năng và định vị an toàn tâm lý, kèm chỗ thiếu.
 
 ### Đợt 2 (sau khi duyệt Đợt 1)
 
