@@ -43,6 +43,7 @@ Không dành cho công chúng. Trang có `noindex`.
 - Tổng quan dạng dashboard: số liệu theo môn và các điểm lặp lại.
 - Bài mới viết theo mẫu, mỗi brand một bài.
 - Nghiên cứu brand và community cho NGUVAN (dòng content A–D, phụ huynh lớp 6–7): xem [brief nghiên cứu](research-nguvan.md). Chưa làm, mới là kế hoạch.
+- Nghiên cứu brand và community cho NEMO IELTS (sinh viên cần chuẩn đầu ra, học sinh THPT): xem [brief nghiên cứu](research-nemo.md). Bước 0 (chứng chỉ, chuẩn đầu ra) chạy trước; phần quét Facebook bắt đầu sau khi NGUVAN xong Bước 6. Mới là kế hoạch.
 - Ngoài phạm vi: thu thập thông tin người xem (phễu) nằm ở các brand, không nằm ở site này.
 
 ## 5. Môn và brand
