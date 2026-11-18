@@ -34,7 +34,7 @@ Ngày đọc: 2026-11-18. Dữ liệu từng bài: [samples-brand.json](samples-
 | Khoa Ngữ văn ĐHSP Hà Nội (29K) | nội dung sự kiện, học thuật của khoa; không nhắm phụ huynh hay Văn THCS |
 | Cô Thu dạy văn chất lượng cao (2,5K) | nội dung tiểu học (lớp 5); tương tác 1–3, 0 bình luận |
 
-## Còn thiếu so với Đợt 1
+## Còn thiếu so với Đợt 1 (đã chốt hạ hạn mức brand xuống 10)
 
 - **Brand còn 10 trên 15**, trong đó Nuôi dạy con đúng cách và Cùng con học tốt rất yếu. Nhóm **1c (tổ chức, nhà xuất bản)** hết ứng viên; nhóm **2b** còn 2 (Cô Nanh, Bảo Thơ); nhóm **2c** gần như trống.
 - **Phụ huynh lớp 6–7:** chỉ Vuihoc, Bảo Thơ (tiểu học/lớp 9) và các bài tin có tín hiệu phụ huynh. Gần như không brand Văn nào có bài nhắm thẳng phụ huynh lớp 6–7, đúng với hạn chế đã ghi ở mục 6 của brief.

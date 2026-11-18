@@ -3,8 +3,8 @@ id: mau-research-nguvan
 type: reference
 site: mau
 title: Brief nghiên cứu brand và community cho NGUVAN
-description: "Brief nghiên cứu 15+15 brand và community (đợt 1), 5 bài mẫu mỗi nơi phân theo dòng content, để rút hero content cho nguvan12.com."
-description_en: "Research brief for NGUVAN: 15 brands and 15 communities in phase 1, 5 samples each sorted by content line, to derive hero content."
+description: "Brief nghiên cứu 10 brand và 15 community (đợt 1), 5 bài mẫu mỗi nơi phân theo dòng content, để rút hero content cho nguvan12.com."
+description_en: "Research brief for NGUVAN: 10 brands and 15 communities in phase 1, 5 samples each sorted by content line, to derive hero content."
 owner: hong
 status: draft
 version: 2.2
@@ -68,9 +68,11 @@ Cách gắn dòng: theo **mục đích chính của bài**, không theo chủ đ
 
 Bản đầu yêu cầu 60+45 longlist và 30+30 chọn. Điều đó rất nặng và cần số người theo dõi từng nơi. Chia hai đợt để có kết quả dùng được sớm.
 
-### Đợt 1: 15 brand và 15 community, chỉ Facebook
+### Đợt 1: 10 brand và 15 community, chỉ Facebook
 
-**Brand (15):**
+**Hạ hạn mức brand từ 15 xuống 10 (Hồng duyệt 2026-11-18):** sau khi đọc bài, 4 brand bị loại và không đủ ứng viên cho nhóm 1c và 2c; hạn mức nhóm con bên dưới chỉ còn là gợi ý.
+
+**Brand (10, gợi ý nhóm con ban đầu cho 15):**
 - Tổ chức, edtech, trung tâm (7): 1a Edtech lớn 3, 1b Trung tâm dạy Văn 2, 1c Tổ chức, dự án, nhà xuất bản 2.
 - Thầy cô (8): 2a Kênh lớn đại trà 2, 2b Giáo viên trẻ (≲30 tuổi, gần chân dung Hồng) 3, 2c Nói với phụ huynh (gần vai Đắc) 3.
 - Nguồn khởi điểm 1a (cần xác minh còn hoạt động, không là kết luận): VietJack, Loigiaihay, Hocmai, OLM, Tuyensinh247, VUIHOC và nền tảng tương tự.
@@ -82,7 +84,7 @@ Bản đầu yêu cầu 60+45 longlist và 30+30 chọn. Điều đó rất nặ
 
 Longlist đợt 1: **~30 brand và ~25 community**, không phải 60 và 45.
 
-**Khối lượng bài mẫu (đổi):** 5 bài mẫu mỗi brand và mỗi community, nên Đợt 1 có **~150 bài mẫu** (75 của brand, 75 của community). Đây là phần tốn công nhất, nên Bước 4 và 5 có thể chia nhỏ theo nhóm con và giao từng đợt.
+**Khối lượng bài mẫu (đổi):** 5 bài mẫu mỗi brand và mỗi community, nên Đợt 1 có **~125 bài mẫu** (50 của brand, 75 của community). Đây là phần tốn công nhất, nên Bước 4 và 5 có thể chia nhỏ theo nhóm con và giao từng đợt.
 
 ### Đợt 2 (sau khi duyệt đợt 1)
 
@@ -166,15 +168,15 @@ Mỗi nhãn có cờ `nguồn nhãn`: **đã kiểm** (người xem trực tiế
 - Lưu cùng cấu trúc với `mau/data/sources.json`.
 - **Tiến độ:** đã làm cho nguồn có sẵn trong mau (Văn và Anh). Số của ứng viên mới đã đọc kèm trong longlist (từ kết quả tìm kiếm, chưa kiểm từng trang); chưa ghi độ khớp.
 
-**Bước 3: Chấm và chốt.** Áp dụng mục 8 cho TẤT CẢ ứng viên (cả loại), chọn 15 brand và 15 community.
+**Bước 3: Chấm và chốt.** Áp dụng mục 8 cho TẤT CẢ ứng viên (cả loại), chọn 10 brand và 15 community (đã hạ hạn mức brand).
 
-**>>> DỪNG, gửi bảng 15 brand, 15 community và ứng viên bị loại (kèm lý do) để duyệt. <<<**
+**>>> DỪNG, gửi bảng 10 brand, 15 community và ứng viên bị loại (kèm lý do) để duyệt. <<<**
 
 **Bước 4: Chi tiết brand.** **5 bài mẫu mỗi brand** (metadata mục 10), mỗi bài gắn một dòng content theo mục 3. Mỗi bài đọc **tối thiểu 20 bình luận đầu**, loại spam, ghi "đọc n/N". Cách chọn 5 bài ở mục 10.
 
 **Bước 5: Chi tiết community.** Chủ đề pain lặp lại, **5 bài mẫu mỗi community** (bài tương tác cao, tóm tắt, không sao chép), mỗi bài gắn dòng content mà nỗi lo đó gợi ra (thường C hoặc D). Kèm luật nhóm và cơ hội. Bình luận: đọc ≥10 bình luận đầu mỗi bài để lấy ngôn ngữ thật.
 
-**Bước 6: Tổng hợp mẫu.** **Gom 150 bài mẫu theo dòng A/B/C/D** (và nhóm D). Mỗi dòng cần: các kiểu hook lặp lại, pain (ngôn ngữ thật từ community), định dạng, cơ chế nhận, điều gì lặp lại ở bài hiệu quả, và **3–5 bài mẫu đáng học nhất của dòng đó** kèm lý do. Tách số chia sẻ khỏi số bình luận. Dòng nào dưới 10 bài mẫu thì ghi "mẫu mỏng" và nói rõ cần quét thêm.
+**Bước 6: Tổng hợp mẫu.** **Gom ~125 bài mẫu theo dòng A/B/C/D** (và nhóm D). Mỗi dòng cần: các kiểu hook lặp lại, pain (ngôn ngữ thật từ community), định dạng, cơ chế nhận, điều gì lặp lại ở bài hiệu quả, và **3–5 bài mẫu đáng học nhất của dòng đó** kèm lý do. Tách số chia sẻ khỏi số bình luận. Dòng nào dưới 10 bài mẫu thì ghi "mẫu mỏng" và nói rõ cần quét thêm.
 
 **Bước 7: Viết nháp** (mục 11).
 
@@ -226,7 +228,7 @@ Dùng lại công cụ của mau thay vì dựng thư viện riêng. File xuất
 - Thêm hai tab **Brand** và **Community** vào mau.danghong.me, dữ liệu trong `mau/data/brands.json` và `mau/data/communities.json`. Bài mẫu dùng lại `posts.json` (thêm trường `brandId` hoặc `communityId`, `line`, `lineSub`, `lineReason`), nên lọc được theo mọi trường, đặc biệt **dòng content**, bộ sách, kênh, nhóm con. Trang mau cần thêm bộ lọc theo dòng và một màn "Học theo dòng": chọn A, B, C hoặc D, xem các bài mẫu của dòng đó cùng hook lặp lại.
 - Đồng thời xuất file để dùng ngoài site, trong `nguvan-hero-research/`:
   - `longlist.csv`: ứng viên, điểm từng tiêu chí, chọn hoặc loại, lý do
-  - `brands.csv`, `samples.csv` (150 dòng, cột `dòng chính`, `dòng phụ`, `nhóm D`, `lý do gắn dòng`, `id brand hoặc community`), `communities.csv`
+  - `brands.csv`, `samples.csv` (~125 dòng, cột `dòng chính`, `dòng phụ`, `nhóm D`, `lý do gắn dòng`, `id brand hoặc community`), `communities.csv`
   - `patterns.md`: mẫu theo dòng A/B/C/D, mỗi dòng có 3–5 bài đáng học nhất
   - `drafts.md`: 6 bản nháp
   - `gaps.md`: điều không lấy được và vì sao
@@ -235,7 +237,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 
 ## 14. Definition of done (Đợt 1)
 
-- [ ] 15 brand và 15 community đã được duyệt, đủ hạn mức nhóm con (lệch thì có giải thích)
+- [ ] 10 brand và 15 community đã được duyệt, đủ hạn mức nhóm con (lệch thì có giải thích)
 - [ ] Mỗi mục có nhãn, cờ nguồn nhãn (đã kiểm hoặc tự động), điểm từng tiêu chí và lý do chọn
 - [ ] Số người theo dõi hoặc thành viên ghi cho mọi ứng viên, kèm ngày đọc
 - [ ] Mỗi brand có 5 bài mẫu và mỗi community có 5 bài mẫu, đủ metadata hoặc "n/a" có lý do; mỗi bài có dòng chính và lý do gắn dòng; bình luận đọc ≥20 (brand) hoặc ≥10 (community) mỗi bài
@@ -247,7 +249,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
-- Bước 4 chạy 2026-11-18: 46 bài mẫu của 10 brand trong `nguvan-hero-research/samples-brand.json`, loại 4 brand sau khi đọc bài; còn 10/15 brand, xem `buoc4-brand.md`. Bình luận đọc được thường dưới 20/bài (Facebook chỉ hiện một phần); bình luận của reel chưa đọc được.
+- Bước 4 chạy 2026-11-18: 46 bài mẫu của 10 brand trong `nguvan-hero-research/samples-brand.json`, loại 4 brand sau khi đọc bài; hạ hạn mức brand xuống 10 (Hồng duyệt), xem `buoc4-brand.md`. Bình luận đọc được thường dưới 20/bài (Facebook chỉ hiện một phần); bình luận của reel chưa đọc được.
 - Bước 3 chạy 2026-11-18 (vòng lọc điều kiện, chưa chấm điểm có trọng số): Hồng duyệt; sau khi tìm thêm còn 14 brand (thiếu 1 ở nhóm 2c), 15 community, trong `nguvan-hero-research/chot-dot1.md`.
 - Bước 1 xong 2026-11-18: 30 brand, 25 community trong `nguvan-hero-research/longlist-dot1.json` (chưa chấm, chưa loại). Bước 2 mới đủ số cho nguồn có sẵn; ứng viên mới có số tìm kiếm, cần kiểm ở Bước 3.
 - Chốt cách thu số người theo dõi cho hàng loạt ứng viên mới.
