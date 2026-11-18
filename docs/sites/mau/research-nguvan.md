@@ -3,18 +3,18 @@ id: mau-research-nguvan
 type: reference
 site: mau
 title: Brief nghiên cứu brand và community cho NGUVAN
-description: "Brief nghiên cứu 15+15 brand và community (đợt 1) để rút hero content cho nguvan12.com, dùng lại dữ liệu và công cụ của mau.danghong.me."
-description_en: "Research brief for NGUVAN: 15 brands and 15 communities in phase 1, reusing mau data and tooling, to derive hero content for nguvan12.com."
+description: "Brief nghiên cứu 15+15 brand và community (đợt 1), 5 bài mẫu mỗi nơi phân theo dòng content, để rút hero content cho nguvan12.com."
+description_en: "Research brief for NGUVAN: 15 brands and 15 communities in phase 1, 5 samples each sorted by content line, to derive hero content."
 owner: hong
 status: draft
-version: 2.1
+version: 2.2
 last_reviewed: 2026-11-18
 ai_readable: true
 ---
 
 # Brief nghiên cứu brand và community cho NGUVAN (nguvan12.com)
 
-Bản 2.1, sửa từ bản đầu theo đối chiếu với [mau.danghong.me](brief.md). Chỗ đổi so với bản đầu ghi **(đổi)**. Bản 2.1 thêm: **5 bài mẫu mỗi brand và community, mỗi bài phân vào một dòng content** để học làm hero content.
+Bản 2.1, sửa từ bản đầu theo đối chiếu với [mau.danghong.me](brief.md). Chỗ đổi so với bản đầu ghi **(đổi)**. Bản 2.1 thêm: **5 bài mẫu mỗi brand và community, mỗi bài phân vào một dòng content** để học làm hero content. Bản 2.2 đối chiếu lại toàn bộ yêu cầu: cập nhật tiến độ Bước 2, làm rõ phạm vi (chỉ nguồn liên quan Ngữ văn), thêm phân bố dòng của 5 bài mẫu vào nhãn brand và community, khôi phục tên thư mục output.
 
 ## 1. Bối cảnh và mục tiêu
 
@@ -92,7 +92,9 @@ Hạn mức con chỉ là gợi ý; lệch thì giải thích.
 
 ## 6. Dữ liệu đã có từ mau (đổi)
 
-Không quét lại những gì đã có. mau.danghong.me đã có **20 bài Ngữ văn** (và 100 bài môn khác) với link, ngày, thích, bình luận, chia sẻ, số ảnh, cơ chế nhận, nhãn tự động. Hạn chế đã biết của 20 bài Văn: phần lớn chưa rõ lớp, chỉ 1 bài rõ lớp 6, gần như không có bài nhắm phụ huynh, và chưa có số người theo dõi của từng page. Dùng làm điểm xuất phát để chọn brand, không coi là bằng chứng cho lớp 6–7.
+Không quét lại những gì đã có. mau.danghong.me đã có **20 bài Ngữ văn** (và 100 bài môn khác) với link, ngày, thích, bình luận, chia sẻ, số ảnh, cơ chế nhận, nhãn tự động. Hạn chế đã biết của 20 bài Văn: phần lớn chưa rõ lớp, chỉ 1 bài rõ lớp 6, gần như không có bài nhắm phụ huynh. Dùng làm điểm xuất phát để chọn brand, không coi là bằng chứng cho lớp 6–7.
+
+**Số người theo dõi (cập nhật 2026-11-18):** đã đọc cho 31 nguồn của Ngữ văn và Tiếng Anh trong mau, lưu ở `mau/data/sources.json` (25 khớp tên, 4 mơ hồ, 2 không thấy). Phạm vi của brief này là NGUVAN, nên chỉ nguồn **liên quan Ngữ văn** (14 nguồn Văn) dùng làm ứng viên ban đầu; nguồn Tiếng Anh và các môn khác chỉ để tham khảo cách làm. Số này là số hiện tại, không phải lúc bài được đăng.
 
 ## 7. Phân loại (gắn nhãn)
 
@@ -105,12 +107,14 @@ Không quét lại những gì đã có. mau.danghong.me đã có **20 bài Ng�
 - kênh chủ lực và kênh phụ
 - mô hình funnel: lead magnet miễn phí, khóa học, nhóm kín, tài liệu thu phí, khác
 - dòng content mạnh nhất (A/B/C/D)
+- **phân bố 5 bài mẫu theo dòng** (ví dụ A2 B1 C2), tính từ nhãn dòng của từng bài mẫu
 - vùng miền (nếu rõ)
 
 ### Community
 - nhóm (phụ huynh chung, phụ huynh theo hướng học tập, sách-viết, giáo viên)
 - nền tảng; quy mô thành viên (Lớn >50k, Vừa 10–50k, Nhỏ <10k)
 - đối tượng, bộ sách hay nhắc, địa phương
+- **phân bố 5 bài mẫu theo dòng** (ví dụ C3 D2) và nhóm D của từng bài
 - mức truy cập: công khai, một phần, kín
 
 ### Trạng thái dữ liệu (đổi, bắt buộc cho mọi nhãn)
@@ -156,7 +160,11 @@ Mỗi nhãn có cờ `nguồn nhãn`: **đã kiểm** (người xem trực tiế
 
 **Bước 1: Longlist Đợt 1.** ~30 brand và ~25 community ứng viên. Tìm bằng tìm kiếm Facebook bằng Chrome đã đăng nhập, bắt đầu từ nguồn sẵn có trong mau. Ghi nguồn tìm thấy.
 
-**Bước 2: Số người theo dõi.** Ghi số người theo dõi hoặc thành viên của mọi ứng viên, kèm ngày đọc. Đây là điều kiện để chuẩn hóa tương tác.
+**Bước 2: Số người theo dõi.** Ghi số người theo dõi (trang) hoặc thành viên (nhóm) của mọi ứng viên, kèm ngày đọc. Đây là điều kiện để chuẩn hóa tương tác.
+- Cách đọc: tìm kiếm trang hoặc nhóm theo tên trên Facebook (đăng nhập sẵn) hoặc mở thẳng link trang hoặc nhóm nếu có; với nhóm ghi thêm số bài mỗi ngày nếu Facebook hiển thị.
+- Mỗi nguồn ghi **độ khớp**: `exact` (tên khớp), `ambiguous` (nhiều trang hoặc nhóm cùng tên, ghi các số), `not_found`. Không đoán khi mơ hồ.
+- Lưu cùng cấu trúc với `mau/data/sources.json`.
+- **Tiến độ:** đã làm cho nguồn có sẵn trong mau (Văn và Anh). Chưa làm cho ứng viên mới của longlist, vì longlist (Bước 1) chưa chạy.
 
 **Bước 3: Chấm và chốt.** Áp dụng mục 8 cho TẤT CẢ ứng viên (cả loại), chọn 15 brand và 15 community.
 
@@ -213,10 +221,10 @@ tên, link, mức hoạt động, **luật nhóm** (quảng cáo, lead magnet, t
 
 ## 13. Lưu ở đâu và output (đổi)
 
-Dùng lại công cụ của mau thay vì dựng thư viện riêng:
+Dùng lại công cụ của mau thay vì dựng thư viện riêng. File xuất để trong thư mục `nguvan-hero-research/` (ngoài `mau/` để không bị publish; không chứa email hay số điện thoại của người khác):
 
 - Thêm hai tab **Brand** và **Community** vào mau.danghong.me, dữ liệu trong `mau/data/brands.json` và `mau/data/communities.json`. Bài mẫu dùng lại `posts.json` (thêm trường `brandId` hoặc `communityId`, `line`, `lineSub`, `lineReason`), nên lọc được theo mọi trường, đặc biệt **dòng content**, bộ sách, kênh, nhóm con. Trang mau cần thêm bộ lọc theo dòng và một màn "Học theo dòng": chọn A, B, C hoặc D, xem các bài mẫu của dòng đó cùng hook lặp lại.
-- Đồng thời xuất CSV để dùng ngoài site:
+- Đồng thời xuất file để dùng ngoài site, trong `nguvan-hero-research/`:
   - `longlist.csv`: ứng viên, điểm từng tiêu chí, chọn hoặc loại, lý do
   - `brands.csv`, `samples.csv` (150 dòng, cột `dòng chính`, `dòng phụ`, `nhóm D`, `lý do gắn dòng`, `id brand hoặc community`), `communities.csv`
   - `patterns.md`: mẫu theo dòng A/B/C/D, mỗi dòng có 3–5 bài đáng học nhất
@@ -239,6 +247,7 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
-- Chốt cách thu số người theo dõi cho hàng loạt page.
+- Bước 1 (longlist) chưa chạy; Bước 2 mới xong cho nguồn Văn và Anh có sẵn trong mau.
+- Chốt cách thu số người theo dõi cho hàng loạt ứng viên mới.
 - Hồng duyệt hạn mức nhóm con của Đợt 1.
 - Hồng xác nhận định nghĩa 4 dòng và nhóm D ở mục 3 trước khi gắn dòng cho hàng loạt bài.
