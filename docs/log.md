@@ -18,6 +18,7 @@ Mới nhất ở trên. Mỗi dòng: ngày, yêu cầu hoặc thay đổi, trang
 
 | Ngày | Yêu cầu / thay đổi | Trang |
 | :--- | :--- | :--- |
+| 2026-11-18 | Hồng: brief nghiên cứu cần 5 bài mẫu mỗi brand và community, phân vào các dòng content để học làm hero content | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: sửa brief nghiên cứu 30 brand + 30 community cho NGUVAN theo đối chiếu với mau; chia hai đợt, chỉ Facebook ở đợt 1 | [Brief nghiên cứu](sites/mau/research-nguvan.md) |
 | 2026-11-18 | Hồng: gộp khung bài vào Bài mới, trình bày từ khóa và khung dễ hiểu, dễ tái sử dụng | [mau sitemap](sites/mau/sitemap.md), [mau content](sites/mau/content.md) |
 | 2026-11-17 | Hồng: quét thêm bài cho Hóa học (5) và Tin học (7) để đủ 20 bài mỗi môn; tổng 120 bài | [mau brief](sites/mau/brief.md) |

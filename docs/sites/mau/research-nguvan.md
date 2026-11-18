@@ -7,14 +7,14 @@ description: "Brief nghiên cứu 15+15 brand và community (đợt 1) để rú
 description_en: "Research brief for NGUVAN: 15 brands and 15 communities in phase 1, reusing mau data and tooling, to derive hero content for nguvan12.com."
 owner: hong
 status: draft
-version: 2.0
+version: 2.1
 last_reviewed: 2026-11-18
 ai_readable: true
 ---
 
 # Brief nghiên cứu brand và community cho NGUVAN (nguvan12.com)
 
-Bản 2.0, sửa từ bản đầu theo đối chiếu với [mau.danghong.me](brief.md). Những chỗ đổi so với bản đầu có ghi **(đổi)**.
+Bản 2.1, sửa từ bản đầu theo đối chiếu với [mau.danghong.me](brief.md). Chỗ đổi so với bản đầu ghi **(đổi)**. Bản 2.1 thêm: **5 bài mẫu mỗi brand và community, mỗi bài phân vào một dòng content** để học làm hero content.
 
 ## 1. Bối cảnh và mục tiêu
 
@@ -47,6 +47,17 @@ Bản nháp viết theo góc nhìn của hai người. KHÔNG bịa số liệu,
 - Không bắt buộc có "cơ chế nhận". Cột cơ chế nhận ghi "không có" là hợp lệ.
 - Chấm hiệu quả bằng chia sẻ và bình luận, không bằng số người nhận tài liệu.
 
+### Quy tắc phân dòng cho từng bài mẫu (đổi)
+
+Mỗi bài mẫu gắn **đúng một dòng chính** (A, B, C hoặc D), có thể thêm một dòng phụ. Mục đích: gom bài theo dòng để học cách làm hero content của từng dòng.
+
+- **A**: bài có tặng hoặc đóng gói đề, lời giải theo mốc kiểm tra.
+- **B**: bài dạy hoặc chia sẻ phương pháp học Văn (cách làm bài, cách đọc hiểu, cách luyện viết).
+- **C**: bài chạm tâm lý, nỗi lo, rào cản của phụ huynh hoặc học sinh. Hook thường là một câu hỏi hay một tình huống.
+- **D**: các dòng còn lại. Gắn thêm **nhóm D**: chấm bài thật có trừ điểm, chuyển cấp 1→2, phụ huynh đồng hành, khung dùng ngay, chẩn đoán bài văn miễn phí, lộ trình lên lớp 10, khác (ghi tên).
+
+Cách gắn dòng: theo **mục đích chính của bài**, không theo chủ đề nhắc tới. Bài nào vừa tặng đề vừa kể nỗi lo thì chọn dòng mà hook nhắm tới và ghi dòng kia làm dòng phụ. Mỗi bài có một câu **lý do gắn dòng** (≤15 từ) để người sau kiểm lại.
+
 ## 4. Định nghĩa và phạm vi
 
 - **Brand**: chủ thể có thương hiệu và chủ sở hữu rõ. Group do chính brand lập chỉ là một **kênh** của brand, không tính là community.
@@ -70,6 +81,8 @@ Bản đầu yêu cầu 60+45 longlist và 30+30 chọn. Điều đó rất nặ
 - Giáo viên (4): hội giáo viên Văn, chia sẻ tài liệu và phương pháp.
 
 Longlist đợt 1: **~30 brand và ~25 community**, không phải 60 và 45.
+
+**Khối lượng bài mẫu (đổi):** 5 bài mẫu mỗi brand và mỗi community, nên Đợt 1 có **~150 bài mẫu** (75 của brand, 75 của community). Đây là phần tốn công nhất, nên Bước 4 và 5 có thể chia nhỏ theo nhóm con và giao từng đợt.
 
 ### Đợt 2 (sau khi duyệt đợt 1)
 
@@ -149,11 +162,11 @@ Mỗi nhãn có cờ `nguồn nhãn`: **đã kiểm** (người xem trực tiế
 
 **>>> DỪNG, gửi bảng 15 brand, 15 community và ứng viên bị loại (kèm lý do) để duyệt. <<<**
 
-**Bước 4: Chi tiết brand.** 2–3 bài hero mỗi brand (metadata mục 10). Mỗi bài đọc **tối thiểu 20 bình luận đầu**, loại spam, ghi "đọc n/N".
+**Bước 4: Chi tiết brand.** **5 bài mẫu mỗi brand** (metadata mục 10), mỗi bài gắn một dòng content theo mục 3. Mỗi bài đọc **tối thiểu 20 bình luận đầu**, loại spam, ghi "đọc n/N". Cách chọn 5 bài ở mục 10.
 
-**Bước 5: Chi tiết community.** Chủ đề pain lặp lại, 2–3 bài tương tác cao (tóm tắt, không sao chép), luật nhóm, cơ hội.
+**Bước 5: Chi tiết community.** Chủ đề pain lặp lại, **5 bài mẫu mỗi community** (bài tương tác cao, tóm tắt, không sao chép), mỗi bài gắn dòng content mà nỗi lo đó gợi ra (thường C hoặc D). Kèm luật nhóm và cơ hội. Bình luận: đọc ≥10 bình luận đầu mỗi bài để lấy ngôn ngữ thật.
 
-**Bước 6: Tổng hợp mẫu.** Theo dòng A/B/C/D: hook, pain (ngôn ngữ thật từ community), định dạng, cơ chế nhận, điều gì lặp lại ở bài hiệu quả. Tách số chia sẻ khỏi số bình luận.
+**Bước 6: Tổng hợp mẫu.** **Gom 150 bài mẫu theo dòng A/B/C/D** (và nhóm D). Mỗi dòng cần: các kiểu hook lặp lại, pain (ngôn ngữ thật từ community), định dạng, cơ chế nhận, điều gì lặp lại ở bài hiệu quả, và **3–5 bài mẫu đáng học nhất của dòng đó** kèm lý do. Tách số chia sẻ khỏi số bình luận. Dòng nào dưới 10 bài mẫu thì ghi "mẫu mỏng" và nói rõ cần quét thêm.
 
 **Bước 7: Viết nháp** (mục 11).
 
@@ -164,15 +177,24 @@ Mỗi nhãn có cờ `nguồn nhãn`: **đã kiểm** (người xem trực tiế
 ### Brand
 tên, link từng kênh (kể cả group do brand sở hữu), quy mô và ngày đọc, tần suất đăng (ước lượng), vì sao đáng tham khảo (1–2 dòng), điểm học được cho NGUVAN.
 
-### Bài mẫu (2–3 mỗi brand)
-url, kênh, định dạng, ngày đăng, dòng content, **tương tác** (thích, bình luận, chia sẻ, lượt xem; "n/a" nếu không thấy, kèm ngày đọc), **đối tượng và mối lo**, **pain** (trích ≤15 từ hoặc tóm tắt), **hook** (loại + 1 dòng), góc nhìn, **offer** (loại quà, số lượng, mốc, bộ sách, có lời giải, định dạng giao), **cơ chế nhận** (từ khóa bình luận, tag bạn, inbox, follow, form; có hỏi lại nhu cầu; gửi đại trà hay đúng bộ; điều kiện lọc; "không có" với B/C/D), vì sao hiệu quả (giả thuyết, ghi rõ là suy đoán), cách chuyển hóa sang giọng Hồng/Đắc.
+### Bài mẫu (5 mỗi brand, 5 mỗi community) (đổi)
+url, kênh, định dạng, ngày đăng, **dòng chính (A/B/C/D), dòng phụ, nhóm D, lý do gắn dòng**, **tương tác** (thích, bình luận, chia sẻ, lượt xem; "n/a" nếu không thấy, kèm ngày đọc), **đối tượng và mối lo**, **pain** (trích ≤15 từ hoặc tóm tắt), **hook** (loại + 1 dòng), góc nhìn, **offer** (loại quà, số lượng, mốc, bộ sách, có lời giải, định dạng giao), **cơ chế nhận** (từ khóa bình luận, tag bạn, inbox, follow, form; có hỏi lại nhu cầu; gửi đại trà hay đúng bộ; điều kiện lọc; "không có" với B/C/D), vì sao hiệu quả (giả thuyết, ghi rõ là suy đoán), cách chuyển hóa sang giọng Hồng/Đắc.
+
+**Cách chọn 5 bài mẫu (đổi):**
+1. Quan sát 10–20 bài gần nhất, lấy các bài có tương tác chuẩn hóa cao nhất.
+2. **Ưu tiên phủ dòng**: nếu brand hoặc community có nhiều dòng, 5 bài nên trải trên ≥3 dòng khác nhau, trong đó dòng mạnh nhất của brand có 2 bài. Brand chỉ làm một dòng thì 5 bài cùng dòng, ghi rõ.
+3. Bài ≤12 tháng. Bài cũ hơn chỉ dùng khi không đủ, ghi ngày.
+4. Không chọn bài quảng cáo trả phí hoặc bài mà tương tác bất thường (nghi mua).
+5. Thiếu bài thì ghi số bài tìm được (ví dụ 3/5) và lý do, không bịa cho đủ.
+
+Với community, 5 bài mẫu là bài người dùng đăng (pain thật) hoặc bài của admin được tương tác cao; ghi rõ ai đăng.
 
 ### Community
 tên, link, mức hoạt động, **luật nhóm** (quảng cáo, lead magnet, tag bạn bè, duyệt bài), chủ đề pain lặp lại kèm ngôn ngữ thật của phụ huynh, loại bài thường nổi, cơ hội (lắng nghe, đăng bài, hợp tác admin).
 
 ## 11. Viết nháp (sau khi duyệt Bước 3 và xong Bước 6)
 
-6 bản nháp: mỗi dòng A/B/C × 2 góc nhìn (Hồng, Đắc). Mỗi bản gồm: kênh, định dạng, hook, thân bài, CTA.
+6 bản nháp: mỗi dòng A/B/C × 2 góc nhìn (Hồng, Đắc). Mỗi bản dựa trên **bài mẫu đã gắn dòng tương ứng** ở Bước 6. Mỗi bản gồm: kênh, định dạng, hook, thân bài, CTA.
 
 - Cơ chế nhận: bình luận từ khóa, tag 2 người bạn, inbox gửi ảnh chụp. **(đổi)** Với dòng B, C không bắt buộc có quà, CTA có thể là mời chia sẻ trải nghiệm.
 - Kịch bản inbox ngắn để Hồng hỏi nhu cầu (lớp mấy, bộ sách, mốc thi, điểm đang lo), rồi gửi đúng bộ khớp với con.
@@ -193,11 +215,11 @@ tên, link, mức hoạt động, **luật nhóm** (quảng cáo, lead magnet, t
 
 Dùng lại công cụ của mau thay vì dựng thư viện riêng:
 
-- Thêm hai tab **Brand** và **Community** vào mau.danghong.me, dữ liệu trong `mau/data/brands.json` và `mau/data/communities.json`. Bài mẫu dùng lại `posts.json` (thêm trường `brandId`), nên lọc được theo mọi trường, đặc biệt bộ sách, dòng content, kênh, nhóm con.
+- Thêm hai tab **Brand** và **Community** vào mau.danghong.me, dữ liệu trong `mau/data/brands.json` và `mau/data/communities.json`. Bài mẫu dùng lại `posts.json` (thêm trường `brandId` hoặc `communityId`, `line`, `lineSub`, `lineReason`), nên lọc được theo mọi trường, đặc biệt **dòng content**, bộ sách, kênh, nhóm con. Trang mau cần thêm bộ lọc theo dòng và một màn "Học theo dòng": chọn A, B, C hoặc D, xem các bài mẫu của dòng đó cùng hook lặp lại.
 - Đồng thời xuất CSV để dùng ngoài site:
   - `longlist.csv`: ứng viên, điểm từng tiêu chí, chọn hoặc loại, lý do
-  - `brands.csv`, `samples.csv`, `communities.csv`
-  - `patterns.md`: mẫu theo dòng A/B/C/D
+  - `brands.csv`, `samples.csv` (150 dòng, cột `dòng chính`, `dòng phụ`, `nhóm D`, `lý do gắn dòng`, `id brand hoặc community`), `communities.csv`
+  - `patterns.md`: mẫu theo dòng A/B/C/D, mỗi dòng có 3–5 bài đáng học nhất
   - `drafts.md`: 6 bản nháp
   - `gaps.md`: điều không lấy được và vì sao
 
@@ -208,14 +230,15 @@ Khi đưa vào mau, cập nhật docs của mau (sitemap, content, ops) trong c�
 - [ ] 15 brand và 15 community đã được duyệt, đủ hạn mức nhóm con (lệch thì có giải thích)
 - [ ] Mỗi mục có nhãn, cờ nguồn nhãn (đã kiểm hoặc tự động), điểm từng tiêu chí và lý do chọn
 - [ ] Số người theo dõi hoặc thành viên ghi cho mọi ứng viên, kèm ngày đọc
-- [ ] Mỗi brand có 2–3 bài mẫu đủ metadata hoặc "n/a" có lý do; bình luận đọc ≥20 mỗi bài
-- [ ] Tổng hợp mẫu theo từng dòng, tách chia sẻ khỏi bình luận, có ngôn ngữ pain từ community
+- [ ] Mỗi brand có 5 bài mẫu và mỗi community có 5 bài mẫu, đủ metadata hoặc "n/a" có lý do; mỗi bài có dòng chính và lý do gắn dòng; bình luận đọc ≥20 (brand) hoặc ≥10 (community) mỗi bài
+- [ ] Tổng hợp mẫu theo từng dòng, mỗi dòng có 3–5 bài đáng học nhất và kiểu hook lặp lại, tách chia sẻ khỏi bình luận, có ngôn ngữ pain từ community; dòng dưới 10 bài ghi "mẫu mỏng"
 - [ ] 6 bản nháp, không có dữ kiện bịa về Hồng và Đắc
 - [ ] `gaps.md` liệt kê giới hạn dữ liệu
-- [ ] Hai tab Brand và Community chạy trên mau, docs của mau đã cập nhật
+- [ ] Hai tab Brand và Community chạy trên mau, có bộ lọc và màn "Học theo dòng", docs của mau đã cập nhật
 
 ## Việc còn mở
 
 - Đợt 2: TikTok, Threads, Instagram, YouTube; mở rộng lên 30+30.
 - Chốt cách thu số người theo dõi cho hàng loạt page.
 - Hồng duyệt hạn mức nhóm con của Đợt 1.
+- Hồng xác nhận định nghĩa 4 dòng và nhóm D ở mục 3 trước khi gắn dòng cho hàng loạt bài.
