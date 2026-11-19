@@ -1,0 +1,20 @@
+{
+  "ghi_chu": "Bước 5 NEMO, đọc 2026-11-19. Không lưu tên người bình luận, email, số điện thoại. 'đọc n/N' là số bình luận đã thấy trên tổng. Chưa đủ 5 bài mỗi group; số bài đã đọc ghi ở từng group.",
+  "samples": [
+    {"group": "Cộng đồng học TOEIC (S1, TOEIC)", "bai": "mất gốc muốn học TOEIC từ đâu", "nhom": "pain", "binh_luan": "có", "co_che": "người hỏi, thành viên trả lời", "ghi_chu": "đọc một phần"},
+    {"group": "BenzenEnglish (S1, TOEIC)", "bai": "mới bắt đầu nên làm thử đề hay học từ vựng nền", "nhom": "pain", "binh_luan": "7", "co_che": "hỏi lộ trình"},
+    {"group": "BenzenEnglish (S1, TOEIC)", "bai": "giới thiệu website luyện TOEIC", "nhom": "quảng cáo lẫn pain", "binh_luan": "47", "co_che": "nhiều trả lời là bài bán hàng, để email"},
+    {"group": "BenzenEnglish (S1, TOEIC)", "bai": "giveaway tài liệu", "nhom": "cơ chế", "co_che": "bình luận '.' hoặc để email"},
+    {"group": "tansinhvienufmk22 (S1, TOEIC)", "bai": "sắp thi giữa tháng 12, điểm tự ôn, aim 800 Reading, hỏi chỗ luyện Reading", "nhom": "pain", "binh_luan": "12 (đọc 6/20)", "co_che": "hỏi nguồn luyện; trả lời kinh nghiệm (ôn đề ETS 26, Listening Part 2 hay đánh đố)"},
+    {"group": "vstep.b1b2c1 (S1, VSTEP)", "bai": "cần đạt B1 trong 8 ngày, mất gốc, học thuộc lòng", "nhom": "pain mạnh", "binh_luan": "12", "co_che": "lo sợ Writing; thành viên khuyên"},
+    {"group": "vstep.b1b2c1 (S1, VSTEP)", "bai": "thi mấy lần không pass", "nhom": "pain mạnh", "co_che": "chia sẻ thất bại"},
+    {"group": "VSTEP (các bài hỏi khóa online rẻ)", "bai": "hỏi khóa VSTEP online giá rẻ", "nhom": "pain + giá", "binh_luan": "hàng chục", "co_che": "người bán trả lời 'ib', 'Zalo', 'pass lại khóa 100–200k'"},
+    {"group": "Mất gốc (158266499089845)", "bai": "tìm giáo viên cho người mất gốc, giá học sinh sinh viên", "nhom": "pain + ngân sách", "binh_luan": "83–113", "co_che": "đa số là gia sư tự quảng cáo"},
+    {"group": "The Forum IELTS Community", "bai": "tìm giáo viên online band 6.5", "nhom": "pain", "co_che": "người hỏi tìm thầy"},
+    {"group": "The Forum IELTS Community", "bai": "kẹt Listening 5.5 muốn lên 6.5", "nhom": "pain", "binh_luan": "50", "co_che": "lời khuyên thật, nghe chép chính tả"},
+    {"group": "Nhóm giáo viên (1947317768815047)", "bai": "cần tìm giáo viên tiếng Anh online", "nhom": "cầu - cung", "binh_luan": "31 phản hồi/77", "co_che": "giáo viên tự giới thiệu, giá 109k/buổi, học thử miễn phí"},
+    {"group": "Nhóm giáo viên (1947317768815047)", "bai": "làm sao để học sinh tự đòi học từ vựng", "nhom": "pain giáo viên (2b)", "binh_luan": "0 đọc được", "co_che": "bài quảng bá sản phẩm hình hỏi pain"},
+    {"group": "nhomgiaovientienganh", "bai": "giáo viên dạy thêm cho học sinh biết đề trước", "nhom": "pain giáo viên (2b)", "binh_luan": "0 đọc được"}
+  ],
+  "chua_doc": "Phần còn lại của 40 bài đã chọn (các group phụ huynh, một số bài vstep.b1b2c1 và theforumielts) chưa đọc bình luận. Ghi ở gaps."
+}
