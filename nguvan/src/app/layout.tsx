@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Be_Vietnam_Pro, Fraunces, Patrick_Hand } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { NEWSLETTER_URL, PARENT_SITE } from "@/lib/site";
+import { NEWSLETTER_URL } from "@/lib/site";
 
 const body = Be_Vietnam_Pro({ variable: "--font-body", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600", "700"] });
 const display = Fraunces({ variable: "--font-display", subsets: ["latin", "vietnamese"] });
@@ -27,11 +27,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main className="flex-1">{children}</main>
         <footer className="border-t border-line bg-secondary/60 text-sm text-muted">
           <div className="mx-auto flex max-w-7xl flex-wrap gap-x-6 gap-y-2 px-5 py-7">
-            <a href={NEWSLETTER_URL}>Newsletter</a>
+            <a href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer">Newsletter</a>
             <Link href="/hoi-dap/">Hỏi đáp</Link>
             <Link href="/quyen-rieng-tu/">Quyền riêng tư</Link>
             <span className="sm:ml-auto">
-              Một phần của <a href={PARENT_SITE} className="underline">danghong.me</a>
+              Ngữ Văn cùng cô Hồng
             </span>
           </div>
         </footer>

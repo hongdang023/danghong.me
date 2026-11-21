@@ -30,8 +30,8 @@ export function Works() {
               )}
               <figcaption className="mt-3 text-center text-xs leading-relaxed text-muted">
                 {w.image.cover ? "" : "Ảnh: "}{w.image.by}
-                {w.image.license && <>, {w.image.licenseUrl ? <a href={w.image.licenseUrl} className="underline">{w.image.license}</a> : w.image.license}</>}
-                {", "}<a href={w.image.page} className="underline">{w.image.pageLabel ?? "Wikimedia Commons"}</a>
+                {w.image.license && <>, {w.image.licenseUrl ? <a href={w.image.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline">{w.image.license}</a> : w.image.license}</>}
+                {", "}<a href={w.image.page} target="_blank" rel="noopener noreferrer" className="underline">{w.image.pageLabel ?? "Wikimedia Commons"}</a>
               </figcaption>
             </figure>
             <div>

@@ -2,8 +2,6 @@
 
 export const CONTACT_URL = "https://www.facebook.com/danghong.harunoyuki";
 export const NEWSLETTER_URL = "https://harureboot.substack.com/";
-export const PARENT_SITE = "https://danghong.me";
-export const NEMO12_URL = "https://nemo12.com";
 
 export type MenuItem = { label: string; href: string };
 export type MenuGroup = {
@@ -28,6 +26,7 @@ export const MENU: MenuGroup[] = [
       { label: "Niềm tin", href: "/co-hong/niem-tin/" },
       { label: "Sở thích", href: "/co-hong/so-thich/" },
       { label: "Tác phẩm", href: "/co-hong/tac-pham/" },
+      { label: "Thử đoán cô", href: "/co-hong/doan-co/" },
     ],
     featured: { tag: "Điều cô muốn", title: "Cô muốn học Văn thú vị hơn", text: "Điểm Văn cao, nhưng ra đời cô chỉ viết được văn để đi thi. Đó là lý do cô dạy khác.", href: "/co-hong/hanh-trinh/#dieu-co-muon", cta: "Đọc câu chuyện" },
   },

@@ -12,7 +12,7 @@ const BELIEFS = [
 
 export default function Beliefs() {
   return (
-    <Page eyebrow="Về cô Hồng · Niềm tin" title="Bốn niềm tin cô mang vào lớp học." lead="Lấy từ trang giới thiệu của cô trên danghong.me.">
+    <Page eyebrow="Về cô Hồng · Niềm tin" title="Bốn niềm tin cô mang vào lớp học.">
       <Band tint="sage">
         <ol className="grid gap-5 md:grid-cols-2">
           {BELIEFS.map(([t, d], i) => (
@@ -25,7 +25,6 @@ export default function Beliefs() {
             </li>
           ))}
         </ol>
-        <p className="pt-6 text-foreground/60">Đọc thêm tại <a href="https://danghong.me/about" className="font-bold text-accent underline">danghong.me</a>.</p>
       </Band>
       <ContactCta />
     </Page>

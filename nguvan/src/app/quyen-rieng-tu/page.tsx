@@ -17,7 +17,7 @@ export default function Privacy() {
         </li>
       </ul>
       <p>
-        Thắc mắc: <a href={CONTACT_URL} className="text-accent underline">nhắn cô Hồng</a>.
+        Thắc mắc: <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline">nhắn cô Hồng</a>.
       </p>
       </Band>
     </Page>

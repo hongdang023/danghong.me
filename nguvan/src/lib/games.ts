@@ -11,6 +11,15 @@ export type Game = {
 
 export const GAMES: Game[] = [
   {
+    slug: "demen",
+    title: "Dế Mèn Tái Sinh",
+    text: "Chuyển sinh thành Dế Mèn trong truyện của Tô Hoài, rồi vận dụng kiến thức Ngữ văn 6 (tác phẩm, thể loại, từ ghép, từ láy, so sánh, nhân hóa, cốt truyện) để lột xác thành dế trưởng thành.",
+    tags: ["Ngữ văn 6", "Dế Mèn"],
+    image: "/games/demen.png",
+    href: "https://demen.danghong.me/",
+    external: true,
+  },
+  {
     slug: "doi-tu",
     title: "Đổi một từ, đổi cả hình ảnh",
     text: "Thay “đi” bằng “tiến”, “lao”, “xông” trong câu về Thánh Gióng và cảm nhận sắc thái của từng từ.",

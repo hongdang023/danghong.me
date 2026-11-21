@@ -23,6 +23,7 @@ Route đã có trong `nguvan/` (chưa deploy).
 │   ├── /co-hong/hoc-van/ ...... 9,25, điểm Văn ≥ 7, THPT Chuyên Ngoại ngữ, ĐH Kinh tế Quốc dân (chỉ phần liên quan)
 │   ├── /co-hong/niem-tin/ ..... 4 niềm tin (từ danghong.me, đã bỏ "Lãnh đạo là Trao quyền")
 │   ├── /co-hong/so-thich/ ..... Viết lách, vẽ vời, múa đương đại, 4 phim (ảnh từ media)
+│   ├── /co-hong/doan-co/ ...... Thử đoán cô: game "Who is the Impostor?" với 6 facts về cô (đều là thật)
 │   └── /co-hong/tac-pham/ ..... 5 tác phẩm: ảnh thật (Wikimedia Commons, ghi nguồn), lý do thích (nháp), 1 game nhỏ mỗi tác phẩm
 ├── /cach-hoc/ ....... Xích lại gần văn hơn + bảng so sánh (hub)
 │   ├── /cach-hoc/truong-phai/ . Học qua đặt câu hỏi (Inquiry, IB), Competency-based (Building21): tự dựng trên nguvan (không link về danghong.me), link Curriculum Nemo12
@@ -40,6 +41,6 @@ Route cũ `/phu-huynh/`, `/hoc-sinh/`, `/thu-choi/...` chuyển hướng 301 b�
 
 | Vị trí | Mục |
 | :--- | :--- |
-| Nav (mega menu, tên mục ≤ 3 từ) | Về cô Hồng ▾ (Hành trình · Học vấn · Niềm tin · Sở thích · Tác phẩm) · Cách học ▾ (Trường phái · Triết lý) · Lớp học ▾ (Một buổi học · Con tiến bộ) · Học liệu ▾ (Toolkit · Curriculum) · Bài viết |
+| Nav (mega menu, tên mục ≤ 3 từ) | Về cô Hồng ▾ (Hành trình · Học vấn · Niềm tin · Sở thích · Tác phẩm · Thử đoán cô) · Cách học ▾ (Trường phái · Triết lý) · Lớp học ▾ (Một buổi học · Con tiến bộ) · Học liệu ▾ (Toolkit · Curriculum) · Bài viết |
 | Nút | Newsletter (viền) · Nhắn cô Hồng (chính) |
 | Footer | Newsletter · Hỏi đáp · Quyền riêng tư · dải "Một phần của danghong.me" ([Core](../../ecosystem/design-system/core.md) §5) |

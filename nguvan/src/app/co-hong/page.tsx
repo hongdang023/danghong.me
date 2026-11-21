@@ -13,7 +13,8 @@ const TILES = [
   ["Học vấn", "9,25 điểm Văn THPT Quốc gia, điểm Văn chưa bao giờ dưới 7, THPT Chuyên Ngoại ngữ.", "/co-hong/hoc-van/", "bg-sky"],
   ["Niềm tin", "Bốn niềm tin cô mang theo vào lớp học.", "/co-hong/niem-tin/", "bg-sage"],
   ["Sở thích", "Viết lách, vẽ vời, xem phim, múa đương đại.", "/co-hong/so-thich/", "bg-lilac"],
-  ["Tác phẩm", "Năm tác phẩm cô thích, kèm tranh màu nước và một trò chơi nhỏ cho mỗi tác phẩm.", "/co-hong/tac-pham/", "bg-butter"],
+  ["Tác phẩm", "Năm tác phẩm cô thích, kèm ảnh và một trò chơi nhỏ cho mỗi tác phẩm.", "/co-hong/tac-pham/", "bg-butter"],
+  ["Thử đoán cô", "Sáu điều về cô, một điều là bịa. Đâu là kẻ giả mạo?", "/co-hong/doan-co/", "bg-peach"],
 ];
 
 export default function About() {
@@ -28,7 +29,7 @@ export default function About() {
           </p>
         </div>
       </Band>
-      <Band eyebrow="Tìm hiểu cô" title="Năm góc nhìn">
+      <Band eyebrow="Tìm hiểu cô" title="Sáu góc nhìn">
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {TILES.map(([t, d, href, c]) => (
             <li key={t}>

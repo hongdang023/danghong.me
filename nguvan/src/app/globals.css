@@ -147,3 +147,10 @@ a.card-ed:hover, .card-ed.lift:hover { transform: translateY(-6px); box-shadow: 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .t-sun { display: block; } :root:not([data-theme="light"]) .t-moon { display: none; }
 }
+
+/* Trò Impostor: nhân vật bị đẩy ra khỏi tàu, rồi chữ hiện lên */
+@keyframes eject-fly { from { transform: translateX(-60vw) rotate(-180deg); } to { transform: translateX(60vw) rotate(180deg); } }
+@keyframes eject-pop { from { opacity: 0; transform: scale(.5); } to { opacity: 1; transform: scale(1); } }
+.eject-crew { animation: eject-fly 3.2s linear forwards; }
+.eject-text { opacity: 0; animation: eject-pop .5s 1s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) { .eject-crew { animation: none; opacity: 0; } .eject-text { animation-delay: 0s; } }

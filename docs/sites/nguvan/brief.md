@@ -40,6 +40,8 @@ Site nội dung để Hồng branding là **cô giáo Ngữ Văn tại Nemo12** 
 
 ## 4. Giọng văn và CTA
 
+**Giữ người đọc trên nguvan** (Hồng chốt 2026-11-21): không có link "đọc thêm" sang danghong.me hay trang khác; footer chỉ là chữ, không link về danghong.me. Link ra ngoài chỉ còn khi cần chức năng và luôn mở tab mới (`target="_blank" rel="noopener noreferrer"`): Nhắn cô Hồng (Facebook), Newsletter và bài đầy đủ trên Substack, 5 module Toolkit (Gemini), game Dế Mèn Tái Sinh (demen.danghong.me, Hồng yêu cầu 2026-11-21), Curriculum (Nemo12, do Hồng yêu cầu đặt ở menu Học liệu), và link ghi công ảnh (Wikimedia Commons, giấy phép CC). Thêm link ngoài mới phải hỏi Hồng.
+
 Hồng là **cô giáo**: dùng "cô Hồng" khi nói về Hồng (không dùng "thầy"). Chữ "Thầy" chỉ xuất hiện trong câu chuyện nguyên văn, khi một học trò cũ gọi Hồng như vậy.
 
 Ấm, nói chuyện, ngôi thứ nhất, không hứa điểm, không chê giáo viên hay trường cụ thể. **CTA:** "Nhắn cô Hồng" (kênh liên hệ như [Identity](../../ecosystem/identity.md) §6, chốt riêng ở NV2).

@@ -7,6 +7,11 @@ import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { CONTACT_URL, MENU, NEWSLETTER_URL } from "@/lib/site";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
+/** Link nội bộ dùng Link; link ra ngoài (Curriculum) mở tab mới để người đọc không rời nguvan. */
+function NL({ href, className, children }: { href: string; className?: string; children: React.ReactNode }) {
+  return href.startsWith("http") ? <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{children}</a> : <Link href={href} className={className}>{children}</Link>;
+}
+
 export function Navbar() {
   const path = usePathname();
   // Trạng thái gắn với đường dẫn: đổi trang thì menu tự đóng, không cần effect.
@@ -65,10 +70,10 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 xl:flex">
           <ThemeToggle />
-          <a href={NEWSLETTER_URL} className="rounded-full border border-line bg-surface px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide shadow-sm transition hover:-translate-y-0.5">
+          <a href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer" className="rounded-full border border-line bg-surface px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide shadow-sm transition hover:-translate-y-0.5">
             Newsletter
           </a>
-          <a href={CONTACT_URL} className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 active:scale-95">
+          <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-accent px-5 py-2.5 text-[13px] font-bold uppercase tracking-wide text-on-accent shadow-lg shadow-accent/30 transition hover:-translate-y-0.5 active:scale-95">
             Nhắn cô Hồng
           </a>
         </div>
@@ -85,9 +90,9 @@ export function Navbar() {
             <ul className="space-y-1">
               {active.items.map((it) => (
                 <li key={it.href}>
-                  <Link href={it.href} className="block rounded-2xl px-4 py-3 text-lg font-bold transition hover:bg-rose/50 hover:text-accent">
+                  <NL href={it.href} className="block rounded-2xl px-4 py-3 text-lg font-bold transition hover:bg-rose/50 hover:text-accent">
                     {it.label}
-                  </Link>
+                  </NL>
                 </li>
               ))}
             </ul>
@@ -114,15 +119,15 @@ export function Navbar() {
               {g.items && (
                 <ul className="mt-2 space-y-1 pl-3">
                   {g.items.map((it) => (
-                    <li key={it.href}><Link href={it.href} className="block py-1 text-foreground/70">{it.label}</Link></li>
+                    <li key={it.href}><NL href={it.href} className="block py-1 text-foreground/70">{it.label}</NL></li>
                   ))}
                 </ul>
               )}
             </div>
           ))}
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href={NEWSLETTER_URL} className="btn-ghost">Newsletter</a>
-            <a href={CONTACT_URL} className="btn-primary">Nhắn cô Hồng</a>
+            <a href={NEWSLETTER_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost">Newsletter</a>
+            <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">Nhắn cô Hồng</a>
           </div>
         </div>
       )}

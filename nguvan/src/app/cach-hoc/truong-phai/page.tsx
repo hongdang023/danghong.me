@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Band, ContactCta, Page } from "@/components/Ui";
-import { CURRICULUM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Trường phái",
   description: "Học qua đặt câu hỏi (Inquiry-based, theo tinh thần IB) và đánh giá theo năng lực (Competency-based, theo tinh thần Building21), áp vào môn Ngữ Văn.",
 };
 
-// Nội dung tóm tắt từ phần Masters của danghong.me (IB, Building21), viết lại cho phụ huynh và áp vào môn Văn.
+// Nội dung tóm tắt IB, Building21 (từ phần Masters của Hồng), viết lại cho phụ huynh và áp vào môn Văn. Không dẫn link ra ngoài.
 // Phần "Trong môn Văn" là BẢN NHÁP do Claude soạn (2026-11-11), cần Hồng duyệt.
 
 const IB_PROFILE = [
@@ -102,7 +101,6 @@ export default function Schools() {
           Chương trình Ngữ Văn của Nemo12 đi theo chuỗi: giải mã chữ và vốn từ, nắm nội dung văn bản, diễn giải ý nghĩa, viết và
           trình bày, rồi đọc các văn bản phức tạp. Ý xuyên suốt: đọc là chỉ ra người viết đã chọn gì, và lựa chọn đó tạo ra hiệu ứng nào.
         </p>
-        <a href={CURRICULUM_URL} className="btn-primary mt-5">Xem chương trình</a>
       </Band>
       <ContactCta />
     </Page>

@@ -75,7 +75,7 @@ export function MediaCard({ href, image, tags, title, text, cta = "Xem thêm", e
     </>
   );
   const cls = "card-ed group flex flex-col overflow-hidden";
-  return external ? <a href={href} className={cls}>{inner}</a> : <Link href={href} className={cls}>{inner}</Link>;
+  return external ? <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a> : <Link href={href} className={cls}>{inner}</Link>;
 }
 
 export function Stat({ value, label }: { value: string; label: string }) {
@@ -128,7 +128,7 @@ export function ContactCta({ text = "Hỏi trước, chưa cần quyết định
       <div className="mx-auto max-w-4xl px-6 py-8 sm:py-10">
         <div className="band-rose relative flex flex-col items-center gap-4 overflow-hidden rounded-[24px] border border-line px-6 py-6 text-center sm:flex-row sm:justify-between sm:px-8 sm:text-left">
           <p className="font-display text-xl font-normal tracking-tight sm:text-2xl">{text}</p>
-          <a href={CONTACT_URL} className="btn-primary shrink-0 !px-5 !py-2.5">Nhắn cô Hồng <ArrowRight size={14} /></a>
+          <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="btn-primary shrink-0 !px-5 !py-2.5">Nhắn cô Hồng <ArrowRight size={14} /></a>
         </div>
       </div>
     </section>
